@@ -287,6 +287,156 @@
   
 
   <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+    <link itemprop="mainEntityOfPage" href="https://flyerooo.github.io/2017/04/02/JavaScript-This-的六道坎/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Jeffzzz">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Hexo">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+            
+            
+              
+                
+                <a class="post-title-link" href="/2017/04/02/JavaScript-This-的六道坎/" itemprop="url">
+                  JavaScript This 的六道坎
+                </a>
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-04-02T16:46:08+08:00">
+                2017-04-02
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <p>转载自<a href="https://blog.crimx.com/2016/05/12/understanding-this/" target="_blank" rel="external">https://blog.crimx.com/2016/05/12/understanding-this/</a></p>
+<p>鉴于this风骚的运作方式，对this的理解是永不过时的话题，本文试图通过将其大卸六块来钉住这个磨人的妖精。</p>
+<h4 id="首先"><a href="#首先" class="headerlink" title="首先"></a>首先</h4><blockquote>
+<p><em>this</em> is all about context.</p>
+</blockquote>
+<p><em>this</em> 说白了就是找大佬，找拥有当前上下文（context）的对象（context object）。</p>
+<p>大佬可以分为六层，层数越高权力越大，<em>this</em> 只会认最大的。</p>
+<h4 id="1-第一层：世界尽头"><a href="#1-第一层：世界尽头" class="headerlink" title="1. 第一层：世界尽头"></a>1. 第一层：世界尽头</h4><p>权力最小的大佬是作为备胎的存在，在普通情况下就是全局，浏览器里就是 <em>window</em> ；在 <em>use strict</em> 的情况下就是 <em>undefined</em> 。<br><figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div></pre></td><td class="code"><pre><div class="line"><span class="function"><span class="keyword">function</span> <span class="title">showThis</span> (<span class="params"></span>) </span>&#123;</div><div class="line">  <span class="built_in">console</span>.log(<span class="keyword">this</span>)</div><div class="line">&#125;</div><div class="line"><span class="function"><span class="keyword">function</span> <span class="title">showStrictThis</span> (<span class="params"></span>) </span>&#123;</div><div class="line"><span class="meta">  'use strict'</span></div><div class="line">  <span class="built_in">console</span>.log(<span class="keyword">this</span>)</div><div class="line">&#125;</div><div class="line">showThis() <span class="comment">// window</span></div><div class="line">showStrictThis() <span class="comment">// undefined</span></div></pre></td></tr></table></figure></p>
+<h4 id="2-第二层：点石成金"><a href="#2-第二层：点石成金" class="headerlink" title="2. 第二层：点石成金"></a>2. 第二层：点石成金</h4><p>第二层大佬说白了就是找这个函数前面的点.。</p>
+<p>如果用到 <em>this</em> 的那个函数是属于某个 context object 的，那么这个 context object 绑定到 <em>this</em> 。</p>
+<p>比如下面的例子，<em>boss</em> 是 <em>returnThis</em> 的 context object ，或者说 <em>returnThis</em> 属于 <em>boss</em> 。<br><figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">var</span> boss = &#123;</div><div class="line">  <span class="attr">name</span>: <span class="string">'boss'</span>,</div><div class="line">  returnThis () &#123;</div><div class="line">    <span class="keyword">return</span> <span class="keyword">this</span></div><div class="line">  &#125;</div><div class="line">&#125;</div><div class="line">boss.returnThis() === boss <span class="comment">// true</span></div></pre></td></tr></table></figure></p>
+<p>下面这个例子就要小心点咯，能想出答案么？<br><figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">var</span> boss1 = &#123;</div><div class="line">  <span class="attr">name</span>: <span class="string">'boss1'</span>,</div><div class="line">  returnThis () &#123;</div><div class="line">    <span class="keyword">return</span> <span class="keyword">this</span></div><div class="line">  &#125;</div><div class="line">&#125;</div><div class="line"><span class="keyword">var</span> boss2 = &#123;</div><div class="line">  <span class="attr">name</span>: <span class="string">'boss2'</span>,</div><div class="line">  returnThis () &#123;</div><div class="line">    <span class="keyword">return</span> boss1.returnThis()</div><div class="line">  &#125;</div><div class="line">&#125;</div><div class="line"><span class="keyword">var</span> boss3 = &#123;</div><div class="line">  <span class="attr">name</span>: <span class="string">'boss3'</span>,</div><div class="line">  returnThis () &#123;</div><div class="line">    <span class="keyword">var</span> returnThis = boss1.returnThis</div><div class="line">    <span class="keyword">return</span> returnThis()</div><div class="line">  &#125;</div><div class="line">&#125;</div><div class="line">boss1.returnThis() <span class="comment">// boss1</span></div><div class="line">boss2.returnThis() <span class="comment">// ?</span></div><div class="line">boss3.returnThis() <span class="comment">// ?</span></div></pre></td></tr></table></figure></p>
+<p>答案是 <em>boss1</em> 和 <em>window</em> 哦，猜对了吗。</p>
+<p>只要看使用 <em>this</em> 的那个函数。</p>
+<p>在 <em>boss2.returnThis</em> 里，使用 <em>this</em> 的函数是 <em>boss1.returnThis</em>，所以 <em>this</em> 绑定到 <em>boss1</em>；</p>
+<p>在 <em>boss3.returnThis</em> 里，使用 <em>this</em> 的函数是 <em>returnThis</em> ，所以 <em>this</em> 绑定到备胎。</p>
+<p>要想把 <em>this</em> 绑定到 <em>boss2</em> 怎么做呢？<br><figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div></pre></td><td class="code"><pre><div class="line"></div><div class="line"><span class="keyword">var</span> boss1 = &#123;</div><div class="line">  <span class="attr">name</span>: <span class="string">'boss1'</span>,</div><div class="line">  returnThis () &#123;</div><div class="line">    <span class="keyword">return</span> <span class="keyword">this</span></div><div class="line">  &#125;</div><div class="line">&#125;</div><div class="line"><span class="keyword">var</span> boss2 = &#123;</div><div class="line">  <span class="attr">name</span>: <span class="string">'boss2'</span>,</div><div class="line">  <span class="attr">returnThis</span>: boss1.returnThis</div><div class="line">&#125;</div><div class="line">boss2.returnThis() <span class="comment">//boss2</span></div></pre></td></tr></table></figure></p>
+<p>没错，只要让使用 <em>this</em> 的函数是属于 <em>boss2</em> 就行。</p>
+<h4 id="3-第三层：指腹为婚"><a href="#3-第三层：指腹为婚" class="headerlink" title="3. 第三层：指腹为婚"></a>3. 第三层：指腹为婚</h4><p>第三层大佬是 <em>Object.prototype.call</em> 和 <em>Object.prototype.apply</em>，它们可以通过参数指定 <em>this</em>。（注意 <em>this</em> 是不可以直接赋值的哦，<em>this = 2</em> 会报 <em>ReferenceError</em>。）</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line"><span class="function"><span class="keyword">function</span> <span class="title">returnThis</span> (<span class="params"></span>) </span>&#123;</div><div class="line">  <span class="keyword">return</span> <span class="keyword">this</span></div><div class="line">&#125;</div><div class="line"><span class="keyword">var</span> boss1 = &#123; <span class="attr">name</span>: <span class="string">'boss1'</span> &#125;</div><div class="line">returnThis() <span class="comment">// window</span></div><div class="line">returnThis.call(boss1) <span class="comment">// boss1</span></div><div class="line">returnThis.apply(boss1) <span class="comment">// boss1</span></div></pre></td></tr></table></figure>
+<h4 id="4-第四层：海誓山盟"><a href="#4-第四层：海誓山盟" class="headerlink" title="4. 第四层：海誓山盟"></a>4. 第四层：海誓山盟</h4><p>第四层大佬是 <em>Object.prototype.bind</em>，他不但通过一个新函数来提供永久的绑定，还会覆盖第三层大佬的命令。<br><figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div></pre></td><td class="code"><pre><div class="line"><span class="function"><span class="keyword">function</span> <span class="title">returnThis</span> (<span class="params"></span>) </span>&#123;</div><div class="line">  <span class="keyword">return</span> <span class="keyword">this</span></div><div class="line">&#125;</div><div class="line"><span class="keyword">var</span> boss1 = &#123; <span class="attr">name</span>: <span class="string">'boss1'</span>&#125;</div><div class="line"><span class="keyword">var</span> boss1returnThis = returnThis.bind(boss1)</div><div class="line">boss1returnThis() <span class="comment">// boss1</span></div><div class="line"><span class="keyword">var</span> boss2 = &#123; <span class="attr">name</span>: <span class="string">'boss2'</span> &#125;</div><div class="line">boss1returnThis.call(boss2) <span class="comment">// still boss1</span></div></pre></td></tr></table></figure></p>
+<h4 id="5-第五层：内有乾坤"><a href="#5-第五层：内有乾坤" class="headerlink" title="5. 第五层：内有乾坤"></a>5. 第五层：内有乾坤</h4><p>一个比较容易忽略的会绑定 <em>this</em> 的地方就是 <em>new</em>。当我们 <em>new</em> 一个函数时，就会自动把 <em>this</em> 绑定在新对象上，然后再调用这个函数。它会覆盖 <em>bind</em> 的绑定。<br><figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div></pre></td><td class="code"><pre><div class="line"><span class="function"><span class="keyword">function</span> <span class="title">showThis</span> (<span class="params"></span>) </span>&#123;</div><div class="line">  <span class="built_in">console</span>.log(<span class="keyword">this</span>)</div><div class="line">&#125;</div><div class="line">showThis() <span class="comment">// window</span></div><div class="line"><span class="keyword">new</span> showThis() <span class="comment">// showThis</span></div><div class="line"><span class="keyword">var</span> boss1 = &#123; <span class="attr">name</span>: <span class="string">'boss1'</span> &#125;</div><div class="line">showThis.call(boss1) <span class="comment">// boss1</span></div><div class="line"><span class="keyword">new</span> showThis.call(boss1) <span class="comment">// TypeError</span></div><div class="line"><span class="keyword">var</span> boss1showThis = showThis.bind(boss1)</div><div class="line">boss1showThis() <span class="comment">// boss1</span></div><div class="line"><span class="keyword">new</span> boss1showThis() <span class="comment">// showThis</span></div></pre></td></tr></table></figure></p>
+<h4 id="6-第六层：军令如山"><a href="#6-第六层：军令如山" class="headerlink" title="6. 第六层：军令如山"></a>6. 第六层：军令如山</h4><p>最后一个法力无边的大佬就是 ES2015 的箭头函数。箭头函数里的 <em>this</em> 不再妖艳，被永远封印到当前词法作用域之中，称作 Lexical this ，在代码运行前就可以确定。没有其他大佬可以覆盖。</p>
+<p>这样的好处就是方便让回调函数的 <em>this</em> 使用当前的作用域，不怕引起混淆。</p>
+<p>所以对于箭头函数，只要看它在哪里创建的就行。</p>
+<p>如果对 V8 实现的词法作用域感兴趣可以看看<br><a href="http://blog.crimx.com/2015/03/29/javascript-hoist-under-the-hood/" target="_blank" rel="external">这里</a>。<br><figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div></pre></td><td class="code"><pre><div class="line"><span class="function"><span class="keyword">function</span> <span class="title">callback</span> (<span class="params">cb</span>) </span>&#123;</div><div class="line">  cb()</div><div class="line">&#125;</div><div class="line">callback(<span class="function"><span class="params">()</span> =&gt;</span> &#123; <span class="built_in">console</span>.log(<span class="keyword">this</span>) &#125;) <span class="comment">// window</span></div><div class="line"><span class="keyword">var</span> boss1 = &#123;</div><div class="line">  <span class="attr">name</span>: <span class="string">'boss1'</span>,</div><div class="line">  <span class="attr">callback</span>: callback,</div><div class="line">  callback2 () &#123;</div><div class="line">    callback(<span class="function"><span class="params">()</span> =&gt;</span> &#123; <span class="built_in">console</span>.log(<span class="keyword">this</span>) &#125;)</div><div class="line">  &#125;</div><div class="line">&#125;</div><div class="line">boss1.callback(<span class="function"><span class="params">()</span> =&gt;</span> &#123; <span class="built_in">console</span>.log(<span class="keyword">this</span>) &#125;) <span class="comment">// still window</span></div><div class="line">boss1.callback2(<span class="function"><span class="params">()</span> =&gt;</span> &#123; <span class="built_in">console</span>.log(<span class="keyword">this</span>) &#125;) <span class="comment">// boss1</span></div></pre></td></tr></table></figure></p>
+<p>下面这种奇葩的使用方式就需要注意：<br><figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">var</span> returnThis = <span class="function"><span class="params">()</span> =&gt;</span> <span class="keyword">this</span></div><div class="line">returnThis() <span class="comment">// window</span></div><div class="line"><span class="keyword">new</span> returnThis() <span class="comment">// TypeError</span></div><div class="line"><span class="keyword">var</span> boss1 = &#123;</div><div class="line">  <span class="attr">name</span>: <span class="string">'boss1'</span>,</div><div class="line">  returnThis () &#123;</div><div class="line">    <span class="keyword">var</span> func = <span class="function"><span class="params">()</span> =&gt;</span> <span class="keyword">this</span></div><div class="line">    <span class="keyword">return</span> func()</div><div class="line">  &#125;</div><div class="line">&#125;</div><div class="line">returnThis.call(boss1) <span class="comment">// still window</span></div><div class="line"><span class="keyword">var</span> boss1returnThis = returnThis.bind(boss1)</div><div class="line">boss1returnThis() <span class="comment">// still window</span></div><div class="line">boss1.returnThis() <span class="comment">// boss1</span></div><div class="line"><span class="keyword">var</span> boss2 = &#123;</div><div class="line">  <span class="attr">name</span>: <span class="string">'boss2'</span>,</div><div class="line">  <span class="attr">returnThis</span>: boss1.returnThis</div><div class="line">&#125;</div><div class="line">boss2.returnThis() <span class="comment">// boss2</span></div></pre></td></tr></table></figure></p>
+<p>如果你不知道最后为什么会是 boss2，继续理解“对于箭头函数，只要看它在哪里创建”这句话。</p>
+<h4 id="参考"><a href="#参考" class="headerlink" title="参考"></a>参考</h4><ol>
+<li>Mozilla Developer Network</li>
+<li>Kyle Simpson, this &amp; object prototypes</li>
+<li>Axel Rauschmayer, Speaking JavaScript<br>[完]</li>
+</ol>
+
+          
+        
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
     <link itemprop="mainEntityOfPage" href="https://flyerooo.github.io/2017/03/30/《网络是怎样连接的》大纲/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -1975,127 +2125,6 @@
 
 
     
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
-    <link itemprop="mainEntityOfPage" href="https://flyerooo.github.io/2017/03/14/《实战ES2015》备忘/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="Jeffzzz">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="/images/avatar.gif">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Hexo">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-            
-            
-              
-                
-                <a class="post-title-link" href="/2017/03/14/《实战ES2015》备忘/" itemprop="url">
-                  《实战ES2015》备忘
-                </a>
-              
-            
-          </h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">发表于</span>
-              
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-03-14T11:19:00+08:00">
-                2017-03-14
-              </time>
-            
-
-            
-
-            
-          </span>
-
-          
-
-          
-            
-          
-
-          
-          
-
-          
-
-          
-
-          
-
-        </div>
-      </header>
-    
-
-
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-            <h6 id="箭头函数绑定上下文的特性，故不能随意在在顶层作用域使用箭头函数"><a href="#箭头函数绑定上下文的特性，故不能随意在在顶层作用域使用箭头函数" class="headerlink" title="箭头函数绑定上下文的特性，故不能随意在在顶层作用域使用箭头函数"></a>箭头函数绑定上下文的特性，故不能随意在在顶层作用域使用箭头函数</h6><figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">const</span> obj = &#123;</div><div class="line">	<span class="attr">msg</span>: <span class="string">'pong'</span>,</div><div class="line">	<span class="attr">ping</span>: <span class="function"><span class="params">()</span>=&gt;</span> <span class="keyword">this</span>.msg <span class="comment">//Waring!</span></div><div class="line">&#125;</div><div class="line"></div><div class="line">obj.ping() <span class="comment">// undefined</span></div><div class="line"><span class="keyword">var</span> msg = <span class="string">'bang'</span></div><div class="line">obj.ping() <span class="comment">//=&gt; bang</span></div></pre></td></tr></table></figure>
-<h6 id="属性名定义省略"><a href="#属性名定义省略" class="headerlink" title="属性名定义省略"></a>属性名定义省略</h6><figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">const</span> foo = <span class="number">123</span></div><div class="line"><span class="keyword">const</span> bar = <span class="function"><span class="params">()</span>=&gt;</span> foo</div><div class="line"><span class="keyword">const</span> obj = &#123;</div><div class="line">    foo,</div><div class="line">    bar</div><div class="line">&#125;</div><div class="line"><span class="built_in">console</span>.log(obj) <span class="comment">//=&gt; &#123; foo: 123, bar: [Function: bar] &#125;</span></div></pre></td></tr></table></figure>
-<p>剩余参数<br><figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div></pre></td><td class="code"><pre><div class="line"><span class="function"><span class="keyword">function</span> <span class="title">merge</span>(<span class="params">target=&#123;&#125;,...objs</span>) </span>&#123;</div><div class="line">    <span class="keyword">for</span> (<span class="keyword">const</span> obj <span class="keyword">of</span> objs)&#123;</div><div class="line">        <span class="keyword">const</span> keys = <span class="built_in">Object</span>.keys(obj)</div><div class="line">        <span class="keyword">for</span> (<span class="keyword">const</span> key <span class="keyword">of</span> keys)&#123;</div><div class="line">            target[key] = obj[key]</div><div class="line">        &#125;</div><div class="line">    &#125;</div><div class="line">    <span class="keyword">return</span> target</div><div class="line">&#125;</div><div class="line"><span class="built_in">console</span>.log(merge(&#123;<span class="attr">a</span>:<span class="number">1</span>&#125;,&#123;<span class="attr">b</span>:<span class="number">2</span>&#125;,&#123;<span class="attr">c</span>:<span class="number">3</span>&#125;))</div></pre></td></tr></table></figure></p>
-<p>解构传参<br><figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line"><span class="function"><span class="keyword">function</span> <span class="title">sum</span>(<span class="params">...numbers</span>) </span>&#123;</div><div class="line">    <span class="keyword">return</span> numbers.reduce(<span class="function">(<span class="params">a,b</span>)=&gt;</span> a+ b)</div><div class="line">&#125;</div><div class="line">sum.apply(<span class="literal">null</span>,[<span class="number">1</span>,<span class="number">2</span>,<span class="number">3</span>]) <span class="comment">//=&gt; 6</span></div><div class="line"><span class="comment">//更好的写法</span></div><div class="line">sum(...[<span class="number">1</span>,<span class="number">2</span>,<span class="number">3</span>]) <span class="comment">//=&gt; 6</span></div></pre></td></tr></table></figure></p>
-
-          
-        
-      
-    </div>
-
-    <div>
-      
-    </div>
-
-    <div>
-      
-    </div>
-
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-
-
-    
   </section>
 
   
@@ -2145,7 +2174,7 @@
           
             <div class="site-state-item site-state-posts">
               <a href="/archives">
-                <span class="site-state-item-count">11</span>
+                <span class="site-state-item-count">12</span>
                 <span class="site-state-item-name">日志</span>
               </a>
             </div>
