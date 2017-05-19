@@ -1,0 +1,359 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+  <title>JavaScript --JSON，数字存储，Ajax | 青穗黄的练习本</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta name="description" content="JSON
+串行化为JSON
+123456var person = &amp;#123;	firstName:&quot;John&quot;,	lastName:&quot;Doe&quot;,	age:30	&amp;#125;;var json = JSON.stringify(person);
+
+解析JSON
+1var johnDoe = JSON.parse(json);
+
+
+数据存储
+cookie
+
+cookie字符串
+名称和值
+过期时间
+路">
+<meta property="og:type" content="article">
+<meta property="og:title" content="JavaScript --JSON，数字存储，Ajax">
+<meta property="og:url" content="https://flyerooo.github.io/2016/08/16/Untitled/index.html">
+<meta property="og:site_name" content="青穗黄的练习本">
+<meta property="og:description" content="JSON
+串行化为JSON
+123456var person = &amp;#123;	firstName:&quot;John&quot;,	lastName:&quot;Doe&quot;,	age:30	&amp;#125;;var json = JSON.stringify(person);
+
+解析JSON
+1var johnDoe = JSON.parse(json);
+
+
+数据存储
+cookie
+
+cookie字符串
+名称和值
+过期时间
+路">
+<meta property="og:updated_time" content="2017-05-19T13:15:51.002Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="JavaScript --JSON，数字存储，Ajax">
+<meta name="twitter:description" content="JSON
+串行化为JSON
+123456var person = &amp;#123;	firstName:&quot;John&quot;,	lastName:&quot;Doe&quot;,	age:30	&amp;#125;;var json = JSON.stringify(person);
+
+解析JSON
+1var johnDoe = JSON.parse(json);
+
+
+数据存储
+cookie
+
+cookie字符串
+名称和值
+过期时间
+路">
+  
+    <link rel="alternate" href="/atom.xml" title="青穗黄的练习本" type="application/atom+xml">
+  
+  
+    <link rel="icon" href="/favicon.png">
+  
+  
+    
+  
+  <link rel="stylesheet" href="/css/style.css">
+  
+
+</head>
+
+<body>
+  <div id="container">
+    <div id="wrap">
+      <header id="header">
+  <div id="banner"></div>
+  <div id="header-outer" class="outer">
+    
+    <div id="header-inner" class="inner">
+      <nav id="sub-nav">
+        
+          <a id="nav-rss-link" class="nav-icon" href="/atom.xml" title="RSS Feed"></a>
+        
+        <a id="nav-search-btn" class="nav-icon" title="搜索"></a>
+      </nav>
+      <div id="search-form-wrap">
+        <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" results="0" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="https://flyerooo.github.io"></form>
+      </div>
+      <nav id="main-nav">
+        <a id="main-nav-toggle" class="nav-icon"></a>
+        
+          <a class="main-nav-link" href="/">首页</a>
+        
+          <a class="main-nav-link" href="/archives">归档</a>
+        
+          <a class="main-nav-link" href="/about">关于</a>
+        
+      </nav>
+      
+    </div>
+    <div id="header-title" class="inner">
+      <h1 id="logo-wrap">
+        <a href="/" id="logo">青穗黄的练习本</a>
+      </h1>
+      
+        <h2 id="subtitle-wrap">
+          <a href="/" id="subtitle">知而不行为不知</a>
+        </h2>
+      
+    </div>
+  </div>
+</header>
+      <div class="outer">
+        <section id="main"><article id="post-Untitled" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2016/08/16/Untitled/" class="article-date">
+  <time datetime="2016-08-16T12:51:00.000Z" itemprop="datePublished">2016-08-16</time>
+</a>
+    
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/JavaScript/">JavaScript</a>
+  </div>
+
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 class="article-title" itemprop="name">
+      JavaScript --JSON，数字存储，Ajax
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <!-- Table of Contents -->
+        
+        <h5 id="JSON"><a href="#JSON" class="headerlink" title="JSON"></a>JSON</h5><ul>
+<li><p>串行化为JSON</p>
+<figure class="highlight ebnf"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line"><span class="attribute">var person</span> = &#123;</div><div class="line">	firstName:<span class="string">"John"</span>,</div><div class="line">	lastName:<span class="string">"Doe"</span>,</div><div class="line">	age:30</div><div class="line">	&#125;;</div><div class="line"><span class="attribute">var json</span> = JSON.stringify(person);</div></pre></td></tr></table></figure>
+</li>
+<li><p>解析JSON</p>
+<figure class="highlight ebnf"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="attribute">var johnDoe</span> = JSON.parse(json);</div></pre></td></tr></table></figure>
+</li>
+</ul>
+<h4 id="数据存储"><a href="#数据存储" class="headerlink" title="数据存储"></a>数据存储</h4><ul>
+<li><p>cookie</p>
+<ul>
+<li>cookie字符串<ul>
+<li>名称和值</li>
+<li>过期时间</li>
+<li>路径</li>
+<li>域</li>
+</ul>
+</li>
+</ul>
+<ul>
+<li>创建cookie</li>
+<li>获取cookie</li>
+</ul>
+</li>
+<li><p>web存储</p>
+<ul>
+<li>设置数据<figure class="highlight stylus"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line"> localStorage<span class="selector-class">.setItem</span> (<span class="string">"userName"</span>,<span class="string">"Paul"</span>)</div><div class="line">or</div><div class="line">localStorage<span class="selector-class">.userName</span> = <span class="string">"Paul"</span></div></pre></td></tr></table></figure>
+</li>
+</ul>
+</li>
+<li><p>获取数据</p>
+<figure class="highlight stylus"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line"><span class="selector-tag">var</span> name = localStorage.getItem(<span class="string">"userName"</span>)</div><div class="line">or</div><div class="line"><span class="selector-tag">var</span> name = localStorage.userName</div></pre></td></tr></table></figure>
+</li>
+<li><p>删除数据</p>
+<figure class="highlight abnf"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">localStorage.removeItem(<span class="string">"userName"</span>)<span class="comment">;</span></div><div class="line">localStorage.userName = null<span class="comment">;</span></div><div class="line">localStorage.clear()<span class="comment">;</span></div></pre></td></tr></table></figure>
+</li>
+</ul>
+<h4 id="Ajax"><a href="#Ajax" class="headerlink" title="Ajax"></a>Ajax</h4><ul>
+<li>//创建request对象</li>
+<li>//初始化XMLHttpRequest对象</li>
+<li><p>//检查状态</p>
+<figure class="highlight fortran"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div></pre></td><td class="code"><pre><div class="line"><span class="function"><span class="keyword">function</span></span> reqReadyStateChange() &#123;</div><div class="line">    <span class="keyword">if</span> (request.readyState == <span class="number">4</span>)&#123;</div><div class="line">        var <span class="keyword">status</span> = request.<span class="keyword">status</span>;</div><div class="line">        <span class="keyword">if</span> (<span class="keyword">status</span> ==<span class="number">200</span>)&#123;</div><div class="line">            alert(request.responseText);</div><div class="line">        &#125; <span class="keyword">else</span> &#123;</div><div class="line">            alert(<span class="string">"The serve returend a status code of "</span> + <span class="keyword">status</span>);</div><div class="line">        &#125;</div><div class="line">    &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+</li>
+<li><p>//发送请求</p>
+<figure class="highlight autoit"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">request.<span class="built_in">send</span>(<span class="literal">null</span>)<span class="comment">;</span></div></pre></td></tr></table></figure>
+</li>
+<li><p>相关代码</p>
+</li>
+</ul>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">var</span> request = <span class="keyword">new</span> XMLHttpRequest();</div><div class="line"><span class="function"><span class="keyword">function</span> <span class="title">reqReadyStateChange</span>(<span class="params"></span>) </span>&#123;</div><div class="line">    <span class="comment">//</span></div><div class="line">&#125;</div><div class="line">request.open(<span class="string">"GET"</span>,<span class="string">'url'</span>);</div><div class="line">request.onreadystatechange = reqReadyStateChange;</div><div class="line">request.send(<span class="literal">null</span>);</div><div class="line"></div><div class="line"></div><div class="line"><span class="function"><span class="keyword">function</span> <span class="title">HttpRequest</span>(<span class="params">url,callback</span>) </span>&#123;</div><div class="line">    <span class="keyword">this</span>.request = <span class="keyword">new</span> XMLHttpRequest();</div><div class="line">    <span class="keyword">this</span>.request.open(<span class="string">"GET"</span>,url);</div><div class="line">    <span class="keyword">var</span> tempRequest = <span class="keyword">this</span>.request;</div><div class="line">    <span class="function"><span class="keyword">function</span> <span class="title">reqReadyStateChange</span>(<span class="params"></span>) </span>&#123;</div><div class="line">        <span class="keyword">if</span> (tempRequest.readyState == <span class="number">4</span>)&#123;</div><div class="line">            <span class="keyword">if</span> (tempRequest.status == <span class="number">200</span>)&#123;</div><div class="line">                callback(tempRequest.responseText);</div><div class="line">            &#125; <span class="keyword">else</span> &#123;</div><div class="line">                alert(<span class="string">"An error occurred trying to contact the server."</span>)</div><div class="line">            &#125;</div><div class="line">        &#125;</div><div class="line">    &#125;</div><div class="line">    <span class="keyword">this</span>.request.onreadystatechange = reqReadyStateChange;</div><div class="line">&#125;</div><div class="line">HttpRequest.prototype.send = <span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123;</div><div class="line">    <span class="keyword">this</span>.request.send(<span class="literal">null</span>);</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="https://flyerooo.github.io/2016/08/16/Untitled/" data-id="cj2vmz0to0005l8hyejexo2we" class="article-share-link">分享</a>
+      
+      
+      
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Ajax/">Ajax</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/JSON/">JSON</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/JavaScript/">JavaScript</a></li></ul>
+
+    </footer>
+  </div>
+  
+    
+<nav id="article-nav">
+  
+    <a href="/2016/10/05/Javascript应用开发指南/" id="article-nav-newer" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">上一篇</strong>
+      <div class="article-nav-title">
+        
+          《JavaScript应用开发实践指南》笔记
+        
+      </div>
+    </a>
+  
+  
+    <a href="/2016/03/20/《SQL必知必会》笔记/" id="article-nav-older" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">下一篇</strong>
+      <div class="article-nav-title">《SQL必知必会》笔记</div>
+    </a>
+  
+</nav>
+
+  
+</article>
+ 
+     
+  <div class="comments" id="comments">
+    
+     
+       
+      <div id="cloud-tie-wrapper" class="cloud-tie-wrapper"></div>
+    
+  </div>
+ 
+  
+
+</section>
+           
+    <aside id="sidebar">
+  
+    
+
+  
+    
+    <div class="widget-wrap">
+    
+      <div class="widget" id="toc-widget-fixed">
+      
+        <strong class="toc-title">文章目录</strong>
+        <div class="toc-widget-list">
+              <ol class="toc"><li class="toc-item toc-level-5"><a class="toc-link" href="#JSON"><span class="toc-number">1.</span> <span class="toc-text">JSON</span></a></li></ol></li><li class="toc-item toc-level-4"><a class="toc-link" href="#数据存储"><span class="toc-number"></span> <span class="toc-text">数据存储</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#Ajax"><span class="toc-number"></span> <span class="toc-text">Ajax</span></a>
+          </div>
+      </div>
+    </div>
+
+  
+    
+
+  
+    
+  
+    
+  
+    
+
+  
+</aside>
+
+      </div>
+      <footer id="footer">
+  
+  <div class="outer">
+    <div id="footer-left">
+      &copy; 2014 - 2017 Jeffzzz&nbsp;|&nbsp;
+      主题 <a href="https://github.com/giscafer/hexo-theme-cafe/" target="_blank">Cafe</a>
+    </div>
+     <div id="footer-right">
+      联系方式&nbsp;|&nbsp;wxl.pure@gmail.com
+    </div>
+  </div>
+</footer>
+ <script src="/jquery/jquery.min.js"></script>
+    </div>
+    <nav id="mobile-nav">
+  
+    <a href="/" class="mobile-nav-link">首页</a>
+  
+    <a href="/archives" class="mobile-nav-link">归档</a>
+  
+    <a href="/about" class="mobile-nav-link">关于</a>
+  
+</nav>
+    <img class="back-to-top-btn" src="/images/fly-to-top.png"/>
+<script>
+// Elevator script included on the page, already.
+window.onload = function() {
+  var elevator = new Elevator({
+    selector:'.back-to-top-btn',
+    element: document.querySelector('.back-to-top-btn'),
+    duration: 1000 // milliseconds
+  });
+}
+</script>
+      
+
+  
+    <script>
+      var cloudTieConfig = {
+        url: document.location.href, 
+        sourceId: "",
+        productKey: "e2fb4051c49842xxce669e634bc983f",
+        target: "cloud-tie-wrapper"
+      };
+    </script>
+    <script src="https://img1.ws.126.net/f2e/tie/yun/sdk/loader.js"></script>
+    
+
+  
+
+
+
+  
+    <script type="text/x-mathjax-config">
+      MathJax.Hub.Config({
+        tex2jax: {
+          inlineMath: [ ['$','$'], ["\\(","\\)"]  ],
+          processEscapes: true,
+          skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']
+        }
+      })
+    </script>
+
+    <script type="text/x-mathjax-config">
+      MathJax.Hub.Queue(function() {
+        var all = MathJax.Hub.getAllJax(), i;
+        for (i=0; i < all.length; i += 1) {
+          all[i].SourceElement().parentNode.className += ' has-jax';
+        }
+      })
+    </script>
+    <script type="text/javascript" src="//cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+  
+
+
+ <script src="/js/is.js"></script>
+
+
+  <link rel="stylesheet" href="/fancybox/jquery.fancybox.css">
+  <script src="/fancybox/jquery.fancybox.pack.js"></script>
+
+
+<script src="/js/script.js"></script>
+<script src="/js/elevator.js"></script>
+  </div>
+</body>
+</html>

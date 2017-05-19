@@ -37,7 +37,7 @@
         
           <a id="nav-rss-link" class="nav-icon" href="/atom.xml" title="RSS Feed"></a>
         
-        <a id="nav-search-btn" class="nav-icon" title="Search"></a>
+        <a id="nav-search-btn" class="nav-icon" title="搜索"></a>
       </nav>
       <div id="search-form-wrap">
         <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" results="0" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="https://flyerooo.github.io"></form>
@@ -104,7 +104,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="https://flyerooo.github.io/2017/03/14/《实战ES2015》备忘/" data-id="cj2vmz0w6000sl8hycans0mw7" class="article-share-link">Share</a>
+      <a data-url="https://flyerooo.github.io/2017/03/14/《实战ES2015》备忘/" data-id="cj2vmz0w6000sl8hycans0mw7" class="article-share-link">分享</a>
       
       
       
@@ -159,62 +159,11 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="https://flyerooo.github.io/2017/01/19/理解web路由-0/" data-id="cj2vmz0wq0017l8hy0pfdi0s1" class="article-share-link">Share</a>
+      <a data-url="https://flyerooo.github.io/2017/01/19/理解web路由-0/" data-id="cj2vmz0wq0017l8hy0pfdi0s1" class="article-share-link">分享</a>
       
       
       
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/路由/">路由</a></li></ul>
-
-    </footer>
-  </div>
-  
-</article>
- 
-
-
-  
-    <article id="post-Untitled" class="article article-type-post" itemscope itemprop="blogPost">
-  <div class="article-meta">
-    <a href="/2016/11/24/Untitled/" class="article-date">
-  <time datetime="2016-11-24T11:46:00.000Z" itemprop="datePublished">2016-11-24</time>
-</a>
-    
-  <div class="article-category">
-    <a class="article-category-link" href="/categories/备忘/">备忘</a>►<a class="article-category-link" href="/categories/备忘/JavaScript/">JavaScript</a>
-  </div>
-
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2016/11/24/Untitled/">JavaScript容易理解错误的例子</a>
-    </h1>
-  
-
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <!-- Table of Contents -->
-        
-        <p>1<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">for</span> (<span class="keyword">var</span> i = <span class="number">1</span>; i &lt;=<span class="number">5</span>; i++)&#123;   </div><div class="line">    setTimeout(<span class="function"><span class="keyword">function</span> <span class="title">timer</span>(<span class="params"></span>) </span>&#123;        </div><div class="line">        <span class="built_in">console</span>.log(i);    </div><div class="line">    &#125;, i*<span class="number">1000</span>);</div><div class="line">&#125;<span class="comment">//输出五次6</span></div></pre></td></tr></table></figure></p>
-<p>2<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">for</span> (<span class="keyword">let</span> i = <span class="number">1</span>; i &lt;=<span class="number">5</span>; i++)&#123;    </div><div class="line">    setTimeout(<span class="function"><span class="keyword">function</span> <span class="title">timer</span>(<span class="params"></span>) </span>&#123;        </div><div class="line">        <span class="built_in">console</span>.log(i);    </div><div class="line">    &#125;, i*<span class="number">1000</span>);</div><div class="line">&#125; <span class="comment">//输出1,2,3,4,5</span></div></pre></td></tr></table></figure></p>
-<p>3<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">for</span> (<span class="keyword">var</span> i = <span class="number">1</span>; i &lt;=<span class="number">5</span>; i++)&#123;</div><div class="line">    (<span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123;</div><div class="line">        <span class="keyword">var</span> j = i;</div><div class="line">        setTimeout(<span class="function"><span class="keyword">function</span> <span class="title">timer</span>(<span class="params"></span>) </span>&#123;</div><div class="line">            <span class="built_in">console</span>.log(j);</div><div class="line">        &#125;, j*<span class="number">1000</span>);</div><div class="line">    &#125;)(i);&#125; <span class="comment">//输出1,2,3,4,5</span></div></pre></td></tr></table></figure></p>
-<p>4<br>改进这段代码<br><figure class="highlight lisp"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line">for (<span class="name">var</span> i =1<span class="comment">; i&lt;=5; i++)&#123;</span></div><div class="line">    (<span class="name">function</span> (<span class="name">j</span>) &#123;</div><div class="line">        setTimeout(<span class="name">function</span> timer() &#123;</div><div class="line">            console.log(<span class="name">j</span>)<span class="comment">;</span></div><div class="line">        &#125;, j*1000)<span class="comment">;</span></div><div class="line">    &#125;)(<span class="name">i</span>)<span class="comment">;&#125;</span></div></pre></td></tr></table></figure></p>
-<p>代码1中到底有什么<em>缺陷</em>导致它的行为同语义所暗示的不一致呢？<br>缺陷是我们试图假设循环中的每个迭代在运行时都会给自己“捕获”一个i的副本，但是根据作用域的工作原理，实际情况是尽管循环中的五个函数实在各个迭代中分别定义的，但是他们都<strong>被封闭在一个共享的全局作用域中</strong>，因此实际上只有一个i.</p>
-
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="https://flyerooo.github.io/2016/11/24/Untitled/" data-id="cj2vmz0to0005l8hyejexo2we" class="article-share-link">Share</a>
-      
-      
-      
-  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/JavaScript/">JavaScript</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/前端/">前端</a></li></ul>
 
     </footer>
   </div>
@@ -266,11 +215,106 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="https://flyerooo.github.io/2016/10/05/Javascript应用开发指南/" data-id="cj2vmz0ty0007l8hyr2ljqe6v" class="article-share-link">Share</a>
+      <a data-url="https://flyerooo.github.io/2016/10/05/Javascript应用开发指南/" data-id="cj2vmz0ty0007l8hyr2ljqe6v" class="article-share-link">分享</a>
       
       
       
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/JavaScript/">JavaScript</a></li></ul>
+
+    </footer>
+  </div>
+  
+</article>
+ 
+
+
+  
+    <article id="post-Untitled" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2016/08/16/Untitled/" class="article-date">
+  <time datetime="2016-08-16T12:51:00.000Z" itemprop="datePublished">2016-08-16</time>
+</a>
+    
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/JavaScript/">JavaScript</a>
+  </div>
+
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2016/08/16/Untitled/">JavaScript --JSON，数字存储，Ajax</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <!-- Table of Contents -->
+        
+        <h5 id="JSON"><a href="#JSON" class="headerlink" title="JSON"></a>JSON</h5><ul>
+<li><p>串行化为JSON</p>
+<figure class="highlight ebnf"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line"><span class="attribute">var person</span> = &#123;</div><div class="line">	firstName:<span class="string">"John"</span>,</div><div class="line">	lastName:<span class="string">"Doe"</span>,</div><div class="line">	age:30</div><div class="line">	&#125;;</div><div class="line"><span class="attribute">var json</span> = JSON.stringify(person);</div></pre></td></tr></table></figure>
+</li>
+<li><p>解析JSON</p>
+<figure class="highlight ebnf"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="attribute">var johnDoe</span> = JSON.parse(json);</div></pre></td></tr></table></figure>
+</li>
+</ul>
+<h4 id="数据存储"><a href="#数据存储" class="headerlink" title="数据存储"></a>数据存储</h4><ul>
+<li><p>cookie</p>
+<ul>
+<li>cookie字符串<ul>
+<li>名称和值</li>
+<li>过期时间</li>
+<li>路径</li>
+<li>域</li>
+</ul>
+</li>
+</ul>
+<ul>
+<li>创建cookie</li>
+<li>获取cookie</li>
+</ul>
+</li>
+<li><p>web存储</p>
+<ul>
+<li>设置数据<figure class="highlight stylus"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line"> localStorage<span class="selector-class">.setItem</span> (<span class="string">"userName"</span>,<span class="string">"Paul"</span>)</div><div class="line">or</div><div class="line">localStorage<span class="selector-class">.userName</span> = <span class="string">"Paul"</span></div></pre></td></tr></table></figure>
+</li>
+</ul>
+</li>
+<li><p>获取数据</p>
+<figure class="highlight stylus"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line"><span class="selector-tag">var</span> name = localStorage.getItem(<span class="string">"userName"</span>)</div><div class="line">or</div><div class="line"><span class="selector-tag">var</span> name = localStorage.userName</div></pre></td></tr></table></figure>
+</li>
+<li><p>删除数据</p>
+<figure class="highlight abnf"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">localStorage.removeItem(<span class="string">"userName"</span>)<span class="comment">;</span></div><div class="line">localStorage.userName = null<span class="comment">;</span></div><div class="line">localStorage.clear()<span class="comment">;</span></div></pre></td></tr></table></figure>
+</li>
+</ul>
+<h4 id="Ajax"><a href="#Ajax" class="headerlink" title="Ajax"></a>Ajax</h4><ul>
+<li>//创建request对象</li>
+<li>//初始化XMLHttpRequest对象</li>
+<li><p>//检查状态</p>
+<figure class="highlight fortran"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div></pre></td><td class="code"><pre><div class="line"><span class="function"><span class="keyword">function</span></span> reqReadyStateChange() &#123;</div><div class="line">    <span class="keyword">if</span> (request.readyState == <span class="number">4</span>)&#123;</div><div class="line">        var <span class="keyword">status</span> = request.<span class="keyword">status</span>;</div><div class="line">        <span class="keyword">if</span> (<span class="keyword">status</span> ==<span class="number">200</span>)&#123;</div><div class="line">            alert(request.responseText);</div><div class="line">        &#125; <span class="keyword">else</span> &#123;</div><div class="line">            alert(<span class="string">"The serve returend a status code of "</span> + <span class="keyword">status</span>);</div><div class="line">        &#125;</div><div class="line">    &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+</li>
+<li><p>//发送请求</p>
+<figure class="highlight autoit"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">request.<span class="built_in">send</span>(<span class="literal">null</span>)<span class="comment">;</span></div></pre></td></tr></table></figure>
+</li>
+<li><p>相关代码</p>
+</li>
+</ul>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">var</span> request = <span class="keyword">new</span> XMLHttpRequest();</div><div class="line"><span class="function"><span class="keyword">function</span> <span class="title">reqReadyStateChange</span>(<span class="params"></span>) </span>&#123;</div><div class="line">    <span class="comment">//</span></div><div class="line">&#125;</div><div class="line">request.open(<span class="string">"GET"</span>,<span class="string">'url'</span>);</div><div class="line">request.onreadystatechange = reqReadyStateChange;</div><div class="line">request.send(<span class="literal">null</span>);</div><div class="line"></div><div class="line"></div><div class="line"><span class="function"><span class="keyword">function</span> <span class="title">HttpRequest</span>(<span class="params">url,callback</span>) </span>&#123;</div><div class="line">    <span class="keyword">this</span>.request = <span class="keyword">new</span> XMLHttpRequest();</div><div class="line">    <span class="keyword">this</span>.request.open(<span class="string">"GET"</span>,url);</div><div class="line">    <span class="keyword">var</span> tempRequest = <span class="keyword">this</span>.request;</div><div class="line">    <span class="function"><span class="keyword">function</span> <span class="title">reqReadyStateChange</span>(<span class="params"></span>) </span>&#123;</div><div class="line">        <span class="keyword">if</span> (tempRequest.readyState == <span class="number">4</span>)&#123;</div><div class="line">            <span class="keyword">if</span> (tempRequest.status == <span class="number">200</span>)&#123;</div><div class="line">                callback(tempRequest.responseText);</div><div class="line">            &#125; <span class="keyword">else</span> &#123;</div><div class="line">                alert(<span class="string">"An error occurred trying to contact the server."</span>)</div><div class="line">            &#125;</div><div class="line">        &#125;</div><div class="line">    &#125;</div><div class="line">    <span class="keyword">this</span>.request.onreadystatechange = reqReadyStateChange;</div><div class="line">&#125;</div><div class="line">HttpRequest.prototype.send = <span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123;</div><div class="line">    <span class="keyword">this</span>.request.send(<span class="literal">null</span>);</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="https://flyerooo.github.io/2016/08/16/Untitled/" data-id="cj2vmz0to0005l8hyejexo2we" class="article-share-link">分享</a>
+      
+      
+      
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Ajax/">Ajax</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/JSON/">JSON</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/JavaScript/">JavaScript</a></li></ul>
 
     </footer>
   </div>
@@ -418,7 +462,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="https://flyerooo.github.io/2016/03/20/《SQL必知必会》笔记/" data-id="cj2vmz0vm000ll8hyglw9lqma" class="article-share-link">Share</a>
+      <a data-url="https://flyerooo.github.io/2016/03/20/《SQL必知必会》笔记/" data-id="cj2vmz0vm000ll8hyglw9lqma" class="article-share-link">分享</a>
       
       
       
@@ -465,7 +509,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="https://flyerooo.github.io/2016/03/17/不要说没时间/" data-id="cj2vmz0w6000wl8hywg8stcbd" class="article-share-link">Share</a>
+      <a data-url="https://flyerooo.github.io/2016/03/17/不要说没时间/" data-id="cj2vmz0w6000wl8hywg8stcbd" class="article-share-link">分享</a>
       
       
       
@@ -509,7 +553,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="https://flyerooo.github.io/2015/12/23/第十一章-函数和函数式编程/" data-id="cj2vmz0x0001el8hyh9rwqcvl" class="article-share-link">Share</a>
+      <a data-url="https://flyerooo.github.io/2015/12/23/第十一章-函数和函数式编程/" data-id="cj2vmz0x0001el8hyh9rwqcvl" class="article-share-link">分享</a>
       
       
       
@@ -556,7 +600,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="https://flyerooo.github.io/2015/12/06/《Python》-6-22-练习/" data-id="cj2vmz0vc000hl8hycdcxnhn6" class="article-share-link">Share</a>
+      <a data-url="https://flyerooo.github.io/2015/12/06/《Python》-6-22-练习/" data-id="cj2vmz0vc000hl8hycdcxnhn6" class="article-share-link">分享</a>
       
       
       
@@ -602,7 +646,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="https://flyerooo.github.io/2015/12/03/《Python核心编程》/" data-id="cj2vmz0us000dl8hyncu4fuuw" class="article-share-link">Share</a>
+      <a data-url="https://flyerooo.github.io/2015/12/03/《Python核心编程》/" data-id="cj2vmz0us000dl8hyncu4fuuw" class="article-share-link">分享</a>
       
       
       
@@ -651,7 +695,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="https://flyerooo.github.io/2015/12/01/《Python-核心编程》/" data-id="cj2vmz0ui000al8hyud4wjfxq" class="article-share-link">Share</a>
+      <a data-url="https://flyerooo.github.io/2015/12/01/《Python-核心编程》/" data-id="cj2vmz0ui000al8hyud4wjfxq" class="article-share-link">分享</a>
       
       
       
@@ -668,7 +712,7 @@
 
 
   <nav id="page-nav">
-    <a class="extend prev" rel="prev" href="/">&laquo; Prev</a><a class="page-number" href="/">1</a><span class="page-number current">2</span><a class="page-number" href="/page/3/">3</a><a class="extend next" rel="next" href="/page/3/">Next&raquo;</a>
+    <a class="extend prev" rel="prev" href="/">&laquo; 上一页</a><a class="page-number" href="/">1</a><span class="page-number current">2</span><a class="page-number" href="/page/3/">3</a><a class="extend next" rel="next" href="/page/3/">下一页&raquo;</a>
   </nav>
 </section>
            
@@ -686,7 +730,7 @@
   
     
   <div class="widget-wrap">
-    <h3 class="widget-title recent-posts">Recent Posts</h3>
+    <h3 class="widget-title recent-posts">最新文章</h3>
     <div class="widget">
       <ul>
         
@@ -726,10 +770,10 @@
   <div class="outer">
     <div id="footer-left">
       &copy; 2014 - 2017 Jeffzzz&nbsp;|&nbsp;
-      Theme by <a href="https://github.com/giscafer/hexo-theme-cafe/" target="_blank">Cafe</a>
+      主题 <a href="https://github.com/giscafer/hexo-theme-cafe/" target="_blank">Cafe</a>
     </div>
      <div id="footer-right">
-      Contact&nbsp;|&nbsp;wxl.pure@gmail.com
+      联系方式&nbsp;|&nbsp;wxl.pure@gmail.com
     </div>
   </div>
 </footer>
