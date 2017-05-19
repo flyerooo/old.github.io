@@ -1,0 +1,509 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+  <title>《SQL必知必会》笔记 | 青穗黄</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta name="description" content="MySQL
+
+
+
+MySQL
+数据类型
+字符型数据
+字符串
+文本
+二进制
+
+
+数值型数据
+时间数据
+
+
+表的创建
+设计
+精化
+确保没有重复（外键除外）或复合列
+
+
+构建SQL方案语句
+
+
+表
+列
+主键
+任意两行都不具有相同的主键值
+每一行都必须具有一个主键值（主键值不允许NULL值）
+主键列中的值不允许修改或更新
+主键值不能重用（如果某行从表中删除，它的主键不能赋给以后的新行）
+
+
+
+
+行
+
+
+操">
+<meta property="og:type" content="article">
+<meta property="og:title" content="《SQL必知必会》笔记">
+<meta property="og:url" content="https://flyerooo.github.io/2015/12/20/《SQL必知必会》笔记/index.html">
+<meta property="og:site_name" content="青穗黄">
+<meta property="og:description" content="MySQL
+
+
+
+MySQL
+数据类型
+字符型数据
+字符串
+文本
+二进制
+
+
+数值型数据
+时间数据
+
+
+表的创建
+设计
+精化
+确保没有重复（外键除外）或复合列
+
+
+构建SQL方案语句
+
+
+表
+列
+主键
+任意两行都不具有相同的主键值
+每一行都必须具有一个主键值（主键值不允许NULL值）
+主键列中的值不允许修改或更新
+主键值不能重用（如果某行从表中删除，它的主键不能赋给以后的新行）
+
+
+
+
+行
+
+
+操">
+<meta property="og:updated_time" content="2017-05-19T06:18:02.952Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="《SQL必知必会》笔记">
+<meta name="twitter:description" content="MySQL
+
+
+
+MySQL
+数据类型
+字符型数据
+字符串
+文本
+二进制
+
+
+数值型数据
+时间数据
+
+
+表的创建
+设计
+精化
+确保没有重复（外键除外）或复合列
+
+
+构建SQL方案语句
+
+
+表
+列
+主键
+任意两行都不具有相同的主键值
+每一行都必须具有一个主键值（主键值不允许NULL值）
+主键列中的值不允许修改或更新
+主键值不能重用（如果某行从表中删除，它的主键不能赋给以后的新行）
+
+
+
+
+行
+
+
+操">
+  
+    <link rel="alternate" href="/atom.xml" title="青穗黄" type="application/atom+xml">
+  
+  
+    <link rel="icon" href="/favicon.png">
+  
+  
+    
+  
+  <link rel="stylesheet" href="/css/style.css">
+  
+
+</head>
+
+<body>
+  <div id="container">
+    <div id="wrap">
+      <header id="header">
+  <div id="banner"></div>
+  <div id="header-outer" class="outer">
+    
+    <div id="header-inner" class="inner">
+      <nav id="sub-nav">
+        
+          <a id="nav-rss-link" class="nav-icon" href="/atom.xml" title="RSS Feed"></a>
+        
+        <a id="nav-search-btn" class="nav-icon" title="Zoeken"></a>
+      </nav>
+      <div id="search-form-wrap">
+        <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" results="0" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="https://flyerooo.github.io"></form>
+      </div>
+      <nav id="main-nav">
+        <a id="main-nav-toggle" class="nav-icon"></a>
+        
+          <a class="main-nav-link" href="/">首页</a>
+        
+          <a class="main-nav-link" href="/archives">归档</a>
+        
+          <a class="main-nav-link" href="/about">关于</a>
+        
+      </nav>
+      
+    </div>
+    <div id="header-title" class="inner">
+      <h1 id="logo-wrap">
+        <a href="/" id="logo">青穗黄</a>
+      </h1>
+      
+        <h2 id="subtitle-wrap">
+          <a href="/" id="subtitle">知而不行为不知</a>
+        </h2>
+      
+    </div>
+  </div>
+</header>
+      <div class="outer">
+        <section id="main"><article id="post-《SQL必知必会》笔记" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2015/12/20/《SQL必知必会》笔记/" class="article-date">
+  <time datetime="2015-12-20T12:15:00.000Z" itemprop="datePublished">2015-12-20</time>
+</a>
+    
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/SQL/">SQL</a>►<a class="article-category-link" href="/categories/SQL/MySQL/">MySQL</a>
+  </div>
+
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 class="article-title" itemprop="name">
+      《SQL必知必会》笔记
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <!-- Table of Contents -->
+        
+        <div class="export-wrapper"><br><br><div style="font-size: 24px; padding: 20px 15px 0;"><br><br><div style="padding-bottom: 10px">MySQL</div>
+
+<p></p></div><p></p>
+<ul>
+<li><span class="content mubu-node" style="line-height: 22px; min-height: 22px; font-size: 14px; display: inline-block; vertical-align: top;">MySQL</span><ul>
+<li><span class="content mubu-node" style="line-height: 22px; min-height: 22px; font-size: 14px; display: inline-block; vertical-align: top;">数据类型</span><ul>
+<li><span class="content mubu-node" style="line-height: 22px; min-height: 22px; font-size: 14px; display: inline-block; vertical-align: top;">字符型数据</span><ul>
+<li><span class="content mubu-node" style="line-height: 22px; min-height: 22px; font-size: 14px; display: inline-block; vertical-align: top;">字符串</span></li>
+<li><span class="content mubu-node" style="line-height: 22px; min-height: 22px; font-size: 14px; display: inline-block; vertical-align: top;">文本</span></li>
+<li><span class="content mubu-node" style="line-height: 22px; min-height: 22px; font-size: 14px; display: inline-block; vertical-align: top;">二进制</span></li>
+</ul>
+</li>
+<li><span class="content mubu-node" style="line-height: 22px; min-height: 22px; font-size: 14px; display: inline-block; vertical-align: top;">数值型数据</span></li>
+<li><span class="content mubu-node" style="line-height: 22px; min-height: 22px; font-size: 14px; display: inline-block; vertical-align: top;">时间数据</span></li>
+</ul>
+</li>
+<li><span class="content mubu-node" style="line-height: 22px; min-height: 22px; font-size: 14px; display: inline-block; vertical-align: top;">表的创建</span><ul>
+<li><span class="content mubu-node" style="line-height: 22px; min-height: 22px; font-size: 14px; display: inline-block; vertical-align: top;">设计</span></li>
+<li><span class="content mubu-node" style="line-height: 22px; min-height: 22px; font-size: 14px; display: inline-block; vertical-align: top;">精化</span><ul>
+<li><span class="content mubu-node" style="line-height: 22px; min-height: 22px; font-size: 14px; display: inline-block; vertical-align: top;">确保没有重复（外键除外）或复合列</span></li>
+</ul>
+</li>
+<li><span class="content mubu-node" style="line-height: 22px; min-height: 22px; font-size: 14px; display: inline-block; vertical-align: top;">构建SQL方案语句</span></li>
+</ul>
+</li>
+<li><span class="content mubu-node" style="line-height: 22px; min-height: 22px; font-size: 14px; display: inline-block; vertical-align: top;">表</span><ul>
+<li><span class="content mubu-node" style="line-height: 22px; min-height: 22px; font-size: 14px; display: inline-block; vertical-align: top;">列</span><ul>
+<li><span class="content mubu-node" style="line-height: 22px; min-height: 22px; font-size: 14px; display: inline-block; vertical-align: top;">主键</span><ul>
+<li><span class="content mubu-node" style="line-height: 22px; min-height: 22px; font-size: 14px; display: inline-block; vertical-align: top;">任意两行都不具有相同的主键值</span></li>
+<li><span class="content mubu-node" style="line-height: 22px; min-height: 22px; font-size: 14px; display: inline-block; vertical-align: top;">每一行都必须具有一个主键值（主键值不允许NULL值）</span></li>
+<li><span class="content mubu-node" style="line-height: 22px; min-height: 22px; font-size: 14px; display: inline-block; vertical-align: top;">主键列中的值不允许修改或更新</span></li>
+<li><span class="content mubu-node" style="line-height: 22px; min-height: 22px; font-size: 14px; display: inline-block; vertical-align: top;">主键值不能重用（如果某行从表中删除，它的主键不能赋给以后的新行）</span></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><span class="content mubu-node" style="line-height: 22px; min-height: 22px; font-size: 14px; display: inline-block; vertical-align: top;">行</span></li>
+</ul>
+</li>
+<li><span class="content mubu-node" style="line-height: 22px; min-height: 22px; font-size: 14px; display: inline-block; vertical-align: top;">操作</span><ul>
+<li><span class="content mubu-node" style="line-height: 22px; min-height: 22px; font-size: 14px; display: inline-block; vertical-align: top;">登录到MySQL</span><ul>
+<li><span class="content mubu-node" style="line-height: 22px; min-height: 22px; font-size: 14px; display: inline-block; vertical-align: top;">mysql -h 主机名 -u 用户名 -p</span><ul>
+<li><span class="content mubu-node" style="line-height: 22px; min-height: 22px; font-size: 14px; display: inline-block; vertical-align: top;">-h : 该命令用于指定客户端所要登录的MySQL主机名, 登录当前机器该参数可以省略;</span></li>
+<li><span class="content mubu-node" style="line-height: 22px; min-height: 22px; font-size: 14px; display: inline-block; vertical-align: top;">-u : 所要登录的用户名;</span></li>
+<li><span class="content mubu-node" style="line-height: 22px; min-height: 22px; font-size: 14px; display: inline-block; vertical-align: top;">-p : 告诉服务器将会使用一个密码来登录, 如果所要登录的用户名密码为空, 可以忽略此选项。</span></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><span class="content mubu-node" style="line-height: 22px; min-height: 22px; font-size: 14px; display: inline-block; vertical-align: top;">创建一个数据库</span><ul>
+<li><span class="content mubu-node" style="line-height: 22px; min-height: 22px; font-size: 14px; display: inline-block; vertical-align: top;">create database 数据库名 [其它选项]</span></li>
+<li><span class="content mubu-node" style="line-height: 22px; min-height: 22px; font-size: 14px; display: inline-block; vertical-align: top;">查看已经创建的全部数据库show databases;</span></li>
+</ul>
+</li>
+<li><span class="content mubu-node" style="line-height: 22px; min-height: 22px; font-size: 14px; display: inline-block; vertical-align: top;">选择要操作的数据库</span><ul>
+<li><span class="content mubu-node" style="line-height: 22px; min-height: 22px; font-size: 14px; display: inline-block; vertical-align: top;">在登录数据库时指定：mysql -D 所选择的数据库名 -h 主机名 -u 用户名 -p</span></li>
+<li><span class="content mubu-node" style="line-height: 22px; min-height: 22px; font-size: 14px; display: inline-block; vertical-align: top;">在登陆后使用use语句指定：use 数据库名</span></li>
+</ul>
+</li>
+<li><span class="content mubu-node" style="line-height: 22px; min-height: 22px; font-size: 14px; display: inline-block; vertical-align: top;">创建数据库表</span><ul>
+<li><span class="content mubu-node" style="line-height: 22px; min-height: 22px; font-size: 14px; display: inline-block; vertical-align: top;">create table 表名称（列声明）</span><ul>
+<li><span class="content mubu-node" style="line-height: 22px; min-height: 22px; font-size: 14px; display: inline-block; vertical-align: top;">对于一些较长的语句在命令提示符下可能容易输错，因此我们可以通过任何文本编辑器将语句输入好后保存为createtable.sql的文件中，通过命令提示符下的文件重定向执行该脚本</span></li>
+<li><span class="content mubu-node" style="line-height: 22px; min-height: 22px; font-size: 14px; display: inline-block; vertical-align: top;">mysql -D samp_db -u root -p &lt; createtable.sql</span></li>
+<li><span class="content mubu-node" style="line-height: 22px; min-height: 22px; font-size: 14px; display: inline-block; vertical-align: top;">提示：1.如果连接远程主机加上-h指令2.createtable.sql文件若不在付钱工作目录下需要指定文件的完整路径</span></li>
+</ul>
+</li>
+<li><span class="content mubu-node" style="line-height: 22px; min-height: 22px; font-size: 14px; display: inline-block; vertical-align: top;">create table students （ id int unsigned not null auto_increment primary     key, name char(8) not null, sex char(4) not null, age tinyint unsigned not null, tel char(13) null default</span></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><span class="content mubu-node" style="line-height: 22px; min-height: 22px; font-size: 14px; display: inline-block; vertical-align: top;">操作MySQL数据库</span><ul>
+<li><span class="content mubu-node" style="line-height: 22px; min-height: 22px; font-size: 14px; display: inline-block; vertical-align: top;">向表中插入数据</span><ul>
+<li><span class="content mubu-node" style="line-height: 22px; min-height: 22px; font-size: 14px; display: inline-block; vertical-align: top;">insert [into] 表名 [(列名1，列名2，列名3，…)] values（值1，值2，值3，…)</span></li>
+<li><span class="content mubu-node" style="line-height: 22px; min-height: 22px; font-size: 14px; display: inline-block; vertical-align: top;">其中 [] 内的内容是可选的, 例如, 要给 samp_db 数据库中的 students 表插入一条记录, 执行语句: insert into students values(NULL,</span></li>
+<li><span class="content mubu-node" style="line-height: 22px; min-height: 22px; font-size: 14px; display: inline-block; vertical-align: top;">有时我们只需要插入部分数据, 或者不按照列的顺序进行插入, 可以使用这样的形式进行插入: insert into students (name, sex, age) values(</span></li>
+</ul>
+</li>
+<li><span class="content mubu-node" style="line-height: 22px; min-height: 22px; font-size: 14px; display: inline-block; vertical-align: top;">查询数据表中的数据</span><ul>
+<li><span class="content mubu-node" style="line-height: 22px; min-height: 22px; font-size: 14px; display: inline-block; vertical-align: top;">select 列名称 from 表名称 [查询条件] </span></li>
+<li><span class="content mubu-node" style="line-height: 22px; min-height: 22px; font-size: 14px; display: inline-block; vertical-align: top;">select 列名称 from 表名称 [查询条件] where 条件</span></li>
+</ul>
+</li>
+<li><span class="content mubu-node" style="line-height: 22px; min-height: 22px; font-size: 14px; display: inline-block; vertical-align: top;">更新表中的数据</span><ul>
+<li><span class="content mubu-node" style="line-height: 22px; min-height: 22px; font-size: 14px; display: inline-block; vertical-align: top;">update 表名称 set 列名称=新值 where 更新条件</span></li>
+</ul>
+</li>
+<li><span class="content mubu-node" style="line-height: 22px; min-height: 22px; font-size: 14px; display: inline-block; vertical-align: top;">删除表中的数据</span><ul>
+<li><span class="content mubu-node" style="line-height: 22px; min-height: 22px; font-size: 14px; display: inline-block; vertical-align: top;">delete from 表名称 where 删除条件</span></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><span class="content mubu-node" style="line-height: 22px; min-height: 22px; font-size: 14px; display: inline-block; vertical-align: top;">创建后表的修改</span><ul>
+<li><span class="content mubu-node" style="line-height: 22px; min-height: 22px; font-size: 14px; display: inline-block; vertical-align: top;">alter table 用于创建后对表的修改</span></li>
+<li><span class="content mubu-node" style="line-height: 22px; min-height: 22px; font-size: 14px; display: inline-block; vertical-align: top;">添加列 基本形式：alter table 表名 add 列名 列数据类型 [after 插入位置]</span></li>
+<li><span class="content mubu-node" style="line-height: 22px; min-height: 22px; font-size: 14px; display: inline-block; vertical-align: top;">修改列 基本形式：alter table   表名 change 列名称 列新名称 新数据类型</span></li>
+<li><span class="content mubu-node" style="line-height: 22px; min-height: 22px; font-size: 14px; display: inline-block; vertical-align: top;">删除列 基本形式: alter table 表名 drop 列名称</span></li>
+<li><span class="content mubu-node" style="line-height: 22px; min-height: 22px; font-size: 14px; display: inline-block; vertical-align: top;">重命名表 基本形式: alter table 表名 rename 新表名;</span></li>
+<li><span class="content mubu-node" style="line-height: 22px; min-height: 22px; font-size: 14px; display: inline-block; vertical-align: top;">删除整个数据库 基本形式: drop database 数据库名;</span></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<p></p></div><br><a href="http://naotu.baidu.com/file/1b8c139710f4c216e0d6b4580355959f?token=3c52e74b7949abe4" target="_blank" rel="external">思维导图地址</a><p></p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="https://flyerooo.github.io/2015/12/20/《SQL必知必会》笔记/" data-id="cj2vh5sgg0004owhyotkvb66x" class="article-share-link">Delen</a>
+      
+      
+      
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/MySQL/">MySQL</a></li></ul>
+
+    </footer>
+  </div>
+  
+    
+<nav id="article-nav">
+  
+    <a href="/2015/12/23/第十一章-函数和函数式编程/" id="article-nav-newer" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Nieuwer</strong>
+      <div class="article-nav-title">
+        
+          《Python核心编程》第十一章 函数和函数式编程
+        
+      </div>
+    </a>
+  
+  
+    <a href="/2015/12/19/《Python核心编程》/" id="article-nav-older" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Ouder</strong>
+      <div class="article-nav-title">《Python核心编程》4.10练习</div>
+    </a>
+  
+</nav>
+
+  
+</article>
+ 
+     
+  <div class="comments" id="comments">
+    
+     
+       
+      <div id="cloud-tie-wrapper" class="cloud-tie-wrapper"></div>
+    
+  </div>
+ 
+  
+
+</section>
+           
+    <aside id="sidebar">
+  
+    
+
+  
+    
+  
+    
+
+  
+    
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title recent-posts">Recente berichten</h3>
+    <div class="widget">
+      <ul>
+        
+          <li>
+            <a href="/2017/04/03/this语义/">this语义</a>
+          </li>
+        
+          <li>
+            <a href="/2017/04/02/JavaScript-This-的六道坎/">JavaScript This 的六道坎</a>
+          </li>
+        
+          <li>
+            <a href="/2017/03/30/《网络是怎样连接的》大纲/">《网络是怎样连接的》大纲</a>
+          </li>
+        
+          <li>
+            <a href="/2017/03/26/第一章-浏览器生成消息/">第一章 浏览器生成消息</a>
+          </li>
+        
+          <li>
+            <a href="/2017/03/25/HTTP-状态码概要/">HTTP 状态码概要</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+
+  
+    
+
+  
+</aside>
+
+      </div>
+      <footer id="footer">
+  
+  <div class="outer">
+    <div id="footer-left">
+      &copy; 2014 - 2017 Jeffzzz&nbsp;|&nbsp;
+      Theme by <a href="https://github.com/giscafer/hexo-theme-cafe/" target="_blank">Cafe</a>
+    </div>
+     <div id="footer-right">
+      Contact&nbsp;|&nbsp;wxl.pure@gmail.com
+    </div>
+  </div>
+</footer>
+ <script src="/jquery/jquery.min.js"></script>
+    </div>
+    <nav id="mobile-nav">
+  
+    <a href="/" class="mobile-nav-link">首页</a>
+  
+    <a href="/archives" class="mobile-nav-link">归档</a>
+  
+    <a href="/about" class="mobile-nav-link">关于</a>
+  
+</nav>
+    <img class="back-to-top-btn" src="/images/fly-to-top.png"/>
+<script>
+// Elevator script included on the page, already.
+window.onload = function() {
+  var elevator = new Elevator({
+    selector:'.back-to-top-btn',
+    element: document.querySelector('.back-to-top-btn'),
+    duration: 1000 // milliseconds
+  });
+}
+</script>
+      
+
+  
+    <script>
+      var cloudTieConfig = {
+        url: document.location.href, 
+        sourceId: "",
+        productKey: "e2fb4051c49842xxce669e634bc983f",
+        target: "cloud-tie-wrapper"
+      };
+    </script>
+    <script src="https://img1.ws.126.net/f2e/tie/yun/sdk/loader.js"></script>
+    
+
+  
+
+
+
+  
+    <script type="text/x-mathjax-config">
+      MathJax.Hub.Config({
+        tex2jax: {
+          inlineMath: [ ['$','$'], ["\\(","\\)"]  ],
+          processEscapes: true,
+          skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']
+        }
+      })
+    </script>
+
+    <script type="text/x-mathjax-config">
+      MathJax.Hub.Queue(function() {
+        var all = MathJax.Hub.getAllJax(), i;
+        for (i=0; i < all.length; i += 1) {
+          all[i].SourceElement().parentNode.className += ' has-jax';
+        }
+      })
+    </script>
+    <script type="text/javascript" src="//cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+  
+
+
+ <script src="/js/is.js"></script>
+
+
+  <link rel="stylesheet" href="/fancybox/jquery.fancybox.css">
+  <script src="/fancybox/jquery.fancybox.pack.js"></script>
+
+
+<script src="/js/script.js"></script>
+<script src="/js/elevator.js"></script>
+  </div>
+</body>
+</html>
