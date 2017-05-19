@@ -1,0 +1,335 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+  <title>《Python》 6.22 练习 | 青穗黄</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta name="description" content="6–1.   字符串.string 模块中是否有一种字符串方法或者函数可以帮我鉴定一下一个字符串是否是另一个大字符串的一部分?">
+<meta property="og:type" content="article">
+<meta property="og:title" content="《Python》 6.22 练习">
+<meta property="og:url" content="https://flyerooo.github.io/2015/12/06/《Python》-6-22-练习/index.html">
+<meta property="og:site_name" content="青穗黄">
+<meta property="og:description" content="6–1.   字符串.string 模块中是否有一种字符串方法或者函数可以帮我鉴定一下一个字符串是否是另一个大字符串的一部分?">
+<meta property="og:updated_time" content="2017-05-19T06:47:43.430Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="《Python》 6.22 练习">
+<meta name="twitter:description" content="6–1.   字符串.string 模块中是否有一种字符串方法或者函数可以帮我鉴定一下一个字符串是否是另一个大字符串的一部分?">
+  
+    <link rel="alternate" href="/atom.xml" title="青穗黄" type="application/atom+xml">
+  
+  
+    <link rel="icon" href="/favicon.png">
+  
+  
+    
+  
+  <link rel="stylesheet" href="/css/style.css">
+  
+
+</head>
+
+<body>
+  <div id="container">
+    <div id="wrap">
+      <header id="header">
+  <div id="banner"></div>
+  <div id="header-outer" class="outer">
+    
+    <div id="header-inner" class="inner">
+      <nav id="sub-nav">
+        
+          <a id="nav-rss-link" class="nav-icon" href="/atom.xml" title="RSS Feed"></a>
+        
+        <a id="nav-search-btn" class="nav-icon" title="Search"></a>
+      </nav>
+      <div id="search-form-wrap">
+        <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" results="0" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="https://flyerooo.github.io"></form>
+      </div>
+      <nav id="main-nav">
+        <a id="main-nav-toggle" class="nav-icon"></a>
+        
+          <a class="main-nav-link" href="/">首页</a>
+        
+          <a class="main-nav-link" href="/archives">归档</a>
+        
+          <a class="main-nav-link" href="/about">关于</a>
+        
+      </nav>
+      
+    </div>
+    <div id="header-title" class="inner">
+      <h1 id="logo-wrap">
+        <a href="/" id="logo">青穗黄</a>
+      </h1>
+      
+        <h2 id="subtitle-wrap">
+          <a href="/" id="subtitle">知而不行为不知</a>
+        </h2>
+      
+    </div>
+  </div>
+</header>
+      <div class="outer">
+        <section id="main"><article id="post-《Python》-6-22-练习" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2015/12/06/《Python》-6-22-练习/" class="article-date">
+  <time datetime="2015-12-06T06:45:00.000Z" itemprop="datePublished">2015-12-06</time>
+</a>
+    
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/Python/">Python</a>
+  </div>
+
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 class="article-title" itemprop="name">
+      《Python》 6.22 练习
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <!-- Table of Contents -->
+        
+        <p>6–1.   字符串.string 模块中是否有一种字符串方法或者函数可以帮我鉴定一下一个字符串是否是另一个大字符串的一部分?<br><a id="more"></a><br><figure class="highlight ruby"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div></pre></td><td class="code"><pre><div class="line"><span class="meta">&gt;&gt;</span>&gt; a=<span class="string">'t'</span></div><div class="line"><span class="meta">&gt;&gt;</span>&gt; b=<span class="string">'letters'</span></div><div class="line"><span class="meta">&gt;&gt;</span>&gt; a in b</div><div class="line">True</div><div class="line"><span class="meta">&gt;&gt;</span>&gt; b.find(a)</div><div class="line"><span class="number">2</span></div><div class="line"><span class="meta">&gt;&gt;</span>&gt; b.index(a)</div><div class="line"><span class="number">2</span></div><div class="line"><span class="meta">&gt;&gt;</span>&gt; b.rfind(a)</div><div class="line"><span class="number">3</span></div><div class="line"><span class="meta">&gt;&gt;</span>&gt; b.rindex(a)</div><div class="line"><span class="number">3</span></div></pre></td></tr></table></figure></p>
+<p>6–2.   字符串标识符.修改例 6-1 的 idcheck.py 脚本,使之可以检测长度为1的标识符,并且可以识别 Python 关键字,对后一个要求,你可以使用 keyword 模块(特别是 keyword.kelist)来帮你. </p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">import</span> string</div><div class="line"><span class="keyword">import</span> keyword</div><div class="line">alphas = string.letters + <span class="string">'_'</span></div><div class="line">nums = string.digits</div><div class="line"></div><div class="line"><span class="keyword">print</span> <span class="string">'Welcome to the Identifier Checker v2.0'</span></div><div class="line"><span class="keyword">print</span> <span class="string">'Testees must be at least 1 chars long.'</span></div><div class="line">myInput = raw_input(<span class="string">'Identifier to test? '</span>)</div><div class="line"></div><div class="line"><span class="keyword">if</span> len(myInput) &gt;= <span class="number">1</span>:</div><div class="line">    <span class="keyword">if</span> myInput[<span class="number">0</span>] <span class="keyword">not</span> <span class="keyword">in</span> alphas:</div><div class="line">        <span class="keyword">print</span> <span class="string">'''invalid: first symbol must be alphabetic'''</span></div><div class="line">    <span class="keyword">else</span>:</div><div class="line">        <span class="keyword">for</span> otherChar <span class="keyword">in</span> myInput[<span class="number">1</span>:]:</div><div class="line">            <span class="keyword">if</span> otherChar <span class="keyword">not</span> <span class="keyword">in</span> alphas + nums:</div><div class="line">                <span class="keyword">print</span> <span class="string">'''invalid: remaining symbols must be alphanumeric'''</span></div><div class="line">                <span class="keyword">break</span></div><div class="line">            </div><div class="line">        <span class="keyword">else</span>:</div><div class="line">            <span class="keyword">if</span> myInput <span class="keyword">in</span>  keyword.kwlist:</div><div class="line">                <span class="keyword">print</span> <span class="string">'''invalid: symbols can't be a keyword of python'''</span></div><div class="line">            <span class="keyword">else</span>:</div><div class="line">                <span class="keyword">print</span> <span class="string">"okay as an identifier"</span></div></pre></td></tr></table></figure>
+<p>6–3.   排序<br> (a) 输入一串数字,从大到小排列之. </p>
+<figure class="highlight vim"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div></pre></td><td class="code"><pre><div class="line">input_nums=raw_input(<span class="string">'Please input numbers: '</span>)</div><div class="line">nums=[]</div><div class="line"><span class="keyword">for</span> n in input_num<span class="variable">s:</span></div><div class="line">    nums.<span class="keyword">append</span>(n)</div><div class="line">nums.<span class="keyword">sort</span>()</div><div class="line">nums.<span class="built_in">reverse</span>()</div><div class="line"><span class="keyword">print</span> <span class="string">''</span>.<span class="keyword">join</span>(nums)</div><div class="line"></div><div class="line">感觉写的很繁琐，在QQ群里一问有人写出以下代码</div><div class="line">input_nums=raw_input(<span class="string">'Please input numbers: '</span>)</div><div class="line"><span class="keyword">print</span> <span class="string">''</span>.<span class="keyword">join</span>(sorted(<span class="keyword">list</span>(input_nums), <span class="built_in">reverse</span>=True))</div></pre></td></tr></table></figure>
+<p> (b) 跟 a 一样,不过要用字典序从大到小排列之. (Do the same thing, but for strings and in reverse alphabetical (largest-to-smallest lexicographic) order.)</p>
+<figure class="highlight"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">没搞懂，字符串排序不就是这样排的吗？</div></pre></td></tr></table></figure>
+<p>6–4.   算术. 更新上一章里面你的得分测试练习方案,把测试得分放到一个列表中去.你的代码应该可以计算出一个平均分,见练习 2-9 和练习 5-3. </p>
+<figure class="highlight livecodeserver"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div></pre></td><td class="code"><pre><div class="line"><span class="comment">#2-9 代码</span></div><div class="line">list1=[<span class="number">1</span>,<span class="number">2</span>,<span class="number">3</span>,<span class="number">4</span>,<span class="number">5</span>]</div><div class="line"><span class="built_in">sum</span> =<span class="number">0</span></div><div class="line"><span class="keyword">for</span> i <span class="keyword">in</span> list1:</div><div class="line">    <span class="built_in">sum</span>+=i</div><div class="line"><span class="built_in">avg</span> = float(<span class="built_in">sum</span>/<span class="built_in">len</span>(list1)) <span class="comment">#当时这样写看来是不对的</span></div><div class="line">print <span class="built_in">avg</span></div><div class="line"></div><div class="line"><span class="comment">#5-3 代码</span></div><div class="line">def judge(score):</div><div class="line">    <span class="keyword">if</span> <span class="number">90</span>&lt;=score&lt;=<span class="number">100</span>:</div><div class="line">        <span class="literal">return</span> <span class="string">'A'</span></div><div class="line">    elif score&gt;=<span class="number">80</span>:</div><div class="line">        <span class="literal">return</span> <span class="string">'B'</span></div><div class="line">    elif score&gt;=<span class="number">70</span>:</div><div class="line">        <span class="literal">return</span> <span class="string">'C'</span></div><div class="line">    elif score&gt;=<span class="number">60</span>:</div><div class="line">        <span class="literal">return</span> <span class="string">'D'</span></div><div class="line">    <span class="keyword">else</span>:</div><div class="line">        <span class="literal">return</span> <span class="string">'F'</span></div><div class="line"></div><div class="line">list1=[<span class="number">1</span>,<span class="number">2</span>,<span class="number">3</span>,<span class="number">4</span>,<span class="number">5</span>]</div><div class="line"><span class="built_in">avg</span> = float(<span class="built_in">sum</span>(list1))/<span class="built_in">len</span>(list1) </div><div class="line">print <span class="built_in">avg</span></div></pre></td></tr></table></figure>
+<p>6–5.   字符串<br>(a)更新你在练习 2-7 里面的方案,使之可以每次向前向后都显示一个字符串的一个字符. </p>
+<figure class="highlight"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">不管是中文还是英文，这个题目我都没搞懂</div></pre></td></tr></table></figure>
+<p>(b)通过扫描来判断两个字符串是否匹配(不能使用比较操作符或者 cmp()内建函数)。附加题：在你的方案里加入大小写区分. </p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div></pre></td><td class="code"><pre><div class="line"><span class="comment">#来源于网络</span></div><div class="line"><span class="function"><span class="keyword">def</span> <span class="title">is_same</span><span class="params">(first_string, second_string)</span>:</span></div><div class="line">    <span class="keyword">if</span> len(first_string) <span class="keyword">is</span> <span class="keyword">not</span> len(second_string):</div><div class="line">        <span class="keyword">return</span> <span class="keyword">False</span></div><div class="line">    <span class="keyword">else</span>:</div><div class="line">        <span class="keyword">for</span> i <span class="keyword">in</span> range(len(first_string)):</div><div class="line">            <span class="keyword">if</span> first_string[i] <span class="keyword">is</span> <span class="keyword">not</span> second_string[i]:</div><div class="line">                <span class="keyword">return</span> <span class="keyword">False</span></div><div class="line"></div><div class="line">    <span class="keyword">return</span> <span class="keyword">True</span></div></pre></td></tr></table></figure>
+<p>(c)判断一个字符串是否重现(后面跟前面的一致).附加题：在处理除了严格的回文之外,加入对例如控制符号和空格的支持。 </p>
+<figure class="highlight"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">暂时不会</div></pre></td></tr></table></figure>
+<p>(d)接受一个字符,在其后面加一个反向的拷贝,构成一个回文字符串. </p>
+<figure class="highlight ruby"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line"><span class="function"><span class="keyword">def</span> <span class="title">add_reverse</span><span class="params">(a_str)</span></span>:</div><div class="line">    <span class="keyword">return</span> a_str+a_str[<span class="symbol">:</span><span class="symbol">:-</span><span class="number">1</span>]</div></pre></td></tr></table></figure>
+<p>6–6.   字符串.创建一个 string.strip()的替代函数:接受一个字符串,去掉它前面和后面的空格(如果使用 string.*strip()函数那本练习就没有意义了) </p>
+<figure class="highlight cs"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line"><span class="function">def <span class="title">strip</span>(<span class="params"><span class="keyword">string</span></span>):</span></div><div class="line">    <span class="keyword">while</span> <span class="keyword">string</span>[0]==<span class="string">' '</span>:</div><div class="line">        <span class="keyword">string</span>=<span class="keyword">string</span>[<span class="number">1</span>:]</div><div class="line">    <span class="keyword">while</span> <span class="keyword">string</span>[<span class="number">-1</span>]==<span class="string">' '</span>:</div><div class="line">        <span class="keyword">string</span>=<span class="keyword">string</span>[:<span class="number">-1</span>]</div><div class="line">    <span class="keyword">return</span> <span class="keyword">string</span></div></pre></td></tr></table></figure>
+<p>6–7.   调试.看一下在例 6.5 中给出的代码(buggy.py)<br>(a)研究这段代码并描述这段代码想做什么.在所有的(#)处都要填写你的注释.<br>(b)这个程序有一个很大的问题,比如输入 6,12,20,30,等它会死掉,实际上它不能处理任何的偶数,找出原因.<br>(c)修正(b)中提出的问题. </p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div></pre></td><td class="code"><pre><div class="line"><span class="string">'''参考网络代码'''</span></div><div class="line"><span class="comment"># 提醒用户输入一个数字</span></div><div class="line">num_str = raw_input(<span class="string">'Enter a number: '</span>) </div><div class="line"> </div><div class="line"><span class="comment">#  把输入的字符串转化为整数</span></div><div class="line">num_num = int(num_str) </div><div class="line"></div><div class="line"><span class="comment"># 生成一个列表</span></div><div class="line">fac_list = range(<span class="number">1</span>, num_num+<span class="number">1</span>) </div><div class="line"><span class="keyword">print</span> <span class="string">"BEFORE:"</span>, `fac_list`<span class="comment">#bug1</span></div><div class="line"> </div><div class="line"><span class="comment"># 初始化</span></div><div class="line">i = <span class="number">0</span> </div><div class="line"> </div><div class="line"><span class="comment"># 循环判断</span></div><div class="line"><span class="keyword">while</span> i &lt; len(fac_list): </div><div class="line"></div><div class="line">    <span class="comment"># 找出约束,bug2</span></div><div class="line">    <span class="keyword">if</span> num_num % fac_list[i] != <span class="number">0</span>: </div><div class="line">        <span class="keyword">del</span> fac_list[i]</div><div class="line">        <span class="keyword">continue</span></div><div class="line"></div><div class="line">    <span class="comment"># bug3</span></div><div class="line">    i = i + <span class="number">1</span> </div><div class="line"></div><div class="line"><span class="comment"># bug4</span></div><div class="line"><span class="keyword">print</span> <span class="string">"AFTER:"</span>, `fac_list`</div></pre></td></tr></table></figure>
+<p>6–8.   列表.给出一个整数值,返回代表该值的英文，比如输入 89 返回”eight-nine”。附加题：能够返回符合英文语法规则的形式，比如输入“89”返回“eighty-nine”。本练习中的值限定在家 0到 1,000. </p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div></pre></td><td class="code"><pre><div class="line"><span class="string">"""参考网上代码"""</span></div><div class="line">dict1 = &#123;<span class="string">"1"</span> :<span class="string">"one"</span> , <span class="string">"2"</span> : <span class="string">"two"</span> , <span class="string">"3"</span> : <span class="string">"three"</span> , <span class="string">"4"</span> : <span class="string">"four"</span> , <span class="string">"5"</span> : <span class="string">"five"</span> ,<span class="string">"6"</span> : <span class="string">"six"</span>, <span class="string">"7"</span> : <span class="string">"seven"</span> , <span class="string">"8"</span> : <span class="string">"eight"</span> , <span class="string">"9"</span> : <span class="string">"nine"</span>, <span class="string">"0"</span> : <span class="string">""</span> &#125;</div><div class="line">dict2 = &#123;<span class="string">"1"</span> :<span class="string">"ten"</span> , <span class="string">"2"</span> : <span class="string">"twenty"</span> , <span class="string">"3"</span> : <span class="string">"thirty"</span> , <span class="string">"4"</span> : <span class="string">"forty"</span> , <span class="string">"5"</span> : <span class="string">"fifty"</span> ,<span class="string">"6"</span> : <span class="string">"sixty"</span>, <span class="string">"7"</span> : <span class="string">"seventy"</span> , <span class="string">"8"</span> : <span class="string">"eighty"</span> , <span class="string">"9"</span> : <span class="string">"ninety"</span>, <span class="string">"0"</span> : <span class="string">""</span> &#125;</div><div class="line">dict3 = &#123;<span class="string">"1"</span> :<span class="string">"one hundred"</span> , <span class="string">"2"</span> : <span class="string">"two hundred"</span> , <span class="string">"3"</span> : <span class="string">"three hundred"</span> , <span class="string">"4"</span> : <span class="string">"four hundred"</span> , <span class="string">"5"</span> : <span class="string">"five hundred"</span> ,<span class="string">"6"</span> : <span class="string">"six hundred"</span>, <span class="string">"7"</span> : <span class="string">"seven hundred"</span> , <span class="string">"8"</span> : <span class="string">"eight hundred"</span> , <span class="string">"9"</span> : <span class="string">"nine hundred"</span>, <span class="string">"0"</span> : <span class="string">""</span> &#125;</div><div class="line">dictAll=&#123; <span class="number">1</span>: dict1 ,<span class="number">2</span>: dict2 , <span class="number">3</span>: dict3 &#125;</div><div class="line"><span class="function"><span class="keyword">def</span> <span class="title">fun</span><span class="params">(strNum)</span>:</span></div><div class="line">    <span class="keyword">if</span> int (strNum)&gt;<span class="number">1000</span> <span class="keyword">or</span> int(strNum)&lt;<span class="number">0</span>:</div><div class="line">        <span class="keyword">return</span> <span class="string">"Invalid Number,Plase input again"</span></div><div class="line">    length = len(strNum)</div><div class="line">    strTemp = <span class="string">""</span></div><div class="line">    <span class="keyword">if</span> len(strNum) ==<span class="number">4</span>:</div><div class="line">        strTemp = <span class="string">"One Thousand"</span></div><div class="line">        <span class="keyword">return</span> strTemp</div><div class="line">    <span class="keyword">for</span> i <span class="keyword">in</span> range(length):</div><div class="line">        strTemp += dictAll[length- i][strNum[i]] +<span class="string">" "</span></div><div class="line">    <span class="keyword">return</span> strTemp</div><div class="line">    </div><div class="line"><span class="keyword">if</span> __name__ == <span class="string">"__main__"</span>:</div><div class="line">    <span class="keyword">while</span> <span class="keyword">True</span>:</div><div class="line">        strNum = raw_input(<span class="string">"请输入一个数字，按q退出: "</span>)</div><div class="line">        <span class="keyword">if</span> strNum.lower() == <span class="string">'q'</span> :</div><div class="line">            <span class="keyword">break</span></div><div class="line">        <span class="keyword">print</span> fun (strNum)</div></pre></td></tr></table></figure>
+<p>6–9.   转换.为练习 5-13 写一个姊妹函数, 接受分钟数, 返回小时数和分钟数. 总时间不变,并且要求小时数尽可能大.  </p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line"><span class="string">'''没想出来分钟是个位时怎么输出0:00的格式'''</span></div><div class="line"><span class="function"><span class="keyword">def</span> <span class="title">change_time</span><span class="params">()</span>:</span></div><div class="line">    time=int(raw_input(<span class="string">"input a time (minutes)  :  "</span>))</div><div class="line">    after_time=divmod(time,<span class="number">60</span>)</div><div class="line">    <span class="keyword">print</span> <span class="string">"%d:%d"</span>% (after_time[<span class="number">0</span>],after_time[<span class="number">1</span>])</div></pre></td></tr></table></figure>
+<p>6–10.字符串.写一个函数,返回一个跟输入字符串相似的字符串,要求字符串的大小写反转.比如,输入”Mr.Ed”,应该返回”mR.eD”作为输出. </p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div></pre></td><td class="code"><pre><div class="line"><span class="string">'''参考网上代码'''</span></div><div class="line"><span class="function"><span class="keyword">def</span> <span class="title">Str1</span><span class="params">(testStr)</span>:</span></div><div class="line">    result = testStr.swapcase()</div><div class="line">    <span class="keyword">return</span> result</div><div class="line"></div><div class="line"><span class="keyword">if</span> __name__ == <span class="string">"__main__"</span>:</div><div class="line">    <span class="keyword">while</span> <span class="keyword">True</span>:</div><div class="line">        testStr = raw_input(<span class="string">"Input your strings(q to quit):"</span>)</div><div class="line">        <span class="keyword">if</span> testStr.lower() == <span class="string">"q"</span>:</div><div class="line">            <span class="keyword">break</span></div><div class="line">        <span class="keyword">print</span> Str1(testStr)</div></pre></td></tr></table></figure>
+<p>Example 6.4  有 bug 的程序(buggy.py) </p>
+<p>这是一个用于练习 6-7 的程序,判断这个程序是干什么的,在”#”处添加你的注释,找出其中的错<br>误,并修改之. </p>
+<figure class="highlight vala"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div></pre></td><td class="code"><pre><div class="line"><span class="meta">#!/usr/bin/env python </span></div><div class="line"> </div><div class="line"><span class="meta"># </span></div><div class="line">num_str = raw_input(<span class="string">'Enter a number: '</span>) </div><div class="line"> </div><div class="line"><span class="meta">#  </span></div><div class="line">num_num = <span class="keyword">int</span>(num_str) </div><div class="line"></div><div class="line"><span class="meta"># </span></div><div class="line">fac_list = range(<span class="number">1</span>, num_num+<span class="number">1</span>) </div><div class="line">print <span class="string">"BEFORE:"</span>, <span class="string">'fac_list'</span> </div><div class="line"> </div><div class="line"><span class="meta"># </span></div><div class="line">i = <span class="number">0</span> </div><div class="line"> </div><div class="line"><span class="meta"># </span></div><div class="line"><span class="keyword">while</span> i &lt; len(fac_list): </div><div class="line"></div><div class="line">    # </div><div class="line">    <span class="keyword">if</span> num_num % fac_list[i] == <span class="number">0</span>: </div><div class="line">        del fac_list[i] </div><div class="line"></div><div class="line">    # </div><div class="line">    i = i + <span class="number">1</span> </div><div class="line"></div><div class="line"><span class="meta"># </span></div><div class="line">print <span class="string">"AFTER:"</span>, <span class="string">'fac_list'</span></div></pre></td></tr></table></figure>
+<p>6–11.转换<br>(a)创建一个从整数到 IP 地址的转换程序,如下格式: WWW.XXX.YYY.ZZZ.<br>(b)更新你的程序,使之可以逆转换. </p>
+<figure class="highlight"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">不懂转换规则</div></pre></td></tr></table></figure>
+<p>6–12.字符串<br>(a)创建一个名字为 findchr()的函数,函数声明如下:<br> def findchr(string, char) findchr()要在字符串 string 中查找字符 char,找到就返回该值的索引,否则返回-1.不能用<br>string.<em>find()或者 string.</em>index()函数和方法 </p>
+<figure class="highlight cs"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line"><span class="function">def <span class="title">findchr</span>(<span class="params"><span class="keyword">string</span>, <span class="keyword">char</span></span>):</span></div><div class="line">    index = <span class="number">-1</span></div><div class="line">    <span class="keyword">for</span> i, <span class="function">ch <span class="keyword">in</span> <span class="title">enumerate</span>(<span class="params"><span class="keyword">string</span></span>):</span></div><div class="line">        <span class="title">if</span> (<span class="params">ch == <span class="keyword">char</span></span>):</div><div class="line">            index = i</div><div class="line">            <span class="keyword">break</span></div><div class="line">    <span class="keyword">return</span> index</div></pre></td></tr></table></figure>
+<p>(b)创建另一个叫 rfindchr()的函数,查找字符 char 最后一次出现的位置.它跟 findchr()工作类似,不过它是从字符串的最后开始向前查找的. </p>
+<figure class="highlight cs"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line"><span class="function">def <span class="title">rfindchr</span>(<span class="params"><span class="keyword">string</span>, <span class="keyword">char</span></span>):</span></div><div class="line">    index = <span class="number">-1</span></div><div class="line">    <span class="keyword">for</span> i, <span class="function">ch <span class="keyword">in</span> <span class="title">enumerate</span>(<span class="params"><span class="keyword">string</span>[::<span class="number">-1</span>]</span>):</span></div><div class="line">        <span class="title">if</span> (<span class="params">ch == <span class="keyword">char</span></span>):</div><div class="line">            index = len(<span class="keyword">string</span>)-i<span class="number">-1</span></div><div class="line">            <span class="keyword">break</span></div><div class="line">    <span class="keyword">return</span> index</div></pre></td></tr></table></figure>
+<p>(c)创建第三个函数,名字叫 subchr(),声明如下:<br>   def subchr(string, origchar, newchar)<br> subchr()跟 findchr()类似,不同的是,如果找到匹配的字符就用新的字符替换原先字符.返回修改后的字符串. </p>
+<figure class="highlight haxe"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div></pre></td><td class="code"><pre><div class="line">def subchr(string,origchar,<span class="keyword">new</span><span class="type">char</span>):<span class="type"></span></div><div class="line">    s=<span class="string">''</span></div><div class="line">    <span class="keyword">for</span> ch <span class="keyword">in</span> string:<span class="type"></span></div><div class="line">        <span class="keyword">if</span> ch == origchar:<span class="type"></span></div><div class="line">            s+=<span class="keyword">new</span><span class="type">char</span></div><div class="line">        <span class="keyword">else</span>:<span class="type"></span></div><div class="line">            s+= ch</div><div class="line">    <span class="keyword">return</span> s</div></pre></td></tr></table></figure>
+<p>6–13.字符串.string 模块包含三个函数,atoi(),atol(),和 atof(),它们分别负责把字符串转换成整数,长整型,和浮点型数字.从 Python1.5 起,Python 的内建函数 int(),long(),float()也可以做相同的事了, complex()函数可以把字符串转换成复数.(然而 1,5 之前,这些转换函数只能工作于数字之上) string 模块中并没有实现一个 atoc()函数,那么你来实现一个,atoc(),接受单个字符串做参数输入,一个表示复数的字符串,例如,’-1.23e+4-5.67j’,返回相应的复数对象.你不能用 eval()函数,但可以使用 complex()函数,而且你只能在如下的限制之下使用 complex():complex(real,imag)的 real 和 imag 都必须是浮点值. </p>
+<figure class="highlight vim"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div></pre></td><td class="code"><pre><div class="line"><span class="string">''</span><span class="string">'网上抄的'</span><span class="string">''</span></div><div class="line">def atoc(<span class="built_in">string</span>):</div><div class="line">    <span class="built_in">index</span> = <span class="built_in">max</span>(<span class="built_in">string</span>.rfind(<span class="string">'+'</span>), <span class="built_in">string</span>.rfind(<span class="string">'-'</span>))</div><div class="line">    <span class="keyword">if</span> <span class="built_in">index</span> &gt; <span class="number">0</span>:</div><div class="line">        <span class="keyword">if</span> <span class="built_in">string</span>[<span class="built_in">index</span>-<span class="number">1</span>] == <span class="string">'e'</span>:</div><div class="line">            <span class="built_in">index</span> = <span class="built_in">max</span>(<span class="built_in">string</span>.rfind(<span class="string">'+'</span>, <span class="number">0</span>, <span class="built_in">index</span>-<span class="number">1</span>), <span class="built_in">string</span>.rfind(<span class="string">'-'</span>, <span class="number">0</span>, <span class="built_in">index</span>-<span class="number">1</span>))</div><div class="line">        real = float(<span class="built_in">string</span>[<span class="number">0</span>:<span class="built_in">index</span>])</div><div class="line">        imag = float(<span class="built_in">string</span>[<span class="built_in">index</span>:<span class="built_in">len</span>(<span class="built_in">string</span>)-<span class="number">1</span>])</div><div class="line">    <span class="keyword">else</span>:</div><div class="line">        <span class="keyword">if</span> <span class="string">'j'</span> in strin<span class="variable">g:</span></div><div class="line">            real = <span class="number">0</span></div><div class="line">            imag = float(<span class="built_in">string</span>[<span class="number">0</span>:<span class="built_in">len</span>(<span class="built_in">string</span>)-<span class="number">1</span>])</div><div class="line">        <span class="keyword">else</span>:</div><div class="line">            real = float(<span class="built_in">string</span>)</div><div class="line">            imag = <span class="number">0</span></div><div class="line">    <span class="keyword">return</span> complex(real, imag)</div></pre></td></tr></table></figure>
+<p>6–14.随机数.设计一个”石头,剪子,布”游戏,有时又叫”Rochambeau”,你小时候可能玩过,下面是规则.你和你的对手,在同一时间做出特定的手势,必须是下面一种手势:石头,剪子,布.胜利者从下面的规则中产生,这个规则本身是个悖论.<br>(a) 布包石头.<br>(b)石头砸剪子,<br>(c)剪子剪破布.<br>在你的计算机版本中,用户输入她/他的选项,计算机找一个随机选项,然后由你的程序来决定一个胜利者或者平手.注意:最好的算法是尽量少的使用 if 语句. </p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div></pre></td><td class="code"><pre><div class="line"><span class="string">'''网上抄的'''</span></div><div class="line"><span class="keyword">import</span> random</div><div class="line"></div><div class="line"><span class="function"><span class="keyword">def</span> <span class="title">rochambeau</span><span class="params">(string)</span>:</span></div><div class="line">    dict1 = &#123;<span class="string">"stone"</span>  : <span class="string">"1"</span> ,<span class="string">"swear"</span> :<span class="string">"2"</span> ,<span class="string">"cloth"</span>:<span class="string">"3"</span>  &#125;</div><div class="line">    dictall = &#123;<span class="string">"11"</span> :<span class="string">"equal"</span> ,<span class="string">"12"</span> :<span class="string">"win"</span> ,<span class="string">"13"</span> :<span class="string">"lose"</span> ,<span class="string">"22"</span>:<span class="string">"equal"</span> ,<span class="string">"23"</span> :<span class="string">"win"</span> ,<span class="string">"21"</span> :<span class="string">"lose"</span> ,<span class="string">"33"</span>:<span class="string">"equal"</span> ,<span class="string">"31"</span>:<span class="string">"win"</span> ,<span class="string">"32"</span> :<span class="string">"lose"</span>   &#125;</div><div class="line">    randnum = random.randrange(<span class="number">1</span>,<span class="number">4</span>)</div><div class="line">    <span class="keyword">return</span> <span class="string">"You are : %s"</span>  %dictall[dict1[string]+str(randnum)]</div><div class="line"></div><div class="line"><span class="keyword">if</span> __name__ == <span class="string">"__main__"</span>:</div><div class="line">    <span class="keyword">while</span> <span class="keyword">True</span>: </div><div class="line">        string = raw_input(<span class="string">"please input your choose(stone,seear or cloth):(quit by q)"</span>)</div><div class="line">        <span class="keyword">if</span> string.lower() == <span class="string">'q'</span>:</div><div class="line">            <span class="keyword">break</span></div><div class="line">        <span class="keyword">if</span> (string != <span class="string">'stone'</span>) <span class="keyword">and</span> (string != <span class="string">'swear'</span>) <span class="keyword">and</span> (string != <span class="string">'cloth'</span>):</div><div class="line">            <span class="keyword">print</span> <span class="string">"error input"</span> </div><div class="line">            <span class="keyword">continue</span></div><div class="line">        <span class="keyword">print</span> rochambeau(string)</div></pre></td></tr></table></figure>
+<p>6–15.转换<br>(a)给出两个可识别格式的日期,比如 MM/DD/YY 或者 DD/MM/YY 格式,计算出两个日期间的天数.<br>(b)给出一个人的生日,计算从此人出生到现在的天数,包括所有的闰月.<br>(c)还是上面的例子,计算出到此人下次过生日还有多少天. </p>
+<figure class="highlight"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">我已经崩溃了，为了不打击学习热情，这些题目就放了她吧</div></pre></td></tr></table></figure>
+<p>6–16.矩阵.处理矩阵 M 和 N 的加和乘操作. </p>
+<p>6–17.方法.实现一个叫 myPop()的函数,功能类似于列表的 pop()方法,用一个列表作为输入,移除列表的最新一个元素,并返回它. </p>
+<p>6–18. zip() 内建函数  在 6.13.2 节里面关于 zip()函数的例子中,zip(fn,ln)返回的是什么? </p>
+<figure class="highlight less"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="selector-id">#zip</span>()返回元组</div></pre></td></tr></table></figure>
+<p>6–19.多列输出.有任意项的序列或者其他容器,把它们等距离分列显示.由调用者提供数据和输出格式.例如,如果你传入 100 个项并定义 3 列输出,按照需要的模式显示这些数据.这种情况下,应该是两列显示 33 个项,最后一列显示 34 个.你可以让用户来选择水平排序或者垂直排序.</p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="https://flyerooo.github.io/2015/12/06/《Python》-6-22-练习/" data-id="cj2vhgrwm000084hyfh1lnhkm" class="article-share-link">Share</a>
+      
+      
+      
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Python/">Python</a></li></ul>
+
+    </footer>
+  </div>
+  
+    
+<nav id="article-nav">
+  
+    <a href="/2015/12/20/《SQL必知必会》笔记/" id="article-nav-newer" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Newer</strong>
+      <div class="article-nav-title">
+        
+          《SQL必知必会》笔记
+        
+      </div>
+    </a>
+  
+  
+    <a href="/2015/12/03/《Python核心编程》/" id="article-nav-older" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Older</strong>
+      <div class="article-nav-title">《Python核心编程》5.9练习</div>
+    </a>
+  
+</nav>
+
+  
+</article>
+ 
+     
+  <div class="comments" id="comments">
+    
+     
+       
+      <div id="cloud-tie-wrapper" class="cloud-tie-wrapper"></div>
+    
+  </div>
+ 
+  
+
+</section>
+           
+    <aside id="sidebar">
+  
+    
+
+  
+    
+  
+    
+
+  
+    
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title recent-posts">Recent Posts</h3>
+    <div class="widget">
+      <ul>
+        
+          <li>
+            <a href="/2017/04/03/this语义/">this语义</a>
+          </li>
+        
+          <li>
+            <a href="/2017/04/02/JavaScript-This-的六道坎/">JavaScript This 的六道坎</a>
+          </li>
+        
+          <li>
+            <a href="/2017/03/30/《网络是怎样连接的》大纲/">《网络是怎样连接的》大纲</a>
+          </li>
+        
+          <li>
+            <a href="/2017/03/26/第一章-浏览器生成消息/">第一章 浏览器生成消息</a>
+          </li>
+        
+          <li>
+            <a href="/2017/03/25/HTTP-状态码概要/">HTTP 状态码概要</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+
+  
+    
+
+  
+</aside>
+
+      </div>
+      <footer id="footer">
+  
+  <div class="outer">
+    <div id="footer-left">
+      &copy; 2014 - 2017 Jeffzzz&nbsp;|&nbsp;
+      Theme by <a href="https://github.com/giscafer/hexo-theme-cafe/" target="_blank">Cafe</a>
+    </div>
+     <div id="footer-right">
+      Contact&nbsp;|&nbsp;wxl.pure@gmail.com
+    </div>
+  </div>
+</footer>
+ <script src="/jquery/jquery.min.js"></script>
+    </div>
+    <nav id="mobile-nav">
+  
+    <a href="/" class="mobile-nav-link">首页</a>
+  
+    <a href="/archives" class="mobile-nav-link">归档</a>
+  
+    <a href="/about" class="mobile-nav-link">关于</a>
+  
+</nav>
+    <img class="back-to-top-btn" src="/images/fly-to-top.png"/>
+<script>
+// Elevator script included on the page, already.
+window.onload = function() {
+  var elevator = new Elevator({
+    selector:'.back-to-top-btn',
+    element: document.querySelector('.back-to-top-btn'),
+    duration: 1000 // milliseconds
+  });
+}
+</script>
+      
+
+  
+    <script>
+      var cloudTieConfig = {
+        url: document.location.href, 
+        sourceId: "",
+        productKey: "e2fb4051c49842xxce669e634bc983f",
+        target: "cloud-tie-wrapper"
+      };
+    </script>
+    <script src="https://img1.ws.126.net/f2e/tie/yun/sdk/loader.js"></script>
+    
+
+  
+
+
+
+  
+    <script type="text/x-mathjax-config">
+      MathJax.Hub.Config({
+        tex2jax: {
+          inlineMath: [ ['$','$'], ["\\(","\\)"]  ],
+          processEscapes: true,
+          skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']
+        }
+      })
+    </script>
+
+    <script type="text/x-mathjax-config">
+      MathJax.Hub.Queue(function() {
+        var all = MathJax.Hub.getAllJax(), i;
+        for (i=0; i < all.length; i += 1) {
+          all[i].SourceElement().parentNode.className += ' has-jax';
+        }
+      })
+    </script>
+    <script type="text/javascript" src="//cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+  
+
+
+ <script src="/js/is.js"></script>
+
+
+  <link rel="stylesheet" href="/fancybox/jquery.fancybox.css">
+  <script src="/fancybox/jquery.fancybox.pack.js"></script>
+
+
+<script src="/js/script.js"></script>
+<script src="/js/elevator.js"></script>
+  </div>
+</body>
+</html>

@@ -1,0 +1,329 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+  <title>《Python核心编程》5.9练习 | 青穗黄</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta name="description" content="5-1 整形 讲讲 Python 普通整型和长整型的区别 
+1基本没什么区别,仅当需引用C语言时需要特别注意。">
+<meta property="og:type" content="article">
+<meta property="og:title" content="《Python核心编程》5.9练习">
+<meta property="og:url" content="https://flyerooo.github.io/2015/12/03/《Python核心编程》/index.html">
+<meta property="og:site_name" content="青穗黄">
+<meta property="og:description" content="5-1 整形 讲讲 Python 普通整型和长整型的区别 
+1基本没什么区别,仅当需引用C语言时需要特别注意。">
+<meta property="og:updated_time" content="2017-05-19T06:44:49.636Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="《Python核心编程》5.9练习">
+<meta name="twitter:description" content="5-1 整形 讲讲 Python 普通整型和长整型的区别 
+1基本没什么区别,仅当需引用C语言时需要特别注意。">
+  
+    <link rel="alternate" href="/atom.xml" title="青穗黄" type="application/atom+xml">
+  
+  
+    <link rel="icon" href="/favicon.png">
+  
+  
+    
+  
+  <link rel="stylesheet" href="/css/style.css">
+  
+
+</head>
+
+<body>
+  <div id="container">
+    <div id="wrap">
+      <header id="header">
+  <div id="banner"></div>
+  <div id="header-outer" class="outer">
+    
+    <div id="header-inner" class="inner">
+      <nav id="sub-nav">
+        
+          <a id="nav-rss-link" class="nav-icon" href="/atom.xml" title="RSS Feed"></a>
+        
+        <a id="nav-search-btn" class="nav-icon" title="Search"></a>
+      </nav>
+      <div id="search-form-wrap">
+        <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" results="0" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="https://flyerooo.github.io"></form>
+      </div>
+      <nav id="main-nav">
+        <a id="main-nav-toggle" class="nav-icon"></a>
+        
+          <a class="main-nav-link" href="/">首页</a>
+        
+          <a class="main-nav-link" href="/archives">归档</a>
+        
+          <a class="main-nav-link" href="/about">关于</a>
+        
+      </nav>
+      
+    </div>
+    <div id="header-title" class="inner">
+      <h1 id="logo-wrap">
+        <a href="/" id="logo">青穗黄</a>
+      </h1>
+      
+        <h2 id="subtitle-wrap">
+          <a href="/" id="subtitle">知而不行为不知</a>
+        </h2>
+      
+    </div>
+  </div>
+</header>
+      <div class="outer">
+        <section id="main"><article id="post-《Python核心编程》" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2015/12/03/《Python核心编程》/" class="article-date">
+  <time datetime="2015-12-03T06:42:00.000Z" itemprop="datePublished">2015-12-03</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 class="article-title" itemprop="name">
+      《Python核心编程》5.9练习
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <!-- Table of Contents -->
+        
+        <p>5-1 整形 讲讲 Python 普通整型和长整型的区别 </p>
+<figure class="highlight mathematica"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">基本没什么区别,仅当需引用<span class="keyword">C</span>语言时需要特别注意。</div></pre></td></tr></table></figure>
+<a id="more"></a>
+<p>5-2 运算符<br>(a) 写一个函数，计算并返回两个数的乘积 </p>
+<figure class="highlight ruby"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line"><span class="meta">&gt;&gt;</span>&gt; <span class="function"><span class="keyword">def</span> <span class="title">multiply</span><span class="params">(x,y)</span></span>:</div><div class="line">	    return x*y</div></pre></td></tr></table></figure>
+<p> (b) 写一段代码调用这个函数，并显示它的结果 </p>
+<figure class="highlight lsl"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">&gt;&gt;&gt; multiply(<span class="number">2</span>,<span class="number">3</span>)</div><div class="line"><span class="number">6</span></div></pre></td></tr></table></figure>
+<p>5-3 标准类型运算符. 写一段脚本，输入一个测验成绩，根据下面的标准，输出他的评分<br>成绩（A-F）。<br>A: 90–100<br>B: 80–89<br>C: 70–79<br>D: 60–69<br>F: &lt;60 </p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div></pre></td><td class="code"><pre><div class="line"><span class="function"><span class="keyword">def</span> <span class="title">judge</span><span class="params">(score)</span>:</span></div><div class="line">    <span class="keyword">if</span> <span class="number">90</span>&lt;=score&lt;=<span class="number">100</span>:</div><div class="line">        <span class="keyword">return</span> <span class="string">'A'</span></div><div class="line">    <span class="keyword">elif</span> score&gt;=<span class="number">80</span>:</div><div class="line">        <span class="keyword">return</span> <span class="string">'B'</span></div><div class="line">    <span class="keyword">elif</span> score&gt;=<span class="number">70</span>:</div><div class="line">        <span class="keyword">return</span> <span class="string">'C'</span></div><div class="line">    <span class="keyword">elif</span> score&gt;=<span class="number">60</span>:</div><div class="line">        <span class="keyword">return</span> <span class="string">'D'</span></div><div class="line">    <span class="keyword">else</span>:</div><div class="line">        <span class="keyword">return</span> <span class="string">'F'</span></div></pre></td></tr></table></figure>
+<p>5-4 取余。判断给定年份是否是闰年。使用下面的公式：<br>一个闰年就是指它可以被 4 整除，但不能被 100 整除， 或者它既可以被 4 又可以被 100 整除。比如 1992，1996 和 2000 年是闰年，但 1967 和 1900 则不是闰年。下一个是闰年的整世纪是 2400 年。 </p>
+<figure class="highlight applescript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">def leap_year(<span class="built_in">year</span>):</div><div class="line">    <span class="keyword">if</span> (<span class="built_in">year</span>%<span class="number">4</span>==<span class="number">0</span> <span class="keyword">and</span> <span class="built_in">year</span>%<span class="number">100</span>!=<span class="number">0</span>) <span class="keyword">or</span> <span class="built_in">year</span>%<span class="number">400</span> ==<span class="number">0</span>:</div><div class="line"><span class="built_in">        return</span> 'This <span class="keyword">is</span> a leap <span class="built_in">year</span>'</div><div class="line">    <span class="keyword">else</span>:</div><div class="line"><span class="built_in">        return</span> 'This <span class="keyword">is</span> <span class="keyword">not</span> a leap <span class="built_in">year</span>'</div></pre></td></tr></table></figure>
+<p>5-5 取余。取一个任意小于 1 美元的金额，然后计算可以换成最少多少枚硬币。硬币有 1美分，5 美分，10 美分，25 美分四种。1 美元等于 100 美分。举例来说，0.76 美元换算结果应该是 3 枚 25 美分，1 枚 1 美分。类似 76 枚 1 美分，2 枚 25 美分+2 枚 10 美分+1 枚 5 美分+1枚 1 美分这样的结果都是不符合要求的。<br><figure class="highlight stata"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div></pre></td><td class="code"><pre><div class="line"></div><div class="line">def coin(money):</div><div class="line">    </div><div class="line">    <span class="keyword">tw</span> = money/25</div><div class="line">    <span class="keyword">te</span> = (money-<span class="keyword">tw</span>*25)/10</div><div class="line">    fi = (money-<span class="keyword">tw</span>*25-<span class="keyword">te</span>*10)/5</div><div class="line">    <span class="keyword">on</span> = money-<span class="keyword">tw</span>*25-<span class="keyword">te</span>*10-fi*5</div><div class="line">    <span class="keyword">return</span> <span class="string">"quarter's number is %s"</span>% <span class="keyword">tw</span>,<span class="string">"dime's number is %s"</span>% <span class="keyword">te</span>,<span class="string">"nickel's number is %s"</span>% fi,<span class="string">"penny's number is %s"</span>% <span class="keyword">on</span></div></pre></td></tr></table></figure></p>
+<p>5-6 算术。写一个计算器程序 你的代码可以接受这样的表达式，两个操作数加一个运算符：<br>N1 运算符 N2. 其中 N1 和 N2 为整数或浮点数，运算符可以是+, -, <em>, /, %, *</em> 分别表示加法，减法， 乘法， 整数除，取余和幂运算。计算这个表达式的结果，然后显示出来。提示：<br>可以使用字符串方法 split(),但不可以使用内建函数 eval(). </p>
+<p>5-7 营业税。随意取一个商品金额，然后根据当地营业税额度计算应该交纳的营业税。 </p>
+<figure class="highlight ruby"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line"><span class="function"><span class="keyword">def</span> <span class="title">tax</span><span class="params">(money)</span></span>:</div><div class="line">    tax=money*<span class="number">0</span>.<span class="number">6</span></div><div class="line">    <span class="keyword">return</span> tax</div></pre></td></tr></table></figure>
+<p>5-8 几何。计算面积和体积：<br>(a)  正方形 和 立方体<br>(b)  圆 和 球 </p>
+<figure class="highlight aspectj"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div></pre></td><td class="code"><pre><div class="line">def geometry():</div><div class="line">    choice=<span class="keyword">int</span>(raw_input(<span class="string">"plase input a number- 1.square's area 2.cube's volume 3.circle's area 4.sphere's volume: "</span>))</div><div class="line">    <span class="keyword">if</span> choice==1:</div><div class="line">        side=<span class="keyword">float</span>(raw_input(<span class="string">"plase input the square's length of side: "</span>))</div><div class="line">        print <span class="string">"square's area= %s"</span>% side**2</div><div class="line">        </div><div class="line">    elif choice==2:</div><div class="line">        side_cube=<span class="keyword">float</span>(raw_input(<span class="string">"plase input the cube's length of side: "</span>))</div><div class="line">        print <span class="string">"sphere's volume= %s"</span>% side_cube**3</div><div class="line">       </div><div class="line">    elif choice==3:</div><div class="line">        radius_circle=<span class="keyword">float</span>(raw_input(<span class="string">"plase input the circle's radius: "</span>))</div><div class="line">        print <span class="string">"area's circle= %s"</span>% (radius_circle**2*3.14)</div><div class="line">       </div><div class="line">    elif choice==4:</div><div class="line">        radius_volume=<span class="keyword">float</span>(raw_input(<span class="string">"plase input the volume's radius: "</span>))</div><div class="line">        print <span class="string">"area's volume= %s"</span> % (4/3*3.14*radius_volume**3)</div><div class="line">      </div><div class="line">geometry()</div></pre></td></tr></table></figure>
+<p>5–9.   数值形式 回答下面关于数值格式的问题：<br> (a) 为什么下面的例子里 17+32 等于 49， 而 017+32 等于 47， 017+032 等于 41？ </p>
+<figure class="highlight lsl"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line">&gt;&gt;&gt; <span class="number">17</span> + <span class="number">32</span> </div><div class="line"><span class="number">49</span> </div><div class="line">&gt;&gt;&gt; <span class="number">017</span>+ <span class="number">32</span> </div><div class="line"><span class="number">47</span> </div><div class="line">&gt;&gt;&gt; <span class="number">017</span> + <span class="number">032</span> </div><div class="line"><span class="number">41</span></div></pre></td></tr></table></figure>
+<figure class="highlight gcode"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">pytho<span class="symbol">n27</span>中<span class="number">0</span>开头的为八进制数字，pytho<span class="symbol">n3</span>中会报错</div></pre></td></tr></table></figure>
+<p>（b）为什么下面这个表达式我们得到的结果是 134L 而不是 1342 ？ </p>
+<figure class="highlight lsl"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">&gt;&gt;&gt; <span class="number">56</span>l + <span class="number">78</span>l </div><div class="line"><span class="number">134</span>L</div></pre></td></tr></table></figure>
+<figure class="highlight gcode"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">L表示长整数，pytho<span class="symbol">n3</span>中会报错</div></pre></td></tr></table></figure>
+<p>5-10 转换。写一对函数来进行华氏度到摄氏度的转换。转换公式为 C = (F - 32) * (5 / 9) 应该在这个练习中使用真正的除法， 否则你会得到不正确的结果。 </p>
+<figure class="highlight ruby"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line"><span class="function"><span class="keyword">def</span> <span class="title">F_to_C</span><span class="params">(F)</span></span>:</div><div class="line">	print <span class="string">"%sF equal to %sC"</span> <span class="string">%(F,(float(F)</span>-<span class="number">32</span>)*<span class="number">5</span>/<span class="number">9</span>）</div></pre></td></tr></table></figure>
+<p>5-11 取余。<br>(a) 使用循环和算术运算，求出 0－20 之间的所有偶数 </p>
+<figure class="highlight dart"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">for</span> <span class="built_in">num</span> <span class="keyword">in</span> range(<span class="number">21</span>):</div><div class="line">    <span class="keyword">if</span> <span class="built_in">num</span>%<span class="number">2</span>==<span class="number">0</span>:</div><div class="line">        <span class="built_in">print</span> <span class="built_in">num</span></div></pre></td></tr></table></figure>
+<p>(b) 同上，不过这次输出所有的奇数 </p>
+<figure class="highlight dart"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">for</span> <span class="built_in">num</span> <span class="keyword">in</span> range(<span class="number">21</span>):</div><div class="line">    <span class="keyword">if</span> <span class="built_in">num</span>%<span class="number">2</span>==<span class="number">1</span>:</div><div class="line">        <span class="built_in">print</span> <span class="built_in">num</span></div></pre></td></tr></table></figure>
+<p>(c) 综合 (a) 和 (b)， 请问辨别奇数和偶数的最简单的方法是什么？ </p>
+<figure class="highlight lsl"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">用<span class="number">2</span>取余，余数为<span class="number">0</span>则为偶，为<span class="number">1</span>则为奇数</div></pre></td></tr></table></figure>
+<p>(d) 使用(c)的成果，写一个函数，检测一个整数能否被另一个整数整除。 先要求用户输入两个数，然后你的函数判断两者是否有整除关系，根据判断结果分别返回 True 和 False; </p>
+<figure class="highlight gradle"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">def</span> <span class="keyword">div</span>(a,b):</div><div class="line">    <span class="keyword">if</span> a%b==<span class="number">0</span>:</div><div class="line">        <span class="keyword">print</span> <span class="string">'True'</span></div><div class="line">    <span class="keyword">else</span>:</div><div class="line">        <span class="keyword">print</span> <span class="string">'False'</span></div><div class="line"><span class="keyword">def</span> judge():</div><div class="line">    num1=<span class="keyword">int</span>(raw_input(<span class="string">"input a int:"</span>))</div><div class="line">    num2=<span class="keyword">int</span>(raw_input(<span class="string">"input another int:"</span>))</div><div class="line">    <span class="keyword">if</span> num1&gt;num2:</div><div class="line">        <span class="keyword">div</span>(num1,num2)</div><div class="line">    <span class="keyword">else</span>:</div><div class="line">        <span class="keyword">div</span>(num2,num1)</div><div class="line">        </div><div class="line">judge()</div></pre></td></tr></table></figure>
+<p>5-12 系统限制。写一段脚本确认一下你的 Python 所能处理的整数，长整数，浮点数和复数的范围。 </p>
+<figure class="highlight stylus"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line">import sys</div><div class="line">print sys<span class="selector-class">.maxint</span></div><div class="line">print -sys<span class="selector-class">.maxint</span> - <span class="number">1</span></div><div class="line">print sys<span class="selector-class">.float_info</span><span class="selector-class">.max</span></div><div class="line">print sys<span class="selector-class">.float_info</span><span class="selector-class">.min</span></div><div class="line">print sys<span class="selector-class">.long_info</span></div><div class="line">网上找的还不是很清楚</div></pre></td></tr></table></figure>
+<p>5-13 转换。写一个函数把由小时和分钟表示的时间转换为只用分钟表示的时间。  </p>
+<figure class="highlight perl"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">def change_time():</div><div class="line">    <span class="keyword">time</span>=raw_input(<span class="string">"input a time split by ':'  :  "</span>)</div><div class="line">    minutes =<span class="keyword">int</span>(time.<span class="keyword">split</span>(<span class="string">':'</span>)[<span class="number">0</span>])*<span class="number">60</span> +<span class="keyword">int</span>(time.<span class="keyword">split</span>(<span class="string">':'</span>)[<span class="number">1</span>])</div><div class="line">    <span class="keyword">print</span> minutes</div><div class="line">change_time()</div></pre></td></tr></table></figure>
+<p>5-14 银行利息。写一个函数，以定期存款利率为参数， 假定该账户每日计算复利，请计算并返回年回报率。 </p>
+<figure class="highlight clean"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">初中数学没学好...</div></pre></td></tr></table></figure>
+<p>5–15.   最大公约数和最小公倍数。请计算两个整数的最大公约数和最小公倍数。 </p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div><div class="line">41</div><div class="line">42</div><div class="line">43</div><div class="line">44</div><div class="line">45</div><div class="line">46</div></pre></td><td class="code"><pre><div class="line"><span class="string">'''参考网络代码'''</span></div><div class="line"><span class="comment"># 定义一个函数</span></div><div class="line"><span class="function"><span class="keyword">def</span> <span class="title">hcf</span><span class="params">(x, y)</span>:</span></div><div class="line">   <span class="string">"""该函数返回两个数的最大公约数"""</span></div><div class="line">   <span class="comment"># 获取最小值</span></div><div class="line">   <span class="keyword">if</span> x &gt; y:</div><div class="line">       smaller = y</div><div class="line">   <span class="keyword">else</span>:</div><div class="line">       smaller = x</div><div class="line"></div><div class="line">   <span class="keyword">for</span> i <span class="keyword">in</span> range(<span class="number">1</span>,smaller + <span class="number">1</span>):</div><div class="line">       <span class="keyword">if</span>((x % i == <span class="number">0</span>) <span class="keyword">and</span> (y % i == <span class="number">0</span>)):</div><div class="line">           hcf = i</div><div class="line"></div><div class="line">   <span class="keyword">return</span> hcf</div><div class="line"></div><div class="line"></div><div class="line"><span class="comment"># 用户输入两个数字</span></div><div class="line">num1 = int(input(<span class="string">"输入第一个数字: "</span>))</div><div class="line">num2 = int(input(<span class="string">"输入第二个数字: "</span>))</div><div class="line"></div><div class="line">print( num1,<span class="string">"和"</span>, num2,<span class="string">"的最大公约数为"</span>, hcf(num1, num2))</div><div class="line"></div><div class="line"><span class="comment"># 定义函数</span></div><div class="line"><span class="function"><span class="keyword">def</span> <span class="title">lcm</span><span class="params">(x, y)</span>:</span></div><div class="line"></div><div class="line">   <span class="comment">#  获取最大的数</span></div><div class="line">   <span class="keyword">if</span> x &gt; y:</div><div class="line">       greater = x</div><div class="line">   <span class="keyword">else</span>:</div><div class="line">       greater = y</div><div class="line"></div><div class="line">   <span class="keyword">while</span>(<span class="keyword">True</span>):</div><div class="line">       <span class="keyword">if</span>((greater % x == <span class="number">0</span>) <span class="keyword">and</span> (greater % y == <span class="number">0</span>)):</div><div class="line">           lcm = greater</div><div class="line">           <span class="keyword">break</span></div><div class="line">       greater += <span class="number">1</span></div><div class="line"></div><div class="line">   <span class="keyword">return</span> lcm</div><div class="line"></div><div class="line"></div><div class="line"><span class="comment"># 获取用户输入</span></div><div class="line">num1 = int(input(<span class="string">"输入第一个数字: "</span>))</div><div class="line">num2 = int(input(<span class="string">"输入第二个数字: "</span>))</div><div class="line"></div><div class="line">print( num1,<span class="string">"和"</span>, num2,<span class="string">"的最小公倍数为"</span>, lcm(num1, num2))</div></pre></td></tr></table></figure>
+<p>5-16 家庭财务。给定一个初始金额和月开销数， 使用循环，确定剩下的金额和当月的支出数， 包括最后的支出数。 Payment() 函数会用到初始金额和月额度， 输出结果应该类似下面的格式（例子中的数字仅用于演示）：  </p>
+<figure class="highlight elixir"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div></pre></td><td class="code"><pre><div class="line">Enter opening <span class="symbol">balance:</span><span class="number">100.00</span></div><div class="line">Enter monthly <span class="symbol">payment:</span> <span class="number">16.13</span> </div><div class="line">Amount Remaining </div><div class="line">Pymt<span class="comment">#  Paid     Balance </span></div><div class="line">----- ------   --------- </div><div class="line"><span class="number">0</span>     <span class="variable">$ </span><span class="number">0</span>.<span class="number">00</span>    <span class="variable">$100</span>.<span class="number">00</span> </div><div class="line"><span class="number">1</span>     <span class="variable">$16</span>.<span class="number">13</span>    <span class="variable">$ </span><span class="number">83.87</span> </div><div class="line"><span class="number">2</span>     <span class="variable">$16</span>.<span class="number">13</span>    <span class="variable">$ </span><span class="number">67.74</span> </div><div class="line"><span class="number">3</span>     <span class="variable">$16</span>.<span class="number">13</span>    <span class="variable">$ </span><span class="number">51.61</span> </div><div class="line"><span class="number">4</span>     <span class="variable">$16</span>.<span class="number">13</span>    <span class="variable">$ </span><span class="number">35.48</span> </div><div class="line"><span class="number">5</span>     <span class="variable">$16</span>.<span class="number">13</span>    <span class="variable">$ </span><span class="number">19.35</span> </div><div class="line"><span class="number">6</span>     <span class="variable">$16</span>.<span class="number">13</span>    <span class="variable">$ </span><span class="number">3.22</span> </div><div class="line"><span class="number">7</span>     <span class="variable">$ </span><span class="number">3.22</span>    <span class="variable">$ </span><span class="number">0</span>.<span class="number">00</span></div></pre></td></tr></table></figure>
+<p>5-17 随机数。熟读随机数模块然后解下面的题：<br>生成一个有 N 个元素的由随机数 n 组成的列表， 其中 N 和 n 的取值范围分别为： (1 &lt; N &lt;= 100), (0 &lt;= n &lt;= 231  -1)。然后再随机从这个列表中取 N (1 &lt;= N &lt;= 100)个随机数出来， 对它们排序，然后显示这个子集。</p>
+<figure class="highlight maxima"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div></pre></td><td class="code"><pre><div class="line">import <span class="built_in">random</span></div><div class="line">N = <span class="built_in">random</span>.randint(<span class="number">1</span>,<span class="number">100</span>)</div><div class="line">list1 = []</div><div class="line"><span class="keyword">for</span> i <span class="keyword">in</span> <span class="built_in">range</span>(N):</div><div class="line">    n = <span class="built_in">random</span>.randint(<span class="number">0</span>,(<span class="number">2</span>**<span class="number">31</span>-<span class="number">1</span>))</div><div class="line">    list1.<span class="built_in">append</span>(n)</div><div class="line">    </div><div class="line">list1.<span class="built_in">sort</span>()</div><div class="line"></div><div class="line"><span class="built_in">print</span> list1</div></pre></td></tr></table></figure>
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="https://flyerooo.github.io/2015/12/03/《Python核心编程》/" data-id="cj2vh5sfl0000owhy2g8y2twn" class="article-share-link">Share</a>
+      
+      
+      
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Python/">Python</a></li></ul>
+
+    </footer>
+  </div>
+  
+    
+<nav id="article-nav">
+  
+    <a href="/2015/12/06/《Python》-6-22-练习/" id="article-nav-newer" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Newer</strong>
+      <div class="article-nav-title">
+        
+          《Python》 6.22 练习
+        
+      </div>
+    </a>
+  
+  
+    <a href="/2015/11/30/《Python核心编程》3-8-练习/" id="article-nav-older" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Older</strong>
+      <div class="article-nav-title">《Python核心编程》3.8 练习</div>
+    </a>
+  
+</nav>
+
+  
+</article>
+ 
+     
+  <div class="comments" id="comments">
+    
+     
+       
+      <div id="cloud-tie-wrapper" class="cloud-tie-wrapper"></div>
+    
+  </div>
+ 
+  
+
+</section>
+           
+    <aside id="sidebar">
+  
+    
+
+  
+    
+  
+    
+
+  
+    
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title recent-posts">Recent Posts</h3>
+    <div class="widget">
+      <ul>
+        
+          <li>
+            <a href="/2017/04/03/this语义/">this语义</a>
+          </li>
+        
+          <li>
+            <a href="/2017/04/02/JavaScript-This-的六道坎/">JavaScript This 的六道坎</a>
+          </li>
+        
+          <li>
+            <a href="/2017/03/30/《网络是怎样连接的》大纲/">《网络是怎样连接的》大纲</a>
+          </li>
+        
+          <li>
+            <a href="/2017/03/26/第一章-浏览器生成消息/">第一章 浏览器生成消息</a>
+          </li>
+        
+          <li>
+            <a href="/2017/03/25/HTTP-状态码概要/">HTTP 状态码概要</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+
+  
+    
+
+  
+</aside>
+
+      </div>
+      <footer id="footer">
+  
+  <div class="outer">
+    <div id="footer-left">
+      &copy; 2014 - 2017 Jeffzzz&nbsp;|&nbsp;
+      Theme by <a href="https://github.com/giscafer/hexo-theme-cafe/" target="_blank">Cafe</a>
+    </div>
+     <div id="footer-right">
+      Contact&nbsp;|&nbsp;wxl.pure@gmail.com
+    </div>
+  </div>
+</footer>
+ <script src="/jquery/jquery.min.js"></script>
+    </div>
+    <nav id="mobile-nav">
+  
+    <a href="/" class="mobile-nav-link">首页</a>
+  
+    <a href="/archives" class="mobile-nav-link">归档</a>
+  
+    <a href="/about" class="mobile-nav-link">关于</a>
+  
+</nav>
+    <img class="back-to-top-btn" src="/images/fly-to-top.png"/>
+<script>
+// Elevator script included on the page, already.
+window.onload = function() {
+  var elevator = new Elevator({
+    selector:'.back-to-top-btn',
+    element: document.querySelector('.back-to-top-btn'),
+    duration: 1000 // milliseconds
+  });
+}
+</script>
+      
+
+  
+    <script>
+      var cloudTieConfig = {
+        url: document.location.href, 
+        sourceId: "",
+        productKey: "e2fb4051c49842xxce669e634bc983f",
+        target: "cloud-tie-wrapper"
+      };
+    </script>
+    <script src="https://img1.ws.126.net/f2e/tie/yun/sdk/loader.js"></script>
+    
+
+  
+
+
+
+  
+    <script type="text/x-mathjax-config">
+      MathJax.Hub.Config({
+        tex2jax: {
+          inlineMath: [ ['$','$'], ["\\(","\\)"]  ],
+          processEscapes: true,
+          skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']
+        }
+      })
+    </script>
+
+    <script type="text/x-mathjax-config">
+      MathJax.Hub.Queue(function() {
+        var all = MathJax.Hub.getAllJax(), i;
+        for (i=0; i < all.length; i += 1) {
+          all[i].SourceElement().parentNode.className += ' has-jax';
+        }
+      })
+    </script>
+    <script type="text/javascript" src="//cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+  
+
+
+ <script src="/js/is.js"></script>
+
+
+  <link rel="stylesheet" href="/fancybox/jquery.fancybox.css">
+  <script src="/fancybox/jquery.fancybox.pack.js"></script>
+
+
+<script src="/js/script.js"></script>
+<script src="/js/elevator.js"></script>
+  </div>
+</body>
+</html>
