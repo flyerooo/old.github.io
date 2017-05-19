@@ -8,10 +8,7 @@
   <meta name="description" content="转载自https://blog.crimx.com/2016/05/12/understanding-this/
 鉴于this风骚的运作方式，对this的理解是永不过时的话题，本文试图通过将其大卸六块来钉住这个磨人的妖精。
 首先
-this is all about context.
-
-this 说白了就是找大佬，找拥有当前上下文（context）的对象（context object）。
-大佬可以分">
+this is all about context.">
 <meta property="og:type" content="article">
 <meta property="og:title" content="JavaScript This 的六道坎">
 <meta property="og:url" content="https://flyerooo.github.io/2017/04/02/JavaScript-This-的六道坎/index.html">
@@ -19,20 +16,14 @@ this 说白了就是找大佬，找拥有当前上下文（context）的对象�
 <meta property="og:description" content="转载自https://blog.crimx.com/2016/05/12/understanding-this/
 鉴于this风骚的运作方式，对this的理解是永不过时的话题，本文试图通过将其大卸六块来钉住这个磨人的妖精。
 首先
-this is all about context.
-
-this 说白了就是找大佬，找拥有当前上下文（context）的对象（context object）。
-大佬可以分">
-<meta property="og:updated_time" content="2017-05-19T03:38:04.576Z">
+this is all about context.">
+<meta property="og:updated_time" content="2017-05-19T07:45:43.447Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="JavaScript This 的六道坎">
 <meta name="twitter:description" content="转载自https://blog.crimx.com/2016/05/12/understanding-this/
 鉴于this风骚的运作方式，对this的理解是永不过时的话题，本文试图通过将其大卸六块来钉住这个磨人的妖精。
 首先
-this is all about context.
-
-this 说白了就是找大佬，找拥有当前上下文（context）的对象（context object）。
-大佬可以分">
+this is all about context.">
   
     <link rel="alternate" href="/atom.xml" title="青穗黄" type="application/atom+xml">
   
@@ -120,9 +111,8 @@ this 说白了就是找大佬，找拥有当前上下文（context）的对象�
         <p>转载自<a href="https://blog.crimx.com/2016/05/12/understanding-this/" target="_blank" rel="external">https://blog.crimx.com/2016/05/12/understanding-this/</a></p>
 <p>鉴于this风骚的运作方式，对this的理解是永不过时的话题，本文试图通过将其大卸六块来钉住这个磨人的妖精。</p>
 <h4 id="首先"><a href="#首先" class="headerlink" title="首先"></a>首先</h4><blockquote>
-<p><em>this</em> is all about context.</p>
+<p><em>this</em> is all about context.<br><a id="more"></a><br><em>this</em> 说白了就是找大佬，找拥有当前上下文（context）的对象（context object）。</p>
 </blockquote>
-<p><em>this</em> 说白了就是找大佬，找拥有当前上下文（context）的对象（context object）。</p>
 <p>大佬可以分为六层，层数越高权力越大，<em>this</em> 只会认最大的。</p>
 <h4 id="1-第一层：世界尽头"><a href="#1-第一层：世界尽头" class="headerlink" title="1. 第一层：世界尽头"></a>1. 第一层：世界尽头</h4><p>权力最小的大佬是作为备胎的存在，在普通情况下就是全局，浏览器里就是 <em>window</em> ；在 <em>use strict</em> 的情况下就是 <em>undefined</em> 。<br><figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div></pre></td><td class="code"><pre><div class="line"><span class="function"><span class="keyword">function</span> <span class="title">showThis</span> (<span class="params"></span>) </span>&#123;</div><div class="line">  <span class="built_in">console</span>.log(<span class="keyword">this</span>)</div><div class="line">&#125;</div><div class="line"><span class="function"><span class="keyword">function</span> <span class="title">showStrictThis</span> (<span class="params"></span>) </span>&#123;</div><div class="line"><span class="meta">  'use strict'</span></div><div class="line">  <span class="built_in">console</span>.log(<span class="keyword">this</span>)</div><div class="line">&#125;</div><div class="line">showThis() <span class="comment">// window</span></div><div class="line">showStrictThis() <span class="comment">// undefined</span></div></pre></td></tr></table></figure></p>
 <h4 id="2-第二层：点石成金"><a href="#2-第二层：点石成金" class="headerlink" title="2. 第二层：点石成金"></a>2. 第二层：点石成金</h4><p>第二层大佬说白了就是找这个函数前面的点.。</p>
