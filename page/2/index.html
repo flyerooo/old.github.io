@@ -37,7 +37,7 @@
         
           <a id="nav-rss-link" class="nav-icon" href="/atom.xml" title="RSS Feed"></a>
         
-        <a id="nav-search-btn" class="nav-icon" title="搜索"></a>
+        <a id="nav-search-btn" class="nav-icon" title="Zoeken"></a>
       </nav>
       <div id="search-form-wrap">
         <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" results="0" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="https://flyerooo.github.io"></form>
@@ -102,7 +102,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="https://flyerooo.github.io/2017/03/16/开始写作/" data-id="cj2ta7evu000lowhy3qsco91y" class="article-share-link">分享</a>
+      <a data-url="https://flyerooo.github.io/2017/03/16/开始写作/" data-id="cj2txggmp000b9ghycdq885k7" class="article-share-link">Delen</a>
       
       
       
@@ -146,7 +146,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="https://flyerooo.github.io/2017/03/14/《实战ES2015》备忘/" data-id="cj2ta7evw000nowhyya6dsiky" class="article-share-link">分享</a>
+      <a data-url="https://flyerooo.github.io/2017/03/14/《实战ES2015》备忘/" data-id="cj2txggmp00099ghy9ou73m1z" class="article-share-link">Delen</a>
       
       
       
@@ -158,10 +158,10 @@
 
 
   
-    <article id="post-hello-world" class="article article-type-post" itemscope itemprop="blogPost">
+    <article id="post-理解web路由-0" class="article article-type-post" itemscope itemprop="blogPost">
   <div class="article-meta">
-    <a href="/2017/03/07/hello-world/" class="article-date">
-  <time datetime="2017-03-06T16:31:54.850Z" itemprop="datePublished">2017-03-07</time>
+    <a href="/2017/01/19/理解web路由-0/" class="article-date">
+  <time datetime="2017-01-19T01:41:00.000Z" itemprop="datePublished">2017-01-19</time>
 </a>
     
   </div>
@@ -172,7 +172,7 @@
         
   
     <h1 itemprop="name">
-      <a class="article-title" href="/2017/03/07/hello-world/">Hello World</a>
+      <a class="article-title" href="/2017/01/19/理解web路由-0/">理解web路由</a>
     </h1>
   
 
@@ -182,23 +182,29 @@
       
         <!-- Table of Contents -->
         
-        <p>Welcome to <a href="https://hexo.io/" target="_blank" rel="external">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/" target="_blank" rel="external">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html" target="_blank" rel="external">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues" target="_blank" rel="external">GitHub</a>.</p>
-<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo new <span class="string">"My New Post"</span></div></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/writing.html" target="_blank" rel="external">Writing</a></p>
-<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo server</div></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/server.html" target="_blank" rel="external">Server</a></p>
-<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo generate</div></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/generating.html" target="_blank" rel="external">Generating</a></p>
-<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo deploy</div></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/deployment.html" target="_blank" rel="external">Deployment</a></p>
+        <h5 id="1-什么是路由"><a href="#1-什么是路由" class="headerlink" title="1. 什么是路由"></a>1. 什么是路由</h5><p>简单来说，路由就是URL到函数的映射。</p>
+<h5 id="2-router和route的区别"><a href="#2-router和route的区别" class="headerlink" title="2. router和route的区别"></a>2. router和route的区别</h5><p>route就是一条路由，它将一个URL路径和一个函数进行映射，例如：</p>
+<p>/users        -&gt;  getAllUsers()</p>
+<p>/users/count  -&gt;  getUsersCount()</p>
+<p>这就是两条路由，当访问/users的时候，会执行getAllUsers()函数；当访问/users/count的时候，会执行getUsersCount()函数。</p>
+<p>而router可以理解为一个容器，或者说一种机制，它管理了一组route。简单来说，route只是进行了URL和函数的映射，而在当接收到一个URL之后，去路由映射表中查找相应的函数，这个过程是由router来处理的。一句话概括就是 “The router routes you to a route“。</p>
+<h5 id="3-服务器端路由"><a href="#3-服务器端路由" class="headerlink" title="3. 服务器端路由"></a>3. 服务器端路由</h5><p>当服务器接收到客户端发来的HTTP请求，会根据请求的URL，来找到相应的映射函数，然后执行该函数，并将函数的返回值发送给客户端。</p>
+<h5 id="4-客户端路由"><a href="#4-客户端路由" class="headerlink" title="4. 客户端路由"></a>4. 客户端路由</h5><p>对于客户端（通常为浏览器）来说，路由的映射函数通常是进行一些DOM的显示和隐藏操作。这样，当访问不同的路径的时候，会显示不同的页面组件。客户端路由最常见的有以下两种实现方案：</p>
+<ul>
+<li>基于Hash</li>
+<li>基于History API</li>
+</ul>
+<p>文中大部分内容参考了此<a href="http://syaning.com/2017/01/10/web-route/" target="_blank" rel="external">文章</a></p>
 
       
     </div>
     <footer class="article-footer">
-      <a data-url="https://flyerooo.github.io/2017/03/07/hello-world/" data-id="cj2ta7ev20007owhyvygu6hln" class="article-share-link">分享</a>
+      <a data-url="https://flyerooo.github.io/2017/01/19/理解web路由-0/" data-id="cj2v6tvsk0000achy48l92r50" class="article-share-link">Delen</a>
       
       
       
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/路由/">路由</a></li></ul>
+
     </footer>
   </div>
   
@@ -244,7 +250,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="https://flyerooo.github.io/2016/11/24/Untitled/" data-id="cj2ta7ev00006owhyxa6k976h" class="article-share-link">分享</a>
+      <a data-url="https://flyerooo.github.io/2016/11/24/Untitled/" data-id="cj2txggmp000a9ghy6w47t611" class="article-share-link">Delen</a>
       
       
       
@@ -261,7 +267,7 @@
 
 
   <nav id="page-nav">
-    <a class="extend prev" rel="prev" href="/">&laquo; 上一页</a><a class="page-number" href="/">1</a><span class="page-number current">2</span>
+    <a class="extend prev" rel="prev" href="/">&laquo; Vorige</a><a class="page-number" href="/">1</a><span class="page-number current">2</span>
   </nav>
 </section>
            
@@ -279,7 +285,7 @@
   
     
   <div class="widget-wrap">
-    <h3 class="widget-title recent-posts">最新文章</h3>
+    <h3 class="widget-title recent-posts">Recente berichten</h3>
     <div class="widget">
       <ul>
         
@@ -319,10 +325,10 @@
   <div class="outer">
     <div id="footer-left">
       &copy; 2014 - 2017 Jeffzzz&nbsp;|&nbsp;
-      主题 <a href="https://github.com/giscafer/hexo-theme-cafe/" target="_blank">Cafe</a>
+      Theme by <a href="https://github.com/giscafer/hexo-theme-cafe/" target="_blank">Cafe</a>
     </div>
      <div id="footer-right">
-      联系方式&nbsp;|&nbsp;wxl.pure@gmail.com
+      Contact&nbsp;|&nbsp;wxl.pure@gmail.com
     </div>
   </div>
 </footer>

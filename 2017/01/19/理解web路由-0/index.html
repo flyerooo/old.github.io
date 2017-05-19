@@ -3,96 +3,30 @@
 <head>
   <meta charset="utf-8">
   
-  <title>HTTP 状态码概要 | 青穗黄</title>
+  <title>理解web路由 | 青穗黄</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="状态码的第一位数字表示状态类型，第二、三位数字表示具体的情况。下表列举了第一位数字的含义。
-
-
-状态码
-含义
-
-
-
-
-1xx
-告知请求的处理进度和情况
-
-
-2xx
-成功
-
-
-3xx
-表示需要进一步操作
-
-
-4xx
-客户端错误
-
-
-5xx
-服务器错误">
+  <meta name="description" content="1. 什么是路由简单来说，路由就是URL到函数的映射。
+2. router和route的区别route就是一条路由，它将一个URL路径和一个函数进行映射，例如：
+/users        -&amp;gt;  getAllUsers()
+/users/count  -&amp;gt;  getUsersCount()
+这就是两条路由，当访问/users的时候，会执行getAllUsers()函数；当访问/use">
 <meta property="og:type" content="article">
-<meta property="og:title" content="HTTP 状态码概要">
-<meta property="og:url" content="https://flyerooo.github.io/2017/03/25/HTTP-状态码概要/index.html">
+<meta property="og:title" content="理解web路由">
+<meta property="og:url" content="https://flyerooo.github.io/2017/01/19/理解web路由-0/index.html">
 <meta property="og:site_name" content="青穗黄">
-<meta property="og:description" content="状态码的第一位数字表示状态类型，第二、三位数字表示具体的情况。下表列举了第一位数字的含义。
-
-
-状态码
-含义
-
-
-
-
-1xx
-告知请求的处理进度和情况
-
-
-2xx
-成功
-
-
-3xx
-表示需要进一步操作
-
-
-4xx
-客户端错误
-
-
-5xx
-服务器错误">
-<meta property="og:updated_time" content="2017-03-25T03:06:22.873Z">
+<meta property="og:description" content="1. 什么是路由简单来说，路由就是URL到函数的映射。
+2. router和route的区别route就是一条路由，它将一个URL路径和一个函数进行映射，例如：
+/users        -&amp;gt;  getAllUsers()
+/users/count  -&amp;gt;  getUsersCount()
+这就是两条路由，当访问/users的时候，会执行getAllUsers()函数；当访问/use">
+<meta property="og:updated_time" content="2017-05-19T01:49:56.198Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="HTTP 状态码概要">
-<meta name="twitter:description" content="状态码的第一位数字表示状态类型，第二、三位数字表示具体的情况。下表列举了第一位数字的含义。
-
-
-状态码
-含义
-
-
-
-
-1xx
-告知请求的处理进度和情况
-
-
-2xx
-成功
-
-
-3xx
-表示需要进一步操作
-
-
-4xx
-客户端错误
-
-
-5xx
-服务器错误">
+<meta name="twitter:title" content="理解web路由">
+<meta name="twitter:description" content="1. 什么是路由简单来说，路由就是URL到函数的映射。
+2. router和route的区别route就是一条路由，它将一个URL路径和一个函数进行映射，例如：
+/users        -&amp;gt;  getAllUsers()
+/users/count  -&amp;gt;  getUsersCount()
+这就是两条路由，当访问/users的时候，会执行getAllUsers()函数；当访问/use">
   
     <link rel="alternate" href="/atom.xml" title="青穗黄" type="application/atom+xml">
   
@@ -149,10 +83,10 @@
   </div>
 </header>
       <div class="outer">
-        <section id="main"><article id="post-HTTP-状态码概要" class="article article-type-post" itemscope itemprop="blogPost">
+        <section id="main"><article id="post-理解web路由-0" class="article article-type-post" itemscope itemprop="blogPost">
   <div class="article-meta">
-    <a href="/2017/03/25/HTTP-状态码概要/" class="article-date">
-  <time datetime="2017-03-25T03:05:34.000Z" itemprop="datePublished">2017-03-25</time>
+    <a href="/2017/01/19/理解web路由-0/" class="article-date">
+  <time datetime="2017-01-19T01:41:00.000Z" itemprop="datePublished">2017-01-19</time>
 </a>
     
   </div>
@@ -163,7 +97,7 @@
         
   
     <h1 class="article-title" itemprop="name">
-      HTTP 状态码概要
+      理解web路由
     </h1>
   
 
@@ -173,63 +107,48 @@
       
         <!-- Table of Contents -->
         
-        <h5 id="状态码的第一位数字表示状态类型，第二、三位数字表示具体的情况。下表列举了第一位数字的含义。"><a href="#状态码的第一位数字表示状态类型，第二、三位数字表示具体的情况。下表列举了第一位数字的含义。" class="headerlink" title="状态码的第一位数字表示状态类型，第二、三位数字表示具体的情况。下表列举了第一位数字的含义。"></a>状态码的第一位数字表示状态类型，第二、三位数字表示具体的情况。下表列举了第一位数字的含义。</h5><table>
-<thead>
-<tr>
-<th>状态码</th>
-<th>含义</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>1xx</td>
-<td>告知请求的处理进度和情况</td>
-</tr>
-<tr>
-<td>2xx</td>
-<td>成功</td>
-</tr>
-<tr>
-<td>3xx</td>
-<td>表示需要进一步操作</td>
-</tr>
-<tr>
-<td>4xx</td>
-<td>客户端错误</td>
-</tr>
-<tr>
-<td>5xx</td>
-<td>服务器错误</td>
-</tr>
-</tbody>
-</table>
+        <h5 id="1-什么是路由"><a href="#1-什么是路由" class="headerlink" title="1. 什么是路由"></a>1. 什么是路由</h5><p>简单来说，路由就是URL到函数的映射。</p>
+<h5 id="2-router和route的区别"><a href="#2-router和route的区别" class="headerlink" title="2. router和route的区别"></a>2. router和route的区别</h5><p>route就是一条路由，它将一个URL路径和一个函数进行映射，例如：</p>
+<p>/users        -&gt;  getAllUsers()</p>
+<p>/users/count  -&gt;  getUsersCount()</p>
+<p>这就是两条路由，当访问/users的时候，会执行getAllUsers()函数；当访问/users/count的时候，会执行getUsersCount()函数。</p>
+<p>而router可以理解为一个容器，或者说一种机制，它管理了一组route。简单来说，route只是进行了URL和函数的映射，而在当接收到一个URL之后，去路由映射表中查找相应的函数，这个过程是由router来处理的。一句话概括就是 “The router routes you to a route“。</p>
+<h5 id="3-服务器端路由"><a href="#3-服务器端路由" class="headerlink" title="3. 服务器端路由"></a>3. 服务器端路由</h5><p>当服务器接收到客户端发来的HTTP请求，会根据请求的URL，来找到相应的映射函数，然后执行该函数，并将函数的返回值发送给客户端。</p>
+<h5 id="4-客户端路由"><a href="#4-客户端路由" class="headerlink" title="4. 客户端路由"></a>4. 客户端路由</h5><p>对于客户端（通常为浏览器）来说，路由的映射函数通常是进行一些DOM的显示和隐藏操作。这样，当访问不同的路径的时候，会显示不同的页面组件。客户端路由最常见的有以下两种实现方案：</p>
+<ul>
+<li>基于Hash</li>
+<li>基于History API</li>
+</ul>
+<p>文中大部分内容参考了此<a href="http://syaning.com/2017/01/10/web-route/" target="_blank" rel="external">文章</a></p>
 
       
     </div>
     <footer class="article-footer">
-      <a data-url="https://flyerooo.github.io/2017/03/25/HTTP-状态码概要/" data-id="cj2txggle00029ghy7763gtuv" class="article-share-link">Delen</a>
+      <a data-url="https://flyerooo.github.io/2017/01/19/理解web路由-0/" data-id="cj2v6tvsk0000achy48l92r50" class="article-share-link">Delen</a>
       
       
       
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/路由/">路由</a></li></ul>
+
     </footer>
   </div>
   
     
 <nav id="article-nav">
   
-    <a href="/2017/03/26/第一章-浏览器生成消息/" id="article-nav-newer" class="article-nav-link-wrap">
+    <a href="/2017/03/14/《实战ES2015》备忘/" id="article-nav-newer" class="article-nav-link-wrap">
       <strong class="article-nav-caption">Nieuwer</strong>
       <div class="article-nav-title">
         
-          第一章 浏览器生成消息
+          《实战ES2015》备忘
         
       </div>
     </a>
   
   
-    <a href="/2017/03/25/HTTP-中主要的头字段/" id="article-nav-older" class="article-nav-link-wrap">
+    <a href="/2016/11/24/Untitled/" id="article-nav-older" class="article-nav-link-wrap">
       <strong class="article-nav-caption">Ouder</strong>
-      <div class="article-nav-title">HTTP 中主要的头字段</div>
+      <div class="article-nav-title">JavaScript容易理解错误的例子</div>
     </a>
   
 </nav>
@@ -262,7 +181,7 @@
       
         <strong class="toc-title">文章目录</strong>
         <div class="toc-widget-list">
-              <ol class="toc"><li class="toc-item toc-level-5"><a class="toc-link" href="#状态码的第一位数字表示状态类型，第二、三位数字表示具体的情况。下表列举了第一位数字的含义。"><span class="toc-number">1.</span> <span class="toc-text">状态码的第一位数字表示状态类型，第二、三位数字表示具体的情况。下表列举了第一位数字的含义。</span></a></li></ol>
+              <ol class="toc"><li class="toc-item toc-level-5"><a class="toc-link" href="#1-什么是路由"><span class="toc-number">1.</span> <span class="toc-text">1. 什么是路由</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#2-router和route的区别"><span class="toc-number">2.</span> <span class="toc-text">2. router和route的区别</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#3-服务器端路由"><span class="toc-number">3.</span> <span class="toc-text">3. 服务器端路由</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#4-客户端路由"><span class="toc-number">4.</span> <span class="toc-text">4. 客户端路由</span></a></li></ol>
           </div>
       </div>
     </div>
