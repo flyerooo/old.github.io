@@ -69,55 +69,6 @@
       <div class="outer">
         <section id="main">
   
-    <article id="post-《Python-核心编程》" class="article article-type-post" itemscope itemprop="blogPost">
-  <div class="article-meta">
-    <a href="/2015/12/01/《Python-核心编程》/" class="article-date">
-  <time datetime="2015-12-01T07:00:00.000Z" itemprop="datePublished">2015-12-01</time>
-</a>
-    
-  <div class="article-category">
-    <a class="article-category-link" href="/categories/Python/">Python</a>
-  </div>
-
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2015/12/01/《Python-核心编程》/">《Python 核心编程》4.10    练习</a>
-    </h1>
-  
-
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p>4–1.   Python 对象。与所有 Python 对象有关的三个属性是什么？请简单的描述一下。<br>
-        
-          <p class="article-more-link">
-            <a href="/2015/12/01/《Python-核心编程》/#more">继续阅读全文 »</a>
-          </p>
-        
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="https://flyerooo.github.io/2015/12/01/《Python-核心编程》/" data-id="cj2vmz0ui000al8hyud4wjfxq" class="article-share-link">Delen</a>
-      
-      
-      
-  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Python/">Python</a></li></ul>
-
-    </footer>
-  </div>
-  
-</article>
- 
-
-
-  
     <article id="post-《Python核心编程》3-8-练习" class="article article-type-post" itemscope itemprop="blogPost">
   <div class="article-meta">
     <a href="/2015/11/30/《Python核心编程》3-8-练习/" class="article-date">
@@ -182,6 +133,61 @@
       
       
       
+    </footer>
+  </div>
+  
+</article>
+ 
+
+
+  
+    <article id="post-Untitled" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2015/11/13/Untitled/" class="article-date">
+  <time datetime="2015-11-13T07:40:00.000Z" itemprop="datePublished">2015-11-13</time>
+</a>
+    
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/Python/">Python</a>
+  </div>
+
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2015/11/13/Untitled/">《父与子的编程之旅-》EasyGui安装问题解决</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <!-- Table of Contents -->
+        
+        <h5 id="问题"><a href="#问题" class="headerlink" title="问题"></a>问题</h5><p>在第六章 GUI–图形用户界面中在按照书中方法（把easygui.py放到Python能找到的地方，我放在了Python27下）安装EassyGui后，msgbox不能成功运行。</p>
+<figure class="highlight ruby"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line"><span class="meta">&gt;&gt;</span>&gt;import easygui</div><div class="line"><span class="meta">&gt;&gt;</span>&gt;easygui.msgbox(<span class="string">"Hello There!"</span>)</div><div class="line">Traceback (most recent call last):</div><div class="line">  File <span class="string">"&lt;stdin&gt;"</span>, line <span class="number">1</span>, <span class="keyword">in</span> &lt;<span class="class"><span class="keyword">module</span>&gt;</span></div><div class="line"><span class="symbol">AttributeError:</span> <span class="string">'module'</span> object has no attribute <span class="string">'msgbox'</span></div></pre></td></tr></table></figure>
+<h5 id="解决办法："><a href="#解决办法：" class="headerlink" title="解决办法："></a>解决办法：</h5><figure class="highlight vala"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line"><span class="meta">#google，stackoverflow大概找了下，没找到答案，之后问了Python QQ群的程序员们，解决了。方法如下：</span></div><div class="line"><span class="meta">#1.把自己刚拖进去的那些文件删掉（比如easygui.py）</span></div><div class="line"><span class="meta">#2.在CMD命令窗口输入pip uninstall easygui中卸载 easygui</span></div><div class="line"><span class="meta">#3.在CMD命令窗口输入pip install easygui 安装easygui</span></div><div class="line"><span class="meta">#4.嗯，然后就好了</span></div></pre></td></tr></table></figure>
+<h5 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h5><p>之前看过<a href="http://www.icourse163.org/learn/bit-268001?tid=317001#/learn/content?type=detail&amp;id=905003&amp;cid=973006" target="_blank" rel="external">库的安装方法优先级别视频</a>，只残存了 ‘好像看过’ 的影响，这次过后，总算记住了。</p>
+<ul>
+<li>优先级 1：pip 工具安装</li>
+<li>优先级 2：库的自定义安装</li>
+<li>优先级 3 : 库的文件安装</li>
+</ul>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="https://flyerooo.github.io/2015/11/13/Untitled/" data-id="cj2vw0kb80000a0hywno5g288" class="article-share-link">Delen</a>
+      
+      
+      
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Python/">Python</a></li></ul>
+
     </footer>
   </div>
   
