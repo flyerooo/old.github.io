@@ -1,0 +1,327 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+  <title>《Python 核心编程》 11.11 练习 | 青穗黄的练习本</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta name="description" content="11–1.参数。比较下面 3 个函数：123456789def countToFour1():    for eachNum in range(5):        print eachNum,def countToFour2(n):    for eachNum in range(n, 5):        print eachNum,def countToFour3(n=1):    for">
+<meta property="og:type" content="article">
+<meta property="og:title" content="《Python 核心编程》 11.11 练习">
+<meta property="og:url" content="https://flyerooo.github.io/2016/11/22/《Python-核心编程》-11-11-练习/index.html">
+<meta property="og:site_name" content="青穗黄的练习本">
+<meta property="og:description" content="11–1.参数。比较下面 3 个函数：123456789def countToFour1():    for eachNum in range(5):        print eachNum,def countToFour2(n):    for eachNum in range(n, 5):        print eachNum,def countToFour3(n=1):    for">
+<meta property="og:updated_time" content="2017-05-20T08:16:18.685Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="《Python 核心编程》 11.11 练习">
+<meta name="twitter:description" content="11–1.参数。比较下面 3 个函数：123456789def countToFour1():    for eachNum in range(5):        print eachNum,def countToFour2(n):    for eachNum in range(n, 5):        print eachNum,def countToFour3(n=1):    for">
+  
+    <link rel="alternate" href="/atom.xml" title="青穗黄的练习本" type="application/atom+xml">
+  
+  
+    <link rel="icon" href="/favicon.png">
+  
+  
+    
+  
+  <link rel="stylesheet" href="/css/style.css">
+  
+
+</head>
+
+<body>
+  <div id="container">
+    <div id="wrap">
+      <header id="header">
+  <div id="banner"></div>
+  <div id="header-outer" class="outer">
+    
+    <div id="header-inner" class="inner">
+      <nav id="sub-nav">
+        
+          <a id="nav-rss-link" class="nav-icon" href="/atom.xml" title="RSS Feed"></a>
+        
+        <a id="nav-search-btn" class="nav-icon" title="Search"></a>
+      </nav>
+      <div id="search-form-wrap">
+        <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" results="0" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="https://flyerooo.github.io"></form>
+      </div>
+      <nav id="main-nav">
+        <a id="main-nav-toggle" class="nav-icon"></a>
+        
+          <a class="main-nav-link" href="/">首页</a>
+        
+          <a class="main-nav-link" href="/archives">归档</a>
+        
+          <a class="main-nav-link" href="/about">关于</a>
+        
+      </nav>
+      
+    </div>
+    <div id="header-title" class="inner">
+      <h1 id="logo-wrap">
+        <a href="/" id="logo">青穗黄的练习本</a>
+      </h1>
+      
+        <h2 id="subtitle-wrap">
+          <a href="/" id="subtitle">知而不行为不知</a>
+        </h2>
+      
+    </div>
+  </div>
+</header>
+      <div class="outer">
+        <section id="main"><article id="post-《Python-核心编程》-11-11-练习" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2016/11/22/《Python-核心编程》-11-11-练习/" class="article-date">
+  <time datetime="2016-11-22T08:12:00.000Z" itemprop="datePublished">2016-11-22</time>
+</a>
+    
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/Python/">Python</a>
+  </div>
+
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 class="article-title" itemprop="name">
+      《Python 核心编程》 11.11 练习
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <!-- Table of Contents -->
+        
+        <p>11–1.参数。比较下面 3 个函数：<br><figure class="highlight python"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div></pre></td><td class="code"><pre><div class="line"><span class="function"><span class="keyword">def</span> <span class="title">countToFour1</span><span class="params">()</span>:</span></div><div class="line">    <span class="keyword">for</span> eachNum <span class="keyword">in</span> range(<span class="number">5</span>):</div><div class="line">        <span class="keyword">print</span> eachNum,</div><div class="line"><span class="function"><span class="keyword">def</span> <span class="title">countToFour2</span><span class="params">(n)</span>:</span></div><div class="line">    <span class="keyword">for</span> eachNum <span class="keyword">in</span> range(n, <span class="number">5</span>):</div><div class="line">        <span class="keyword">print</span> eachNum,</div><div class="line"><span class="function"><span class="keyword">def</span> <span class="title">countToFour3</span><span class="params">(n=<span class="number">1</span>)</span>:</span></div><div class="line">    <span class="keyword">for</span> eachNum <span class="keyword">in</span> range(n, <span class="number">5</span>):</div><div class="line">        <span class="keyword">print</span> eachNum,</div></pre></td></tr></table></figure></p>
+<p>给定如下的输入直到程序输出，你认为什么会发生？向下表 11.2 填入输出。如果你认为给定的输入会发生错误的话填入“ERROR”或者如果没有输出的话填入“NONE”<br>11-2.函数。结合你对练习 5-2 的解，以便你创建一个带相同对数字并同时返回一它们之和以及产物的结合函数。<br>表 11.2 问题 11-1 的输出图 </p>
+<figure class="highlight lsl"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div></pre></td><td class="code"><pre><div class="line">Input      countToFour1      countToFour2     countToFour3</div><div class="line"></div><div class="line"><span class="number">2</span>          ERROR             <span class="number">2</span> <span class="number">3</span> <span class="number">4</span>            <span class="number">2</span> <span class="number">3</span> <span class="number">4</span></div><div class="line">  </div><div class="line"><span class="number">4</span>          ERROR             <span class="number">4</span>                <span class="number">4</span></div><div class="line">    </div><div class="line"><span class="number">5</span>          ERROR             None             None</div><div class="line">  </div><div class="line">(nothing)  <span class="number">0</span> <span class="number">1</span> <span class="number">2</span> <span class="number">3</span> <span class="number">4</span>         ERROR            <span class="number">1</span> <span class="number">2</span> <span class="number">3</span> <span class="number">4</span></div></pre></td></tr></table></figure>
+<p>11-3 函数。在这个练习中，我们将实现 max()和 min()内建函数。<br>(a) 写分别带两个元素返回一个较大和较小元素，简单的 max2()核 min2()函数。他们应该可以用任意的 python 对象运作。举例来说，max2(4,8)和 min2(4,8)会各自每次返回 8 和 4。<br><figure class="highlight ruby"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div></pre></td><td class="code"><pre><div class="line"><span class="function"><span class="keyword">def</span> <span class="title">max2</span><span class="params">(a,b)</span></span>:</div><div class="line">    max_num = a</div><div class="line">    <span class="keyword">if</span> a&lt;<span class="symbol">b:</span></div><div class="line">        max_num =b</div><div class="line">    <span class="keyword">return</span> max_num</div><div class="line"><span class="function"><span class="keyword">def</span> <span class="title">min2</span><span class="params">(a,b)</span></span>:</div><div class="line">    min_num = a</div><div class="line">    <span class="keyword">if</span> a&gt;<span class="symbol">b:</span></div><div class="line">        min_num =b</div><div class="line">    <span class="keyword">return</span> min_num</div></pre></td></tr></table></figure></p>
+<p>(b) 创建使用了在 a 部分中的解来重构 max()和 min()的新函数my_max()和 my_min().这些函数分别返回非空队列中一个最大和最小值。它们也能带一个参数集合作为输入。用数字和字符串来测试你的解。<br><figure class="highlight python"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div></pre></td><td class="code"><pre><div class="line">这题是我理解有问题吗，和网上代码都不一样</div><div class="line"><span class="function"><span class="keyword">def</span> <span class="title">max2</span><span class="params">(a,b)</span>:</span></div><div class="line">    max_num = a</div><div class="line">    <span class="keyword">if</span> a&lt;b:</div><div class="line">        max_num =b</div><div class="line">    <span class="keyword">return</span> max_num</div><div class="line">aset=&#123;<span class="number">1</span>&#125;</div><div class="line">my_max = reduce(max2,aset)</div><div class="line"><span class="keyword">print</span> my_max</div></pre></td></tr></table></figure></p>
+<p>11–4.   返回值。给你在 5-13 的解创建一个补充函数。创建一个带以分为单位的总时间以及返回一个以小时和分为单位的等价的总时间。 </p>
+<figure class="highlight perl"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line"><span class="comment">#5-13 输入的不就是小时和分为单位？题目没弄清</span></div><div class="line">def change_time():</div><div class="line">    <span class="keyword">time</span>=raw_input(<span class="string">"input a time split by ':'   "</span>)</div><div class="line">    minutes =<span class="keyword">int</span>(time.<span class="keyword">split</span>(<span class="string">':'</span>)[<span class="number">0</span>])*<span class="number">60</span> +<span class="keyword">int</span>(time.<span class="keyword">split</span>(<span class="string">':'</span>)[<span class="number">1</span>])</div><div class="line">    <span class="keyword">print</span> <span class="keyword">time</span> ,<span class="string">"is equl"</span> ,minutes,<span class="string">"minutes"</span></div><div class="line">change_time()</div></pre></td></tr></table></figure>
+<p>11–5.    默认参数。更新你在练习 5-7 中创建的销售税脚本以便让销售税率不再是函数输入的必要之物。创建使用你地方税率的默认参数如果在调用的时候没有值传入。 </p>
+<figure class="highlight ruby"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line"><span class="function"><span class="keyword">def</span> <span class="title">tax</span><span class="params">(money，tax_ratio=<span class="number">0</span>.<span class="number">6</span>)</span></span>:</div><div class="line">    tax=money*tax_ratio</div><div class="line">    <span class="keyword">return</span> tax</div></pre></td></tr></table></figure>
+<p>11–6.   变长参数。下一个称为 printf()的函数。有一个值参数，格式字符串。剩下的就是根据格式化字符串上的值，要显示在标准输出上的可变参数，格式化字符串中的值允许特别的字符串格式操作指示符，如%d, %f, etc。提示：解是很琐碎的—-无需实现字符串操作符功能性，但你需要显示用字符串格式化操作（%） </p>
+<figure class="highlight nimrod"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div></pre></td><td class="code"><pre><div class="line"><span class="comment">#抄网上代码</span></div><div class="line">def printf(rule,*num):</div><div class="line">    i = -<span class="number">1</span></div><div class="line">    <span class="keyword">for</span> j <span class="keyword">in</span> num:</div><div class="line">        i = rule.find(<span class="string">"%"</span>,i+<span class="number">1</span>)  <span class="comment">#对%定位，分三种情况讨论并进行替换</span></div><div class="line">        <span class="keyword">if</span> rule[i+<span class="number">1</span>]==<span class="string">"d"</span> <span class="keyword">and</span> <span class="keyword">type</span>(j)==<span class="built_in">int</span>:</div><div class="line">            <span class="literal">result</span> = rule.replace(<span class="string">"%d"</span>,str(j),<span class="number">1</span>)</div><div class="line">        <span class="keyword">elif</span> rule[i+<span class="number">1</span>]==<span class="string">"f"</span> <span class="keyword">and</span> <span class="keyword">type</span>(j)==<span class="built_in">float</span>:</div><div class="line">            <span class="literal">result</span> = rule.replace(<span class="string">"%f"</span>,str(j),<span class="number">1</span>)</div><div class="line">        <span class="keyword">elif</span> rule[i+<span class="number">1</span>]==<span class="string">"s"</span> <span class="keyword">and</span> <span class="keyword">type</span>(j)==str:</div><div class="line">            <span class="literal">result</span> = rule.replace(<span class="string">"%s"</span>,j,<span class="number">1</span>)</div><div class="line">        <span class="keyword">else</span>:</div><div class="line">             print  <span class="string">"ERROR"</span>  <span class="comment">#当对应类型不正确时抛出异常</span></div><div class="line">             exit(<span class="number">0</span>)</div><div class="line">        rule = <span class="literal">result</span></div><div class="line">    print <span class="literal">result</span></div></pre></td></tr></table></figure>
+<p>11–7.    用map()进行函数式编程 。给定一对同一大小的列表，如[1，2 ， 3] 和[‘abc’,’def’,’ghi’,….]，将两个标归并为一个由每个列表元素组成的元组的单一的表，以使我们的结果看起来像这样：{[(1, ‘abc’), (2, ‘def’), (3, ‘ghi’), …}.（虽然这问题在本质上和第六章的一个问题相似，那时两个解没有直接的联系）然后创建用 zip 内建函数创建另一个解。 </p>
+<figure class="highlight stylus"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line">a=[<span class="number">1</span>, <span class="number">2</span>, <span class="number">3</span>,]</div><div class="line">b=[<span class="string">'abc'</span>, <span class="string">'def'</span>, <span class="string">'ghi'</span>]</div><div class="line"><span class="function"><span class="title">map</span><span class="params">(None,a,b)</span></span></div><div class="line"></div><div class="line">a=[<span class="number">1</span>, <span class="number">2</span>, <span class="number">3</span>,]</div><div class="line">b=[<span class="string">'abc'</span>, <span class="string">'def'</span>, <span class="string">'ghi'</span>]</div><div class="line"><span class="function"><span class="title">zip</span><span class="params">(a,b)</span></span></div></pre></td></tr></table></figure>
+<p>11–8.  用 filer()进行函数式编程.使用练习 5-4 你给出的代码来决定年。更新你的代码一边他成为一个函数如果你还没有那么做的话。然后写一段代码来给出一个年份的列表并返回一个只有闰年的列表。然后将它转化为用列表解析。 </p>
+<figure class="highlight applescript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div></pre></td><td class="code"><pre><div class="line">def judge_year(<span class="built_in">year</span>):</div><div class="line">    <span class="keyword">if</span> (<span class="built_in">year</span>%<span class="number">4</span>==<span class="number">0</span> <span class="keyword">and</span> <span class="built_in">year</span>%<span class="number">100</span>!=<span class="number">0</span>) <span class="keyword">or</span> <span class="built_in">year</span>%<span class="number">400</span> ==<span class="number">0</span>:</div><div class="line"><span class="built_in">        return</span> True</div><div class="line">    <span class="keyword">else</span>:</div><div class="line"><span class="built_in">        return</span> False</div><div class="line">        </div><div class="line">year_list=range(<span class="number">1987</span>,<span class="number">2020</span>)</div><div class="line">leap_year=filter(judge_year,year_list)</div><div class="line">print leap_year</div><div class="line"><span class="comment">#列表解析    </span></div><div class="line">[<span class="built_in">year</span> <span class="keyword">for</span> <span class="built_in">year</span> <span class="keyword">in</span> range(<span class="number">1987</span>,<span class="number">2020</span>) <span class="keyword">if</span> (<span class="built_in">year</span>%<span class="number">4</span>==<span class="number">0</span> <span class="keyword">and</span> <span class="built_in">year</span>%<span class="number">100</span>!=<span class="number">0</span>) <span class="keyword">or</span> <span class="built_in">year</span>%<span class="number">400</span> ==<span class="number">0</span>]</div></pre></td></tr></table></figure>
+<p>11–9.   用 reduce()进行函数式编程。复习 11.7.2 部分，阐述如何用 reduce()数字集合的累加的代码。修改它，创建一个叫 average()的函数来计算每个数字集合的简单的平均值。 </p>
+<figure class="highlight lisp"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">average = reduce(<span class="name">lambda</span> x,y<span class="symbol">:x+y</span>,range(<span class="number">10</span>))/float(<span class="name">len</span>(<span class="name">range</span>(<span class="number">10</span>)))</div></pre></td></tr></table></figure>
+<p>11–10.用 filter()进行函数式编程。在 unix 文件系统中，在每个文件夹或者目录中都有两个特别的文件：’.’表示现在的目录，’..’表示父目录。给出上面的知识，看下 os.listdir()函数的文档并描述这段代码做了什么：<br>files = filter(lambda x: x and x[0] != ‘.’, os. listdir(folder)) </p>
+<figure class="highlight vala"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="meta">#不懂</span></div></pre></td></tr></table></figure>
+<p>11–11.用 map()进行函数式编程。写一个使用文件名以及通过除去每行中所有排头和最尾的空白来“清洁“文件。在原始文件中读取然后写入一个新的文件，创建一个新的或者覆盖掉已存在的。给你的用户一个选择来决定执行哪一个。将你的解转换成使用列表解析。 </p>
+<figure class="highlight livecodeserver"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div></pre></td><td class="code"><pre><div class="line"><span class="comment">#抄的网上代码</span></div><div class="line">def strip(strTemp):</div><div class="line">    <span class="literal">return</span> strTemp.strip()</div><div class="line"><span class="keyword">while</span> True:</div><div class="line">    fileName = raw_input(<span class="string">"please enter the fileName(q to quit):"</span>)</div><div class="line">    <span class="keyword">if</span> fileName.<span class="built_in">lower</span>() == <span class="string">"q"</span>:</div><div class="line">        break</div><div class="line">    choice = raw_input(<span class="string">"n to new file, or c to cover file:"</span>)</div><div class="line">    <span class="keyword">if</span> choice.<span class="built_in">lower</span>() == <span class="string">"n"</span>:</div><div class="line">        newFileName = raw_input(<span class="string">"please enter the new file name:"</span>)</div><div class="line">        <span class="keyword">with</span> <span class="built_in">open</span>(newFileName,<span class="string">"w"</span>) <span class="keyword">as</span> fobj:</div><div class="line">            <span class="keyword">with</span> <span class="built_in">open</span>(fileName) <span class="keyword">as</span> fobjold:</div><div class="line">                <span class="keyword">lines</span> = fobjold.readlines()</div><div class="line">                <span class="keyword">for</span> <span class="built_in">line</span> <span class="keyword">in</span> map(strip, <span class="keyword">lines</span>):</div><div class="line">                    fobj.<span class="built_in">write</span>(repr(<span class="built_in">line</span>))</div><div class="line">                    fobj.<span class="built_in">write</span>(<span class="string">"\n"</span>)</div><div class="line">    <span class="keyword">else</span>:</div><div class="line">        <span class="keyword">with</span> <span class="built_in">open</span>(fileName) <span class="keyword">as</span> fobjold:</div><div class="line">            <span class="keyword">lines</span> = fobjold.readlines()</div><div class="line">        <span class="keyword">with</span> <span class="built_in">open</span>(fileName,<span class="string">"w"</span>) <span class="keyword">as</span> fobjold:</div><div class="line">            <span class="keyword">for</span> <span class="built_in">line</span> <span class="keyword">in</span> map(strip, <span class="keyword">lines</span>):</div><div class="line">                fobjold.<span class="built_in">write</span>(repr(<span class="built_in">line</span>))</div><div class="line">                fobjold.<span class="built_in">write</span>(<span class="string">"\n"</span>)</div></pre></td></tr></table></figure>
+<p>11–12. 传递函数。给在这章中描述的 testit()函数写一个姊妹函数。timeit()会带一个函数对象（和参数一起）以及计算出用了多少时间来执行这个函数，而不是测试执行时的错误。返回下面的状态：函数返回值，消耗的时间。你可以用 time.clock()或者 time.time()，无论哪一个给你提供了较高的精度。（一般的共识是在 POSIX 上用 time.time()，在win32 系统上用 time.clock()）<br>注意：timeit()函数与 timeit 模块不相关(在 python2.3 中引入） </p>
+<figure class="highlight swift"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">import</span> time</div><div class="line">def timeit(<span class="function"><span class="keyword">func</span>):</span></div><div class="line">    <span class="title">start_time</span> = <span class="title">time</span>.<span class="title">clock</span><span class="params">()</span></div><div class="line">    result = <span class="function"><span class="keyword">func</span></span></div><div class="line">    <span class="title">end_time</span> = <span class="title">time</span>.<span class="title">clock</span><span class="params">()</span></div><div class="line">    <span class="keyword">return</span> (result, end_time - start_time)</div><div class="line"></div><div class="line">def <span class="function"><span class="keyword">func</span><span class="params">(a, b)</span></span>:</div><div class="line">    <span class="keyword">return</span> a * b</div><div class="line"></div><div class="line"><span class="built_in">print</span> timeit(<span class="function"><span class="keyword">func</span><span class="params">(<span class="number">23</span>, <span class="number">12</span>)</span></span>)</div></pre></td></tr></table></figure>
+<p>11–13.使用 reduce()进行函数式编程以及递归。在第 8 张中，我们看到 N 的阶乘或者 N!作为从 1 到 N 所有数字的乘积。<br>(a) 用一分钟写一个带 x,y 并返回他们乘积的名为 mult(x,y)的简单小巧的函数。 </p>
+<figure class="highlight ruby"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line"><span class="function"><span class="keyword">def</span> <span class="title">mult</span><span class="params">(x,y)</span></span>:</div><div class="line">    <span class="keyword">return</span> x*y</div></pre></td></tr></table></figure>
+<p>(b)用你在 a 中创建 mult()函数以及 reduce 来计算阶乘。 </p>
+<figure class="highlight ruby"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line"><span class="function"><span class="keyword">def</span> <span class="title">mult</span><span class="params">(x,y)</span></span>:</div><div class="line">    <span class="keyword">return</span> x*y</div><div class="line"><span class="function"><span class="keyword">def</span> <span class="title">fac1</span><span class="params">(n)</span></span>:</div><div class="line">    <span class="keyword">return</span> reduce(mult, range(<span class="number">1</span>,n+<span class="number">1</span>))</div></pre></td></tr></table></figure>
+<p>(c)彻底抛弃掉 mult()的使用，用 lamda 表达式替代。 </p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line"><span class="function"><span class="keyword">def</span> <span class="title">fac2</span><span class="params">(n)</span>:</span></div><div class="line">    <span class="keyword">return</span> reduce(<span class="keyword">lambda</span> x, y: x * y, range(<span class="number">1</span>,n+<span class="number">1</span>))</div></pre></td></tr></table></figure>
+<p>(d)在这章中，我们描绘了一个递归解决方案来找到 N!用你在上面问题中完成的 timeit()函数，并给三个版本阶乘函数计时(迭代的，reduce()以及递归） </p>
+<figure class="highlight vala"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="meta">#暂空</span></div></pre></td></tr></table></figure>
+<p>11–14. 递归。我们也来看下在第八章中的 Fibonacci 数字。重写你先前计算 Fibonacci 数字的解(练习 8-9）以便你可以使用递归。 </p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line"><span class="function"><span class="keyword">def</span> <span class="title">fibo</span><span class="params">(n)</span>:</span></div><div class="line">    <span class="keyword">if</span> n == <span class="number">1</span>:</div><div class="line">        <span class="keyword">return</span> <span class="number">1</span></div><div class="line">    <span class="keyword">elif</span> n == <span class="number">2</span>:</div><div class="line">        <span class="keyword">return</span> <span class="number">1</span></div><div class="line">    <span class="keyword">else</span>:</div><div class="line">        <span class="keyword">return</span> fibo(n - <span class="number">1</span>) + fibo(n - <span class="number">2</span>)</div></pre></td></tr></table></figure>
+<p>11–15.递归。从写练习 6-5 的解，用递归向后打印一个字符串。用递归向前以及向后打印一个字符串。 </p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div></pre></td><td class="code"><pre><div class="line"><span class="comment">#抄网上代码</span></div><div class="line"><span class="comment">#向后打印</span></div><div class="line"><span class="function"><span class="keyword">def</span> <span class="title">printLeft</span><span class="params">(strTemp)</span>:</span></div><div class="line">    <span class="keyword">if</span> strTemp:</div><div class="line">        <span class="keyword">print</span> strTemp[<span class="number">0</span>],</div><div class="line">        <span class="keyword">return</span> printLeft(strTemp[<span class="number">1</span>:])</div><div class="line"><span class="comment">#向前打印</span></div><div class="line"><span class="function"><span class="keyword">def</span> <span class="title">printRight</span><span class="params">(strTemp)</span>:</span></div><div class="line">    <span class="keyword">if</span> strTemp:</div><div class="line">        <span class="keyword">print</span> strTemp[<span class="number">-1</span>],</div><div class="line">        <span class="keyword">return</span> printRight(strTemp[:<span class="number">-1</span>])</div></pre></td></tr></table></figure>
+<p>11–16. 更新 easyMath.py。这个脚本，如例子 11.1 描绘的那样，以入门程序来帮助年轻人强化他们的数学技能。通过加入乘法作为可支持的操作来更进一步提升这个程序。额外的加分：也加入除法；这比较难做些因为你要找到有效的整数除数。幸运的是，已经有代码来确定分子比分母大，所以不需要支持分数。 </p>
+<figure class="highlight clean"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"># 太麻烦 ，头大...</div></pre></td></tr></table></figure>
+<p>11–17.定义<br>(a)  描述偏函数应用和 currying 之间的区别。<br>(b)   偏函数应用和闭包之间有什么区别？<br>(c)   最后，迭代器和生成器是怎么区别开的？ </p>
+<figure class="highlight vala"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="meta">#没什么深入的理解，放过</span></div></pre></td></tr></table></figure>
+<p>11–18. 同步化函数调用。复习下第六章中当引入浅拷贝和深拷贝的时候，提到的丈夫和妻子情形（6.20 小结）。他们共用了一个普通账户，同时对他们银行账户访问时会发生不利影响。 </p>
+<p>  创建一个程序，让调用改变账户收支的函数必需同步。换句话说，在任意给定时刻只能有个一进程或者线程来执行函数。一开始你试着用文件，但是一个真正的解决方法是用装饰器和在threading 或者 mutex 模块中的同步指令。你看看第 17 张来获得更多的灵感。 </p>
+<figure class="highlight"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">不会</div></pre></td></tr></table></figure>
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="https://flyerooo.github.io/2016/11/22/《Python-核心编程》-11-11-练习/" data-id="cj2x0ki4u0003l0hyz1ucd1qh" class="article-share-link">Share</a>
+      
+      
+      
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Python/">Python</a></li></ul>
+
+    </footer>
+  </div>
+  
+    
+<nav id="article-nav">
+  
+    <a href="/2016/11/30/《Python语言程序设计》前四章学习记录/" id="article-nav-newer" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Newer</strong>
+      <div class="article-nav-title">
+        
+          《Python语言程序设计》前四章学习记录
+        
+      </div>
+    </a>
+  
+  
+    <a href="/2016/11/22/《Python-核心编程》/" id="article-nav-older" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Older</strong>
+      <div class="article-nav-title">Python 可变长度参数</div>
+    </a>
+  
+</nav>
+
+  
+</article>
+ 
+     
+  <div class="comments" id="comments">
+    
+     
+       
+      <div id="cloud-tie-wrapper" class="cloud-tie-wrapper"></div>
+    
+  </div>
+ 
+  
+
+</section>
+           
+    <aside id="sidebar">
+  
+    
+
+  
+    
+  
+    
+
+  
+    
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title recent-posts">Recent Posts</h3>
+    <div class="widget">
+      <ul>
+        
+          <li>
+            <a href="/2017/04/03/this语义/">this语义</a>
+          </li>
+        
+          <li>
+            <a href="/2017/04/02/JavaScript-This-的六道坎/">JavaScript This 的六道坎</a>
+          </li>
+        
+          <li>
+            <a href="/2017/03/30/《网络是怎样连接的》大纲/">《网络是怎样连接的》大纲</a>
+          </li>
+        
+          <li>
+            <a href="/2017/03/26/第一章-浏览器生成消息/">第一章 浏览器生成消息</a>
+          </li>
+        
+          <li>
+            <a href="/2017/03/25/HTTP-状态码概要/">HTTP 状态码概要</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+
+  
+    
+
+  
+</aside>
+
+      </div>
+      <footer id="footer">
+  
+  <div class="outer">
+    <div id="footer-left">
+      &copy; 2014 - 2017 Jeffzzz&nbsp;|&nbsp;
+      Theme by <a href="https://github.com/giscafer/hexo-theme-cafe/" target="_blank">Cafe</a>
+    </div>
+     <div id="footer-right">
+      Contact&nbsp;|&nbsp;wxl.pure@gmail.com
+    </div>
+  </div>
+</footer>
+ <script src="/jquery/jquery.min.js"></script>
+    </div>
+    <nav id="mobile-nav">
+  
+    <a href="/" class="mobile-nav-link">首页</a>
+  
+    <a href="/archives" class="mobile-nav-link">归档</a>
+  
+    <a href="/about" class="mobile-nav-link">关于</a>
+  
+</nav>
+    <img class="back-to-top-btn" src="/images/fly-to-top.png"/>
+<script>
+// Elevator script included on the page, already.
+window.onload = function() {
+  var elevator = new Elevator({
+    selector:'.back-to-top-btn',
+    element: document.querySelector('.back-to-top-btn'),
+    duration: 1000 // milliseconds
+  });
+}
+</script>
+      
+
+  
+    <script>
+      var cloudTieConfig = {
+        url: document.location.href, 
+        sourceId: "",
+        productKey: "e2fb4051c49842xxce669e634bc983f",
+        target: "cloud-tie-wrapper"
+      };
+    </script>
+    <script src="https://img1.ws.126.net/f2e/tie/yun/sdk/loader.js"></script>
+    
+
+  
+
+
+
+  
+    <script type="text/x-mathjax-config">
+      MathJax.Hub.Config({
+        tex2jax: {
+          inlineMath: [ ['$','$'], ["\\(","\\)"]  ],
+          processEscapes: true,
+          skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']
+        }
+      })
+    </script>
+
+    <script type="text/x-mathjax-config">
+      MathJax.Hub.Queue(function() {
+        var all = MathJax.Hub.getAllJax(), i;
+        for (i=0; i < all.length; i += 1) {
+          all[i].SourceElement().parentNode.className += ' has-jax';
+        }
+      })
+    </script>
+    <script type="text/javascript" src="//cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+  
+
+
+ <script src="/js/is.js"></script>
+
+
+  <link rel="stylesheet" href="/fancybox/jquery.fancybox.css">
+  <script src="/fancybox/jquery.fancybox.pack.js"></script>
+
+
+<script src="/js/script.js"></script>
+<script src="/js/elevator.js"></script>
+  </div>
+</body>
+</html>

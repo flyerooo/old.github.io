@@ -1,0 +1,307 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+  <title>《Python语言程序设计》前四章学习记录 | 青穗黄的练习本</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta name="description" content="1.不换行打印：
+12345print(&quot;AAA&quot;, end = &apos; &apos;)print(&quot;BBB&quot;, end = &apos;&apos;)print(&quot;CCC&quot;, end = &apos;**&apos;)#输出AAA BBBCCC**
+2.格式化数字：
+123456789101112131415161718format(item, format-specifier)#&quot;10.2f&quot; 10为域宽度，2为精度，f为转换码&amp;gt;&amp;gt;&amp;">
+<meta property="og:type" content="article">
+<meta property="og:title" content="《Python语言程序设计》前四章学习记录">
+<meta property="og:url" content="https://flyerooo.github.io/2016/11/30/《Python语言程序设计》前四章学习记录/index.html">
+<meta property="og:site_name" content="青穗黄的练习本">
+<meta property="og:description" content="1.不换行打印：
+12345print(&quot;AAA&quot;, end = &apos; &apos;)print(&quot;BBB&quot;, end = &apos;&apos;)print(&quot;CCC&quot;, end = &apos;**&apos;)#输出AAA BBBCCC**
+2.格式化数字：
+123456789101112131415161718format(item, format-specifier)#&quot;10.2f&quot; 10为域宽度，2为精度，f为转换码&amp;gt;&amp;gt;&amp;">
+<meta property="og:updated_time" content="2017-05-20T08:16:49.182Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="《Python语言程序设计》前四章学习记录">
+<meta name="twitter:description" content="1.不换行打印：
+12345print(&quot;AAA&quot;, end = &apos; &apos;)print(&quot;BBB&quot;, end = &apos;&apos;)print(&quot;CCC&quot;, end = &apos;**&apos;)#输出AAA BBBCCC**
+2.格式化数字：
+123456789101112131415161718format(item, format-specifier)#&quot;10.2f&quot; 10为域宽度，2为精度，f为转换码&amp;gt;&amp;gt;&amp;">
+  
+    <link rel="alternate" href="/atom.xml" title="青穗黄的练习本" type="application/atom+xml">
+  
+  
+    <link rel="icon" href="/favicon.png">
+  
+  
+    
+  
+  <link rel="stylesheet" href="/css/style.css">
+  
+
+</head>
+
+<body>
+  <div id="container">
+    <div id="wrap">
+      <header id="header">
+  <div id="banner"></div>
+  <div id="header-outer" class="outer">
+    
+    <div id="header-inner" class="inner">
+      <nav id="sub-nav">
+        
+          <a id="nav-rss-link" class="nav-icon" href="/atom.xml" title="RSS Feed"></a>
+        
+        <a id="nav-search-btn" class="nav-icon" title="Search"></a>
+      </nav>
+      <div id="search-form-wrap">
+        <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" results="0" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="https://flyerooo.github.io"></form>
+      </div>
+      <nav id="main-nav">
+        <a id="main-nav-toggle" class="nav-icon"></a>
+        
+          <a class="main-nav-link" href="/">首页</a>
+        
+          <a class="main-nav-link" href="/archives">归档</a>
+        
+          <a class="main-nav-link" href="/about">关于</a>
+        
+      </nav>
+      
+    </div>
+    <div id="header-title" class="inner">
+      <h1 id="logo-wrap">
+        <a href="/" id="logo">青穗黄的练习本</a>
+      </h1>
+      
+        <h2 id="subtitle-wrap">
+          <a href="/" id="subtitle">知而不行为不知</a>
+        </h2>
+      
+    </div>
+  </div>
+</header>
+      <div class="outer">
+        <section id="main"><article id="post-《Python语言程序设计》前四章学习记录" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2016/11/30/《Python语言程序设计》前四章学习记录/" class="article-date">
+  <time datetime="2016-11-30T08:11:00.000Z" itemprop="datePublished">2016-11-30</time>
+</a>
+    
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/Python/">Python</a>
+  </div>
+
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 class="article-title" itemprop="name">
+      《Python语言程序设计》前四章学习记录
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <!-- Table of Contents -->
+        
+        <p>1.不换行打印：</p>
+<figure class="highlight stylus"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line"><span class="function"><span class="title">print</span><span class="params">(<span class="string">"AAA"</span>, end = <span class="string">' '</span>)</span></span></div><div class="line"><span class="function"><span class="title">print</span><span class="params">(<span class="string">"BBB"</span>, end = <span class="string">''</span>)</span></span></div><div class="line"><span class="function"><span class="title">print</span><span class="params">(<span class="string">"CCC"</span>, end = <span class="string">'**'</span>)</span></span></div><div class="line">#输出</div><div class="line">AAA BBBCCC**</div></pre></td></tr></table></figure>
+<p>2.格式化数字：</p>
+<figure class="highlight gauss"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">format</span>(item, <span class="keyword">format</span>-specifier)</div><div class="line"><span class="meta">#"10.2f" 10为域宽度，2为精度，f为转换码</span></div><div class="line">&gt;&gt;&gt; <span class="keyword">print</span>(<span class="keyword">format</span>(<span class="number">57.467657</span>, <span class="string">"10.2f"</span>))</div><div class="line">     <span class="number">57.47</span>       </div><div class="line"><span class="meta">#默认为右对齐，加"&lt;"为左对齐，注意打印结果后面的空格   </span></div><div class="line">&gt;&gt;&gt; <span class="keyword">print</span>(<span class="keyword">format</span>(<span class="number">57.467657</span>, <span class="string">"&lt;10.2f"</span>))</div><div class="line"><span class="number">57.47</span>     </div><div class="line">---------------------------------</div><div class="line"><span class="string">"10.2f"</span></div><div class="line"><span class="string">"10.2e"</span></div><div class="line"><span class="string">"5d"</span>整数</div><div class="line"><span class="string">"5x"</span>十六进制数</div><div class="line"><span class="string">"5o"</span>八进制数</div><div class="line"><span class="string">"5b"</span>二进制数</div><div class="line"><span class="string">"10.2%"</span>格式为百分数</div><div class="line"><span class="string">"50s"</span>字符串</div><div class="line"><span class="string">"&lt;10.2f"</span>向左对齐格式化项目</div><div class="line"><span class="string">"&gt;10.2f"</span>向右对齐格式化项目</div></pre></td></tr></table></figure>
+<p>3.最小化数值错误：<br>在循环继续条件中使用浮点数可能会导致数值错误。</p>
+<figure class="highlight stylus"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div></pre></td><td class="code"><pre><div class="line">sum = <span class="number">0</span></div><div class="line"><span class="selector-tag">i</span> = <span class="number">0.01</span></div><div class="line"></div><div class="line">while <span class="selector-tag">i</span> &lt;= <span class="number">1.0</span>:</div><div class="line">    sum += <span class="selector-tag">i</span></div><div class="line">    <span class="selector-tag">i</span> += <span class="number">0.01</span></div><div class="line"><span class="function"><span class="title">print</span><span class="params">(<span class="string">"The sum is"</span>, sum)</span></span></div><div class="line"><span class="function"><span class="title">print</span><span class="params">(<span class="string">'i is'</span>,i)</span></span></div><div class="line">#输出结果</div><div class="line">The sum is <span class="number">49.50000000000003</span></div><div class="line"><span class="selector-tag">i</span> is <span class="number">1.0000000000000007</span></div></pre></td></tr></table></figure>
+<p>但正确结果应该为50.5，因为循环的每次迭代中变量i都递增0.01，当循环结束时，i的值稍稍大于1，这导致最后一个i的值没有被加到sum上。<br>最基本的问题是浮点数被近似表示了。</p>
+<p>4.问题：蒙特卡洛模拟<br>使用随机数和概率来解决问题</p>
+<p>例子：求π的近似值<br>首先绘制一个带外接正方形的圆。<br>假设这个圆的半径为1，因此，这个圆的面积就是π，而正方形的面积为4，在这个正方形内随机产生一个点，这个点落在圆内的面积为circleArea/squareArea =π/4</p>
+<figure class="highlight sqf"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div></pre></td><td class="code"><pre><div class="line">import <span class="built_in">random</span></div><div class="line"></div><div class="line">NUMBER_OF_TRIALS = <span class="number">3000000</span></div><div class="line">numberOfHits = <span class="number">0</span></div><div class="line"></div><div class="line"><span class="keyword">for</span> i <span class="built_in">in</span> range(NUMBER_OF_TRIALS):</div><div class="line">    x = <span class="built_in">random</span>.<span class="built_in">uniform</span>(-<span class="number">1</span>, <span class="number">1</span>)</div><div class="line">    y = <span class="built_in">random</span>.<span class="built_in">uniform</span>(-<span class="number">1</span>, <span class="number">1</span>)</div><div class="line"></div><div class="line">    <span class="keyword">if</span>  x ** <span class="number">2</span> + y ** <span class="number">2</span> &lt;= <span class="number">1</span>:</div><div class="line">        numberOfHits += <span class="number">1</span></div><div class="line"></div><div class="line"><span class="built_in">pi</span> = <span class="number">4</span> * numberOfHits / NUMBER_OF_TRIALS</div><div class="line"></div><div class="line">print(<span class="string">"PI is "</span>, <span class="built_in">pi</span>)</div></pre></td></tr></table></figure>
+<p>5.显示素数<br>在五行李显示前50个素数，每行10个</p>
+<p>编程步骤：<br>先编写代码判定给定的那个数字是否为素数，然后再用一个循环来扩展它，判断其它数字是否为素数。<br><figure class="highlight tap"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div></pre></td><td class="code"><pre><div class="line">NUMBER_OF_PRIMES =<span class="number"> 50 </span><span class="comment">#总计要显示素数的个数</span></div><div class="line">NUMBER_OF_PRIMES_PER_LINE =<span class="number"> 10 </span><span class="comment">#每行10个</span></div><div class="line">count =<span class="number"> 0 </span><span class="comment">#素数的个数</span></div><div class="line">number =<span class="number"> 2 </span><span class="comment">#素数起始数字</span></div><div class="line">print("The first<span class="number"> 50 </span>prime numbers are")</div><div class="line"><span class="comment">#查找素数</span></div><div class="line">while count &lt; NUMBER_OF_PRIMES:</div><div class="line"></div><div class="line">    isPrime = True</div><div class="line">    divisor = 2</div><div class="line">    while divisor &lt;= number / 2:</div><div class="line">        if number % divisor == 0:</div><div class="line">            isPrime = False</div><div class="line">            break</div><div class="line">        divisor += 1</div><div class="line"></div><div class="line">    if isPrime:</div><div class="line">        count += 1</div><div class="line">        print (format(number, "5d"), end = '')</div><div class="line">        if count % NUMBER_OF_PRIMES_PER_LINE == 0:</div><div class="line">            print()</div><div class="line"></div><div class="line">    number += 1</div><div class="line"></div><div class="line"><span class="comment">#输出结果</span></div><div class="line">The first<span class="number"> 50 </span>prime numbers are</div><div class="line">   <span class="number"> 2 </span>  <span class="number"> 3 </span>  <span class="number"> 5 </span>  <span class="number"> 7 </span> <span class="number"> 11 </span> <span class="number"> 13 </span> <span class="number"> 17 </span> <span class="number"> 19 </span> <span class="number"> 23 </span>  29</div><div class="line">  <span class="number"> 31 </span> <span class="number"> 37 </span> <span class="number"> 41 </span> <span class="number"> 43 </span> <span class="number"> 47 </span> <span class="number"> 53 </span> <span class="number"> 59 </span> <span class="number"> 61 </span> <span class="number"> 67 </span>  71</div><div class="line">  <span class="number"> 73 </span> <span class="number"> 79 </span> <span class="number"> 83 </span> <span class="number"> 89 </span> <span class="number"> 97 </span><span class="number"> 101 </span><span class="number"> 103 </span><span class="number"> 107 </span><span class="number"> 109 </span> 113</div><div class="line"> <span class="number"> 127 </span><span class="number"> 131 </span><span class="number"> 137 </span><span class="number"> 139 </span><span class="number"> 149 </span><span class="number"> 151 </span><span class="number"> 157 </span><span class="number"> 163 </span><span class="number"> 167 </span> 173</div><div class="line"> <span class="number"> 179 </span><span class="number"> 181 </span><span class="number"> 191 </span><span class="number"> 193 </span><span class="number"> 197 </span><span class="number"> 199 </span><span class="number"> 211 </span><span class="number"> 223 </span><span class="number"> 227 </span> 229</div></pre></td></tr></table></figure></p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="https://flyerooo.github.io/2016/11/30/《Python语言程序设计》前四章学习记录/" data-id="cj2x0ki4z0006l0hyyv0myb81" class="article-share-link">Share</a>
+      
+      
+      
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Python/">Python</a></li></ul>
+
+    </footer>
+  </div>
+  
+    
+<nav id="article-nav">
+  
+    <a href="/2017/01/19/理解web路由-0/" id="article-nav-newer" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Newer</strong>
+      <div class="article-nav-title">
+        
+          理解web路由
+        
+      </div>
+    </a>
+  
+  
+    <a href="/2016/11/22/《Python-核心编程》-11-11-练习/" id="article-nav-older" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Older</strong>
+      <div class="article-nav-title">《Python 核心编程》 11.11 练习</div>
+    </a>
+  
+</nav>
+
+  
+</article>
+ 
+     
+  <div class="comments" id="comments">
+    
+     
+       
+      <div id="cloud-tie-wrapper" class="cloud-tie-wrapper"></div>
+    
+  </div>
+ 
+  
+
+</section>
+           
+    <aside id="sidebar">
+  
+    
+
+  
+    
+  
+    
+
+  
+    
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title recent-posts">Recent Posts</h3>
+    <div class="widget">
+      <ul>
+        
+          <li>
+            <a href="/2017/04/03/this语义/">this语义</a>
+          </li>
+        
+          <li>
+            <a href="/2017/04/02/JavaScript-This-的六道坎/">JavaScript This 的六道坎</a>
+          </li>
+        
+          <li>
+            <a href="/2017/03/30/《网络是怎样连接的》大纲/">《网络是怎样连接的》大纲</a>
+          </li>
+        
+          <li>
+            <a href="/2017/03/26/第一章-浏览器生成消息/">第一章 浏览器生成消息</a>
+          </li>
+        
+          <li>
+            <a href="/2017/03/25/HTTP-状态码概要/">HTTP 状态码概要</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+
+  
+    
+
+  
+</aside>
+
+      </div>
+      <footer id="footer">
+  
+  <div class="outer">
+    <div id="footer-left">
+      &copy; 2014 - 2017 Jeffzzz&nbsp;|&nbsp;
+      Theme by <a href="https://github.com/giscafer/hexo-theme-cafe/" target="_blank">Cafe</a>
+    </div>
+     <div id="footer-right">
+      Contact&nbsp;|&nbsp;wxl.pure@gmail.com
+    </div>
+  </div>
+</footer>
+ <script src="/jquery/jquery.min.js"></script>
+    </div>
+    <nav id="mobile-nav">
+  
+    <a href="/" class="mobile-nav-link">首页</a>
+  
+    <a href="/archives" class="mobile-nav-link">归档</a>
+  
+    <a href="/about" class="mobile-nav-link">关于</a>
+  
+</nav>
+    <img class="back-to-top-btn" src="/images/fly-to-top.png"/>
+<script>
+// Elevator script included on the page, already.
+window.onload = function() {
+  var elevator = new Elevator({
+    selector:'.back-to-top-btn',
+    element: document.querySelector('.back-to-top-btn'),
+    duration: 1000 // milliseconds
+  });
+}
+</script>
+      
+
+  
+    <script>
+      var cloudTieConfig = {
+        url: document.location.href, 
+        sourceId: "",
+        productKey: "e2fb4051c49842xxce669e634bc983f",
+        target: "cloud-tie-wrapper"
+      };
+    </script>
+    <script src="https://img1.ws.126.net/f2e/tie/yun/sdk/loader.js"></script>
+    
+
+  
+
+
+
+  
+    <script type="text/x-mathjax-config">
+      MathJax.Hub.Config({
+        tex2jax: {
+          inlineMath: [ ['$','$'], ["\\(","\\)"]  ],
+          processEscapes: true,
+          skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']
+        }
+      })
+    </script>
+
+    <script type="text/x-mathjax-config">
+      MathJax.Hub.Queue(function() {
+        var all = MathJax.Hub.getAllJax(), i;
+        for (i=0; i < all.length; i += 1) {
+          all[i].SourceElement().parentNode.className += ' has-jax';
+        }
+      })
+    </script>
+    <script type="text/javascript" src="//cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+  
+
+
+ <script src="/js/is.js"></script>
+
+
+  <link rel="stylesheet" href="/fancybox/jquery.fancybox.css">
+  <script src="/fancybox/jquery.fancybox.pack.js"></script>
+
+
+<script src="/js/script.js"></script>
+<script src="/js/elevator.js"></script>
+  </div>
+</body>
+</html>
