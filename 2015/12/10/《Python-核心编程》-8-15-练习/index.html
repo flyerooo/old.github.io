@@ -1,0 +1,329 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+  <title>《Python 核心编程》 8.15 练习 | 青穗黄的练习本</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta name="description" content="8–1.   条件语句. 请看下边的代码 
+1234567891011# statement A if x &amp;gt; 0:     # statement B     pass elif x &amp;lt; 0:     # statement C     pass else:     # statement D     pass     # statement E
+(a)如果 x&amp;lt; 0 , 上面">
+<meta property="og:type" content="article">
+<meta property="og:title" content="《Python 核心编程》 8.15 练习">
+<meta property="og:url" content="https://flyerooo.github.io/2015/12/10/《Python-核心编程》-8-15-练习/index.html">
+<meta property="og:site_name" content="青穗黄的练习本">
+<meta property="og:description" content="8–1.   条件语句. 请看下边的代码 
+1234567891011# statement A if x &amp;gt; 0:     # statement B     pass elif x &amp;lt; 0:     # statement C     pass else:     # statement D     pass     # statement E
+(a)如果 x&amp;lt; 0 , 上面">
+<meta property="og:image" content="http://img.blog.csdn.net/20151211120353102">
+<meta property="og:updated_time" content="2017-05-20T08:44:24.023Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="《Python 核心编程》 8.15 练习">
+<meta name="twitter:description" content="8–1.   条件语句. 请看下边的代码 
+1234567891011# statement A if x &amp;gt; 0:     # statement B     pass elif x &amp;lt; 0:     # statement C     pass else:     # statement D     pass     # statement E
+(a)如果 x&amp;lt; 0 , 上面">
+<meta name="twitter:image" content="http://img.blog.csdn.net/20151211120353102">
+  
+    <link rel="alternate" href="/atom.xml" title="青穗黄的练习本" type="application/atom+xml">
+  
+  
+    <link rel="icon" href="/favicon.png">
+  
+  
+    
+  
+  <link rel="stylesheet" href="/css/style.css">
+  
+
+</head>
+
+<body>
+  <div id="container">
+    <div id="wrap">
+      <header id="header">
+  <div id="banner"></div>
+  <div id="header-outer" class="outer">
+    
+    <div id="header-inner" class="inner">
+      <nav id="sub-nav">
+        
+          <a id="nav-rss-link" class="nav-icon" href="/atom.xml" title="RSS Feed"></a>
+        
+        <a id="nav-search-btn" class="nav-icon" title="Zoeken"></a>
+      </nav>
+      <div id="search-form-wrap">
+        <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" results="0" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="https://flyerooo.github.io"></form>
+      </div>
+      <nav id="main-nav">
+        <a id="main-nav-toggle" class="nav-icon"></a>
+        
+          <a class="main-nav-link" href="/">首页</a>
+        
+          <a class="main-nav-link" href="/archives">归档</a>
+        
+          <a class="main-nav-link" href="/about">关于</a>
+        
+      </nav>
+      
+    </div>
+    <div id="header-title" class="inner">
+      <h1 id="logo-wrap">
+        <a href="/" id="logo">青穗黄的练习本</a>
+      </h1>
+      
+        <h2 id="subtitle-wrap">
+          <a href="/" id="subtitle">知而不行为不知</a>
+        </h2>
+      
+    </div>
+  </div>
+</header>
+      <div class="outer">
+        <section id="main"><article id="post-《Python-核心编程》-8-15-练习" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2015/12/10/《Python-核心编程》-8-15-练习/" class="article-date">
+  <time datetime="2015-12-10T08:43:00.000Z" itemprop="datePublished">2015-12-10</time>
+</a>
+    
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/Python/">Python</a>
+  </div>
+
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 class="article-title" itemprop="name">
+      《Python 核心编程》 8.15 练习
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <!-- Table of Contents -->
+        
+        <p>8–1.   条件语句. 请看下边的代码 </p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div></pre></td><td class="code"><pre><div class="line"><span class="comment"># statement A </span></div><div class="line"><span class="keyword">if</span> x &gt; <span class="number">0</span>: </div><div class="line">    <span class="comment"># statement B </span></div><div class="line">    <span class="keyword">pass</span> </div><div class="line"><span class="keyword">elif</span> x &lt; <span class="number">0</span>: </div><div class="line">    <span class="comment"># statement C </span></div><div class="line">    <span class="keyword">pass</span> </div><div class="line"><span class="keyword">else</span>: </div><div class="line">    <span class="comment"># statement D </span></div><div class="line">    <span class="keyword">pass</span> </div><div class="line">    <span class="comment"># statement E</span></div></pre></td></tr></table></figure>
+<p>(a)如果 x&lt; 0 , 上面哪个语句(A, B, C, D, E)将被执行 </p>
+<figure class="highlight ebnf"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="attribute">statement C</span></div></pre></td></tr></table></figure>
+<p>(b)如果 x== 0 , 上面哪个居于将被执行?  </p>
+<figure class="highlight clean"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"># statement D , # statement E</div></pre></td></tr></table></figure>
+<p>(c)如果 x&gt; 0 , 上面哪个语句将被执行? </p>
+<figure class="highlight vala"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="meta"># statement B</span></div></pre></td></tr></table></figure>
+<p>8–2.   循环. 编写一个程序, 让用户输入三个数字: (f)rom, (t)o, 和 (i)ncrement . 以 i 为步长, 从 f 计数到 t , 包括 f 和 t . 例如, 如果输入的是 f == 2, t == 26, i == 4 , 程序<br>将输出 2, 6, 10, 14, 18, 22, 26. </p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line"><span class="function"><span class="keyword">def</span> <span class="title">f_t_i</span><span class="params">(f,t,i)</span>:</span></div><div class="line">    <span class="keyword">for</span> x <span class="keyword">in</span> range(f,t+<span class="number">1</span>,i):</div><div class="line">        <span class="keyword">print</span> x,</div></pre></td></tr></table></figure>
+<p>8–3.   range() . 如果我们需要生成下面的这些列表, 分别需要在 range() 内建函数中提<br>供那些参数?<br>(a) [0, 1, 2, 3, 4, 5, 6, 7, 8, 9] </p>
+<figure class="highlight stylus"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">[ <span class="selector-tag">i</span> <span class="keyword">for</span> <span class="selector-tag">i</span> <span class="keyword">in</span> range(<span class="number">0</span>,<span class="number">10</span>)]</div></pre></td></tr></table></figure>
+<p>(b) [3, 6, 9, 12, 15, 18] </p>
+<figure class="highlight stylus"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">[ <span class="number">3</span>*<span class="selector-tag">i</span> <span class="keyword">for</span> <span class="selector-tag">i</span> <span class="keyword">in</span> range(<span class="number">1</span>,<span class="number">7</span>)] ,[ <span class="selector-tag">i</span> <span class="keyword">for</span> <span class="selector-tag">i</span> <span class="keyword">in</span> range(<span class="number">3</span>,<span class="number">19</span>,<span class="number">3</span>)]</div></pre></td></tr></table></figure>
+<p>(c) [-20, 200, 420, 640, 860]<br><figure class="highlight stylus"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">[ <span class="selector-tag">i</span> <span class="keyword">for</span> <span class="selector-tag">i</span> <span class="keyword">in</span> range(-<span class="number">20</span>,<span class="number">1000</span>,<span class="number">220</span>)]</div></pre></td></tr></table></figure></p>
+<p>8–4.   素数. 我们在本章已经给出了一些代码来确定一个数字的最大约数或者它是否是一个素数. 请把相关代码转换为一个返回值为布尔值的函数，函数名为 isprime() . 如果输入的是一个素数, 那么返回 True , 否则返回 False .  </p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div></pre></td><td class="code"><pre><div class="line"><span class="function"><span class="keyword">def</span> <span class="title">isprime</span><span class="params">(num)</span>:</span></div><div class="line">    count = num / <span class="number">2</span> </div><div class="line">    <span class="keyword">while</span> count &gt; <span class="number">1</span>: </div><div class="line">        <span class="keyword">if</span> num % count == <span class="number">0</span>: </div><div class="line">            <span class="keyword">print</span> <span class="keyword">False</span></div><div class="line">            <span class="keyword">break</span></div><div class="line">        count -= <span class="number">1</span> </div><div class="line">        </div><div class="line">    <span class="keyword">else</span>:</div><div class="line">        <span class="keyword">print</span> <span class="keyword">True</span></div></pre></td></tr></table></figure>
+<p>8–5.   约数. 完成一个名为 getfactors() 的函数. 它接受一个整数作为参数, 返回它所有约数的列表, 包括 1 和它本身,<br><figure class="highlight dart"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">def getfactors(<span class="built_in">num</span>):</div><div class="line">         <span class="built_in">print</span> [x <span class="keyword">for</span> x <span class="keyword">in</span> range(<span class="number">1</span>,<span class="built_in">num</span>+<span class="number">1</span>) <span class="keyword">if</span> <span class="built_in">num</span>%x ==<span class="number">0</span>]</div></pre></td></tr></table></figure></p>
+<p>8–6.   素因子分解. 以刚才练习中的 isprime() 和 getfactors() 函数为基础编写一个函数, 它接受一个整数作为参数, 返回该整数所有素数因子的列表. 这个过程叫做求素因子分解, 它输出的所有因子之积应该是原来的数字. 注意列表里可能有重复的元素. 例如输入 20 , 返回结果应该是 [2, 2, 5] </p>
+<figure class="highlight vala"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="meta">#不理解“输出的所有因子之积应该是原来的数字”怎么实现</span></div></pre></td></tr></table></figure>
+<p>8–7.   全数. 完全数被定义为这样的数字: 它的约数(不包括它自己)之和为它本身. 例如: 6 的约数是 1, 2, 3, 因为 1 + 2 + 3 = 6 , 所以 6 被认为是一个完全数. 编写一个名为 isperfect() 的函数, 它接受一个整数作为参数, 如果这个数字是完全数, 返回 1 ; 否则返回 0 . </p>
+<figure class="highlight maxima"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line">def isperfect(<span class="built_in">num</span>):</div><div class="line">    n=<span class="built_in">sum</span>([i <span class="keyword">for</span> i <span class="keyword">in</span> <span class="built_in">range</span>(<span class="number">1</span>,<span class="built_in">num</span>) <span class="keyword">if</span> num%i==<span class="number">0</span>])</div><div class="line">    <span class="keyword">if</span> n==<span class="built_in">num</span>:</div><div class="line">        <span class="built_in">print</span> <span class="number">1</span></div><div class="line">    <span class="keyword">else</span>:</div><div class="line">        <span class="built_in">print</span> <span class="number">0</span></div></pre></td></tr></table></figure>
+<p>8–8.   阶乘. 一个数的阶乘被定义为从 1 到该数字所有数字的乘积. N 的阶乘简写为 N! . 写一个函数, 指定 N, 返回 N! 的值. </p>
+<figure class="highlight maxima"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line">def <span class="built_in">factorial</span>(<span class="built_in">num</span>):</div><div class="line">    f=<span class="number">1</span></div><div class="line">    <span class="keyword">for</span> x <span class="keyword">in</span> <span class="built_in">range</span>(<span class="number">1</span>,<span class="built_in">num</span>+<span class="number">1</span>):</div><div class="line">        f*=x</div><div class="line"></div><div class="line">    <span class="built_in">return</span> f</div></pre></td></tr></table></figure>
+<p>8–9.   Fibonacci 数列. Fibonacci 数列形如 1, 1, 2, 3, 5, 8, 13, 21, 等等. 也就是说, 下一个值是序列中前两个值之和. 写一个函数, 给定 N , 返回第 N 个 Fibonacci 数字. 例如, 第 1 个 Fibonacci 数字是 1 , 第 6 个是 8 . </p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line"><span class="function"><span class="keyword">def</span> <span class="title">f</span><span class="params">(n)</span>:</span></div><div class="line">    <span class="keyword">if</span> n&lt;=<span class="number">0</span>:</div><div class="line">        <span class="keyword">return</span> <span class="number">-1</span></div><div class="line">    <span class="keyword">elif</span> n&lt;= <span class="number">2</span>:</div><div class="line">        <span class="keyword">return</span> <span class="number">1</span></div><div class="line">    <span class="keyword">else</span>:</div><div class="line">        <span class="keyword">return</span> f(n<span class="number">-1</span>)+f(n<span class="number">-2</span>) <span class="comment">#发现数字稍大点执行起来还真慢</span></div></pre></td></tr></table></figure>
+<p>8–10.   文本处理. 统计一句话中的元音, 辅音以及单词(以空格分割)的个数. 忽略元音和辅音的特殊情况, 如 “h”, “y”, “qu” 等. 附加题: 编写处理这些特殊情况的代码. </p>
+<figure class="highlight livecodeserver"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div></pre></td><td class="code"><pre><div class="line"><span class="comment">#基本抄网上的代码</span></div><div class="line">import <span class="keyword">string</span></div><div class="line">letters =<span class="built_in">set</span>(<span class="keyword">string</span>.uppercase)</div><div class="line">vowels = <span class="built_in">set</span>(<span class="string">'AEIOU'</span>)</div><div class="line"></div><div class="line">del dealtext():</div><div class="line">    vlen =<span class="number">0</span></div><div class="line">    clen=<span class="number">0</span></div><div class="line">    <span class="keyword">text</span> =raw_input(<span class="string">"Enter text: "</span>).<span class="built_in">upper</span>()</div><div class="line">    wlen =<span class="built_in">len</span>([<span class="built_in">word</span> <span class="keyword">for</span> <span class="built_in">word</span> <span class="keyword">in</span> <span class="keyword">text</span>.<span class="built_in">split</span>()])</div><div class="line">    tlen =<span class="built_in">sum</span>([<span class="built_in">len</span>(<span class="built_in">word</span>) <span class="keyword">for</span> <span class="built_in">word</span> <span class="keyword">in</span> <span class="keyword">text</span>.<span class="built_in">split</span>()])</div><div class="line">    </div><div class="line">    cqu =<span class="keyword">text</span>.count(<span class="string">'QU'</span>)</div><div class="line">    ch =<span class="keyword">text</span>.count(<span class="string">'H'</span>)</div><div class="line">    cy =<span class="keyword">text</span>.count(<span class="string">'Y'</span>)</div><div class="line">    </div><div class="line">    vlen =<span class="built_in">len</span>([x <span class="keyword">for</span> x <span class="keyword">in</span> <span class="keyword">text</span> <span class="keyword">if</span> x <span class="keyword">in</span> vowels])-cqu</div><div class="line">    clen =tlen-vlen<span class="number">-2</span>*cqu-ch-cy</div><div class="line">    </div><div class="line">    print wlen,vlen,clen</div></pre></td></tr></table></figure>
+<p>8–11.   文本处理. 要求输入一个姓名列表，输入格式是“Last Name, First Name,” 即 姓, 逗号, 名. 编写程序处理输入, 如果用户输入错误, 比如“First Name Last Name,” , 请纠正这些错误, 并通知用户. 同时你还需要记录输入错误次数. 当用户输入结束后, 给列表排序, 然后以 “姓 , 名” 的顺序显示. 输入输出示例(你不需要完全按照这里里例子完成): </p>
+<figure class="highlight applescript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div></pre></td><td class="code"><pre><div class="line">% nametrack.py </div><div class="line">Enter total <span class="built_in">number</span> <span class="keyword">of</span> names: <span class="number">5</span> </div><div class="line"> </div><div class="line">Please enter <span class="built_in">name</span> <span class="number">0</span>: Smith, Joe </div><div class="line">Please enter <span class="built_in">name</span> <span class="number">1</span>: Mary Wong </div><div class="line">&gt;&gt; Wrong format... should be Last, First. </div><div class="line">&gt;&gt; You have done this <span class="number">1</span> <span class="built_in">time</span>(s) already. Fixing input... Please enter <span class="built_in">name</span> <span class="number">2</span>: Hamilton, </div><div class="line">Gerald </div><div class="line">Please enter <span class="built_in">name</span> <span class="number">3</span>: Royce, Linda </div><div class="line">Please enter <span class="built_in">name</span> <span class="number">4</span>: Winston Salem </div><div class="line">&gt;&gt; Wrong format... should be Last, First. </div><div class="line">&gt;&gt; You have done this <span class="number">2</span> <span class="built_in">time</span>(s) already. Fixing input... </div><div class="line"> </div><div class="line">The sorted <span class="built_in">list</span> (<span class="keyword">by</span> <span class="keyword">last</span> <span class="built_in">name</span>) <span class="keyword">is</span>:  </div><div class="line">    Hamilton, Gerald </div><div class="line">    Royce, Linda  </div><div class="line">    Salem, Winston  </div><div class="line">    Smith, Joe  </div><div class="line">    Wong, Mary</div></pre></td></tr></table></figure>
+<figure class="highlight clean"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">#嗯...不想做</div></pre></td></tr></table></figure>
+<p>8–12. (整数)位操作. 编写一个程序, 用户给出起始和结束数字后给出一个下面这样的表格, 分别显示出两个数字间所有整数的十进制, 二进制, 八进制和十六进制表示. 如果字符是可打印的 ASCII 字符, 也要把它打印出来, 如果没有一个是可打印字符, 就省略掉 ASCII 那一栏的表头. 请参考下面的输入输出格式: </p>
+<p> <img src="http://img.blog.csdn.net/20151211120353102" alt="这里写图片描述"></p>
+<figure class="highlight vala"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="meta">#头大，放过去</span></div></pre></td></tr></table></figure>
+<p>8–13. 程序执行性能. 在 8.5.2 节里, 我们介绍了两种基本的迭代序列方法: (1) 通过序列项, 以及 (2) 通过序列索引遍历. 该小节的末尾我们指出后一种方法在序列很长的时候性能不佳. (在我的系统下, 性能差了将近两倍[83%]) 你认为它的原因是什么? </p>
+<figure class="highlight"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">不懂</div></pre></td></tr></table></figure>
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="https://flyerooo.github.io/2015/12/10/《Python-核心编程》-8-15-练习/" data-id="cj2x172go0000uchy15qu98n8" class="article-share-link">Delen</a>
+      
+      
+      
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Python/">Python</a></li></ul>
+
+    </footer>
+  </div>
+  
+    
+<nav id="article-nav">
+  
+    <a href="/2015/12/13/父与子的编程之旅-EasyGui安装问题解决/" id="article-nav-newer" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Nieuwer</strong>
+      <div class="article-nav-title">
+        
+          父与子的编程之旅--EasyGui安装问题解决
+        
+      </div>
+    </a>
+  
+  
+    <a href="/2015/12/10/《Python-核心编程》7-12-练习/" id="article-nav-older" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Ouder</strong>
+      <div class="article-nav-title">《Python 核心编程》7.12  练习</div>
+    </a>
+  
+</nav>
+
+  
+</article>
+ 
+     
+  <div class="comments" id="comments">
+    
+     
+       
+      <div id="cloud-tie-wrapper" class="cloud-tie-wrapper"></div>
+    
+  </div>
+ 
+  
+
+</section>
+           
+    <aside id="sidebar">
+  
+    
+
+  
+    
+  
+    
+
+  
+    
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title recent-posts">Recente berichten</h3>
+    <div class="widget">
+      <ul>
+        
+          <li>
+            <a href="/2017/04/03/this语义/">this语义</a>
+          </li>
+        
+          <li>
+            <a href="/2017/04/02/JavaScript-This-的六道坎/">JavaScript This 的六道坎</a>
+          </li>
+        
+          <li>
+            <a href="/2017/03/30/《网络是怎样连接的》大纲/">《网络是怎样连接的》大纲</a>
+          </li>
+        
+          <li>
+            <a href="/2017/03/26/第一章-浏览器生成消息/">第一章 浏览器生成消息</a>
+          </li>
+        
+          <li>
+            <a href="/2017/03/25/HTTP-状态码概要/">HTTP 状态码概要</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+
+  
+    
+
+  
+</aside>
+
+      </div>
+      <footer id="footer">
+  
+  <div class="outer">
+    <div id="footer-left">
+      &copy; 2014 - 2017 Jeffzzz&nbsp;|&nbsp;
+      Theme by <a href="https://github.com/giscafer/hexo-theme-cafe/" target="_blank">Cafe</a>
+    </div>
+     <div id="footer-right">
+      Contact&nbsp;|&nbsp;wxl.pure@gmail.com
+    </div>
+  </div>
+</footer>
+ <script src="/jquery/jquery.min.js"></script>
+    </div>
+    <nav id="mobile-nav">
+  
+    <a href="/" class="mobile-nav-link">首页</a>
+  
+    <a href="/archives" class="mobile-nav-link">归档</a>
+  
+    <a href="/about" class="mobile-nav-link">关于</a>
+  
+</nav>
+    <img class="back-to-top-btn" src="/images/fly-to-top.png"/>
+<script>
+// Elevator script included on the page, already.
+window.onload = function() {
+  var elevator = new Elevator({
+    selector:'.back-to-top-btn',
+    element: document.querySelector('.back-to-top-btn'),
+    duration: 1000 // milliseconds
+  });
+}
+</script>
+      
+
+  
+    <script>
+      var cloudTieConfig = {
+        url: document.location.href, 
+        sourceId: "",
+        productKey: "e2fb4051c49842xxce669e634bc983f",
+        target: "cloud-tie-wrapper"
+      };
+    </script>
+    <script src="https://img1.ws.126.net/f2e/tie/yun/sdk/loader.js"></script>
+    
+
+  
+
+
+
+  
+    <script type="text/x-mathjax-config">
+      MathJax.Hub.Config({
+        tex2jax: {
+          inlineMath: [ ['$','$'], ["\\(","\\)"]  ],
+          processEscapes: true,
+          skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']
+        }
+      })
+    </script>
+
+    <script type="text/x-mathjax-config">
+      MathJax.Hub.Queue(function() {
+        var all = MathJax.Hub.getAllJax(), i;
+        for (i=0; i < all.length; i += 1) {
+          all[i].SourceElement().parentNode.className += ' has-jax';
+        }
+      })
+    </script>
+    <script type="text/javascript" src="//cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+  
+
+
+ <script src="/js/is.js"></script>
+
+
+  <link rel="stylesheet" href="/fancybox/jquery.fancybox.css">
+  <script src="/fancybox/jquery.fancybox.pack.js"></script>
+
+
+<script src="/js/script.js"></script>
+<script src="/js/elevator.js"></script>
+  </div>
+</body>
+</html>

@@ -37,7 +37,7 @@
         
           <a id="nav-rss-link" class="nav-icon" href="/atom.xml" title="RSS Feed"></a>
         
-        <a id="nav-search-btn" class="nav-icon" title="Søk"></a>
+        <a id="nav-search-btn" class="nav-icon" title="Zoeken"></a>
       </nav>
       <div id="search-form-wrap">
         <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" results="0" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="https://flyerooo.github.io"></form>
@@ -103,7 +103,65 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="https://flyerooo.github.io/2016/01/03/极客学院面向对象程序设计-学习记录/" data-id="cj2x0ki6e000hl0hy9mxsg16c" class="article-share-link">Share</a>
+      <a data-url="https://flyerooo.github.io/2016/01/03/极客学院面向对象程序设计-学习记录/" data-id="cj2x0ki6e000hl0hy9mxsg16c" class="article-share-link">Delen</a>
+      
+      
+      
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Python/">Python</a></li></ul>
+
+    </footer>
+  </div>
+  
+</article>
+ 
+
+
+  
+    <article id="post-《Python语言程序设计》前四章学习记录" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2015/12/30/《Python语言程序设计》前四章学习记录/" class="article-date">
+  <time datetime="2015-12-30T08:11:00.000Z" itemprop="datePublished">2015-12-30</time>
+</a>
+    
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/Python/">Python</a>
+  </div>
+
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2015/12/30/《Python语言程序设计》前四章学习记录/">《Python语言程序设计》前四章学习记录</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <!-- Table of Contents -->
+        
+        <p>1.不换行打印：</p>
+<figure class="highlight stylus"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line"><span class="function"><span class="title">print</span><span class="params">(<span class="string">"AAA"</span>, end = <span class="string">' '</span>)</span></span></div><div class="line"><span class="function"><span class="title">print</span><span class="params">(<span class="string">"BBB"</span>, end = <span class="string">''</span>)</span></span></div><div class="line"><span class="function"><span class="title">print</span><span class="params">(<span class="string">"CCC"</span>, end = <span class="string">'**'</span>)</span></span></div><div class="line">#输出</div><div class="line">AAA BBBCCC**</div></pre></td></tr></table></figure>
+<p>2.格式化数字：</p>
+<figure class="highlight gauss"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">format</span>(item, <span class="keyword">format</span>-specifier)</div><div class="line"><span class="meta">#"10.2f" 10为域宽度，2为精度，f为转换码</span></div><div class="line">&gt;&gt;&gt; <span class="keyword">print</span>(<span class="keyword">format</span>(<span class="number">57.467657</span>, <span class="string">"10.2f"</span>))</div><div class="line">     <span class="number">57.47</span>       </div><div class="line"><span class="meta">#默认为右对齐，加"&lt;"为左对齐，注意打印结果后面的空格   </span></div><div class="line">&gt;&gt;&gt; <span class="keyword">print</span>(<span class="keyword">format</span>(<span class="number">57.467657</span>, <span class="string">"&lt;10.2f"</span>))</div><div class="line"><span class="number">57.47</span>     </div><div class="line">---------------------------------</div><div class="line"><span class="string">"10.2f"</span></div><div class="line"><span class="string">"10.2e"</span></div><div class="line"><span class="string">"5d"</span>整数</div><div class="line"><span class="string">"5x"</span>十六进制数</div><div class="line"><span class="string">"5o"</span>八进制数</div><div class="line"><span class="string">"5b"</span>二进制数</div><div class="line"><span class="string">"10.2%"</span>格式为百分数</div><div class="line"><span class="string">"50s"</span>字符串</div><div class="line"><span class="string">"&lt;10.2f"</span>向左对齐格式化项目</div><div class="line"><span class="string">"&gt;10.2f"</span>向右对齐格式化项目</div></pre></td></tr></table></figure>
+<p>3.最小化数值错误：<br>在循环继续条件中使用浮点数可能会导致数值错误。</p>
+<figure class="highlight stylus"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div></pre></td><td class="code"><pre><div class="line">sum = <span class="number">0</span></div><div class="line"><span class="selector-tag">i</span> = <span class="number">0.01</span></div><div class="line"></div><div class="line">while <span class="selector-tag">i</span> &lt;= <span class="number">1.0</span>:</div><div class="line">    sum += <span class="selector-tag">i</span></div><div class="line">    <span class="selector-tag">i</span> += <span class="number">0.01</span></div><div class="line"><span class="function"><span class="title">print</span><span class="params">(<span class="string">"The sum is"</span>, sum)</span></span></div><div class="line"><span class="function"><span class="title">print</span><span class="params">(<span class="string">'i is'</span>,i)</span></span></div><div class="line">#输出结果</div><div class="line">The sum is <span class="number">49.50000000000003</span></div><div class="line"><span class="selector-tag">i</span> is <span class="number">1.0000000000000007</span></div></pre></td></tr></table></figure>
+<p>但正确结果应该为50.5，因为循环的每次迭代中变量i都递增0.01，当循环结束时，i的值稍稍大于1，这导致最后一个i的值没有被加到sum上。<br>最基本的问题是浮点数被近似表示了。</p>
+<p>4.问题：蒙特卡洛模拟<br>使用随机数和概率来解决问题</p>
+<p>例子：求π的近似值<br>首先绘制一个带外接正方形的圆。<br>假设这个圆的半径为1，因此，这个圆的面积就是π，而正方形的面积为4，在这个正方形内随机产生一个点，这个点落在圆内的面积为circleArea/squareArea =π/4</p>
+<figure class="highlight sqf"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div></pre></td><td class="code"><pre><div class="line">import <span class="built_in">random</span></div><div class="line"></div><div class="line">NUMBER_OF_TRIALS = <span class="number">3000000</span></div><div class="line">numberOfHits = <span class="number">0</span></div><div class="line"></div><div class="line"><span class="keyword">for</span> i <span class="built_in">in</span> range(NUMBER_OF_TRIALS):</div><div class="line">    x = <span class="built_in">random</span>.<span class="built_in">uniform</span>(-<span class="number">1</span>, <span class="number">1</span>)</div><div class="line">    y = <span class="built_in">random</span>.<span class="built_in">uniform</span>(-<span class="number">1</span>, <span class="number">1</span>)</div><div class="line"></div><div class="line">    <span class="keyword">if</span>  x ** <span class="number">2</span> + y ** <span class="number">2</span> &lt;= <span class="number">1</span>:</div><div class="line">        numberOfHits += <span class="number">1</span></div><div class="line"></div><div class="line"><span class="built_in">pi</span> = <span class="number">4</span> * numberOfHits / NUMBER_OF_TRIALS</div><div class="line"></div><div class="line">print(<span class="string">"PI is "</span>, <span class="built_in">pi</span>)</div></pre></td></tr></table></figure>
+<p>5.显示素数<br>在五行李显示前50个素数，每行10个</p>
+<p>编程步骤：<br>先编写代码判定给定的那个数字是否为素数，然后再用一个循环来扩展它，判断其它数字是否为素数。<br><figure class="highlight tap"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div></pre></td><td class="code"><pre><div class="line">NUMBER_OF_PRIMES =<span class="number"> 50 </span><span class="comment">#总计要显示素数的个数</span></div><div class="line">NUMBER_OF_PRIMES_PER_LINE =<span class="number"> 10 </span><span class="comment">#每行10个</span></div><div class="line">count =<span class="number"> 0 </span><span class="comment">#素数的个数</span></div><div class="line">number =<span class="number"> 2 </span><span class="comment">#素数起始数字</span></div><div class="line">print("The first<span class="number"> 50 </span>prime numbers are")</div><div class="line"><span class="comment">#查找素数</span></div><div class="line">while count &lt; NUMBER_OF_PRIMES:</div><div class="line"></div><div class="line">    isPrime = True</div><div class="line">    divisor = 2</div><div class="line">    while divisor &lt;= number / 2:</div><div class="line">        if number % divisor == 0:</div><div class="line">            isPrime = False</div><div class="line">            break</div><div class="line">        divisor += 1</div><div class="line"></div><div class="line">    if isPrime:</div><div class="line">        count += 1</div><div class="line">        print (format(number, "5d"), end = '')</div><div class="line">        if count % NUMBER_OF_PRIMES_PER_LINE == 0:</div><div class="line">            print()</div><div class="line"></div><div class="line">    number += 1</div><div class="line"></div><div class="line"><span class="comment">#输出结果</span></div><div class="line">The first<span class="number"> 50 </span>prime numbers are</div><div class="line">   <span class="number"> 2 </span>  <span class="number"> 3 </span>  <span class="number"> 5 </span>  <span class="number"> 7 </span> <span class="number"> 11 </span> <span class="number"> 13 </span> <span class="number"> 17 </span> <span class="number"> 19 </span> <span class="number"> 23 </span>  29</div><div class="line">  <span class="number"> 31 </span> <span class="number"> 37 </span> <span class="number"> 41 </span> <span class="number"> 43 </span> <span class="number"> 47 </span> <span class="number"> 53 </span> <span class="number"> 59 </span> <span class="number"> 61 </span> <span class="number"> 67 </span>  71</div><div class="line">  <span class="number"> 73 </span> <span class="number"> 79 </span> <span class="number"> 83 </span> <span class="number"> 89 </span> <span class="number"> 97 </span><span class="number"> 101 </span><span class="number"> 103 </span><span class="number"> 107 </span><span class="number"> 109 </span> 113</div><div class="line"> <span class="number"> 127 </span><span class="number"> 131 </span><span class="number"> 137 </span><span class="number"> 139 </span><span class="number"> 149 </span><span class="number"> 151 </span><span class="number"> 157 </span><span class="number"> 163 </span><span class="number"> 167 </span> 173</div><div class="line"> <span class="number"> 179 </span><span class="number"> 181 </span><span class="number"> 191 </span><span class="number"> 193 </span><span class="number"> 197 </span><span class="number"> 199 </span><span class="number"> 211 </span><span class="number"> 223 </span><span class="number"> 227 </span> 229</div></pre></td></tr></table></figure></p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="https://flyerooo.github.io/2015/12/30/《Python语言程序设计》前四章学习记录/" data-id="cj2x0ki4z0006l0hyyv0myb81" class="article-share-link">Delen</a>
       
       
       
@@ -149,232 +207,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="https://flyerooo.github.io/2015/12/23/第十一章-函数和函数式编程/" data-id="cj2vmz0x0001el8hyh9rwqcvl" class="article-share-link">Share</a>
-      
-      
-      
-    </footer>
-  </div>
-  
-</article>
- 
-
-
-  
-    <article id="post-《Python》-6-22-练习" class="article article-type-post" itemscope itemprop="blogPost">
-  <div class="article-meta">
-    <a href="/2015/12/06/《Python》-6-22-练习/" class="article-date">
-  <time datetime="2015-12-06T06:45:00.000Z" itemprop="datePublished">2015-12-06</time>
-</a>
-    
-  <div class="article-category">
-    <a class="article-category-link" href="/categories/Python/">Python</a>
-  </div>
-
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2015/12/06/《Python》-6-22-练习/">《Python》 6.22 练习</a>
-    </h1>
-  
-
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p>6–1.   字符串.string 模块中是否有一种字符串方法或者函数可以帮我鉴定一下一个字符串是否是另一个大字符串的一部分?<br>
-        
-          <p class="article-more-link">
-            <a href="/2015/12/06/《Python》-6-22-练习/#more">继续阅读全文 »</a>
-          </p>
-        
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="https://flyerooo.github.io/2015/12/06/《Python》-6-22-练习/" data-id="cj2vmz0vc000hl8hycdcxnhn6" class="article-share-link">Share</a>
-      
-      
-      
-  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Python/">Python</a></li></ul>
-
-    </footer>
-  </div>
-  
-</article>
- 
-
-
-  
-    <article id="post-《Python核心编程》" class="article article-type-post" itemscope itemprop="blogPost">
-  <div class="article-meta">
-    <a href="/2015/12/03/《Python核心编程》/" class="article-date">
-  <time datetime="2015-12-03T06:42:00.000Z" itemprop="datePublished">2015-12-03</time>
-</a>
-    
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2015/12/03/《Python核心编程》/">《Python核心编程》5.9练习</a>
-    </h1>
-  
-
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p>5-1 整形 讲讲 Python 普通整型和长整型的区别 </p>
-<figure class="highlight mathematica"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">基本没什么区别,仅当需引用<span class="keyword">C</span>语言时需要特别注意。</div></pre></td></tr></table></figure>
-        
-          <p class="article-more-link">
-            <a href="/2015/12/03/《Python核心编程》/#more">继续阅读全文 »</a>
-          </p>
-        
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="https://flyerooo.github.io/2015/12/03/《Python核心编程》/" data-id="cj2vmz0us000dl8hyncu4fuuw" class="article-share-link">Share</a>
-      
-      
-      
-  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Python/">Python</a></li></ul>
-
-    </footer>
-  </div>
-  
-</article>
- 
-
-
-  
-    <article id="post-《Python语言程序设计》前四章学习记录" class="article article-type-post" itemscope itemprop="blogPost">
-  <div class="article-meta">
-    <a href="/2015/11/30/《Python语言程序设计》前四章学习记录/" class="article-date">
-  <time datetime="2015-11-30T08:11:00.000Z" itemprop="datePublished">2015-11-30</time>
-</a>
-    
-  <div class="article-category">
-    <a class="article-category-link" href="/categories/Python/">Python</a>
-  </div>
-
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2015/11/30/《Python语言程序设计》前四章学习记录/">《Python语言程序设计》前四章学习记录</a>
-    </h1>
-  
-
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <!-- Table of Contents -->
-        
-        <p>1.不换行打印：</p>
-<figure class="highlight stylus"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line"><span class="function"><span class="title">print</span><span class="params">(<span class="string">"AAA"</span>, end = <span class="string">' '</span>)</span></span></div><div class="line"><span class="function"><span class="title">print</span><span class="params">(<span class="string">"BBB"</span>, end = <span class="string">''</span>)</span></span></div><div class="line"><span class="function"><span class="title">print</span><span class="params">(<span class="string">"CCC"</span>, end = <span class="string">'**'</span>)</span></span></div><div class="line">#输出</div><div class="line">AAA BBBCCC**</div></pre></td></tr></table></figure>
-<p>2.格式化数字：</p>
-<figure class="highlight gauss"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">format</span>(item, <span class="keyword">format</span>-specifier)</div><div class="line"><span class="meta">#"10.2f" 10为域宽度，2为精度，f为转换码</span></div><div class="line">&gt;&gt;&gt; <span class="keyword">print</span>(<span class="keyword">format</span>(<span class="number">57.467657</span>, <span class="string">"10.2f"</span>))</div><div class="line">     <span class="number">57.47</span>       </div><div class="line"><span class="meta">#默认为右对齐，加"&lt;"为左对齐，注意打印结果后面的空格   </span></div><div class="line">&gt;&gt;&gt; <span class="keyword">print</span>(<span class="keyword">format</span>(<span class="number">57.467657</span>, <span class="string">"&lt;10.2f"</span>))</div><div class="line"><span class="number">57.47</span>     </div><div class="line">---------------------------------</div><div class="line"><span class="string">"10.2f"</span></div><div class="line"><span class="string">"10.2e"</span></div><div class="line"><span class="string">"5d"</span>整数</div><div class="line"><span class="string">"5x"</span>十六进制数</div><div class="line"><span class="string">"5o"</span>八进制数</div><div class="line"><span class="string">"5b"</span>二进制数</div><div class="line"><span class="string">"10.2%"</span>格式为百分数</div><div class="line"><span class="string">"50s"</span>字符串</div><div class="line"><span class="string">"&lt;10.2f"</span>向左对齐格式化项目</div><div class="line"><span class="string">"&gt;10.2f"</span>向右对齐格式化项目</div></pre></td></tr></table></figure>
-<p>3.最小化数值错误：<br>在循环继续条件中使用浮点数可能会导致数值错误。</p>
-<figure class="highlight stylus"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div></pre></td><td class="code"><pre><div class="line">sum = <span class="number">0</span></div><div class="line"><span class="selector-tag">i</span> = <span class="number">0.01</span></div><div class="line"></div><div class="line">while <span class="selector-tag">i</span> &lt;= <span class="number">1.0</span>:</div><div class="line">    sum += <span class="selector-tag">i</span></div><div class="line">    <span class="selector-tag">i</span> += <span class="number">0.01</span></div><div class="line"><span class="function"><span class="title">print</span><span class="params">(<span class="string">"The sum is"</span>, sum)</span></span></div><div class="line"><span class="function"><span class="title">print</span><span class="params">(<span class="string">'i is'</span>,i)</span></span></div><div class="line">#输出结果</div><div class="line">The sum is <span class="number">49.50000000000003</span></div><div class="line"><span class="selector-tag">i</span> is <span class="number">1.0000000000000007</span></div></pre></td></tr></table></figure>
-<p>但正确结果应该为50.5，因为循环的每次迭代中变量i都递增0.01，当循环结束时，i的值稍稍大于1，这导致最后一个i的值没有被加到sum上。<br>最基本的问题是浮点数被近似表示了。</p>
-<p>4.问题：蒙特卡洛模拟<br>使用随机数和概率来解决问题</p>
-<p>例子：求π的近似值<br>首先绘制一个带外接正方形的圆。<br>假设这个圆的半径为1，因此，这个圆的面积就是π，而正方形的面积为4，在这个正方形内随机产生一个点，这个点落在圆内的面积为circleArea/squareArea =π/4</p>
-<figure class="highlight sqf"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div></pre></td><td class="code"><pre><div class="line">import <span class="built_in">random</span></div><div class="line"></div><div class="line">NUMBER_OF_TRIALS = <span class="number">3000000</span></div><div class="line">numberOfHits = <span class="number">0</span></div><div class="line"></div><div class="line"><span class="keyword">for</span> i <span class="built_in">in</span> range(NUMBER_OF_TRIALS):</div><div class="line">    x = <span class="built_in">random</span>.<span class="built_in">uniform</span>(-<span class="number">1</span>, <span class="number">1</span>)</div><div class="line">    y = <span class="built_in">random</span>.<span class="built_in">uniform</span>(-<span class="number">1</span>, <span class="number">1</span>)</div><div class="line"></div><div class="line">    <span class="keyword">if</span>  x ** <span class="number">2</span> + y ** <span class="number">2</span> &lt;= <span class="number">1</span>:</div><div class="line">        numberOfHits += <span class="number">1</span></div><div class="line"></div><div class="line"><span class="built_in">pi</span> = <span class="number">4</span> * numberOfHits / NUMBER_OF_TRIALS</div><div class="line"></div><div class="line">print(<span class="string">"PI is "</span>, <span class="built_in">pi</span>)</div></pre></td></tr></table></figure>
-<p>5.显示素数<br>在五行李显示前50个素数，每行10个</p>
-<p>编程步骤：<br>先编写代码判定给定的那个数字是否为素数，然后再用一个循环来扩展它，判断其它数字是否为素数。<br><figure class="highlight tap"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div></pre></td><td class="code"><pre><div class="line">NUMBER_OF_PRIMES =<span class="number"> 50 </span><span class="comment">#总计要显示素数的个数</span></div><div class="line">NUMBER_OF_PRIMES_PER_LINE =<span class="number"> 10 </span><span class="comment">#每行10个</span></div><div class="line">count =<span class="number"> 0 </span><span class="comment">#素数的个数</span></div><div class="line">number =<span class="number"> 2 </span><span class="comment">#素数起始数字</span></div><div class="line">print("The first<span class="number"> 50 </span>prime numbers are")</div><div class="line"><span class="comment">#查找素数</span></div><div class="line">while count &lt; NUMBER_OF_PRIMES:</div><div class="line"></div><div class="line">    isPrime = True</div><div class="line">    divisor = 2</div><div class="line">    while divisor &lt;= number / 2:</div><div class="line">        if number % divisor == 0:</div><div class="line">            isPrime = False</div><div class="line">            break</div><div class="line">        divisor += 1</div><div class="line"></div><div class="line">    if isPrime:</div><div class="line">        count += 1</div><div class="line">        print (format(number, "5d"), end = '')</div><div class="line">        if count % NUMBER_OF_PRIMES_PER_LINE == 0:</div><div class="line">            print()</div><div class="line"></div><div class="line">    number += 1</div><div class="line"></div><div class="line"><span class="comment">#输出结果</span></div><div class="line">The first<span class="number"> 50 </span>prime numbers are</div><div class="line">   <span class="number"> 2 </span>  <span class="number"> 3 </span>  <span class="number"> 5 </span>  <span class="number"> 7 </span> <span class="number"> 11 </span> <span class="number"> 13 </span> <span class="number"> 17 </span> <span class="number"> 19 </span> <span class="number"> 23 </span>  29</div><div class="line">  <span class="number"> 31 </span> <span class="number"> 37 </span> <span class="number"> 41 </span> <span class="number"> 43 </span> <span class="number"> 47 </span> <span class="number"> 53 </span> <span class="number"> 59 </span> <span class="number"> 61 </span> <span class="number"> 67 </span>  71</div><div class="line">  <span class="number"> 73 </span> <span class="number"> 79 </span> <span class="number"> 83 </span> <span class="number"> 89 </span> <span class="number"> 97 </span><span class="number"> 101 </span><span class="number"> 103 </span><span class="number"> 107 </span><span class="number"> 109 </span> 113</div><div class="line"> <span class="number"> 127 </span><span class="number"> 131 </span><span class="number"> 137 </span><span class="number"> 139 </span><span class="number"> 149 </span><span class="number"> 151 </span><span class="number"> 157 </span><span class="number"> 163 </span><span class="number"> 167 </span> 173</div><div class="line"> <span class="number"> 179 </span><span class="number"> 181 </span><span class="number"> 191 </span><span class="number"> 193 </span><span class="number"> 197 </span><span class="number"> 199 </span><span class="number"> 211 </span><span class="number"> 223 </span><span class="number"> 227 </span> 229</div></pre></td></tr></table></figure></p>
-
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="https://flyerooo.github.io/2015/11/30/《Python语言程序设计》前四章学习记录/" data-id="cj2x0ki4z0006l0hyyv0myb81" class="article-share-link">Share</a>
-      
-      
-      
-  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Python/">Python</a></li></ul>
-
-    </footer>
-  </div>
-  
-</article>
- 
-
-
-  
-    <article id="post-《Python核心编程》3-8-练习" class="article article-type-post" itemscope itemprop="blogPost">
-  <div class="article-meta">
-    <a href="/2015/11/30/《Python核心编程》3-8-练习/" class="article-date">
-  <time datetime="2015-11-30T06:34:00.000Z" itemprop="datePublished">2015-11-30</time>
-</a>
-    
-  <div class="article-category">
-    <a class="article-category-link" href="/categories/Python/">Python</a>
-  </div>
-
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2015/11/30/《Python核心编程》3-8-练习/">《Python核心编程》3.8 练习</a>
-    </h1>
-  
-
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <!-- Table of Contents -->
-        
-        <p>3–1.   标识符。为什么 Python 中不需要变量名和变量类型声明？ </p>
-<figure class="highlight awk"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="string">'''变量的类型和值在赋值那一刻被初始化。变量赋值通过等号来执行'''</span></div></pre></td></tr></table></figure>
-<p>3–2.   标识符。为什么 Python 中不需要声明函数类型？<br><figure class="highlight awk"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="string">'''原因类似变量无须声明类型'''</span></div></pre></td></tr></table></figure></p>
-<p>3–3.   标识符。为什么应当避免在变量名的开始和和结尾使用双下划线？ </p>
-<figure class="highlight awk"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="string">'''因为下划线对解释器有特殊的意义，而且是内建标识符所使用的符号'''</span></div></pre></td></tr></table></figure>
-<p>3–4.   语句。在 Python 中一行可以书写多个语句吗？ </p>
-<figure class="highlight awk"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="string">'''可以，用；隔开'''</span></div></pre></td></tr></table></figure>
-<p>3–5.  语句。在 Python 中可以将一个语句分成多行书写吗？ </p>
-<figure class="highlight awk"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="string">'''可以，使用反斜杠\，或在使用闭合操作符时，单一语句可以跨多行，例如：在含有小括号、中括号、花括号，还有三引号'''</span></div></pre></td></tr></table></figure>
-<p>3–6.   变量赋值<br>(a)赋值语句 x, y, z = 1, 2, 3 会在 x、y、z 中分别赋什么值？ </p>
-<figure class="highlight lsl"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="number">1</span>、<span class="number">2</span>、<span class="number">3</span></div></pre></td></tr></table></figure>
-<p>(b)执行 z, x, y = y, z, x 后，x、y、z 中分别含有什么值？ </p>
-<figure class="highlight lsl"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="number">3</span>,<span class="number">1</span>,<span class="number">2</span></div></pre></td></tr></table></figure>
-<p>3–7.   标识符。下面哪些是 Python 合法的标识符？如果不是，请说明理由！在合法的标识符中，哪些是关键字？ </p>
-<figure class="highlight awk"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="string">'''略'''</span></div></pre></td></tr></table></figure>
-<p>下面的问题涉及了 makeTextFile.py 和 readTextFile.py 脚本。 </p>
-<p>3–8.   Python 代码。将脚本拷贝到您的文件系统中，然后修改它。可以添加注释，修改提示符（‘&gt;’太单调了）等等，修改这些代码，使它看上去更舒服。 </p>
-<figure class="highlight vim"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div></pre></td><td class="code"><pre><div class="line">import os </div><div class="line"><span class="keyword">ls</span> = os.linesep </div><div class="line"><span class="keyword">print</span> <span class="keyword">ls</span></div><div class="line"># <span class="built_in">get</span> filename </div><div class="line"><span class="keyword">while</span> True:</div><div class="line">    fname = raw_input(<span class="string">'Plase input a file name: '</span>)</div><div class="line">    <span class="keyword">if</span> os.path.<span class="built_in">exists</span>(fname):</div><div class="line">        <span class="keyword">print</span> <span class="string">"ERROR: '%s' already exists"</span> % fname</div><div class="line">    <span class="keyword">else</span>:</div><div class="line">        <span class="keyword">break</span> </div><div class="line"># <span class="built_in">get</span> <span class="keyword">file</span> content (text) lines </div><div class="line"><span class="keyword">all</span> = [] </div><div class="line"><span class="keyword">print</span> <span class="string">"\nEnter lines ('.' by itself to quit).\n"</span> </div><div class="line"></div><div class="line"># loop until user terminates <span class="built_in">input</span> </div><div class="line"><span class="keyword">while</span> True:</div><div class="line">    entry = raw_input(<span class="string">'Plase input the content&gt; '</span>)</div><div class="line">    <span class="keyword">if</span> entry == <span class="string">'.'</span>:</div><div class="line">        <span class="keyword">break</span></div><div class="line">    <span class="keyword">else</span>:</div><div class="line">        <span class="keyword">all</span>.<span class="keyword">append</span>(entry) </div><div class="line"></div><div class="line"># <span class="keyword">write</span> lines <span class="keyword">to</span> <span class="keyword">file</span> with proper <span class="built_in">line</span>-ending </div><div class="line">fobj = <span class="keyword">open</span>(fname, <span class="string">'w'</span>) </div><div class="line">fobj.writelines([<span class="string">'%s%s'</span> % (<span class="keyword">x</span>, <span class="keyword">ls</span>) <span class="keyword">for</span> <span class="keyword">x</span> in <span class="keyword">all</span>]) </div><div class="line">fobj.<span class="keyword">close</span>() </div><div class="line"><span class="keyword">print</span> <span class="string">'DONE!'</span></div></pre></td></tr></table></figure>
-<figure class="highlight vim"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div></pre></td><td class="code"><pre><div class="line">#书中代码，未改动</div><div class="line"><span class="string">'readTextFile.py -- read and display text file'</span></div><div class="line">#!/usr/bin/env</div><div class="line"></div><div class="line"># <span class="built_in">get</span> filename</div><div class="line">fname = raw_input(<span class="string">'Enter filename: '</span>)</div><div class="line"><span class="keyword">print</span></div><div class="line"># attempt <span class="keyword">to</span> <span class="keyword">open</span> <span class="keyword">file</span> <span class="keyword">for</span> reading</div><div class="line"><span class="keyword">try</span>:</div><div class="line">    fobj = <span class="keyword">open</span>(fname, <span class="string">'r'</span>)</div><div class="line">except IOError, <span class="keyword">e</span>:</div><div class="line">    <span class="keyword">print</span> <span class="string">"*** file open error:"</span>, <span class="keyword">e</span></div><div class="line"><span class="keyword">else</span>:</div><div class="line"># <span class="keyword">display</span> contents <span class="keyword">to</span> the screen</div><div class="line">    <span class="keyword">for</span> eachLine in fobj:</div><div class="line">        <span class="keyword">print</span> eachLine,</div><div class="line">    fobj.<span class="keyword">close</span>()</div></pre></td></tr></table></figure>
-<p>3–9.   移植。 如果你在不同类型的计算机系统中分别安装有 Python， 检查一下， os.linesep 的值是否有不同。 记下操作系统的类型以及 linesep 的值。 </p>
-<p>win7 64位<br><figure class="highlight ruby"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line"><span class="meta">&gt;&gt;</span>&gt; import os </div><div class="line"><span class="meta">&gt;&gt;</span>&gt; ls = os.linesep </div><div class="line"><span class="meta">&gt;&gt;</span>&gt; ls</div><div class="line"><span class="string">'\r\n'</span></div><div class="line"><span class="meta">&gt;&gt;</span>&gt; print ls  <span class="comment">#会打印出一个空行</span></div></pre></td></tr></table></figure></p>
-<p>3–10.   异常。使用类似 readTextFile.py 中异常处理的方法取代 readTextFile.py<br>makeTextFile.py 中 对 os.path.exists() 的 调 用 。 反 过 来 ，   用 os.path.exists() 取 代readTextFile.py 中的异常处理方法。<br><figure class="highlight vim"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div></pre></td><td class="code"><pre><div class="line">import os </div><div class="line"><span class="keyword">ls</span> = os.linesep </div><div class="line"><span class="keyword">print</span> <span class="keyword">ls</span></div><div class="line"># <span class="built_in">get</span> filename </div><div class="line"><span class="keyword">while</span> True:</div><div class="line">    </div><div class="line">    fname = raw_input(<span class="string">'Plase input a file name: '</span>)</div><div class="line">    <span class="keyword">try</span>:</div><div class="line">        fobj = <span class="keyword">open</span>(fname)</div><div class="line">    except IOError:</div><div class="line">        <span class="keyword">break</span> </div><div class="line">    <span class="keyword">else</span>:</div><div class="line">        <span class="keyword">print</span> <span class="string">"ERROR: '%s' already exists"</span> % fname</div><div class="line"># <span class="built_in">get</span> <span class="keyword">file</span> content (text) lines </div><div class="line"><span class="keyword">all</span> = [] </div><div class="line"><span class="keyword">print</span> <span class="string">"\nEnter lines ('.' by itself to quit).\n"</span> </div><div class="line"></div><div class="line"># loop until user terminates <span class="built_in">input</span> </div><div class="line"><span class="keyword">while</span> True:</div><div class="line">    entry = raw_input(<span class="string">'Plase input the content&gt; '</span>)</div><div class="line">    <span class="keyword">if</span> entry == <span class="string">'.'</span>:</div><div class="line">        <span class="keyword">break</span></div><div class="line">    <span class="keyword">else</span>:</div><div class="line">        <span class="keyword">all</span>.<span class="keyword">append</span>(entry) </div><div class="line"></div><div class="line"># <span class="keyword">write</span> lines <span class="keyword">to</span> <span class="keyword">file</span> with proper <span class="built_in">line</span>-ending </div><div class="line">fobj = <span class="keyword">open</span>(fname, <span class="string">'w'</span>) </div><div class="line">fobj.writelines([<span class="string">'%s%s'</span> % (<span class="keyword">x</span>, <span class="keyword">ls</span>) <span class="keyword">for</span> <span class="keyword">x</span> in <span class="keyword">all</span>]) </div><div class="line">fobj.<span class="keyword">close</span>()</div></pre></td></tr></table></figure></p>
-<figure class="highlight vim"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div></pre></td><td class="code"><pre><div class="line"></div><div class="line">import os</div><div class="line"></div><div class="line">fname = raw_input(<span class="string">'Enter filename: '</span>)</div><div class="line"><span class="keyword">print</span></div><div class="line"></div><div class="line">#attempt <span class="keyword">to</span> <span class="keyword">open</span> <span class="keyword">file</span> <span class="keyword">for</span> reading</div><div class="line"><span class="keyword">if</span> os.path.<span class="built_in">exists</span>(fname):</div><div class="line">    # <span class="keyword">display</span> contents <span class="keyword">to</span> the screen</div><div class="line">    fobj = <span class="keyword">open</span>(fname,<span class="string">'r'</span>)</div><div class="line">    <span class="keyword">for</span> eachLine in fobj:</div><div class="line">        <span class="keyword">print</span> eachLine,</div><div class="line">    fobj.<span class="keyword">close</span>()</div><div class="line"><span class="keyword">else</span>:</div><div class="line">    <span class="keyword">print</span> <span class="string">"ERROR: '%s' no exists"</span> % fname</div></pre></td></tr></table></figure>
-<p>3–11.<br>字符串格式化 不再抑制 readTextFile.py 中 print 语句生成的 NEWLINE 字符，修改你的代码， 在显示一行之前删除每行末尾的空白。这样， 你就可以移除 print 语句末尾的逗号了。<br>提示： 使用字符串对象的 strip()方法  </p>
-<figure class="highlight vim"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div></pre></td><td class="code"><pre><div class="line">import os</div><div class="line"></div><div class="line">fname = raw_input(<span class="string">'Enter filename: '</span>)</div><div class="line"><span class="keyword">print</span></div><div class="line"></div><div class="line">#attempt <span class="keyword">to</span> <span class="keyword">open</span> <span class="keyword">file</span> <span class="keyword">for</span> reading</div><div class="line"><span class="keyword">if</span> os.path.<span class="built_in">exists</span>(fname):</div><div class="line">    # <span class="keyword">display</span> contents <span class="keyword">to</span> the screen</div><div class="line">    fobj = <span class="keyword">open</span>(fname,<span class="string">'r'</span>)</div><div class="line">    <span class="keyword">for</span> eachLine in fobj:</div><div class="line">        <span class="keyword">print</span> eachLine.strip(<span class="string">'\r\n'</span>)</div><div class="line">    fobj.<span class="keyword">close</span>()</div><div class="line"><span class="keyword">else</span>:</div><div class="line">    <span class="keyword">print</span> <span class="string">"ERROR: '%s' no exists"</span> % fname</div></pre></td></tr></table></figure>
-<p>3–12.   合并源文件。将两段程序合并成一个，给它起一个你喜欢的名字，比方readNwriteTextFiles.py。让用户自己选择是创建还是显示一个文本文件。 </p>
-<figure class="highlight vim"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div><div class="line">41</div><div class="line">42</div><div class="line">43</div><div class="line">44</div></pre></td><td class="code"><pre><div class="line">import os </div><div class="line"><span class="keyword">ls</span> = os.linesep </div><div class="line"><span class="keyword">print</span> <span class="keyword">ls</span></div><div class="line"># <span class="built_in">get</span> filename </div><div class="line">choice = <span class="keyword">int</span>(raw_input(<span class="string">'Plase make a choise:1. create 2.display : '</span>))</div><div class="line"><span class="keyword">if</span> choice ==<span class="number">1</span>:</div><div class="line">    <span class="keyword">while</span> True:</div><div class="line">        fname = raw_input(<span class="string">'Plase input a file name: '</span>)</div><div class="line">        <span class="keyword">if</span> os.path.<span class="built_in">exists</span>(fname):</div><div class="line">            <span class="keyword">print</span> <span class="string">"ERROR: '%s' already exists"</span> % fname</div><div class="line">        <span class="keyword">else</span>:</div><div class="line">            <span class="keyword">break</span> </div><div class="line">    # <span class="built_in">get</span> <span class="keyword">file</span> content (text) lines </div><div class="line">    <span class="keyword">all</span> = [] </div><div class="line">    <span class="keyword">print</span> <span class="string">"\nEnter lines ('.' by itself to quit).\n"</span> </div><div class="line">    </div><div class="line">    # loop until user terminates <span class="built_in">input</span> </div><div class="line">    <span class="keyword">while</span> True:</div><div class="line">        entry = raw_input(<span class="string">'Plase input the content&gt; '</span>)</div><div class="line">        <span class="keyword">if</span> entry == <span class="string">'.'</span>:</div><div class="line">            <span class="keyword">break</span></div><div class="line">        <span class="keyword">else</span>:</div><div class="line">            <span class="keyword">all</span>.<span class="keyword">append</span>(entry) </div><div class="line">    </div><div class="line">    # <span class="keyword">write</span> lines <span class="keyword">to</span> <span class="keyword">file</span> with proper <span class="built_in">line</span>-ending </div><div class="line">    fobj = <span class="keyword">open</span>(fname, <span class="string">'w'</span>) </div><div class="line">    fobj.writelines([<span class="string">'%s%s'</span> % (<span class="keyword">x</span>, <span class="keyword">ls</span>) <span class="keyword">for</span> <span class="keyword">x</span> in <span class="keyword">all</span>]) </div><div class="line">    fobj.<span class="keyword">close</span>() </div><div class="line">    <span class="keyword">print</span> <span class="string">'DONE!'</span></div><div class="line"></div><div class="line"><span class="keyword">if</span> choice ==<span class="number">2</span>:</div><div class="line">    # <span class="built_in">get</span> filename</div><div class="line">    fname = raw_input(<span class="string">'Enter filename: '</span>)</div><div class="line">    <span class="keyword">print</span></div><div class="line">    # attempt <span class="keyword">to</span> <span class="keyword">open</span> <span class="keyword">file</span> <span class="keyword">for</span> reading</div><div class="line">    <span class="keyword">try</span>:</div><div class="line">        fobj = <span class="keyword">open</span>(fname, <span class="string">'r'</span>)</div><div class="line">    except IOError, <span class="keyword">e</span>:</div><div class="line">        <span class="keyword">print</span> <span class="string">"*** file open error:"</span>, <span class="keyword">e</span></div><div class="line">    <span class="keyword">else</span>:</div><div class="line">    # <span class="keyword">display</span> contents <span class="keyword">to</span> the screen</div><div class="line">        <span class="keyword">for</span> eachLine in fobj:</div><div class="line">            <span class="keyword">print</span> eachLine,</div><div class="line">        fobj.<span class="keyword">close</span>()</div></pre></td></tr></table></figure>
-<p>3–13.   添加新功能。将你上一个问题改造好的 readNwriteTextFiles.py 增加一个新功能：允许用户编辑一个已经存在的文本文件。 你可以使用任何方式，无论是一次编辑一行，还是一次编辑所有文本。需要提醒一下的是， 一次编辑全部文本有一定难度，你可能需要借助 GUI  工具包或一个基于屏幕文本编辑的模块比如 curses 模块。要允许用户保存他的修改（保存到文件）或取消他的修改（不改变原始文件），并且要确保原始文件的安全性（不论程序是否正常关闭）。 </p>
-<figure class="highlight vala"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="meta">#以后再做</span></div></pre></td></tr></table></figure>
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="https://flyerooo.github.io/2015/11/30/《Python核心编程》3-8-练习/" data-id="cj2vmz0v2000fl8hykjmtosww" class="article-share-link">Share</a>
+      <a data-url="https://flyerooo.github.io/2015/12/23/第十一章-函数和函数式编程/" data-id="cj2vmz0x0001el8hyh9rwqcvl" class="article-share-link">Delen</a>
       
       
       
@@ -388,8 +221,8 @@
   
     <article id="post-《Python-核心编程》-11-11-练习" class="article article-type-post" itemscope itemprop="blogPost">
   <div class="article-meta">
-    <a href="/2015/11/22/《Python-核心编程》-11-11-练习/" class="article-date">
-  <time datetime="2015-11-22T08:12:00.000Z" itemprop="datePublished">2015-11-22</time>
+    <a href="/2015/12/22/《Python-核心编程》-11-11-练习/" class="article-date">
+  <time datetime="2015-12-22T08:12:00.000Z" itemprop="datePublished">2015-12-22</time>
 </a>
     
   <div class="article-category">
@@ -404,7 +237,7 @@
         
   
     <h1 itemprop="name">
-      <a class="article-title" href="/2015/11/22/《Python-核心编程》-11-11-练习/">《Python 核心编程》 11.11 练习</a>
+      <a class="article-title" href="/2015/12/22/《Python-核心编程》-11-11-练习/">《Python 核心编程》 11.11 练习</a>
     </h1>
   
 
@@ -459,7 +292,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="https://flyerooo.github.io/2015/11/22/《Python-核心编程》-11-11-练习/" data-id="cj2x0ki4u0003l0hyz1ucd1qh" class="article-share-link">Share</a>
+      <a data-url="https://flyerooo.github.io/2015/12/22/《Python-核心编程》-11-11-练习/" data-id="cj2x0ki4u0003l0hyz1ucd1qh" class="article-share-link">Delen</a>
       
       
       
@@ -475,8 +308,8 @@
   
     <article id="post-《Python-核心编程》" class="article article-type-post" itemscope itemprop="blogPost">
   <div class="article-meta">
-    <a href="/2015/11/22/《Python-核心编程》/" class="article-date">
-  <time datetime="2015-11-22T08:08:00.000Z" itemprop="datePublished">2015-11-22</time>
+    <a href="/2015/12/22/《Python-核心编程》/" class="article-date">
+  <time datetime="2015-12-22T08:08:00.000Z" itemprop="datePublished">2015-12-22</time>
 </a>
     
   <div class="article-category">
@@ -491,7 +324,7 @@
         
   
     <h1 itemprop="name">
-      <a class="article-title" href="/2015/11/22/《Python-核心编程》/">Python 可变长度参数</a>
+      <a class="article-title" href="/2015/12/22/《Python-核心编程》/">Python 可变长度参数</a>
     </h1>
   
 
@@ -508,7 +341,316 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="https://flyerooo.github.io/2015/11/22/《Python-核心编程》/" data-id="cj2vmz0ui000al8hyud4wjfxq" class="article-share-link">Share</a>
+      <a data-url="https://flyerooo.github.io/2015/12/22/《Python-核心编程》/" data-id="cj2vmz0ui000al8hyud4wjfxq" class="article-share-link">Delen</a>
+      
+      
+      
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Python/">Python</a></li></ul>
+
+    </footer>
+  </div>
+  
+</article>
+ 
+
+
+  
+    <article id="post-父与子的编程之旅-EasyGui安装问题解决" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2015/12/13/父与子的编程之旅-EasyGui安装问题解决/" class="article-date">
+  <time datetime="2015-12-13T08:46:00.000Z" itemprop="datePublished">2015-12-13</time>
+</a>
+    
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/Python/">Python</a>
+  </div>
+
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2015/12/13/父与子的编程之旅-EasyGui安装问题解决/">父与子的编程之旅--EasyGui安装问题解决</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <!-- Table of Contents -->
+        
+        <h5 id="问题"><a href="#问题" class="headerlink" title="问题"></a>问题</h5><p>在第六章 GUI–图形用户界面中在按照书中方法（把easygui.py放到Python能找到的地方，我放在了Python27下）安装EassyGui后，msgbox不能成功运行。</p>
+<figure class="highlight ruby"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line"><span class="meta">&gt;&gt;</span>&gt;import easygui</div><div class="line"><span class="meta">&gt;&gt;</span>&gt;easygui.msgbox(<span class="string">"Hello There!"</span>)</div><div class="line">Traceback (most recent call last):</div><div class="line">  File <span class="string">"&lt;stdin&gt;"</span>, line <span class="number">1</span>, <span class="keyword">in</span> &lt;<span class="class"><span class="keyword">module</span>&gt;</span></div><div class="line"><span class="symbol">AttributeError:</span> <span class="string">'module'</span> object has no attribute <span class="string">'msgbox'</span></div></pre></td></tr></table></figure>
+<h5 id="解决办法"><a href="#解决办法" class="headerlink" title="解决办法"></a>解决办法</h5><figure class="highlight vala"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line"><span class="meta">#google，stackoverflow大概找了下，没找到答案，之后问了Python QQ群的程序员们，解决了。方法如下：</span></div><div class="line"><span class="meta">#1.把自己刚拖进去的那些文件删掉（比如easygui.py）</span></div><div class="line"><span class="meta">#2.在CMD命令窗口输入pip uninstall easygui中卸载 easygui</span></div><div class="line"><span class="meta">#3.在CMD命令窗口输入pip install easygui 安装easygui</span></div><div class="line"><span class="meta">#4.嗯，然后就好了</span></div></pre></td></tr></table></figure>
+<h5 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h5><p>之前看过<a href="http://www.icourse163.org/learn/bit-268001?tid=317001#/learn/content?type=detail&amp;id=905003&amp;cid=973006" target="_blank" rel="external">库的安装方法优先级别视频</a>，只残存了 ‘好像看过’ 的影响，这次过后，总算记住了。</p>
+<ul>
+<li>优先级 1：pip 工具安装</li>
+<li>优先级 2：库的自定义安装</li>
+<li>优先级 3 : 库的文件安装</li>
+</ul>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="https://flyerooo.github.io/2015/12/13/父与子的编程之旅-EasyGui安装问题解决/" data-id="cj2x172h40006uchyop6i2yvo" class="article-share-link">Delen</a>
+      
+      
+      
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Python/">Python</a></li></ul>
+
+    </footer>
+  </div>
+  
+</article>
+ 
+
+
+  
+    <article id="post-《Python-核心编程》-8-15-练习" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2015/12/10/《Python-核心编程》-8-15-练习/" class="article-date">
+  <time datetime="2015-12-10T08:43:00.000Z" itemprop="datePublished">2015-12-10</time>
+</a>
+    
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/Python/">Python</a>
+  </div>
+
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2015/12/10/《Python-核心编程》-8-15-练习/">《Python 核心编程》 8.15 练习</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <!-- Table of Contents -->
+        
+        <p>8–1.   条件语句. 请看下边的代码 </p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div></pre></td><td class="code"><pre><div class="line"><span class="comment"># statement A </span></div><div class="line"><span class="keyword">if</span> x &gt; <span class="number">0</span>: </div><div class="line">    <span class="comment"># statement B </span></div><div class="line">    <span class="keyword">pass</span> </div><div class="line"><span class="keyword">elif</span> x &lt; <span class="number">0</span>: </div><div class="line">    <span class="comment"># statement C </span></div><div class="line">    <span class="keyword">pass</span> </div><div class="line"><span class="keyword">else</span>: </div><div class="line">    <span class="comment"># statement D </span></div><div class="line">    <span class="keyword">pass</span> </div><div class="line">    <span class="comment"># statement E</span></div></pre></td></tr></table></figure>
+<p>(a)如果 x&lt; 0 , 上面哪个语句(A, B, C, D, E)将被执行 </p>
+<figure class="highlight ebnf"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="attribute">statement C</span></div></pre></td></tr></table></figure>
+<p>(b)如果 x== 0 , 上面哪个居于将被执行?  </p>
+<figure class="highlight clean"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"># statement D , # statement E</div></pre></td></tr></table></figure>
+<p>(c)如果 x&gt; 0 , 上面哪个语句将被执行? </p>
+<figure class="highlight vala"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="meta"># statement B</span></div></pre></td></tr></table></figure>
+<p>8–2.   循环. 编写一个程序, 让用户输入三个数字: (f)rom, (t)o, 和 (i)ncrement . 以 i 为步长, 从 f 计数到 t , 包括 f 和 t . 例如, 如果输入的是 f == 2, t == 26, i == 4 , 程序<br>将输出 2, 6, 10, 14, 18, 22, 26. </p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line"><span class="function"><span class="keyword">def</span> <span class="title">f_t_i</span><span class="params">(f,t,i)</span>:</span></div><div class="line">    <span class="keyword">for</span> x <span class="keyword">in</span> range(f,t+<span class="number">1</span>,i):</div><div class="line">        <span class="keyword">print</span> x,</div></pre></td></tr></table></figure>
+<p>8–3.   range() . 如果我们需要生成下面的这些列表, 分别需要在 range() 内建函数中提<br>供那些参数?<br>(a) [0, 1, 2, 3, 4, 5, 6, 7, 8, 9] </p>
+<figure class="highlight stylus"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">[ <span class="selector-tag">i</span> <span class="keyword">for</span> <span class="selector-tag">i</span> <span class="keyword">in</span> range(<span class="number">0</span>,<span class="number">10</span>)]</div></pre></td></tr></table></figure>
+<p>(b) [3, 6, 9, 12, 15, 18] </p>
+<figure class="highlight stylus"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">[ <span class="number">3</span>*<span class="selector-tag">i</span> <span class="keyword">for</span> <span class="selector-tag">i</span> <span class="keyword">in</span> range(<span class="number">1</span>,<span class="number">7</span>)] ,[ <span class="selector-tag">i</span> <span class="keyword">for</span> <span class="selector-tag">i</span> <span class="keyword">in</span> range(<span class="number">3</span>,<span class="number">19</span>,<span class="number">3</span>)]</div></pre></td></tr></table></figure>
+<p>(c) [-20, 200, 420, 640, 860]<br><figure class="highlight stylus"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">[ <span class="selector-tag">i</span> <span class="keyword">for</span> <span class="selector-tag">i</span> <span class="keyword">in</span> range(-<span class="number">20</span>,<span class="number">1000</span>,<span class="number">220</span>)]</div></pre></td></tr></table></figure></p>
+<p>8–4.   素数. 我们在本章已经给出了一些代码来确定一个数字的最大约数或者它是否是一个素数. 请把相关代码转换为一个返回值为布尔值的函数，函数名为 isprime() . 如果输入的是一个素数, 那么返回 True , 否则返回 False .  </p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div></pre></td><td class="code"><pre><div class="line"><span class="function"><span class="keyword">def</span> <span class="title">isprime</span><span class="params">(num)</span>:</span></div><div class="line">    count = num / <span class="number">2</span> </div><div class="line">    <span class="keyword">while</span> count &gt; <span class="number">1</span>: </div><div class="line">        <span class="keyword">if</span> num % count == <span class="number">0</span>: </div><div class="line">            <span class="keyword">print</span> <span class="keyword">False</span></div><div class="line">            <span class="keyword">break</span></div><div class="line">        count -= <span class="number">1</span> </div><div class="line">        </div><div class="line">    <span class="keyword">else</span>:</div><div class="line">        <span class="keyword">print</span> <span class="keyword">True</span></div></pre></td></tr></table></figure>
+<p>8–5.   约数. 完成一个名为 getfactors() 的函数. 它接受一个整数作为参数, 返回它所有约数的列表, 包括 1 和它本身,<br><figure class="highlight dart"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">def getfactors(<span class="built_in">num</span>):</div><div class="line">         <span class="built_in">print</span> [x <span class="keyword">for</span> x <span class="keyword">in</span> range(<span class="number">1</span>,<span class="built_in">num</span>+<span class="number">1</span>) <span class="keyword">if</span> <span class="built_in">num</span>%x ==<span class="number">0</span>]</div></pre></td></tr></table></figure></p>
+<p>8–6.   素因子分解. 以刚才练习中的 isprime() 和 getfactors() 函数为基础编写一个函数, 它接受一个整数作为参数, 返回该整数所有素数因子的列表. 这个过程叫做求素因子分解, 它输出的所有因子之积应该是原来的数字. 注意列表里可能有重复的元素. 例如输入 20 , 返回结果应该是 [2, 2, 5] </p>
+<figure class="highlight vala"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="meta">#不理解“输出的所有因子之积应该是原来的数字”怎么实现</span></div></pre></td></tr></table></figure>
+<p>8–7.   全数. 完全数被定义为这样的数字: 它的约数(不包括它自己)之和为它本身. 例如: 6 的约数是 1, 2, 3, 因为 1 + 2 + 3 = 6 , 所以 6 被认为是一个完全数. 编写一个名为 isperfect() 的函数, 它接受一个整数作为参数, 如果这个数字是完全数, 返回 1 ; 否则返回 0 . </p>
+<figure class="highlight maxima"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line">def isperfect(<span class="built_in">num</span>):</div><div class="line">    n=<span class="built_in">sum</span>([i <span class="keyword">for</span> i <span class="keyword">in</span> <span class="built_in">range</span>(<span class="number">1</span>,<span class="built_in">num</span>) <span class="keyword">if</span> num%i==<span class="number">0</span>])</div><div class="line">    <span class="keyword">if</span> n==<span class="built_in">num</span>:</div><div class="line">        <span class="built_in">print</span> <span class="number">1</span></div><div class="line">    <span class="keyword">else</span>:</div><div class="line">        <span class="built_in">print</span> <span class="number">0</span></div></pre></td></tr></table></figure>
+<p>8–8.   阶乘. 一个数的阶乘被定义为从 1 到该数字所有数字的乘积. N 的阶乘简写为 N! . 写一个函数, 指定 N, 返回 N! 的值. </p>
+<figure class="highlight maxima"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line">def <span class="built_in">factorial</span>(<span class="built_in">num</span>):</div><div class="line">    f=<span class="number">1</span></div><div class="line">    <span class="keyword">for</span> x <span class="keyword">in</span> <span class="built_in">range</span>(<span class="number">1</span>,<span class="built_in">num</span>+<span class="number">1</span>):</div><div class="line">        f*=x</div><div class="line"></div><div class="line">    <span class="built_in">return</span> f</div></pre></td></tr></table></figure>
+<p>8–9.   Fibonacci 数列. Fibonacci 数列形如 1, 1, 2, 3, 5, 8, 13, 21, 等等. 也就是说, 下一个值是序列中前两个值之和. 写一个函数, 给定 N , 返回第 N 个 Fibonacci 数字. 例如, 第 1 个 Fibonacci 数字是 1 , 第 6 个是 8 . </p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line"><span class="function"><span class="keyword">def</span> <span class="title">f</span><span class="params">(n)</span>:</span></div><div class="line">    <span class="keyword">if</span> n&lt;=<span class="number">0</span>:</div><div class="line">        <span class="keyword">return</span> <span class="number">-1</span></div><div class="line">    <span class="keyword">elif</span> n&lt;= <span class="number">2</span>:</div><div class="line">        <span class="keyword">return</span> <span class="number">1</span></div><div class="line">    <span class="keyword">else</span>:</div><div class="line">        <span class="keyword">return</span> f(n<span class="number">-1</span>)+f(n<span class="number">-2</span>) <span class="comment">#发现数字稍大点执行起来还真慢</span></div></pre></td></tr></table></figure>
+<p>8–10.   文本处理. 统计一句话中的元音, 辅音以及单词(以空格分割)的个数. 忽略元音和辅音的特殊情况, 如 “h”, “y”, “qu” 等. 附加题: 编写处理这些特殊情况的代码. </p>
+<figure class="highlight livecodeserver"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div></pre></td><td class="code"><pre><div class="line"><span class="comment">#基本抄网上的代码</span></div><div class="line">import <span class="keyword">string</span></div><div class="line">letters =<span class="built_in">set</span>(<span class="keyword">string</span>.uppercase)</div><div class="line">vowels = <span class="built_in">set</span>(<span class="string">'AEIOU'</span>)</div><div class="line"></div><div class="line">del dealtext():</div><div class="line">    vlen =<span class="number">0</span></div><div class="line">    clen=<span class="number">0</span></div><div class="line">    <span class="keyword">text</span> =raw_input(<span class="string">"Enter text: "</span>).<span class="built_in">upper</span>()</div><div class="line">    wlen =<span class="built_in">len</span>([<span class="built_in">word</span> <span class="keyword">for</span> <span class="built_in">word</span> <span class="keyword">in</span> <span class="keyword">text</span>.<span class="built_in">split</span>()])</div><div class="line">    tlen =<span class="built_in">sum</span>([<span class="built_in">len</span>(<span class="built_in">word</span>) <span class="keyword">for</span> <span class="built_in">word</span> <span class="keyword">in</span> <span class="keyword">text</span>.<span class="built_in">split</span>()])</div><div class="line">    </div><div class="line">    cqu =<span class="keyword">text</span>.count(<span class="string">'QU'</span>)</div><div class="line">    ch =<span class="keyword">text</span>.count(<span class="string">'H'</span>)</div><div class="line">    cy =<span class="keyword">text</span>.count(<span class="string">'Y'</span>)</div><div class="line">    </div><div class="line">    vlen =<span class="built_in">len</span>([x <span class="keyword">for</span> x <span class="keyword">in</span> <span class="keyword">text</span> <span class="keyword">if</span> x <span class="keyword">in</span> vowels])-cqu</div><div class="line">    clen =tlen-vlen<span class="number">-2</span>*cqu-ch-cy</div><div class="line">    </div><div class="line">    print wlen,vlen,clen</div></pre></td></tr></table></figure>
+<p>8–11.   文本处理. 要求输入一个姓名列表，输入格式是“Last Name, First Name,” 即 姓, 逗号, 名. 编写程序处理输入, 如果用户输入错误, 比如“First Name Last Name,” , 请纠正这些错误, 并通知用户. 同时你还需要记录输入错误次数. 当用户输入结束后, 给列表排序, 然后以 “姓 , 名” 的顺序显示. 输入输出示例(你不需要完全按照这里里例子完成): </p>
+<figure class="highlight applescript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div></pre></td><td class="code"><pre><div class="line">% nametrack.py </div><div class="line">Enter total <span class="built_in">number</span> <span class="keyword">of</span> names: <span class="number">5</span> </div><div class="line"> </div><div class="line">Please enter <span class="built_in">name</span> <span class="number">0</span>: Smith, Joe </div><div class="line">Please enter <span class="built_in">name</span> <span class="number">1</span>: Mary Wong </div><div class="line">&gt;&gt; Wrong format... should be Last, First. </div><div class="line">&gt;&gt; You have done this <span class="number">1</span> <span class="built_in">time</span>(s) already. Fixing input... Please enter <span class="built_in">name</span> <span class="number">2</span>: Hamilton, </div><div class="line">Gerald </div><div class="line">Please enter <span class="built_in">name</span> <span class="number">3</span>: Royce, Linda </div><div class="line">Please enter <span class="built_in">name</span> <span class="number">4</span>: Winston Salem </div><div class="line">&gt;&gt; Wrong format... should be Last, First. </div><div class="line">&gt;&gt; You have done this <span class="number">2</span> <span class="built_in">time</span>(s) already. Fixing input... </div><div class="line"> </div><div class="line">The sorted <span class="built_in">list</span> (<span class="keyword">by</span> <span class="keyword">last</span> <span class="built_in">name</span>) <span class="keyword">is</span>:  </div><div class="line">    Hamilton, Gerald </div><div class="line">    Royce, Linda  </div><div class="line">    Salem, Winston  </div><div class="line">    Smith, Joe  </div><div class="line">    Wong, Mary</div></pre></td></tr></table></figure>
+<figure class="highlight clean"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">#嗯...不想做</div></pre></td></tr></table></figure>
+<p>8–12. (整数)位操作. 编写一个程序, 用户给出起始和结束数字后给出一个下面这样的表格, 分别显示出两个数字间所有整数的十进制, 二进制, 八进制和十六进制表示. 如果字符是可打印的 ASCII 字符, 也要把它打印出来, 如果没有一个是可打印字符, 就省略掉 ASCII 那一栏的表头. 请参考下面的输入输出格式: </p>
+<p> <img src="http://img.blog.csdn.net/20151211120353102" alt="这里写图片描述"></p>
+<figure class="highlight vala"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="meta">#头大，放过去</span></div></pre></td></tr></table></figure>
+<p>8–13. 程序执行性能. 在 8.5.2 节里, 我们介绍了两种基本的迭代序列方法: (1) 通过序列项, 以及 (2) 通过序列索引遍历. 该小节的末尾我们指出后一种方法在序列很长的时候性能不佳. (在我的系统下, 性能差了将近两倍[83%]) 你认为它的原因是什么? </p>
+<figure class="highlight"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">不懂</div></pre></td></tr></table></figure>
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="https://flyerooo.github.io/2015/12/10/《Python-核心编程》-8-15-练习/" data-id="cj2x172go0000uchy15qu98n8" class="article-share-link">Delen</a>
+      
+      
+      
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Python/">Python</a></li></ul>
+
+    </footer>
+  </div>
+  
+</article>
+ 
+
+
+  
+    <article id="post-《Python-核心编程》7-12-练习" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2015/12/10/《Python-核心编程》7-12-练习/" class="article-date">
+  <time datetime="2015-12-10T08:42:00.000Z" itemprop="datePublished">2015-12-10</time>
+</a>
+    
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/Python/">Python</a>
+  </div>
+
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2015/12/10/《Python-核心编程》7-12-练习/">《Python 核心编程》7.12  练习</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <!-- Table of Contents -->
+        
+        <p>7–1.   字典方法。哪个字典方法可以用来把两个字典合并到一起？ </p>
+<figure class="highlight tcl"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">dict</span>.<span class="keyword">update</span>(dict2)</div></pre></td></tr></table></figure>
+<p>7–2.   字典的键。我们知道字典的值可以是任意的 Python 对象，那字典的键又如何呢？请试着将除数字和字符串以外的其他不同类型的对象作为字典的键，看一看，哪些类型可以，哪些不行？对那些不能作字典的键的对象类型，你认为是什么原因呢？<br><figure class="highlight lsl"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">字典的键须为可哈希的,即为不可变类型，</div><div class="line">可行：数字、字符串、只含不可变类型元素的元组（<span class="number">1</span>,<span class="number">2</span>,<span class="number">3</span>,’abc’）</div><div class="line">不行：列表，字典，含可变类型元素的元组</div></pre></td></tr></table></figure></p>
+<p>7–3.   字典和列表的方法。<br>(a) 创建一个字典，并把这个字典中的键按照字母顺序显示出来。</p>
+<figure class="highlight stylus"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line">&gt;&gt;&gt; a=dict(b=<span class="number">4</span>,c=<span class="number">5</span>,a=<span class="number">2</span>)</div><div class="line">&gt;&gt;&gt; <span class="selector-tag">a</span></div><div class="line">&#123;<span class="string">'a'</span>: <span class="number">2</span>, <span class="string">'c'</span>: <span class="number">5</span>, <span class="string">'b'</span>: <span class="number">4</span>&#125;</div><div class="line">&gt;&gt;&gt; <span class="keyword">for</span> k <span class="keyword">in</span> sorted(a):</div><div class="line">	print k,</div><div class="line"></div><div class="line">	<span class="selector-tag">a</span> <span class="selector-tag">b</span> c</div></pre></td></tr></table></figure>
+<p>(b) 现在根据已按照字母顺序排序好的键，显示出这个字典中的键和值。 </p>
+<figure class="highlight livecodeserver"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line">&gt;&gt;&gt; <span class="keyword">for</span> k <span class="keyword">in</span> sorted(<span class="keyword">a</span>):</div><div class="line">	print <span class="string">'key=%s,value=%s'</span> % (k,<span class="keyword">a</span>[k])</div><div class="line"></div><div class="line">	</div><div class="line">key=<span class="keyword">a</span>,<span class="built_in">value</span>=<span class="number">2</span></div><div class="line">key=b,<span class="built_in">value</span>=<span class="number">4</span></div><div class="line">key=c,<span class="built_in">value</span>=<span class="number">5</span></div></pre></td></tr></table></figure>
+<p>(c)同(b),但这次是根据已按照字母顺序排序好的字典的值，显示出这个字典中的键和值。(注意：对字典和哈希表来说，这样做一般没有什么实际意义，因为大多数访问和排序(如果需要)都是基于字典的键，这里只把它作为一个练习。) </p>
+<figure class="highlight stylus"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div></pre></td><td class="code"><pre><div class="line">&gt;&gt;&gt; <span class="keyword">for</span> value <span class="keyword">in</span> v:</div><div class="line">	    <span class="keyword">for</span> k <span class="keyword">in</span> <span class="selector-tag">a</span>.keys():</div><div class="line">		    <span class="keyword">if</span> value == <span class="selector-tag">a</span>[k]:</div><div class="line">			    print k,value</div><div class="line"></div><div class="line">			</div><div class="line"><span class="selector-tag">a</span> <span class="number">2</span></div><div class="line"><span class="selector-tag">b</span> <span class="number">4</span></div><div class="line">c <span class="number">5</span></div><div class="line">&gt;&gt;&gt; </div><div class="line">&gt;&gt;&gt;</div></pre></td></tr></table></figure>
+<p>7-4.   建立字典。给定两个长度相同的列表，比如说，列表[1, 2, 3,…]和[‘abc’, ‘def’, ‘ghi’,…],用这两个列表里的所有数据组成一个字典，像这样：{1:’abc’, 2: ‘def’, 3: ‘ghi’,…} </p>
+<figure class="highlight lisp"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">dict(<span class="name">zip</span>([<span class="number">1</span>, <span class="number">2</span>, <span class="number">3</span>],['abc', 'def', 'ghi']))</div></pre></td></tr></table></figure>
+<p>7–5. userpw2.py. 下面的问题和例题 7.1 中管理名字-密码的键值对数据的程序有关。<br>(a)修改那个脚本，使它能记录用户上次的登录日期和时间(用 time 模块)，并与用户密码一起保存起来。程序的界面有要求用户输入用户名和密码的提示。无论户名是否成功登录，都应有提示，在户名成功登录后，应更新相应用户的上次登录时间戳。如果本次登录与上次登录在时间上相差不超过 4 个小时，则通知该用户： “You already logged in at: <last_ login_timestamp="">.”<br>(b) 添加一个“管理”菜单，其中有以下两项:(1)删除一个用户 (2)显示统中所有用户的名字和他们的密码的清单。<br>(c) 口令目前没有加密。请添加一段对口令加密的代码(请参考 crypt, rotor, 或其它加密模块)<br>(d) 为程序添加图形界面，例如，用 Tkinter 写。<br>(e) 要求用户名不区分大小写。<br>(f) 加强对用户名的限制，不允许符号和空白符。<br>(g)合并“新用户”和“老用户”两个选项。如果一个新用户试图用一个不存在的用户名登录，询问该用户是否是新用户，如果回答是肯定的，就创建该帐户。否则，按照老用户的方式登录。 </last_></p>
+<figure class="highlight vala"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="meta">#不会</span></div></pre></td></tr></table></figure>
+<p>7-6.  列表和字典。创建一个简单的股票证券投资数据系统。其中应至少包含四项数据：股市行情显示器符号，所持有的股票，购买价格及当前价位 - 你可以随意添加其他数据项，比如收益率，52 周最高指数、最低指数，等等。 用户每次输入各列的数据构成一个输出行。每行数据构成一个列表。还有一个总列表，包括了所有行的数据。数据输入完毕后，提示用户选择一列数据项进行排序。把该数据项抽取出来作为字典的键，字典的值就是该键对应行的值的列表。提醒读者：被选择用来排序的数据项必须是非重复的键，否则就会丢失数据，因为字典不允许一个键有多个值。你还可以选择其他计算输出，比如，盈亏比率，目前证券资产价值等。 </p>
+<figure class="highlight vala"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="meta">#不会</span></div></pre></td></tr></table></figure>
+<p>7-7.   颠倒字典中的键和值。用一个字典做输入，输出另一个字典，用前者的键做值，前者的值做键。 </p>
+<figure class="highlight xquery"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">d=&#123;<span class="string">'a'</span>:<span class="number">1</span>,<span class="string">'b'</span>:<span class="number">2</span>,<span class="string">'c'</span>:<span class="number">2</span>,<span class="string">'d'</span>:<span class="number">3</span>&#125;</div><div class="line">m=&#123;&#125;</div><div class="line"><span class="keyword">for</span> k,v <span class="keyword">in</span> d.items():</div><div class="line">	m[v]=k</div><div class="line">print m</div></pre></td></tr></table></figure>
+<p>7-8.   人力资源。创建一个简单的雇员姓名和编号的程序。让用户输入一组雇员姓名和编号。你的程序可以提供按照姓名排序输出的功能，雇员姓名显示在前面，后面是对应的雇员编号。附加题：添加一项功能，按照雇员编号的顺序输出数据。 </p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div></pre></td><td class="code"><pre><div class="line"><span class="string">'''参考网上代码'''</span></div><div class="line">dict1=&#123;&#125;</div><div class="line">dict2=&#123;&#125;</div><div class="line"><span class="keyword">while</span> <span class="keyword">True</span>:</div><div class="line">    name=raw_input(<span class="string">'pls input a worker name: '</span>)</div><div class="line">    <span class="keyword">if</span> name==<span class="string">'--'</span>:</div><div class="line">        <span class="keyword">break</span></div><div class="line">    number=raw_input(<span class="string">'pls input a worker number: '</span>)</div><div class="line">    dict1[name]=number</div><div class="line">    dict2[number]=name</div><div class="line"></div><div class="line"><span class="keyword">for</span> key <span class="keyword">in</span> sorted(dict1):</div><div class="line">    <span class="keyword">print</span> key,dict1[key]</div><div class="line"><span class="keyword">print</span></div><div class="line"><span class="keyword">for</span> key <span class="keyword">in</span> sorted(dict2):</div><div class="line">    <span class="keyword">print</span> key,dict2[key]</div></pre></td></tr></table></figure>
+<p>7-9.   翻译<br>(a) 编写一个字符翻译程序(功能类似于 Unix 中的 tr 命令)。我们将这个函数叫做 tr()，它有三个字符串做参数: 源字符串、目的字符串、基本字符串，语法定义如下：<br>def tr(srcstr, dststr, string)  srcstr 的内容是你打算“翻译”的字符集合，dsrstr 是翻译后得到的字符集合，而 string 是你打算进行翻译操作的字符串。举例来说，如果 srcstr == ‘abc’, dststr== ‘mno’, string == ‘abcdef’, 那么 tr()的输出将是’mnodef’. 注意这里 len(srcstr) == len(dststr).<br>在这个练习里，你可以使用内建函数 chr() 和 ord(), 但它们并不一定是解决这个问题所必不可少的函数。<br>(b) 在这个函数里增加一个标志符参数，来处理不区分大小写的翻译问题。<br>(c)修改你的程序，使它能够处理删除字符的操作。字符串 srcstr 中不能够映射到字符串 dststr中字符的多余字符都将被过滤掉。换句话说，这些字符没有映射到 dststr 字符串中的任何字符，因此就从函数返回的字符里被过滤掉了。举例来说：如果  srcstr == ‘abcdef’, dststr == ‘mno’,<br>string == ‘abcdefghi’, 那么 tr()将输出’mnoghi’. 注意这里 len(srcstr) &gt;= len(dststr). </p>
+<figure class="highlight vala"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="meta">#啊啊啊，崩溃了</span></div></pre></td></tr></table></figure>
+<p>7–10.   加密。<br>(a) 用上一个练习的思路编写一个”rot13”翻译器。”rot13”是一个古老而又简单的加密方法，它把字母表中的每个字母用其后的第 13 个字母来代替。字母表中前半部分字母将被映射到后半部分，而后半部分字母将被映射到前半部分，大小写保持不变。举例来说，’a’将被替换为’n’,’X’将被替<br>换为’K’; 数字和符号不进行翻译。<br>(b)在你的解决方案的基础上加一个应用程序，让它提示用户输入准备加密的字符串(这个算法同时也可以对加密后的字符串进行解密)，如下所示: </p>
+<p>% rot13.py<br>Enter string to rot13: This is a short sentence. Your string to en/decrypt was: [This<br>is a short sentence.].<br>The rot13 string is: [Guvf vf n fubeg fragrapr.].<br>%<br>% rot13.py<br>Enter string to rot13: Guvf vf n fubeg fragrapr. Your string to en/decrypt was: [Guvf<br>vf n fubeg fragrapr.].<br>The rot13 string is: [This is a short sentence.]. </p>
+<p>7–11.   定义。什么组成字典中合法的键? 举例说明字典中合法的键和非法的键。 </p>
+<figure class="highlight"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">可哈希，</div></pre></td></tr></table></figure>
+<p>7-12.   定义。<br>(a)在数学上，什么是集合?<br>(b)在 Python 中，关于集合类型的定义是什么？ </p>
+<figure class="highlight vala"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line"><span class="meta">#集合是指具有某种特定性质的具体的或抽象的对象汇总成的集体，这些对象称为该集合的元素。</span></div><div class="line"><span class="meta">#在Python中，集合对象是一组无序列的可哈希的值。</span></div></pre></td></tr></table></figure>
+<p>7–13.   随机数。修改练习 5-17 的代码：使用 random 模块中的 randint()或 randrange()方法生成一个随机数集合：从 0 到 9(包括 9)中随机选择，生成 1 到 10 个随机数。这些数字组成集合A(A 可以是可变集合，也可以不是)。同理，按此方法生成集合 B。每次新生成集合 A 和 B 后，显示结果 A | B 和 A &amp; B </p>
+<figure class="highlight processing"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div></pre></td><td class="code"><pre><div class="line">参考网上代码</div><div class="line"><span class="keyword">import</span> <span class="built_in">random</span></div><div class="line">aset=<span class="built_in">set</span>()</div><div class="line">bset=<span class="built_in">set</span>()</div><div class="line">temp= <span class="built_in">random</span>.randint(<span class="number">1</span>,<span class="number">10</span>)</div><div class="line"><span class="keyword">for</span> i in range(temp):</div><div class="line">    aset.<span class="built_in">add</span>(<span class="built_in">random</span>.randint(<span class="number">0</span>,<span class="number">9</span>))</div><div class="line">temp= <span class="built_in">random</span>.randint(<span class="number">1</span>,<span class="number">10</span>)</div><div class="line"><span class="keyword">for</span> i in range(temp):</div><div class="line">    bset.<span class="built_in">add</span>(<span class="built_in">random</span>.randint(<span class="number">0</span>,<span class="number">9</span>))</div><div class="line">    </div><div class="line"><span class="built_in">print</span> aset|bset</div><div class="line"><span class="built_in">print</span> aset&amp;bset</div></pre></td></tr></table></figure>
+<p>7–14.   用户验证。修改前面的练习，要求用户输入 A | B 和 A &amp; B 的结果，并告诉用户他(或她)的答案是否正确，而不是将 A | B 和 A &amp; B 的结果直接显示出来。如果用户回答错误，允许他(或她)修改解决方案，然后重新验证用户输入的答案。如果用户三次提交的答案均不正确，程序将显示正确结果。<br>附加题：运用你关于集合的知识，创建某个集合的潜在子集，并询问用户此潜在子集是否真是该集合的子集，要求和主程序一样有显示更正和答案的功能。</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div></pre></td><td class="code"><pre><div class="line"><span class="string">''</span><span class="string">'参考网上代码'</span><span class="string">''</span></div><div class="line">import random</div><div class="line"></div><div class="line">def set_random():</div><div class="line">    A<span class="built_in">set</span> = <span class="built_in">set</span>()</div><div class="line">    B<span class="built_in">set</span> = <span class="built_in">set</span>()</div><div class="line">    temp = random.randint(1,10)</div><div class="line">    <span class="keyword">for</span> i <span class="keyword">in</span> range(temp):</div><div class="line">        Aset.add(random.randint(0,9))</div><div class="line">    temp = random.randint(1,10)</div><div class="line">    <span class="keyword">for</span> i <span class="keyword">in</span> range(temp):</div><div class="line">        Bset.add(random.randint(0,9))</div><div class="line">    <span class="built_in">print</span> <span class="string">'Aset is:'</span>,A<span class="built_in">set</span>, B<span class="built_in">set</span>|B<span class="built_in">set</span></div><div class="line">    <span class="built_in">print</span> <span class="string">'Bset is:'</span>,B<span class="built_in">set</span></div><div class="line">    <span class="built_in">return</span> (A<span class="built_in">set</span>,B<span class="built_in">set</span>)</div><div class="line"></div><div class="line">def set_check(A<span class="built_in">set</span>,B<span class="built_in">set</span>):</div><div class="line">    <span class="keyword">for</span> i <span class="keyword">in</span> range(3):</div><div class="line">        C<span class="built_in">set</span> = <span class="built_in">set</span>(map(int,raw_input(<span class="string">'Please input A|B:'</span>).split())) <span class="comment">#这儿还是不理解</span></div><div class="line">        D<span class="built_in">set</span> = <span class="built_in">set</span>(map(int,raw_input(<span class="string">'Please input A&amp;B:'</span>).split()))</div><div class="line">        <span class="keyword">if</span> A<span class="built_in">set</span>|B<span class="built_in">set</span>==C<span class="built_in">set</span> and A<span class="built_in">set</span>&amp;B<span class="built_in">set</span>==D<span class="built_in">set</span>:</div><div class="line">            <span class="built_in">print</span> <span class="string">'Accepted!'</span></div><div class="line">            <span class="built_in">break</span></div><div class="line">        <span class="keyword">else</span>:</div><div class="line">            <span class="built_in">print</span> <span class="string">'Wrong answer!'</span></div><div class="line">    <span class="keyword">else</span>:</div><div class="line">        <span class="built_in">print</span> <span class="string">'Aset|Bset is:'</span>,A<span class="built_in">set</span>|B<span class="built_in">set</span> </div><div class="line">        <span class="built_in">print</span> <span class="string">'Bset&amp;Bset is:'</span>,A<span class="built_in">set</span>&amp;B<span class="built_in">set</span></div><div class="line"></div><div class="line"><span class="keyword">if</span> __name__ == <span class="string">'__main__'</span>:</div><div class="line">    myset = set_random()</div><div class="line">    set_check(myset[0], myset[1])</div></pre></td></tr></table></figure>
+<p>7–15.   编写计算器。 这个练习取材于 <a href="http://math.hws.edu/" target="_blank" rel="external">http://math.hws.edu/</a> 在线免费 Java 教材中的练习12.2。编写一个程序允许用户选择两个集合:A 和 B, 及运算操作符。例如，in, not in, &amp;, |, ^, &lt;, &lt;=, &gt;, &gt;=, ==, !=, 等. (你自己定义集合的输入语法，它们并不一定要像 Java 示例中那样用方括号括住。)解析输入的字符串，按照用户选择的运算进行操作。你写的程序代码应该比 Java 版本的该程序更简洁。 </p>
+<figure class="highlight"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">不会</div></pre></td></tr></table></figure>
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="https://flyerooo.github.io/2015/12/10/《Python-核心编程》7-12-练习/" data-id="cj2x172h40003uchy25u0c0st" class="article-share-link">Delen</a>
+      
+      
+      
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Python/">Python</a></li></ul>
+
+    </footer>
+  </div>
+  
+</article>
+ 
+
+
+  
+    <article id="post-《Python》-6-22-练习" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2015/12/06/《Python》-6-22-练习/" class="article-date">
+  <time datetime="2015-12-06T06:45:00.000Z" itemprop="datePublished">2015-12-06</time>
+</a>
+    
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/Python/">Python</a>
+  </div>
+
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2015/12/06/《Python》-6-22-练习/">《Python》 6.22 练习</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>6–1.   字符串.string 模块中是否有一种字符串方法或者函数可以帮我鉴定一下一个字符串是否是另一个大字符串的一部分?<br>
+        
+          <p class="article-more-link">
+            <a href="/2015/12/06/《Python》-6-22-练习/#more">继续阅读全文 »</a>
+          </p>
+        
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="https://flyerooo.github.io/2015/12/06/《Python》-6-22-练习/" data-id="cj2vmz0vc000hl8hycdcxnhn6" class="article-share-link">Delen</a>
+      
+      
+      
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Python/">Python</a></li></ul>
+
+    </footer>
+  </div>
+  
+</article>
+ 
+
+
+  
+    <article id="post-《Python核心编程》" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2015/12/03/《Python核心编程》/" class="article-date">
+  <time datetime="2015-12-03T06:42:00.000Z" itemprop="datePublished">2015-12-03</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2015/12/03/《Python核心编程》/">《Python核心编程》5.9练习</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>5-1 整形 讲讲 Python 普通整型和长整型的区别 </p>
+<figure class="highlight mathematica"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">基本没什么区别,仅当需引用<span class="keyword">C</span>语言时需要特别注意。</div></pre></td></tr></table></figure>
+        
+          <p class="article-more-link">
+            <a href="/2015/12/03/《Python核心编程》/#more">继续阅读全文 »</a>
+          </p>
+        
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="https://flyerooo.github.io/2015/12/03/《Python核心编程》/" data-id="cj2vmz0us000dl8hyncu4fuuw" class="article-share-link">Delen</a>
       
       
       
@@ -525,7 +667,7 @@
 
 
   <nav id="page-nav">
-    <a class="extend prev" rel="prev" href="/page/2/">&laquo; Forrige</a><a class="page-number" href="/">1</a><a class="page-number" href="/page/2/">2</a><span class="page-number current">3</span>
+    <a class="extend prev" rel="prev" href="/page/2/">&laquo; Vorige</a><a class="page-number" href="/">1</a><a class="page-number" href="/page/2/">2</a><span class="page-number current">3</span><a class="page-number" href="/page/4/">4</a><a class="extend next" rel="next" href="/page/4/">Volgende&raquo;</a>
   </nav>
 </section>
            
@@ -543,7 +685,7 @@
   
     
   <div class="widget-wrap">
-    <h3 class="widget-title recent-posts">Siste innlegg</h3>
+    <h3 class="widget-title recent-posts">Recente berichten</h3>
     <div class="widget">
       <ul>
         

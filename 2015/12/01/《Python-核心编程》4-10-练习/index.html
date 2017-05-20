@@ -1,0 +1,308 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+  <title>《Python 核心编程》4.10    练习 | 青穗黄的练习本</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta name="description" content="4–1.   Python 对象。与所有 Python 对象有关的三个属性是什么？请简单的描述一下。 
+1234567&apos;&apos;&apos;身份，类型和值身份identity：每一个对象都有一个唯一的身份标识自己，任何对象的身份可以使用内建函数 id()来得到。这个值可以被认为是该对象的内存地址。类型type：对象的类型决定了该对象可以保存什么类型的值，可以进行什么样的操作，以及遵循什么样的规则。您可以用内建函数">
+<meta property="og:type" content="article">
+<meta property="og:title" content="《Python 核心编程》4.10    练习">
+<meta property="og:url" content="https://flyerooo.github.io/2015/12/01/《Python-核心编程》4-10-练习/index.html">
+<meta property="og:site_name" content="青穗黄的练习本">
+<meta property="og:description" content="4–1.   Python 对象。与所有 Python 对象有关的三个属性是什么？请简单的描述一下。 
+1234567&apos;&apos;&apos;身份，类型和值身份identity：每一个对象都有一个唯一的身份标识自己，任何对象的身份可以使用内建函数 id()来得到。这个值可以被认为是该对象的内存地址。类型type：对象的类型决定了该对象可以保存什么类型的值，可以进行什么样的操作，以及遵循什么样的规则。您可以用内建函数">
+<meta property="og:updated_time" content="2017-05-20T08:40:30.119Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="《Python 核心编程》4.10    练习">
+<meta name="twitter:description" content="4–1.   Python 对象。与所有 Python 对象有关的三个属性是什么？请简单的描述一下。 
+1234567&apos;&apos;&apos;身份，类型和值身份identity：每一个对象都有一个唯一的身份标识自己，任何对象的身份可以使用内建函数 id()来得到。这个值可以被认为是该对象的内存地址。类型type：对象的类型决定了该对象可以保存什么类型的值，可以进行什么样的操作，以及遵循什么样的规则。您可以用内建函数">
+  
+    <link rel="alternate" href="/atom.xml" title="青穗黄的练习本" type="application/atom+xml">
+  
+  
+    <link rel="icon" href="/favicon.png">
+  
+  
+    
+  
+  <link rel="stylesheet" href="/css/style.css">
+  
+
+</head>
+
+<body>
+  <div id="container">
+    <div id="wrap">
+      <header id="header">
+  <div id="banner"></div>
+  <div id="header-outer" class="outer">
+    
+    <div id="header-inner" class="inner">
+      <nav id="sub-nav">
+        
+          <a id="nav-rss-link" class="nav-icon" href="/atom.xml" title="RSS Feed"></a>
+        
+        <a id="nav-search-btn" class="nav-icon" title="Zoeken"></a>
+      </nav>
+      <div id="search-form-wrap">
+        <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" results="0" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="https://flyerooo.github.io"></form>
+      </div>
+      <nav id="main-nav">
+        <a id="main-nav-toggle" class="nav-icon"></a>
+        
+          <a class="main-nav-link" href="/">首页</a>
+        
+          <a class="main-nav-link" href="/archives">归档</a>
+        
+          <a class="main-nav-link" href="/about">关于</a>
+        
+      </nav>
+      
+    </div>
+    <div id="header-title" class="inner">
+      <h1 id="logo-wrap">
+        <a href="/" id="logo">青穗黄的练习本</a>
+      </h1>
+      
+        <h2 id="subtitle-wrap">
+          <a href="/" id="subtitle">知而不行为不知</a>
+        </h2>
+      
+    </div>
+  </div>
+</header>
+      <div class="outer">
+        <section id="main"><article id="post-《Python-核心编程》4-10-练习" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2015/12/01/《Python-核心编程》4-10-练习/" class="article-date">
+  <time datetime="2015-12-01T08:38:00.000Z" itemprop="datePublished">2015-12-01</time>
+</a>
+    
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/Python/">Python</a>
+  </div>
+
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 class="article-title" itemprop="name">
+      《Python 核心编程》4.10    练习
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <!-- Table of Contents -->
+        
+        <p>4–1.   Python 对象。与所有 Python 对象有关的三个属性是什么？请简单的描述一下。 </p>
+<figure class="highlight awk"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line"><span class="string">'''身份，类型和值</span></div><div class="line"></div><div class="line">身份identity：每一个对象都有一个唯一的身份标识自己，任何对象的身份可以使用内建函数 id()来得到。这个值可以被认为是该对象的内存地址。</div><div class="line"></div><div class="line">类型type：对象的类型决定了该对象可以保存什么类型的值，可以进行什么样的操作，以及遵循什么样的规则。您可以用内建函数 type()查看 Python 对象的类型。</div><div class="line"></div><div class="line">值value：对象表示的数据项 '''</div></pre></td></tr></table></figure>
+<p>4–2.   类型。不可更改（immutable）指的是什么？Python 的哪些类型是可更改的（mutable），哪些不是？ </p>
+<figure class="highlight"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line">不可更改指对象创建以后值不可以更新</div><div class="line"></div><div class="line">数字  不可更改     </div><div class="line">字符串  不可更改  </div><div class="line">列表  可更改  </div><div class="line">元组  不可更改  </div><div class="line">字典  可更改</div></pre></td></tr></table></figure>
+<p>4–3.   类型。哪些 Python 类型是按照顺序访问的，它们和映射类型的不同是什么？ </p>
+<figure class="highlight gauss"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line">访问模型 </div><div class="line"></div><div class="line">分类                          Python 类型 </div><div class="line">直接访问                         数字 </div><div class="line">顺序访问                       字符串、列表、元组 </div><div class="line">映射访问                       字典 </div><div class="line">映射类型元素无序存放， 通过一个唯一的 <span class="built_in">key</span> 来访问</div></pre></td></tr></table></figure>
+<p>4–4.   type()。内建函数 type()做什么？type()返回的对象是什么？ </p>
+<figure class="highlight elm"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">type</span>()返回任意 <span class="type">Python</span> 对象的类型信息</div><div class="line">返回<span class="keyword">type</span></div></pre></td></tr></table></figure>
+<p>4–4.   str() 和 repr()。内建函数 str()与 repr()之间的不同是什么？哪一个等价于反引号(``)运算符？。 </p>
+<figure class="highlight stylus"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line"><span class="function"><span class="title">str</span><span class="params">()</span></span>对人友好</div><div class="line"><span class="function"><span class="title">repr</span><span class="params">()</span></span>对python友好，等价于``</div></pre></td></tr></table></figure>
+<p>4–6.   对象相等。您认为 type(a) == type(b)和 type(a) is type(b)之间的不同是什么？<br>为什么会选择后者？函数 isinstance()与这有什么关系？ </p>
+<figure class="highlight elm"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line">这题还是不太懂</div><div class="line"><span class="keyword">type</span>(a) == <span class="keyword">type</span>(b)比较两个值，调用两次<span class="keyword">type</span>函数</div><div class="line"><span class="keyword">type</span>(a) is <span class="keyword">type</span>(b)测试两个变量是否指向同一个对象</div><div class="line">用对象身份的比较来替代对象值的比较。如果对象是不同的，那意</div><div class="line">味着原来的变量一定是不同类型的。(因为每一个类型只有一个类型对象)，我们就没有必要去检查(值)了。</div><div class="line"><span class="title">isinstance</span>()判断对象类型</div></pre></td></tr></table></figure>
+<p>4–7.   内建函数 dir()。在第二章的几个练习中，我们用内建函数 dir()做了几个实验，它接受一个对象，然后给出相应的属性。请对 types 模块做相同的实验。记下您熟悉的类型，包括您对这些类型的认识，然后记下你还不熟悉的类型。在学习 Python 的过程中，你要逐步将“不熟悉”的类型变得“熟悉”起来。</p>
+<figure class="highlight stylus"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line"><span class="function"><span class="title">dir</span><span class="params">([obj])</span></span>显示对象的属性，如果没有提供参数， 则显示全局变量的名字 </div><div class="line">&gt;&gt;&gt; dir(type)</div><div class="line">[<span class="string">'__abstractmethods__'</span>, <span class="string">'__base__'</span>, <span class="string">'__bases__'</span>, <span class="string">'__basicsize__'</span>, <span class="string">'__call__'</span>, <span class="string">'__class__'</span>, <span class="string">'__delattr__'</span>, <span class="string">'__dict__'</span>, <span class="string">'__dictoffset__'</span>, <span class="string">'__doc__'</span>, <span class="string">'__eq__'</span>, <span class="string">'__flags__'</span>, <span class="string">'__format__'</span>, <span class="string">'__ge__'</span>, <span class="string">'__getattribute__'</span>, <span class="string">'__gt__'</span>, <span class="string">'__hash__'</span>, <span class="string">'__init__'</span>, <span class="string">'__instancecheck__'</span>, <span class="string">'__itemsize__'</span>, <span class="string">'__le__'</span>, <span class="string">'__lt__'</span>, <span class="string">'__module__'</span>, <span class="string">'__mro__'</span>, <span class="string">'__name__'</span>, <span class="string">'__ne__'</span>, <span class="string">'__new__'</span>, <span class="string">'__reduce__'</span>, <span class="string">'__reduce_ex__'</span>, <span class="string">'__repr__'</span>, <span class="string">'__setattr__'</span>, <span class="string">'__sizeof__'</span>, <span class="string">'__str__'</span>, <span class="string">'__subclasscheck__'</span>, <span class="string">'__subclasses__'</span>, <span class="string">'__subclasshook__'</span>, <span class="string">'__weakrefoffset__'</span>, <span class="string">'mro'</span>]</div></pre></td></tr></table></figure>
+<p>4–8.   列表和元组。列表和元组的相同点是什么？不同点是什么？ </p>
+<figure class="highlight gams"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line">数据类型 存储模型      更新模型   访问模型</div><div class="line">数字     <span class="keyword">Scalar</span>     不可更改    直接访问     </div><div class="line">字符串   <span class="keyword">Scalar</span>     不可更改     顺序访问 </div><div class="line">列表    Container   可更改      顺序访问 </div><div class="line">元组    Container   不可更改    顺序访问 </div><div class="line">字典    Container   可更改      映射访问</div></pre></td></tr></table></figure>
+<p>4–9.   练习，给定以下赋值： </p>
+<p>a = 10<br>b = 10<br>c = 100<br>d = 100<br>e = 10.0<br>f = 10.0<br>请问下面各表达式的输出是什么？为什么？<br>(a)  a is b<br>(b)  c is d<br>(c)  e is f </p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div></pre></td><td class="code"><pre><div class="line"><span class="meta">&gt;&gt;&gt; </span>a <span class="keyword">is</span> b</div><div class="line"><span class="keyword">True</span></div><div class="line"><span class="meta">&gt;&gt;&gt; </span>c <span class="keyword">is</span> d</div><div class="line"><span class="keyword">True</span></div><div class="line"><span class="meta">&gt;&gt;&gt; </span>e <span class="keyword">is</span> f</div><div class="line"><span class="keyword">False</span></div><div class="line"></div><div class="line"><span class="string">'直接运行为什么结果不一样呢?存疑'</span></div><div class="line">a =<span class="number">100.0</span></div><div class="line">b =<span class="number">100.0</span></div><div class="line"><span class="keyword">print</span> a <span class="keyword">is</span> b</div></pre></td></tr></table></figure>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="https://flyerooo.github.io/2015/12/01/《Python-核心编程》4-10-练习/" data-id="cj2x172go0001uchy5hdwbd48" class="article-share-link">Delen</a>
+      
+      
+      
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Python/">Python</a></li></ul>
+
+    </footer>
+  </div>
+  
+    
+<nav id="article-nav">
+  
+    <a href="/2015/12/03/《Python核心编程》/" id="article-nav-newer" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Nieuwer</strong>
+      <div class="article-nav-title">
+        
+          《Python核心编程》5.9练习
+        
+      </div>
+    </a>
+  
+  
+    <a href="/2015/11/30/《Python核心编程》3-8-练习/" id="article-nav-older" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Ouder</strong>
+      <div class="article-nav-title">《Python核心编程》3.8 练习</div>
+    </a>
+  
+</nav>
+
+  
+</article>
+ 
+     
+  <div class="comments" id="comments">
+    
+     
+       
+      <div id="cloud-tie-wrapper" class="cloud-tie-wrapper"></div>
+    
+  </div>
+ 
+  
+
+</section>
+           
+    <aside id="sidebar">
+  
+    
+
+  
+    
+  
+    
+
+  
+    
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title recent-posts">Recente berichten</h3>
+    <div class="widget">
+      <ul>
+        
+          <li>
+            <a href="/2017/04/03/this语义/">this语义</a>
+          </li>
+        
+          <li>
+            <a href="/2017/04/02/JavaScript-This-的六道坎/">JavaScript This 的六道坎</a>
+          </li>
+        
+          <li>
+            <a href="/2017/03/30/《网络是怎样连接的》大纲/">《网络是怎样连接的》大纲</a>
+          </li>
+        
+          <li>
+            <a href="/2017/03/26/第一章-浏览器生成消息/">第一章 浏览器生成消息</a>
+          </li>
+        
+          <li>
+            <a href="/2017/03/25/HTTP-状态码概要/">HTTP 状态码概要</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+
+  
+    
+
+  
+</aside>
+
+      </div>
+      <footer id="footer">
+  
+  <div class="outer">
+    <div id="footer-left">
+      &copy; 2014 - 2017 Jeffzzz&nbsp;|&nbsp;
+      Theme by <a href="https://github.com/giscafer/hexo-theme-cafe/" target="_blank">Cafe</a>
+    </div>
+     <div id="footer-right">
+      Contact&nbsp;|&nbsp;wxl.pure@gmail.com
+    </div>
+  </div>
+</footer>
+ <script src="/jquery/jquery.min.js"></script>
+    </div>
+    <nav id="mobile-nav">
+  
+    <a href="/" class="mobile-nav-link">首页</a>
+  
+    <a href="/archives" class="mobile-nav-link">归档</a>
+  
+    <a href="/about" class="mobile-nav-link">关于</a>
+  
+</nav>
+    <img class="back-to-top-btn" src="/images/fly-to-top.png"/>
+<script>
+// Elevator script included on the page, already.
+window.onload = function() {
+  var elevator = new Elevator({
+    selector:'.back-to-top-btn',
+    element: document.querySelector('.back-to-top-btn'),
+    duration: 1000 // milliseconds
+  });
+}
+</script>
+      
+
+  
+    <script>
+      var cloudTieConfig = {
+        url: document.location.href, 
+        sourceId: "",
+        productKey: "e2fb4051c49842xxce669e634bc983f",
+        target: "cloud-tie-wrapper"
+      };
+    </script>
+    <script src="https://img1.ws.126.net/f2e/tie/yun/sdk/loader.js"></script>
+    
+
+  
+
+
+
+  
+    <script type="text/x-mathjax-config">
+      MathJax.Hub.Config({
+        tex2jax: {
+          inlineMath: [ ['$','$'], ["\\(","\\)"]  ],
+          processEscapes: true,
+          skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']
+        }
+      })
+    </script>
+
+    <script type="text/x-mathjax-config">
+      MathJax.Hub.Queue(function() {
+        var all = MathJax.Hub.getAllJax(), i;
+        for (i=0; i < all.length; i += 1) {
+          all[i].SourceElement().parentNode.className += ' has-jax';
+        }
+      })
+    </script>
+    <script type="text/javascript" src="//cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+  
+
+
+ <script src="/js/is.js"></script>
+
+
+  <link rel="stylesheet" href="/fancybox/jquery.fancybox.css">
+  <script src="/fancybox/jquery.fancybox.pack.js"></script>
+
+
+<script src="/js/script.js"></script>
+<script src="/js/elevator.js"></script>
+  </div>
+</body>
+</html>
