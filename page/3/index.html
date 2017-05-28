@@ -69,6 +69,74 @@
       <div class="outer">
         <section id="main">
   
+    <article id="post-三者最大实例分析" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2016/02/10/三者最大实例分析/" class="article-date">
+  <time datetime="2016-02-10T08:25:00.000Z" itemprop="datePublished">2016-02-10</time>
+</a>
+    
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/Python/">Python</a>
+  </div>
+
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2016/02/10/三者最大实例分析/">三者最大实例分析</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <!-- Table of Contents -->
+        
+        <p>很早看过这个视频，但今天要拿出来用时发现已经忘得差不多了。因此在这儿再复习一下。</p>
+<p>找出三个数字中最大者</p>
+<ul>
+<li>输入：三个数值</li>
+<li>处理：三者最大算法</li>
+<li><p>输出：打印最大值</p>
+<p>策略1：通盘比较</p>
+</li>
+<li>将每一个值与其他所有值比较以确定最大值</li>
+</ul>
+<figure class="highlight llvm"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line">if <span class="keyword">x</span><span class="number">1</span> &gt; <span class="keyword">x</span><span class="number">2</span> <span class="keyword">and</span> <span class="keyword">x</span><span class="number">1</span> &gt;= <span class="keyword">x</span><span class="number">3</span>:</div><div class="line">    <span class="keyword">max</span> = <span class="keyword">x</span><span class="number">1</span></div><div class="line">elif <span class="keyword">x</span><span class="number">2</span> &gt;= <span class="keyword">x</span><span class="number">1</span> <span class="keyword">and</span> <span class="keyword">x</span><span class="number">2</span> &gt;= <span class="keyword">x</span><span class="number">3</span>:</div><div class="line">	<span class="keyword">max</span> = <span class="keyword">x</span><span class="number">2</span></div><div class="line">else:</div><div class="line">	<span class="keyword">max</span> = <span class="keyword">x</span><span class="number">3</span></div></pre></td></tr></table></figure>
+<ul>
+<li>如果是五个值比较，表达式包含四个and，比较复杂</li>
+<li><p>每个表达式结果没有被互相利用，效率低（x1与x2比较了两次）</p>
+<p>策略2：决策树<br>决策树方法可以避免冗余比较<br>但比较值增加时，结构变得非常复杂</p>
+</li>
+</ul>
+<figure class="highlight llvm"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div></pre></td><td class="code"><pre><div class="line">if <span class="keyword">x</span><span class="number">1</span>&gt;=<span class="keyword">x</span><span class="number">2</span>:</div><div class="line">    if <span class="keyword">x</span><span class="number">1</span>&gt;=<span class="keyword">x</span><span class="number">3</span>:</div><div class="line">        <span class="keyword">max</span> = <span class="keyword">x</span><span class="number">1</span></div><div class="line">else:</div><div class="line">    if <span class="keyword">x</span><span class="number">2</span> &gt;=<span class="keyword">x</span><span class="number">3</span>:</div><div class="line">     <span class="keyword">max</span> = <span class="keyword">x</span><span class="number">2</span></div><div class="line"> else:</div><div class="line">     <span class="keyword">max</span> = <span class="keyword">x</span><span class="number">3</span></div></pre></td></tr></table></figure>
+<p>策略3：顺序处理<br>逐个扫描每个值，保留最大者</p>
+<figure class="highlight llvm"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">max</span> = <span class="keyword">x</span><span class="number">1</span></div><div class="line">if <span class="keyword">x</span><span class="number">2</span> &gt; <span class="keyword">max</span>:</div><div class="line">	<span class="keyword">max</span> = <span class="keyword">x</span><span class="number">2</span></div><div class="line">if <span class="keyword">x</span><span class="number">3</span> &gt; <span class="keyword">max</span>:</div><div class="line">	<span class="keyword">max</span> = <span class="keyword">x</span><span class="number">3</span></div></pre></td></tr></table></figure>
+<p>寻找一组数中的最大值</p>
+<figure class="highlight vim"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div></pre></td><td class="code"><pre><div class="line">def main():</div><div class="line">	n = <span class="built_in">eval</span>(<span class="built_in">input</span>(<span class="string">"How many numbers are there?"</span>))</div><div class="line">	#将第一个值赋给<span class="built_in">max</span></div><div class="line">	<span class="built_in">max</span> = <span class="built_in">eval</span>(<span class="built_in">input</span>(<span class="string">"Enter a number &gt;&gt; "</span>))</div><div class="line">	#连续与后面n-<span class="number">1</span>值进行比较</div><div class="line">	<span class="keyword">for</span> i in <span class="built_in">range</span>(n-<span class="number">1</span>):</div><div class="line">		<span class="keyword">x</span> = <span class="built_in">eval</span>(<span class="built_in">input</span>(<span class="string">"Enter a number &gt;&gt; "</span>))</div><div class="line">		<span class="keyword">if</span> <span class="keyword">x</span> &gt; <span class="built_in">max</span>:</div><div class="line">			<span class="built_in">max</span> = <span class="keyword">x</span></div><div class="line">	<span class="keyword">print</span>(<span class="string">"The largest value is"</span>, <span class="built_in">max</span>)</div><div class="line">main()</div></pre></td></tr></table></figure>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="https://flyerooo.github.io/2016/02/10/三者最大实例分析/" data-id="cj2x0ki550009l0hyovby6686" class="article-share-link">Share</a>
+      
+      
+      
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Python/">Python</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/算法/">算法</a></li></ul>
+
+    </footer>
+  </div>
+  
+</article>
+ 
+
+
+  
     <article id="post-Python-复制列表" class="article article-type-post" itemscope itemprop="blogPost">
   <div class="article-meta">
     <a href="/2016/01/14/Python-复制列表/" class="article-date">
@@ -618,55 +686,6 @@
 
 
   
-    <article id="post-《Python》-6-22-练习" class="article article-type-post" itemscope itemprop="blogPost">
-  <div class="article-meta">
-    <a href="/2015/12/06/《Python》-6-22-练习/" class="article-date">
-  <time datetime="2015-12-06T06:45:00.000Z" itemprop="datePublished">2015-12-06</time>
-</a>
-    
-  <div class="article-category">
-    <a class="article-category-link" href="/categories/Python/">Python</a>
-  </div>
-
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2015/12/06/《Python》-6-22-练习/">《Python》 6.22 练习</a>
-    </h1>
-  
-
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p>6–1.   字符串.string 模块中是否有一种字符串方法或者函数可以帮我鉴定一下一个字符串是否是另一个大字符串的一部分?<br>
-        
-          <p class="article-more-link">
-            <a href="/2015/12/06/《Python》-6-22-练习/#more">继续阅读全文 »</a>
-          </p>
-        
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="https://flyerooo.github.io/2015/12/06/《Python》-6-22-练习/" data-id="cj2vmz0vc000hl8hycdcxnhn6" class="article-share-link">Share</a>
-      
-      
-      
-  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Python/">Python</a></li></ul>
-
-    </footer>
-  </div>
-  
-</article>
- 
-
-
-  
 
 
   <nav id="page-nav">
@@ -693,10 +712,6 @@
       <ul>
         
           <li>
-            <a href="/2017/05/28/Untitled/">Python多种方法实现斐波那契数列</a>
-          </li>
-        
-          <li>
             <a href="/2017/04/21/python爬虫入门-简书七日热门文章数据/">python爬虫-简书七日热门文章数据</a>
           </li>
         
@@ -710,6 +725,10 @@
         
           <li>
             <a href="/2017/03/30/《网络是怎样连接的》大纲/">《网络是怎样连接的》大纲</a>
+          </li>
+        
+          <li>
+            <a href="/2017/03/26/第一章-浏览器生成消息/">第一章 浏览器生成消息</a>
           </li>
         
       </ul>
