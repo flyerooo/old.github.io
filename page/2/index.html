@@ -37,7 +37,7 @@
         
           <a id="nav-rss-link" class="nav-icon" href="/atom.xml" title="RSS Feed"></a>
         
-        <a id="nav-search-btn" class="nav-icon" title="搜索"></a>
+        <a id="nav-search-btn" class="nav-icon" title="Search"></a>
       </nav>
       <div id="search-form-wrap">
         <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" results="0" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="https://flyerooo.github.io"></form>
@@ -68,6 +68,60 @@
 </header>
       <div class="outer">
         <section id="main">
+  
+    <article id="post-如何写好原生Javascript-1" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2017/03/23/如何写好原生Javascript-1/" class="article-date">
+  <time datetime="2017-03-23T02:20:00.000Z" itemprop="datePublished">2017-03-23</time>
+</a>
+    
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/JavaScript/">JavaScript</a>
+  </div>
+
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2017/03/23/如何写好原生Javascript-1/">如何写好原生Javascript?</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <!-- Table of Contents -->
+        
+        <p>看了齐舞团“如何写好原生Javascript?”，发现有些知识点掌握的还是不太牢。再次记录一下。</p>
+<ul>
+<li>代码职责清晰，JavaScript不应该直接操作DOM</li>
+<li>API设计合理</li>
+<li>合适的算法<br>例. 给定一个很大的数组，里面有很多的整数，有JavaScript实现一个函数，要求将数组中和为10的每一对数配对并找出，返回这些数配对后的数组。<figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">let</span> list = [<span class="number">1</span>,<span class="number">2</span>,<span class="number">3</span>,<span class="number">4</span>,<span class="number">5</span>,<span class="number">6</span>,<span class="number">7</span>,<span class="number">8</span>,<span class="number">9</span>,<span class="number">0</span>,<span class="number">11</span>,<span class="number">-2</span>,<span class="number">-1</span>,<span class="number">-3</span>,<span class="number">5</span>,<span class="number">7</span>,<span class="number">-5</span>]</div><div class="line"><span class="function"><span class="keyword">function</span> <span class="title">map</span>(<span class="params">list</span>) </span>&#123;</div><div class="line">   <span class="keyword">let</span> ret = []</div><div class="line">    list = list.sort(<span class="function">(<span class="params">a,b</span>)=&gt;</span>a-b)</div><div class="line">    <span class="keyword">for</span> (<span class="keyword">let</span> i = <span class="number">0</span>, j = list.length - <span class="number">1</span>; i &lt; j;)&#123;</div><div class="line">        <span class="keyword">let</span> a = list[i], b = list[j]</div><div class="line">        <span class="keyword">if</span> (a + b === <span class="number">10</span>)&#123;</div><div class="line">            ret.push([a,b])</div><div class="line">            i++</div><div class="line">            j--</div><div class="line">        &#125; <span class="keyword">else</span> <span class="keyword">if</span> (a + b &lt;<span class="number">10</span>)&#123;</div><div class="line">            i++</div><div class="line">        &#125; <span class="keyword">else</span> &#123;</div><div class="line">            j--</div><div class="line">        &#125;</div><div class="line">    &#125;</div><div class="line">    <span class="keyword">return</span> ret</div><div class="line">&#125;</div><div class="line"><span class="built_in">console</span>.log(<span class="built_in">JSON</span>.stringify(map(list)))</div></pre></td></tr></table></figure>
+</li>
+</ul>
+<p>先排序，首尾相加，如和等于10，两头都向中间靠拢，和小于10，低位数加1，和大于19，高位数减1</p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="https://flyerooo.github.io/2017/03/23/如何写好原生Javascript-1/" data-id="cj2vmz0wg000zl8hyv4ha2in4" class="article-share-link">Share</a>
+      
+      
+      
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/JavaScript/">JavaScript</a></li></ul>
+
+    </footer>
+  </div>
+  
+</article>
+ 
+
+
   
     <article id="post-开始写作" class="article article-type-post" itemscope itemprop="blogPost">
   <div class="article-meta">
@@ -102,7 +156,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="https://flyerooo.github.io/2017/03/16/开始写作/" data-id="cj2vmz0wg0013l8hytzxgnx5g" class="article-share-link">分享</a>
+      <a data-url="https://flyerooo.github.io/2017/03/16/开始写作/" data-id="cj2vmz0wg0013l8hytzxgnx5g" class="article-share-link">Share</a>
       
       
       
@@ -149,103 +203,11 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="https://flyerooo.github.io/2017/03/14/《实战ES2015》备忘/" data-id="cj2vmz0w6000sl8hycans0mw7" class="article-share-link">分享</a>
+      <a data-url="https://flyerooo.github.io/2017/03/14/《实战ES2015》备忘/" data-id="cj2vmz0w6000sl8hycans0mw7" class="article-share-link">Share</a>
       
       
       
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/ES6/">ES6</a></li></ul>
-
-    </footer>
-  </div>
-  
-</article>
- 
-
-
-  
-    <article id="post-Untitled" class="article article-type-post" itemscope itemprop="blogPost">
-  <div class="article-meta">
-    <a href="/2017/01/20/Untitled/" class="article-date">
-  <time datetime="2017-01-20T10:11:00.000Z" itemprop="datePublished">2017-01-20</time>
-</a>
-    
-  <div class="article-category">
-    <a class="article-category-link" href="/categories/SQL/">SQL</a>
-  </div>
-
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2017/01/20/Untitled/">查询数据操作</a>
-    </h1>
-  
-
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <!-- Table of Contents -->
-        
-        <div class="export-wrapper"><br><br><div style="font-size: 24px; padding: 20px 15px 0;"><br><br><div style="padding-bottom: 10px"></div>
-
-<p></p></div><p></p>
-<ul>
-<li><span class="content mubu-node" style="line-height: 22px; min-height: 22px; font-size: 14px; display: inline-block; vertical-align: top;">查询数据操作</span><ul>
-<li><span class="content mubu-node" style="line-height: 22px; min-height: 22px; font-size: 14px; display: inline-block; vertical-align: top;">1.查询记录</span><ul>
-<li><span class="content mubu-node" style="line-height: 22px; min-height: 22px; font-size: 14px; display: inline-block; vertical-align: top;">SELECT select_expr [, select_expr …] [ FROM table_references [WHERE 条件] [GROUP BY {col_name | position} [ASC | DESC], … 分组] [HAVING 条件 对分组结果进行二次筛选] [ORDER BY {col_name | position} [ASC | DESC], …排序] [LIMIT 限制显示条数] ]</span></li>
-</ul>
-</li>
-<li><span class="content mubu-node" style="line-height: 22px; min-height: 22px; font-size: 14px; display: inline-block; vertical-align: top;">2.查询表达式</span><ul>
-<li><span class="content mubu-node" style="line-height: 22px; min-height: 22px; font-size: 14px; display: inline-block; vertical-align: top;">每一个表达式表示想要的一列，必须至少有一列，多个列之间以逗号分隔</span></li>
-<li><span class="content mubu-node" style="line-height: 22px; min-height: 22px; font-size: 14px; display: inline-block; vertical-align: top;"><em>表示所有列,tbl_name.</em>可以表示命名表的所有列</span></li>
-<li><span class="content mubu-node" style="line-height: 22px; min-height: 22px; font-size: 14px; display: inline-block; vertical-align: top;">查询表达式可以使用[AS]alias_name为其赋予别名</span></li>
-</ul>
-</li>
-<li><span class="content mubu-node" style="line-height: 22px; min-height: 22px; font-size: 14px; display: inline-block; vertical-align: top;">3.WHERE 条件</span></li>
-<li><span class="content mubu-node" style="line-height: 22px; min-height: 22px; font-size: 14px; display: inline-block; vertical-align: top;">4.GROUP BY查询结果分组</span><ul>
-<li><span class="content mubu-node" style="line-height: 22px; min-height: 22px; font-size: 14px; display: inline-block; vertical-align: top;">配合GROUP_CONCAT()得到分组详情</span></li>
-<li><span class="content mubu-node" style="line-height: 22px; min-height: 22px; font-size: 14px; display: inline-block; vertical-align: top;">配合聚合函数</span><ul>
-<li><span class="content mubu-node" style="line-height: 22px; min-height: 22px; font-size: 14px; display: inline-block; vertical-align: top;">COUNT()</span></li>
-<li><span class="content mubu-node" style="line-height: 22px; min-height: 22px; font-size: 14px; display: inline-block; vertical-align: top;">MAX()</span></li>
-<li><span class="content mubu-node" style="line-height: 22px; min-height: 22px; font-size: 14px; display: inline-block; vertical-align: top;">MIN()</span></li>
-<li><span class="content mubu-node" style="line-height: 22px; min-height: 22px; font-size: 14px; display: inline-block; vertical-align: top;">AVG()</span></li>
-<li><span class="content mubu-node" style="line-height: 22px; min-height: 22px; font-size: 14px; display: inline-block; vertical-align: top;">SUM()</span></li>
-</ul>
-</li>
-<li><span class="content mubu-node" style="line-height: 22px; min-height: 22px; font-size: 14px; display: inline-block; vertical-align: top;">配合WITH ROLLUP记录上面所有记录的总和</span></li>
-</ul>
-</li>
-<li><span class="content mubu-node" style="line-height: 22px; min-height: 22px; font-size: 14px; display: inline-block; vertical-align: top;">5.HAVING子句</span><ul>
-<li><span class="content mubu-node" style="line-height: 22px; min-height: 22px; font-size: 14px; display: inline-block; vertical-align: top;">通过HAVING子句对分组结果进行二次筛选</span></li>
-</ul>
-</li>
-<li><span class="content mubu-node" style="line-height: 22px; min-height: 22px; font-size: 14px; display: inline-block; vertical-align: top;">6.ORDER BY排序</span><ul>
-<li><span class="content mubu-node" style="line-height: 22px; min-height: 22px; font-size: 14px; display: inline-block; vertical-align: top;">通过ORDER BY对查询结果排序</span></li>
-</ul>
-</li>
-<li><span class="content mubu-node" style="line-height: 22px; min-height: 22px; font-size: 14px; display: inline-block; vertical-align: top;">7.LIMIT限制查询结果显示条数</span><ul>
-<li><span class="content mubu-node" style="line-height: 22px; min-height: 22px; font-size: 14px; display: inline-block; vertical-align: top;">LIMIT 显示条数</span></li>
-<li><span class="content mubu-node" style="line-height: 22px; min-height: 22px; font-size: 14px; display: inline-block; vertical-align: top;">LIMIT 偏移量，显示条数</span></li>
-</ul>
-</li>
-</ul>
-</li>
-</ul>
-<p></p></div><p></p>
-
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="https://flyerooo.github.io/2017/01/20/Untitled/" data-id="cj2vw0kb80000a0hywno5g288" class="article-share-link">分享</a>
-      
-      
-      
-  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/SQL/">SQL</a></li></ul>
 
     </footer>
   </div>
@@ -296,7 +258,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="https://flyerooo.github.io/2017/01/19/理解web路由-0/" data-id="cj2vmz0wq0017l8hy0pfdi0s1" class="article-share-link">分享</a>
+      <a data-url="https://flyerooo.github.io/2017/01/19/理解web路由-0/" data-id="cj2vmz0wq0017l8hy0pfdi0s1" class="article-share-link">Share</a>
       
       
       
@@ -343,7 +305,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="https://flyerooo.github.io/2016/11/05/JavaScript-面向对象编程/" data-id="cj2vvwgke0000nshydd5n05gy" class="article-share-link">分享</a>
+      <a data-url="https://flyerooo.github.io/2016/11/05/JavaScript-面向对象编程/" data-id="cj2vvwgke0000nshydd5n05gy" class="article-share-link">Share</a>
       
       
       
@@ -399,7 +361,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="https://flyerooo.github.io/2016/10/05/Javascript应用开发指南/" data-id="cj2vmz0ty0007l8hyr2ljqe6v" class="article-share-link">分享</a>
+      <a data-url="https://flyerooo.github.io/2016/10/05/Javascript应用开发指南/" data-id="cj2vmz0ty0007l8hyr2ljqe6v" class="article-share-link">Share</a>
       
       
       
@@ -551,7 +513,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="https://flyerooo.github.io/2016/03/20/《SQL必知必会》笔记/" data-id="cj2vmz0vm000ll8hyglw9lqma" class="article-share-link">分享</a>
+      <a data-url="https://flyerooo.github.io/2016/03/20/《SQL必知必会》笔记/" data-id="cj2vmz0vm000ll8hyglw9lqma" class="article-share-link">Share</a>
       
       
       
@@ -598,7 +560,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="https://flyerooo.github.io/2016/03/17/不要说没时间/" data-id="cj2vmz0w6000wl8hywg8stcbd" class="article-share-link">分享</a>
+      <a data-url="https://flyerooo.github.io/2016/03/17/不要说没时间/" data-id="cj2vmz0w6000wl8hywg8stcbd" class="article-share-link">Share</a>
       
       
       
@@ -653,7 +615,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="https://flyerooo.github.io/2016/03/02/Python-sys-模块/" data-id="cj2x0ki3v0000l0hy1x5klvsw" class="article-share-link">分享</a>
+      <a data-url="https://flyerooo.github.io/2016/03/02/Python-sys-模块/" data-id="cj2x0ki3v0000l0hy1x5klvsw" class="article-share-link">Share</a>
       
       
       
@@ -721,7 +683,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="https://flyerooo.github.io/2016/02/10/三者最大实例分析/" data-id="cj2x0ki550009l0hyovby6686" class="article-share-link">分享</a>
+      <a data-url="https://flyerooo.github.io/2016/02/10/三者最大实例分析/" data-id="cj2x0ki550009l0hyovby6686" class="article-share-link">Share</a>
       
       
       
@@ -738,7 +700,7 @@
 
 
   <nav id="page-nav">
-    <a class="extend prev" rel="prev" href="/">&laquo; 上一页</a><a class="page-number" href="/">1</a><span class="page-number current">2</span><a class="page-number" href="/page/3/">3</a><a class="page-number" href="/page/4/">4</a><a class="extend next" rel="next" href="/page/3/">下一页&raquo;</a>
+    <a class="extend prev" rel="prev" href="/">&laquo; Prev</a><a class="page-number" href="/">1</a><span class="page-number current">2</span><a class="page-number" href="/page/3/">3</a><a class="page-number" href="/page/4/">4</a><a class="extend next" rel="next" href="/page/3/">Next&raquo;</a>
   </nav>
 </section>
            
@@ -756,9 +718,13 @@
   
     
   <div class="widget-wrap">
-    <h3 class="widget-title recent-posts">最新文章</h3>
+    <h3 class="widget-title recent-posts">Recent Posts</h3>
     <div class="widget">
       <ul>
+        
+          <li>
+            <a href="/2017/05/28/Untitled/">Python多种方法实现斐波那契数列</a>
+          </li>
         
           <li>
             <a href="/2017/04/21/python爬虫入门-简书七日热门文章数据/">python爬虫-简书七日热门文章数据</a>
@@ -774,10 +740,6 @@
         
           <li>
             <a href="/2017/03/30/《网络是怎样连接的》大纲/">《网络是怎样连接的》大纲</a>
-          </li>
-        
-          <li>
-            <a href="/2017/03/26/第一章-浏览器生成消息/">第一章 浏览器生成消息</a>
           </li>
         
       </ul>
@@ -796,10 +758,10 @@
   <div class="outer">
     <div id="footer-left">
       &copy; 2014 - 2017 Jeffzzz&nbsp;|&nbsp;
-      主题 <a href="https://github.com/giscafer/hexo-theme-cafe/" target="_blank">Cafe</a>
+      Theme by <a href="https://github.com/giscafer/hexo-theme-cafe/" target="_blank">Cafe</a>
     </div>
      <div id="footer-right">
-      联系方式&nbsp;|&nbsp;wxl.pure@gmail.com
+      Contact&nbsp;|&nbsp;wxl.pure@gmail.com
     </div>
   </div>
 </footer>
