@@ -37,7 +37,7 @@
         
           <a id="nav-rss-link" class="nav-icon" href="/atom.xml" title="RSS Feed"></a>
         
-        <a id="nav-search-btn" class="nav-icon" title="Søk"></a>
+        <a id="nav-search-btn" class="nav-icon" title="Zoeken"></a>
       </nav>
       <div id="search-form-wrap">
         <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" results="0" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="https://flyerooo.github.io"></form>
@@ -68,6 +68,61 @@
 </header>
       <div class="outer">
         <section id="main">
+  
+    <article id="post-Python-sys-模块" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2016/03/02/Python-sys-模块/" class="article-date">
+  <time datetime="2016-03-02T08:28:00.000Z" itemprop="datePublished">2016-03-02</time>
+</a>
+    
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/Python/">Python</a>
+  </div>
+
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2016/03/02/Python-sys-模块/">Python sys 模块</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <!-- Table of Contents -->
+        
+        <p>使用dir(),help()查看查看对象的属性和文档<br><figure class="highlight stylus"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">函数            描述 </div><div class="line"><span class="function"><span class="title">dir</span><span class="params">([obj])</span></span>      显示对象的属性，如果没有提供参数，则显示全局变量的名字 </div><div class="line"><span class="function"><span class="title">help</span><span class="params">([obj])</span></span>     以一种整齐美观的形式 显示对象的文档字符串，如果没有提供任何参数，则会进入交互式帮助。</div></pre></td></tr></table></figure></p>
+<p>sys 是与操作环境有关的函数。<br>以下我们用用dir()查看sys属性</p>
+<figure class="highlight swift"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">import</span> sys</div><div class="line"><span class="built_in">print</span> dir(sys)</div></pre></td></tr></table></figure>
+<p>输出<br><figure class="highlight scheme"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">[<span class="symbol">'__displayhook__</span>', <span class="symbol">'__doc__</span>', <span class="symbol">'__excepthook__</span>', <span class="symbol">'__name__</span>', <span class="symbol">'__package__</span>', <span class="symbol">'__stderr__</span>', <span class="symbol">'__stdin__</span>', <span class="symbol">'__stdout__</span>', <span class="symbol">'_clear_type_cache</span>', <span class="symbol">'_current_frames</span>', <span class="symbol">'_getframe</span>', <span class="symbol">'_mercurial</span>', <span class="symbol">'api_version</span>', <span class="symbol">'argv</span>', <span class="symbol">'builtin_module_names</span>', <span class="symbol">'byteorder</span>', <span class="symbol">'call_tracing</span>', <span class="symbol">'callstats</span>', <span class="symbol">'copyright</span>', <span class="symbol">'displayhook</span>', <span class="symbol">'dllhandle</span>', <span class="symbol">'dont_write_bytecode</span>', <span class="symbol">'exc_clear</span>', <span class="symbol">'exc_info</span>', <span class="symbol">'exc_type</span>', <span class="symbol">'excepthook</span>', <span class="symbol">'exec_prefix</span>', <span class="symbol">'executable</span>', <span class="symbol">'exit</span>', <span class="symbol">'flags</span>', <span class="symbol">'float_info</span>', <span class="symbol">'float_repr_style</span>', <span class="symbol">'getcheckinterval</span>', <span class="symbol">'getdefaultencoding</span>', <span class="symbol">'getfilesystemencoding</span>', <span class="symbol">'getprofile</span>', <span class="symbol">'getrecursionlimit</span>', <span class="symbol">'getrefcount</span>', <span class="symbol">'getsizeof</span>', <span class="symbol">'gettrace</span>', <span class="symbol">'getwindowsversion</span>', <span class="symbol">'hexversion</span>', <span class="symbol">'long_info</span>', <span class="symbol">'maxint</span>', <span class="symbol">'maxsize</span>', <span class="symbol">'maxunicode</span>', <span class="symbol">'meta_path</span>', <span class="symbol">'modules</span>', <span class="symbol">'path</span>', <span class="symbol">'path_hooks</span>', <span class="symbol">'path_importer_cache</span>', <span class="symbol">'platform</span>', <span class="symbol">'prefix</span>', <span class="symbol">'py3kwarning</span>', <span class="symbol">'setcheckinterval</span>', <span class="symbol">'setprofile</span>', <span class="symbol">'setrecursionlimit</span>', <span class="symbol">'settrace</span>', <span class="symbol">'stderr</span>', <span class="symbol">'stdin</span>', <span class="symbol">'stdout</span>', <span class="symbol">'subversion</span>', <span class="symbol">'version</span>', <span class="symbol">'version_info</span>', <span class="symbol">'warnoptions</span>', <span class="symbol">'winver</span>']</div></pre></td></tr></table></figure></p>
+<p>选取几个进行说明<br>sys.argv 命令行参数List，第一个元素是程序本身路径<br>sys.path 是一个list,指明所有查找module，package的路径.<br>我的理解：这就是叫环境变量吧？<br>sys.platform 得到运行的操作系统环境 </p>
+<p>输入<br><figure class="highlight vim"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line">import sys</div><div class="line"></div><div class="line"><span class="keyword">print</span> <span class="string">"The file name: "</span>, sys.<span class="built_in">argv</span>[<span class="number">0</span>]</div><div class="line"><span class="keyword">print</span> <span class="string">"The number of argument"</span>, <span class="built_in">len</span>(sys.<span class="built_in">argv</span>)</div><div class="line"><span class="keyword">print</span> <span class="string">"The argument is: "</span>, str(sys.<span class="built_in">argv</span>)</div><div class="line"><span class="keyword">print</span> <span class="string">"The platform is: "</span>, str(sys.platform)</div></pre></td></tr></table></figure></p>
+<p>输出<br><figure class="highlight vim"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">D:/learnpython27/python27exercise.<span class="keyword">py</span></div><div class="line">The <span class="keyword">file</span> name:  D:/learnpython27/python27exercise.<span class="keyword">py</span></div><div class="line">The <span class="keyword">number</span> of <span class="keyword">argument</span> <span class="number">1</span></div><div class="line">The <span class="keyword">argument</span> i<span class="variable">s:</span>  [<span class="string">'D:/learnpython27/python27exercise.py'</span>]</div><div class="line">The platform i<span class="variable">s:</span>  win32</div></pre></td></tr></table></figure></p>
+<p>使用help()查看platform，得到<br>（话说，只能用help(sys) 然后再去找platform对应的说明吗？）<br><figure class="highlight delphi"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">platform</span> -- <span class="keyword">platform</span> identifier #平台识别符？不懂</div></pre></td></tr></table></figure></p>
+<p>还有很多，就不一一说明了（主要是没用过，说不出个所以然来）</p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="https://flyerooo.github.io/2016/03/02/Python-sys-模块/" data-id="cj2x0ki3v0000l0hy1x5klvsw" class="article-share-link">Delen</a>
+      
+      
+      
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Python/">Python</a></li></ul>
+
+    </footer>
+  </div>
+  
+</article>
+ 
+
+
   
     <article id="post-三者最大实例分析" class="article article-type-post" itemscope itemprop="blogPost">
   <div class="article-meta">
@@ -123,7 +178,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="https://flyerooo.github.io/2016/02/10/三者最大实例分析/" data-id="cj2x0ki550009l0hyovby6686" class="article-share-link">Share</a>
+      <a data-url="https://flyerooo.github.io/2016/02/10/三者最大实例分析/" data-id="cj2x0ki550009l0hyovby6686" class="article-share-link">Delen</a>
       
       
       
@@ -172,7 +227,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="https://flyerooo.github.io/2016/01/14/Python-复制列表/" data-id="cj2x0ki4f0001l0hynbcrswkc" class="article-share-link">Share</a>
+      <a data-url="https://flyerooo.github.io/2016/01/14/Python-复制列表/" data-id="cj2x0ki4f0001l0hynbcrswkc" class="article-share-link">Delen</a>
       
       
       
@@ -220,7 +275,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="https://flyerooo.github.io/2016/01/03/极客学院面向对象程序设计-学习记录/" data-id="cj2x0ki6e000hl0hy9mxsg16c" class="article-share-link">Share</a>
+      <a data-url="https://flyerooo.github.io/2016/01/03/极客学院面向对象程序设计-学习记录/" data-id="cj2x0ki6e000hl0hy9mxsg16c" class="article-share-link">Delen</a>
       
       
       
@@ -278,7 +333,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="https://flyerooo.github.io/2015/12/30/《Python语言程序设计》前四章学习记录/" data-id="cj2x0ki4z0006l0hyyv0myb81" class="article-share-link">Share</a>
+      <a data-url="https://flyerooo.github.io/2015/12/30/《Python语言程序设计》前四章学习记录/" data-id="cj2x0ki4z0006l0hyyv0myb81" class="article-share-link">Delen</a>
       
       
       
@@ -324,7 +379,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="https://flyerooo.github.io/2015/12/23/第十一章-函数和函数式编程/" data-id="cj2vmz0x0001el8hyh9rwqcvl" class="article-share-link">Share</a>
+      <a data-url="https://flyerooo.github.io/2015/12/23/第十一章-函数和函数式编程/" data-id="cj2vmz0x0001el8hyh9rwqcvl" class="article-share-link">Delen</a>
       
       
       
@@ -409,7 +464,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="https://flyerooo.github.io/2015/12/22/《Python-核心编程》-11-11-练习/" data-id="cj2x0ki4u0003l0hyz1ucd1qh" class="article-share-link">Share</a>
+      <a data-url="https://flyerooo.github.io/2015/12/22/《Python-核心编程》-11-11-练习/" data-id="cj2x0ki4u0003l0hyz1ucd1qh" class="article-share-link">Delen</a>
       
       
       
@@ -458,7 +513,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="https://flyerooo.github.io/2015/12/22/《Python-核心编程》/" data-id="cj2vmz0ui000al8hyud4wjfxq" class="article-share-link">Share</a>
+      <a data-url="https://flyerooo.github.io/2015/12/22/《Python-核心编程》/" data-id="cj2vmz0ui000al8hyud4wjfxq" class="article-share-link">Delen</a>
       
       
       
@@ -513,7 +568,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="https://flyerooo.github.io/2015/12/13/父与子的编程之旅-EasyGui安装问题解决/" data-id="cj2x172h40006uchyop6i2yvo" class="article-share-link">Share</a>
+      <a data-url="https://flyerooo.github.io/2015/12/13/父与子的编程之旅-EasyGui安装问题解决/" data-id="cj2x172h40006uchyop6i2yvo" class="article-share-link">Delen</a>
       
       
       
@@ -594,85 +649,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="https://flyerooo.github.io/2015/12/10/《Python-核心编程》-8-15-练习/" data-id="cj2x172go0000uchy15qu98n8" class="article-share-link">Share</a>
-      
-      
-      
-  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Python/">Python</a></li></ul>
-
-    </footer>
-  </div>
-  
-</article>
- 
-
-
-  
-    <article id="post-《Python-核心编程》7-12-练习" class="article article-type-post" itemscope itemprop="blogPost">
-  <div class="article-meta">
-    <a href="/2015/12/10/《Python-核心编程》7-12-练习/" class="article-date">
-  <time datetime="2015-12-10T08:42:00.000Z" itemprop="datePublished">2015-12-10</time>
-</a>
-    
-  <div class="article-category">
-    <a class="article-category-link" href="/categories/Python/">Python</a>
-  </div>
-
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2015/12/10/《Python-核心编程》7-12-练习/">《Python 核心编程》7.12  练习</a>
-    </h1>
-  
-
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <!-- Table of Contents -->
-        
-        <p>7–1.   字典方法。哪个字典方法可以用来把两个字典合并到一起？ </p>
-<figure class="highlight tcl"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">dict</span>.<span class="keyword">update</span>(dict2)</div></pre></td></tr></table></figure>
-<p>7–2.   字典的键。我们知道字典的值可以是任意的 Python 对象，那字典的键又如何呢？请试着将除数字和字符串以外的其他不同类型的对象作为字典的键，看一看，哪些类型可以，哪些不行？对那些不能作字典的键的对象类型，你认为是什么原因呢？<br><figure class="highlight lsl"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">字典的键须为可哈希的,即为不可变类型，</div><div class="line">可行：数字、字符串、只含不可变类型元素的元组（<span class="number">1</span>,<span class="number">2</span>,<span class="number">3</span>,’abc’）</div><div class="line">不行：列表，字典，含可变类型元素的元组</div></pre></td></tr></table></figure></p>
-<p>7–3.   字典和列表的方法。<br>(a) 创建一个字典，并把这个字典中的键按照字母顺序显示出来。</p>
-<figure class="highlight stylus"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line">&gt;&gt;&gt; a=dict(b=<span class="number">4</span>,c=<span class="number">5</span>,a=<span class="number">2</span>)</div><div class="line">&gt;&gt;&gt; <span class="selector-tag">a</span></div><div class="line">&#123;<span class="string">'a'</span>: <span class="number">2</span>, <span class="string">'c'</span>: <span class="number">5</span>, <span class="string">'b'</span>: <span class="number">4</span>&#125;</div><div class="line">&gt;&gt;&gt; <span class="keyword">for</span> k <span class="keyword">in</span> sorted(a):</div><div class="line">	print k,</div><div class="line"></div><div class="line">	<span class="selector-tag">a</span> <span class="selector-tag">b</span> c</div></pre></td></tr></table></figure>
-<p>(b) 现在根据已按照字母顺序排序好的键，显示出这个字典中的键和值。 </p>
-<figure class="highlight livecodeserver"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line">&gt;&gt;&gt; <span class="keyword">for</span> k <span class="keyword">in</span> sorted(<span class="keyword">a</span>):</div><div class="line">	print <span class="string">'key=%s,value=%s'</span> % (k,<span class="keyword">a</span>[k])</div><div class="line"></div><div class="line">	</div><div class="line">key=<span class="keyword">a</span>,<span class="built_in">value</span>=<span class="number">2</span></div><div class="line">key=b,<span class="built_in">value</span>=<span class="number">4</span></div><div class="line">key=c,<span class="built_in">value</span>=<span class="number">5</span></div></pre></td></tr></table></figure>
-<p>(c)同(b),但这次是根据已按照字母顺序排序好的字典的值，显示出这个字典中的键和值。(注意：对字典和哈希表来说，这样做一般没有什么实际意义，因为大多数访问和排序(如果需要)都是基于字典的键，这里只把它作为一个练习。) </p>
-<figure class="highlight stylus"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div></pre></td><td class="code"><pre><div class="line">&gt;&gt;&gt; <span class="keyword">for</span> value <span class="keyword">in</span> v:</div><div class="line">	    <span class="keyword">for</span> k <span class="keyword">in</span> <span class="selector-tag">a</span>.keys():</div><div class="line">		    <span class="keyword">if</span> value == <span class="selector-tag">a</span>[k]:</div><div class="line">			    print k,value</div><div class="line"></div><div class="line">			</div><div class="line"><span class="selector-tag">a</span> <span class="number">2</span></div><div class="line"><span class="selector-tag">b</span> <span class="number">4</span></div><div class="line">c <span class="number">5</span></div><div class="line">&gt;&gt;&gt; </div><div class="line">&gt;&gt;&gt;</div></pre></td></tr></table></figure>
-<p>7-4.   建立字典。给定两个长度相同的列表，比如说，列表[1, 2, 3,…]和[‘abc’, ‘def’, ‘ghi’,…],用这两个列表里的所有数据组成一个字典，像这样：{1:’abc’, 2: ‘def’, 3: ‘ghi’,…} </p>
-<figure class="highlight lisp"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">dict(<span class="name">zip</span>([<span class="number">1</span>, <span class="number">2</span>, <span class="number">3</span>],['abc', 'def', 'ghi']))</div></pre></td></tr></table></figure>
-<p>7–5. userpw2.py. 下面的问题和例题 7.1 中管理名字-密码的键值对数据的程序有关。<br>(a)修改那个脚本，使它能记录用户上次的登录日期和时间(用 time 模块)，并与用户密码一起保存起来。程序的界面有要求用户输入用户名和密码的提示。无论户名是否成功登录，都应有提示，在户名成功登录后，应更新相应用户的上次登录时间戳。如果本次登录与上次登录在时间上相差不超过 4 个小时，则通知该用户： “You already logged in at: <last_ login_timestamp="">.”<br>(b) 添加一个“管理”菜单，其中有以下两项:(1)删除一个用户 (2)显示统中所有用户的名字和他们的密码的清单。<br>(c) 口令目前没有加密。请添加一段对口令加密的代码(请参考 crypt, rotor, 或其它加密模块)<br>(d) 为程序添加图形界面，例如，用 Tkinter 写。<br>(e) 要求用户名不区分大小写。<br>(f) 加强对用户名的限制，不允许符号和空白符。<br>(g)合并“新用户”和“老用户”两个选项。如果一个新用户试图用一个不存在的用户名登录，询问该用户是否是新用户，如果回答是肯定的，就创建该帐户。否则，按照老用户的方式登录。 </last_></p>
-<figure class="highlight vala"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="meta">#不会</span></div></pre></td></tr></table></figure>
-<p>7-6.  列表和字典。创建一个简单的股票证券投资数据系统。其中应至少包含四项数据：股市行情显示器符号，所持有的股票，购买价格及当前价位 - 你可以随意添加其他数据项，比如收益率，52 周最高指数、最低指数，等等。 用户每次输入各列的数据构成一个输出行。每行数据构成一个列表。还有一个总列表，包括了所有行的数据。数据输入完毕后，提示用户选择一列数据项进行排序。把该数据项抽取出来作为字典的键，字典的值就是该键对应行的值的列表。提醒读者：被选择用来排序的数据项必须是非重复的键，否则就会丢失数据，因为字典不允许一个键有多个值。你还可以选择其他计算输出，比如，盈亏比率，目前证券资产价值等。 </p>
-<figure class="highlight vala"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="meta">#不会</span></div></pre></td></tr></table></figure>
-<p>7-7.   颠倒字典中的键和值。用一个字典做输入，输出另一个字典，用前者的键做值，前者的值做键。 </p>
-<figure class="highlight xquery"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">d=&#123;<span class="string">'a'</span>:<span class="number">1</span>,<span class="string">'b'</span>:<span class="number">2</span>,<span class="string">'c'</span>:<span class="number">2</span>,<span class="string">'d'</span>:<span class="number">3</span>&#125;</div><div class="line">m=&#123;&#125;</div><div class="line"><span class="keyword">for</span> k,v <span class="keyword">in</span> d.items():</div><div class="line">	m[v]=k</div><div class="line">print m</div></pre></td></tr></table></figure>
-<p>7-8.   人力资源。创建一个简单的雇员姓名和编号的程序。让用户输入一组雇员姓名和编号。你的程序可以提供按照姓名排序输出的功能，雇员姓名显示在前面，后面是对应的雇员编号。附加题：添加一项功能，按照雇员编号的顺序输出数据。 </p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div></pre></td><td class="code"><pre><div class="line"><span class="string">'''参考网上代码'''</span></div><div class="line">dict1=&#123;&#125;</div><div class="line">dict2=&#123;&#125;</div><div class="line"><span class="keyword">while</span> <span class="keyword">True</span>:</div><div class="line">    name=raw_input(<span class="string">'pls input a worker name: '</span>)</div><div class="line">    <span class="keyword">if</span> name==<span class="string">'--'</span>:</div><div class="line">        <span class="keyword">break</span></div><div class="line">    number=raw_input(<span class="string">'pls input a worker number: '</span>)</div><div class="line">    dict1[name]=number</div><div class="line">    dict2[number]=name</div><div class="line"></div><div class="line"><span class="keyword">for</span> key <span class="keyword">in</span> sorted(dict1):</div><div class="line">    <span class="keyword">print</span> key,dict1[key]</div><div class="line"><span class="keyword">print</span></div><div class="line"><span class="keyword">for</span> key <span class="keyword">in</span> sorted(dict2):</div><div class="line">    <span class="keyword">print</span> key,dict2[key]</div></pre></td></tr></table></figure>
-<p>7-9.   翻译<br>(a) 编写一个字符翻译程序(功能类似于 Unix 中的 tr 命令)。我们将这个函数叫做 tr()，它有三个字符串做参数: 源字符串、目的字符串、基本字符串，语法定义如下：<br>def tr(srcstr, dststr, string)  srcstr 的内容是你打算“翻译”的字符集合，dsrstr 是翻译后得到的字符集合，而 string 是你打算进行翻译操作的字符串。举例来说，如果 srcstr == ‘abc’, dststr== ‘mno’, string == ‘abcdef’, 那么 tr()的输出将是’mnodef’. 注意这里 len(srcstr) == len(dststr).<br>在这个练习里，你可以使用内建函数 chr() 和 ord(), 但它们并不一定是解决这个问题所必不可少的函数。<br>(b) 在这个函数里增加一个标志符参数，来处理不区分大小写的翻译问题。<br>(c)修改你的程序，使它能够处理删除字符的操作。字符串 srcstr 中不能够映射到字符串 dststr中字符的多余字符都将被过滤掉。换句话说，这些字符没有映射到 dststr 字符串中的任何字符，因此就从函数返回的字符里被过滤掉了。举例来说：如果  srcstr == ‘abcdef’, dststr == ‘mno’,<br>string == ‘abcdefghi’, 那么 tr()将输出’mnoghi’. 注意这里 len(srcstr) &gt;= len(dststr). </p>
-<figure class="highlight vala"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="meta">#啊啊啊，崩溃了</span></div></pre></td></tr></table></figure>
-<p>7–10.   加密。<br>(a) 用上一个练习的思路编写一个”rot13”翻译器。”rot13”是一个古老而又简单的加密方法，它把字母表中的每个字母用其后的第 13 个字母来代替。字母表中前半部分字母将被映射到后半部分，而后半部分字母将被映射到前半部分，大小写保持不变。举例来说，’a’将被替换为’n’,’X’将被替<br>换为’K’; 数字和符号不进行翻译。<br>(b)在你的解决方案的基础上加一个应用程序，让它提示用户输入准备加密的字符串(这个算法同时也可以对加密后的字符串进行解密)，如下所示: </p>
-<p>% rot13.py<br>Enter string to rot13: This is a short sentence. Your string to en/decrypt was: [This<br>is a short sentence.].<br>The rot13 string is: [Guvf vf n fubeg fragrapr.].<br>%<br>% rot13.py<br>Enter string to rot13: Guvf vf n fubeg fragrapr. Your string to en/decrypt was: [Guvf<br>vf n fubeg fragrapr.].<br>The rot13 string is: [This is a short sentence.]. </p>
-<p>7–11.   定义。什么组成字典中合法的键? 举例说明字典中合法的键和非法的键。 </p>
-<figure class="highlight"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">可哈希，</div></pre></td></tr></table></figure>
-<p>7-12.   定义。<br>(a)在数学上，什么是集合?<br>(b)在 Python 中，关于集合类型的定义是什么？ </p>
-<figure class="highlight vala"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line"><span class="meta">#集合是指具有某种特定性质的具体的或抽象的对象汇总成的集体，这些对象称为该集合的元素。</span></div><div class="line"><span class="meta">#在Python中，集合对象是一组无序列的可哈希的值。</span></div></pre></td></tr></table></figure>
-<p>7–13.   随机数。修改练习 5-17 的代码：使用 random 模块中的 randint()或 randrange()方法生成一个随机数集合：从 0 到 9(包括 9)中随机选择，生成 1 到 10 个随机数。这些数字组成集合A(A 可以是可变集合，也可以不是)。同理，按此方法生成集合 B。每次新生成集合 A 和 B 后，显示结果 A | B 和 A &amp; B </p>
-<figure class="highlight processing"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div></pre></td><td class="code"><pre><div class="line">参考网上代码</div><div class="line"><span class="keyword">import</span> <span class="built_in">random</span></div><div class="line">aset=<span class="built_in">set</span>()</div><div class="line">bset=<span class="built_in">set</span>()</div><div class="line">temp= <span class="built_in">random</span>.randint(<span class="number">1</span>,<span class="number">10</span>)</div><div class="line"><span class="keyword">for</span> i in range(temp):</div><div class="line">    aset.<span class="built_in">add</span>(<span class="built_in">random</span>.randint(<span class="number">0</span>,<span class="number">9</span>))</div><div class="line">temp= <span class="built_in">random</span>.randint(<span class="number">1</span>,<span class="number">10</span>)</div><div class="line"><span class="keyword">for</span> i in range(temp):</div><div class="line">    bset.<span class="built_in">add</span>(<span class="built_in">random</span>.randint(<span class="number">0</span>,<span class="number">9</span>))</div><div class="line">    </div><div class="line"><span class="built_in">print</span> aset|bset</div><div class="line"><span class="built_in">print</span> aset&amp;bset</div></pre></td></tr></table></figure>
-<p>7–14.   用户验证。修改前面的练习，要求用户输入 A | B 和 A &amp; B 的结果，并告诉用户他(或她)的答案是否正确，而不是将 A | B 和 A &amp; B 的结果直接显示出来。如果用户回答错误，允许他(或她)修改解决方案，然后重新验证用户输入的答案。如果用户三次提交的答案均不正确，程序将显示正确结果。<br>附加题：运用你关于集合的知识，创建某个集合的潜在子集，并询问用户此潜在子集是否真是该集合的子集，要求和主程序一样有显示更正和答案的功能。</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div></pre></td><td class="code"><pre><div class="line"><span class="string">''</span><span class="string">'参考网上代码'</span><span class="string">''</span></div><div class="line">import random</div><div class="line"></div><div class="line">def set_random():</div><div class="line">    A<span class="built_in">set</span> = <span class="built_in">set</span>()</div><div class="line">    B<span class="built_in">set</span> = <span class="built_in">set</span>()</div><div class="line">    temp = random.randint(1,10)</div><div class="line">    <span class="keyword">for</span> i <span class="keyword">in</span> range(temp):</div><div class="line">        Aset.add(random.randint(0,9))</div><div class="line">    temp = random.randint(1,10)</div><div class="line">    <span class="keyword">for</span> i <span class="keyword">in</span> range(temp):</div><div class="line">        Bset.add(random.randint(0,9))</div><div class="line">    <span class="built_in">print</span> <span class="string">'Aset is:'</span>,A<span class="built_in">set</span>, B<span class="built_in">set</span>|B<span class="built_in">set</span></div><div class="line">    <span class="built_in">print</span> <span class="string">'Bset is:'</span>,B<span class="built_in">set</span></div><div class="line">    <span class="built_in">return</span> (A<span class="built_in">set</span>,B<span class="built_in">set</span>)</div><div class="line"></div><div class="line">def set_check(A<span class="built_in">set</span>,B<span class="built_in">set</span>):</div><div class="line">    <span class="keyword">for</span> i <span class="keyword">in</span> range(3):</div><div class="line">        C<span class="built_in">set</span> = <span class="built_in">set</span>(map(int,raw_input(<span class="string">'Please input A|B:'</span>).split())) <span class="comment">#这儿还是不理解</span></div><div class="line">        D<span class="built_in">set</span> = <span class="built_in">set</span>(map(int,raw_input(<span class="string">'Please input A&amp;B:'</span>).split()))</div><div class="line">        <span class="keyword">if</span> A<span class="built_in">set</span>|B<span class="built_in">set</span>==C<span class="built_in">set</span> and A<span class="built_in">set</span>&amp;B<span class="built_in">set</span>==D<span class="built_in">set</span>:</div><div class="line">            <span class="built_in">print</span> <span class="string">'Accepted!'</span></div><div class="line">            <span class="built_in">break</span></div><div class="line">        <span class="keyword">else</span>:</div><div class="line">            <span class="built_in">print</span> <span class="string">'Wrong answer!'</span></div><div class="line">    <span class="keyword">else</span>:</div><div class="line">        <span class="built_in">print</span> <span class="string">'Aset|Bset is:'</span>,A<span class="built_in">set</span>|B<span class="built_in">set</span> </div><div class="line">        <span class="built_in">print</span> <span class="string">'Bset&amp;Bset is:'</span>,A<span class="built_in">set</span>&amp;B<span class="built_in">set</span></div><div class="line"></div><div class="line"><span class="keyword">if</span> __name__ == <span class="string">'__main__'</span>:</div><div class="line">    myset = set_random()</div><div class="line">    set_check(myset[0], myset[1])</div></pre></td></tr></table></figure>
-<p>7–15.   编写计算器。 这个练习取材于 <a href="http://math.hws.edu/" target="_blank" rel="external">http://math.hws.edu/</a> 在线免费 Java 教材中的练习12.2。编写一个程序允许用户选择两个集合:A 和 B, 及运算操作符。例如，in, not in, &amp;, |, ^, &lt;, &lt;=, &gt;, &gt;=, ==, !=, 等. (你自己定义集合的输入语法，它们并不一定要像 Java 示例中那样用方括号括住。)解析输入的字符串，按照用户选择的运算进行操作。你写的程序代码应该比 Java 版本的该程序更简洁。 </p>
-<figure class="highlight"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">不会</div></pre></td></tr></table></figure>
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="https://flyerooo.github.io/2015/12/10/《Python-核心编程》7-12-练习/" data-id="cj2x172h40003uchy25u0c0st" class="article-share-link">Share</a>
+      <a data-url="https://flyerooo.github.io/2015/12/10/《Python-核心编程》-8-15-练习/" data-id="cj2x172go0000uchy15qu98n8" class="article-share-link">Delen</a>
       
       
       
@@ -689,7 +666,7 @@
 
 
   <nav id="page-nav">
-    <a class="extend prev" rel="prev" href="/page/2/">&laquo; Forrige</a><a class="page-number" href="/">1</a><a class="page-number" href="/page/2/">2</a><span class="page-number current">3</span><a class="page-number" href="/page/4/">4</a><a class="extend next" rel="next" href="/page/4/">Neste&raquo;</a>
+    <a class="extend prev" rel="prev" href="/page/2/">&laquo; Vorige</a><a class="page-number" href="/">1</a><a class="page-number" href="/page/2/">2</a><span class="page-number current">3</span><a class="page-number" href="/page/4/">4</a><a class="extend next" rel="next" href="/page/4/">Volgende&raquo;</a>
   </nav>
 </section>
            
@@ -707,9 +684,13 @@
   
     
   <div class="widget-wrap">
-    <h3 class="widget-title recent-posts">Siste innlegg</h3>
+    <h3 class="widget-title recent-posts">Recente berichten</h3>
     <div class="widget">
       <ul>
+        
+          <li>
+            <a href="/2017/06/03/SQL/">SQL学习</a>
+          </li>
         
           <li>
             <a href="/2017/05/28/Untitled/">Python多种方法实现斐波那契数列</a>
@@ -725,10 +706,6 @@
         
           <li>
             <a href="/2017/04/02/JavaScript-This-的六道坎/">JavaScript This 的六道坎</a>
-          </li>
-        
-          <li>
-            <a href="/2017/03/30/《网络是怎样连接的》大纲/">《网络是怎样连接的》大纲</a>
           </li>
         
       </ul>

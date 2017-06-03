@@ -3,18 +3,17 @@
 <head>
   <meta charset="utf-8">
   
-  <title>this语义 | 青穗黄的练习本</title>
+  <title>SQL学习 | 青穗黄的练习本</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="this 上下文只存在两种语义，一种是被当作方法调用，this 指向调用它的对象；一种是作为函数调用，指向 Global 对象（严格模式下为 undefined）。它没有作用域的限制，如下图所示，a 由于是作为函数被调用，所以它指向的是 window，故而返回 false。12345678910var foo = &amp;#123;    m:function () &amp;#123;        var">
-<meta property="og:type" content="article">
-<meta property="og:title" content="this语义">
-<meta property="og:url" content="https://flyerooo.github.io/2017/04/03/this语义/index.html">
+  <meta property="og:type" content="article">
+<meta property="og:title" content="SQL学习">
+<meta property="og:url" content="https://flyerooo.github.io/2017/06/03/SQL/index.html">
 <meta property="og:site_name" content="青穗黄的练习本">
-<meta property="og:description" content="this 上下文只存在两种语义，一种是被当作方法调用，this 指向调用它的对象；一种是作为函数调用，指向 Global 对象（严格模式下为 undefined）。它没有作用域的限制，如下图所示，a 由于是作为函数被调用，所以它指向的是 window，故而返回 false。12345678910var foo = &amp;#123;    m:function () &amp;#123;        var">
-<meta property="og:updated_time" content="2017-05-19T03:37:13.556Z">
+<meta property="og:image" content="http://ww1.sinaimg.cn/large/006JS5I6gy1fg8asvb9zdj31m21nnqpb.jpg">
+<meta property="og:updated_time" content="2017-06-03T12:44:50.087Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="this语义">
-<meta name="twitter:description" content="this 上下文只存在两种语义，一种是被当作方法调用，this 指向调用它的对象；一种是作为函数调用，指向 Global 对象（严格模式下为 undefined）。它没有作用域的限制，如下图所示，a 由于是作为函数被调用，所以它指向的是 window，故而返回 false。12345678910var foo = &amp;#123;    m:function () &amp;#123;        var">
+<meta name="twitter:title" content="SQL学习">
+<meta name="twitter:image" content="http://ww1.sinaimg.cn/large/006JS5I6gy1fg8asvb9zdj31m21nnqpb.jpg">
   
     <link rel="alternate" href="/atom.xml" title="青穗黄的练习本" type="application/atom+xml">
   
@@ -71,14 +70,14 @@
   </div>
 </header>
       <div class="outer">
-        <section id="main"><article id="post-this语义" class="article article-type-post" itemscope itemprop="blogPost">
+        <section id="main"><article id="post-SQL" class="article article-type-post" itemscope itemprop="blogPost">
   <div class="article-meta">
-    <a href="/2017/04/03/this语义/" class="article-date">
-  <time datetime="2017-04-03T00:49:00.000Z" itemprop="datePublished">2017-04-03</time>
+    <a href="/2017/06/03/SQL/" class="article-date">
+  <time datetime="2017-06-03T12:43:00.000Z" itemprop="datePublished">2017-06-03</time>
 </a>
     
   <div class="article-category">
-    <a class="article-category-link" href="/categories/JavaScript/">JavaScript</a>
+    <a class="article-category-link" href="/categories/SQL/">SQL</a>
   </div>
 
   </div>
@@ -89,7 +88,7 @@
         
   
     <h1 class="article-title" itemprop="name">
-      this语义
+      SQL学习
     </h1>
   
 
@@ -99,34 +98,27 @@
       
         <!-- Table of Contents -->
         
-        <p>this 上下文只存在两种语义，一种是被当作方法调用，this 指向调用它的对象；一种是作为函数调用，指向 Global 对象（严格模式下为 undefined）。它没有作用域的限制，如下图所示，a 由于是作为函数被调用，所以它指向的是 window，故而返回 false。<br><figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">var</span> foo = &#123;</div><div class="line">    <span class="attr">m</span>:<span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123;</div><div class="line">        <span class="keyword">var</span> that = <span class="keyword">this</span></div><div class="line">        a()</div><div class="line">        <span class="function"><span class="keyword">function</span> <span class="title">a</span>(<span class="params"></span>) </span>&#123;</div><div class="line">            <span class="built_in">console</span>.log(<span class="keyword">this</span> === that)</div><div class="line">        &#125;</div><div class="line">    &#125;</div><div class="line">&#125;</div><div class="line">foo.m() <span class="comment">// false</span></div></pre></td></tr></table></figure></p>
+        <p><img src="http://ww1.sinaimg.cn/large/006JS5I6gy1fg8asvb9zdj31m21nnqpb.jpg" alt="SQL学习"></p>
 
       
     </div>
     <footer class="article-footer">
-      <a data-url="https://flyerooo.github.io/2017/04/03/this语义/" data-id="cj2vmz0u80008l8hyg47zosyp" class="article-share-link">Delen</a>
+      <a data-url="https://flyerooo.github.io/2017/06/03/SQL/" data-id="cj3h9ttn80000eohy10rox0e2" class="article-share-link">Delen</a>
       
       
       
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/SQL/">SQL</a></li></ul>
+
     </footer>
   </div>
   
     
 <nav id="article-nav">
   
-    <a href="/2017/04/21/python爬虫入门-简书七日热门文章数据/" id="article-nav-newer" class="article-nav-link-wrap">
-      <strong class="article-nav-caption">Nieuwer</strong>
-      <div class="article-nav-title">
-        
-          python爬虫-简书七日热门文章数据
-        
-      </div>
-    </a>
   
-  
-    <a href="/2017/04/02/JavaScript-This-的六道坎/" id="article-nav-older" class="article-nav-link-wrap">
+    <a href="/2017/05/28/Untitled/" id="article-nav-older" class="article-nav-link-wrap">
       <strong class="article-nav-caption">Ouder</strong>
-      <div class="article-nav-title">JavaScript This 的六道坎</div>
+      <div class="article-nav-title">Python多种方法实现斐波那契数列</div>
     </a>
   
 </nav>
