@@ -37,7 +37,7 @@
         
           <a id="nav-rss-link" class="nav-icon" href="/atom.xml" title="RSS Feed"></a>
         
-        <a id="nav-search-btn" class="nav-icon" title="Zoeken"></a>
+        <a id="nav-search-btn" class="nav-icon" title="搜索"></a>
       </nav>
       <div id="search-form-wrap">
         <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" results="0" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="https://flyerooo.github.io"></form>
@@ -68,164 +68,6 @@
 </header>
       <div class="outer">
         <section id="main">
-  
-    <article id="post-齐舞团前端工程化之CSS" class="article article-type-post" itemscope itemprop="blogPost">
-  <div class="article-meta">
-    <a href="/2017/03/24/齐舞团前端工程化之CSS/" class="article-date">
-  <time datetime="2017-03-24T14:13:00.000Z" itemprop="datePublished">2017-03-24</time>
-</a>
-    
-  <div class="article-category">
-    <a class="article-category-link" href="/categories/CSS/">CSS</a>
-  </div>
-
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2017/03/24/齐舞团前端工程化之CSS/">齐舞团前端工程化之CSS</a>
-    </h1>
-  
-
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <!-- Table of Contents -->
-        
-        <div class="export-wrapper"><br><br><div style="font-size: 24px; padding: 20px 15px 0;"><br><br><div style="padding-bottom: 10px">奇舞团前端工程化之CSS</div>
-
-<p></p></div><p></p>
-<ul>
-<li><span class="content mubu-node" style="line-height: 22px; min-height: 22px; font-size: 14px; display: inline-block; vertical-align: top;">奇舞团前端工程化之CSS</span><ul>
-<li><span class="content mubu-node" style="line-height: 22px; min-height: 22px; font-size: 14px; display: inline-block; vertical-align: top;">目的</span><ul>
-<li><span class="content mubu-node" style="line-height: 22px; min-height: 22px; font-size: 14px; display: inline-block; vertical-align: top;">提供一致、合理的开发基础</span></li>
-<li><span class="content mubu-node" style="line-height: 22px; min-height: 22px; font-size: 14px; display: inline-block; vertical-align: top;">应对变化</span></li>
-<li><span class="content mubu-node" style="line-height: 22px; min-height: 22px; font-size: 14px; display: inline-block; vertical-align: top;">提升效率</span></li>
-</ul>
-</li>
-<li><span class="content mubu-node" style="line-height: 22px; min-height: 22px; font-size: 14px; display: inline-block; vertical-align: top;">命名原则</span><ul>
-<li><span class="content mubu-node" style="line-height: 22px; min-height: 22px; font-size: 14px; display: inline-block; vertical-align: top;">基于功能</span><ul>
-<li><span class="content mubu-node" style="line-height: 22px; min-height: 22px; font-size: 14px; display: inline-block; vertical-align: top;">它是用来干什么的</span></li>
-<li><span class="content mubu-node" style="line-height: 22px; min-height: 22px; font-size: 14px; display: inline-block; vertical-align: top;">.button/.form/.list/.tab-list/.nav</span></li>
-<li><span class="content mubu-node" style="line-height: 22px; min-height: 22px; font-size: 14px; display: inline-block; vertical-align: top;">优先使用</span></li>
-<li><span class="content mubu-node" style="line-height: 22px; min-height: 22px; font-size: 14px; display: inline-block; vertical-align: top;">样式与内容无关</span></li>
-</ul>
-</li>
-<li><span class="content mubu-node" style="line-height: 22px; min-height: 22px; font-size: 14px; display: inline-block; vertical-align: top;">基于内容</span><ul>
-<li><span class="content mubu-node" style="line-height: 22px; min-height: 22px; font-size: 14px; display: inline-block; vertical-align: top;">元素里面放的是什么</span></li>
-<li><span class="content mubu-node" style="line-height: 22px; min-height: 22px; font-size: 14px; display: inline-block; vertical-align: top;">.news/.user-info/.help/.contact-me</span></li>
-<li><span class="content mubu-node" style="line-height: 22px; min-height: 22px; font-size: 14px; display: inline-block; vertical-align: top;">中小型网站可以给予内容去命名</span></li>
-</ul>
-</li>
-<li><span class="content mubu-node" style="line-height: 22px; min-height: 22px; font-size: 14px; display: inline-block; vertical-align: top;">基于视觉</span><ul>
-<li><span class="content mubu-node" style="line-height: 22px; min-height: 22px; font-size: 14px; display: inline-block; vertical-align: top;">看起来是什么样？</span></li>
-<li><span class="content mubu-node" style="line-height: 22px; min-height: 22px; font-size: 14px; display: inline-block; vertical-align: top;">.round-image/.nowrap</span></li>
-<li><span class="content mubu-node" style="line-height: 22px; min-height: 22px; font-size: 14px; display: inline-block; vertical-align: top;">大型网站可以基于视觉去命名</span></li>
-<li><span class="content mubu-node" style="line-height: 22px; min-height: 22px; font-size: 14px; display: inline-block; vertical-align: top;">不要使用太具体的样式</span></li>
-</ul>
-</li>
-<li><span class="content mubu-node" style="line-height: 22px; min-height: 22px; font-size: 14px; display: inline-block; vertical-align: top;">现在比较火的命名方式</span><ul>
-<li><span class="content mubu-node" style="line-height: 22px; min-height: 22px; font-size: 14px; display: inline-block; vertical-align: top;">BEM</span><ul>
-<li><span class="content mubu-node" style="line-height: 22px; min-height: 22px; font-size: 14px; display: inline-block; vertical-align: top;">Block</span><ul>
-<li><span class="content mubu-node" style="line-height: 22px; min-height: 22px; font-size: 14px; display: inline-block; vertical-align: top;">.block</span></li>
-</ul>
-</li>
-<li><span class="content mubu-node" style="line-height: 22px; min-height: 22px; font-size: 14px; display: inline-block; vertical-align: top;">Element</span><ul>
-<li><span class="content mubu-node" style="line-height: 22px; min-height: 22px; font-size: 14px; display: inline-block; vertical-align: top;">.block__element</span></li>
-</ul>
-</li>
-<li><span class="content mubu-node" style="line-height: 22px; min-height: 22px; font-size: 14px; display: inline-block; vertical-align: top;">Modifier(修饰)</span><ul>
-<li><span class="content mubu-node" style="line-height: 22px; min-height: 22px; font-size: 14px; display: inline-block; vertical-align: top;">.block__element–modifer</span></li>
-<li><span class="content mubu-node" style="line-height: 22px; min-height: 22px; font-size: 14px; display: inline-block; vertical-align: top;">eg. tab__item–active</span></li>
-</ul>
-</li>
-</ul>
-</li>
-</ul>
-</li>
-</ul>
-</li>
-<li><span class="content mubu-node" style="line-height: 22px; min-height: 22px; font-size: 14px; display: inline-block; vertical-align: top;">文件结构</span><ul>
-<li><span class="content mubu-node" style="line-height: 22px; min-height: 22px; font-size: 14px; display: inline-block; vertical-align: top;">css</span><ul>
-<li><span class="content mubu-node" style="line-height: 22px; min-height: 22px; font-size: 14px; display: inline-block; vertical-align: top;">basic</span><ul>
-<li><span class="content mubu-node" style="line-height: 22px; min-height: 22px; font-size: 14px; display: inline-block; vertical-align: top;">css reset</span><ul>
-<li><span class="content mubu-node" style="line-height: 22px; min-height: 22px; font-size: 14px; display: inline-block; vertical-align: top;">设置HTML标签的默认样式</span></li>
-<li><span class="content mubu-node" style="line-height: 22px; min-height: 22px; font-size: 14px; display: inline-block; vertical-align: top;">使其在各个浏览器表现基本一致</span></li>
-<li><span class="content mubu-node" style="line-height: 22px; min-height: 22px; font-size: 14px; display: inline-block; vertical-align: top;">让默认样式归零</span></li>
-</ul>
-</li>
-<li><span class="content mubu-node" style="line-height: 22px; min-height: 22px; font-size: 14px; display: inline-block; vertical-align: top;">normalize.css</span><ul>
-<li><span class="content mubu-node" style="line-height: 22px; min-height: 22px; font-size: 14px; display: inline-block; vertical-align: top;">设置HTML标签的默认样式</span></li>
-<li><span class="content mubu-node" style="line-height: 22px; min-height: 22px; font-size: 14px; display: inline-block; vertical-align: top;">使其在各个浏览器表现基本一致</span></li>
-<li><span class="content mubu-node" style="line-height: 22px; min-height: 22px; font-size: 14px; display: inline-block; vertical-align: top;">保留标签的默认样式</span></li>
-</ul>
-</li>
-</ul>
-</li>
-<li><span class="content mubu-node" style="line-height: 22px; min-height: 22px; font-size: 14px; display: inline-block; vertical-align: top;">moudles</span><ul>
-<li><span class="content mubu-node" style="line-height: 22px; min-height: 22px; font-size: 14px; display: inline-block; vertical-align: top;">可复用的css代码段</span></li>
-<li><span class="content mubu-node" style="line-height: 22px; min-height: 22px; font-size: 14px; display: inline-block; vertical-align: top;">与模块在HTML中的位置无关</span></li>
-<li><span class="content mubu-node" style="line-height: 22px; min-height: 22px; font-size: 14px; display: inline-block; vertical-align: top;">（一般）与使用的HTML标签无关</span></li>
-<li><span class="content mubu-node" style="line-height: 22px; min-height: 22px; font-size: 14px; display: inline-block; vertical-align: top;">抽取css模块原则</span><ul>
-<li><span class="content mubu-node" style="line-height: 22px; min-height: 22px; font-size: 14px; display: inline-block; vertical-align: top;">面向对象</span><ul>
-<li><span class="content mubu-node" style="line-height: 22px; min-height: 22px; font-size: 14px; display: inline-block; vertical-align: top;">结构和皮肤分离</span><ul>
-<li><span class="content mubu-node" style="line-height: 22px; min-height: 22px; font-size: 14px; display: inline-block; vertical-align: top;">.btn .btn–primary .btn–info .btn–danger</span></li>
-</ul>
-</li>
-<li><span class="content mubu-node" style="line-height: 22px; min-height: 22px; font-size: 14px; display: inline-block; vertical-align: top;">容器和内容分离</span><ul>
-<li><span class="content mubu-node" style="line-height: 22px; min-height: 22px; font-size: 14px; display: inline-block; vertical-align: top;">/<em> 不推荐这样写 </em>/ .header .btn { background: <span class="tag" style="text-decoration: underline; opacity: 0.6; color: inherit;">#f66</span>; color: <span class="tag" style="text-decoration: underline; opacity: 0.6; color: inherit;">#fff</span>; }</span></li>
-<li><span class="content mubu-node" style="line-height: 22px; min-height: 22px; font-size: 14px; display: inline-block; vertical-align: top;">这样就没有遵循与位置无关原则</span></li>
-</ul>
-</li>
-</ul>
-</li>
-<li><span class="content mubu-node" style="line-height: 22px; min-height: 22px; font-size: 14px; display: inline-block; vertical-align: top;">单一职责</span><ul>
-<li><span class="content mubu-node" style="line-height: 22px; min-height: 22px; font-size: 14px; display: inline-block; vertical-align: top;">尽可能细的拆分成可独立复用的组件</span></li>
-<li><span class="content mubu-node" style="line-height: 22px; min-height: 22px; font-size: 14px; display: inline-block; vertical-align: top;">通过组合方式使用多个组件</span></li>
-<li><span class="content mubu-node" style="line-height: 22px; min-height: 22px; font-size: 14px; display: inline-block; vertical-align: top;">比如将布局和其它样式拆分</span></li>
-</ul>
-</li>
-<li><span class="content mubu-node" style="line-height: 22px; min-height: 22px; font-size: 14px; display: inline-block; vertical-align: top;">开闭原则</span><ul>
-<li><span class="content mubu-node" style="line-height: 22px; min-height: 22px; font-size: 14px; display: inline-block; vertical-align: top;">对扩展开放</span></li>
-<li><span class="content mubu-node" style="line-height: 22px; min-height: 22px; font-size: 14px; display: inline-block; vertical-align: top;">对修改关闭</span></li>
-</ul>
-</li>
-<li><span class="content mubu-node" style="line-height: 22px; min-height: 22px; font-size: 14px; display: inline-block; vertical-align: top;">DRY</span></li>
-</ul>
-</li>
-</ul>
-</li>
-<li><span class="content mubu-node" style="line-height: 22px; min-height: 22px; font-size: 14px; display: inline-block; vertical-align: top;">pages</span></li>
-</ul>
-</li>
-</ul>
-</li>
-</ul>
-</li>
-</ul>
-<p></p></div><br><a href="https://t.75team.com/video/play?id=34_136_20161229102914abb59e6b-d2b0-4101-bbd5-97801b6692a4" target="_blank" rel="external">视频教程地址</a><p></p>
-
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="https://flyerooo.github.io/2017/03/24/齐舞团前端工程化之CSS/" data-id="cj2vmz0xa001kl8hyp9g3vne0" class="article-share-link">Delen</a>
-      
-      
-      
-  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/CSS/">CSS</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/前端/">前端</a></li></ul>
-
-    </footer>
-  </div>
-  
-</article>
- 
-
-
   
     <article id="post-如何写好原生Javascript-1" class="article article-type-post" itemscope itemprop="blogPost">
   <div class="article-meta">
@@ -267,7 +109,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="https://flyerooo.github.io/2017/03/23/如何写好原生Javascript-1/" data-id="cj2vmz0wg000zl8hyv4ha2in4" class="article-share-link">Delen</a>
+      <a data-url="https://flyerooo.github.io/2017/03/23/如何写好原生Javascript-1/" data-id="cj2vmz0wg000zl8hyv4ha2in4" class="article-share-link">分享</a>
       
       
       
@@ -314,7 +156,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="https://flyerooo.github.io/2017/03/16/开始写作/" data-id="cj2vmz0wg0013l8hytzxgnx5g" class="article-share-link">Delen</a>
+      <a data-url="https://flyerooo.github.io/2017/03/16/开始写作/" data-id="cj2vmz0wg0013l8hytzxgnx5g" class="article-share-link">分享</a>
       
       
       
@@ -361,7 +203,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="https://flyerooo.github.io/2017/03/14/《实战ES2015》备忘/" data-id="cj2vmz0w6000sl8hycans0mw7" class="article-share-link">Delen</a>
+      <a data-url="https://flyerooo.github.io/2017/03/14/《实战ES2015》备忘/" data-id="cj2vmz0w6000sl8hycans0mw7" class="article-share-link">分享</a>
       
       
       
@@ -416,7 +258,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="https://flyerooo.github.io/2017/01/19/理解web路由-0/" data-id="cj2vmz0wq0017l8hy0pfdi0s1" class="article-share-link">Delen</a>
+      <a data-url="https://flyerooo.github.io/2017/01/19/理解web路由-0/" data-id="cj2vmz0wq0017l8hy0pfdi0s1" class="article-share-link">分享</a>
       
       
       
@@ -463,7 +305,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="https://flyerooo.github.io/2016/11/05/JavaScript-面向对象编程/" data-id="cj2vvwgke0000nshydd5n05gy" class="article-share-link">Delen</a>
+      <a data-url="https://flyerooo.github.io/2016/11/05/JavaScript-面向对象编程/" data-id="cj2vvwgke0000nshydd5n05gy" class="article-share-link">分享</a>
       
       
       
@@ -581,7 +423,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="https://flyerooo.github.io/2016/10/15/Untitled-1/" data-id="cj38ox2zl00002shyzh5ip8zb" class="article-share-link">Delen</a>
+      <a data-url="https://flyerooo.github.io/2016/10/15/Untitled-1/" data-id="cj38ox2zl00002shyzh5ip8zb" class="article-share-link">分享</a>
       
       
       
@@ -637,7 +479,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="https://flyerooo.github.io/2016/10/05/Javascript应用开发指南/" data-id="cj2vmz0ty0007l8hyr2ljqe6v" class="article-share-link">Delen</a>
+      <a data-url="https://flyerooo.github.io/2016/10/05/Javascript应用开发指南/" data-id="cj2vmz0ty0007l8hyr2ljqe6v" class="article-share-link">分享</a>
       
       
       
@@ -789,7 +631,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="https://flyerooo.github.io/2016/03/20/《SQL必知必会》笔记/" data-id="cj2vmz0vm000ll8hyglw9lqma" class="article-share-link">Delen</a>
+      <a data-url="https://flyerooo.github.io/2016/03/20/《SQL必知必会》笔记/" data-id="cj2vmz0vm000ll8hyglw9lqma" class="article-share-link">分享</a>
       
       
       
@@ -836,7 +678,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="https://flyerooo.github.io/2016/03/17/不要说没时间/" data-id="cj2vmz0w6000wl8hywg8stcbd" class="article-share-link">Delen</a>
+      <a data-url="https://flyerooo.github.io/2016/03/17/不要说没时间/" data-id="cj2vmz0w6000wl8hywg8stcbd" class="article-share-link">分享</a>
       
       
       
@@ -850,10 +692,65 @@
 
 
   
+    <article id="post-Python-sys-模块" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2016/03/02/Python-sys-模块/" class="article-date">
+  <time datetime="2016-03-02T08:28:00.000Z" itemprop="datePublished">2016-03-02</time>
+</a>
+    
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/Python/">Python</a>
+  </div>
+
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2016/03/02/Python-sys-模块/">Python sys 模块</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <!-- Table of Contents -->
+        
+        <p>使用dir(),help()查看查看对象的属性和文档<br><figure class="highlight stylus"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">函数            描述 </div><div class="line"><span class="function"><span class="title">dir</span><span class="params">([obj])</span></span>      显示对象的属性，如果没有提供参数，则显示全局变量的名字 </div><div class="line"><span class="function"><span class="title">help</span><span class="params">([obj])</span></span>     以一种整齐美观的形式 显示对象的文档字符串，如果没有提供任何参数，则会进入交互式帮助。</div></pre></td></tr></table></figure></p>
+<p>sys 是与操作环境有关的函数。<br>以下我们用用dir()查看sys属性</p>
+<figure class="highlight swift"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">import</span> sys</div><div class="line"><span class="built_in">print</span> dir(sys)</div></pre></td></tr></table></figure>
+<p>输出<br><figure class="highlight scheme"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">[<span class="symbol">'__displayhook__</span>', <span class="symbol">'__doc__</span>', <span class="symbol">'__excepthook__</span>', <span class="symbol">'__name__</span>', <span class="symbol">'__package__</span>', <span class="symbol">'__stderr__</span>', <span class="symbol">'__stdin__</span>', <span class="symbol">'__stdout__</span>', <span class="symbol">'_clear_type_cache</span>', <span class="symbol">'_current_frames</span>', <span class="symbol">'_getframe</span>', <span class="symbol">'_mercurial</span>', <span class="symbol">'api_version</span>', <span class="symbol">'argv</span>', <span class="symbol">'builtin_module_names</span>', <span class="symbol">'byteorder</span>', <span class="symbol">'call_tracing</span>', <span class="symbol">'callstats</span>', <span class="symbol">'copyright</span>', <span class="symbol">'displayhook</span>', <span class="symbol">'dllhandle</span>', <span class="symbol">'dont_write_bytecode</span>', <span class="symbol">'exc_clear</span>', <span class="symbol">'exc_info</span>', <span class="symbol">'exc_type</span>', <span class="symbol">'excepthook</span>', <span class="symbol">'exec_prefix</span>', <span class="symbol">'executable</span>', <span class="symbol">'exit</span>', <span class="symbol">'flags</span>', <span class="symbol">'float_info</span>', <span class="symbol">'float_repr_style</span>', <span class="symbol">'getcheckinterval</span>', <span class="symbol">'getdefaultencoding</span>', <span class="symbol">'getfilesystemencoding</span>', <span class="symbol">'getprofile</span>', <span class="symbol">'getrecursionlimit</span>', <span class="symbol">'getrefcount</span>', <span class="symbol">'getsizeof</span>', <span class="symbol">'gettrace</span>', <span class="symbol">'getwindowsversion</span>', <span class="symbol">'hexversion</span>', <span class="symbol">'long_info</span>', <span class="symbol">'maxint</span>', <span class="symbol">'maxsize</span>', <span class="symbol">'maxunicode</span>', <span class="symbol">'meta_path</span>', <span class="symbol">'modules</span>', <span class="symbol">'path</span>', <span class="symbol">'path_hooks</span>', <span class="symbol">'path_importer_cache</span>', <span class="symbol">'platform</span>', <span class="symbol">'prefix</span>', <span class="symbol">'py3kwarning</span>', <span class="symbol">'setcheckinterval</span>', <span class="symbol">'setprofile</span>', <span class="symbol">'setrecursionlimit</span>', <span class="symbol">'settrace</span>', <span class="symbol">'stderr</span>', <span class="symbol">'stdin</span>', <span class="symbol">'stdout</span>', <span class="symbol">'subversion</span>', <span class="symbol">'version</span>', <span class="symbol">'version_info</span>', <span class="symbol">'warnoptions</span>', <span class="symbol">'winver</span>']</div></pre></td></tr></table></figure></p>
+<p>选取几个进行说明<br>sys.argv 命令行参数List，第一个元素是程序本身路径<br>sys.path 是一个list,指明所有查找module，package的路径.<br>我的理解：这就是叫环境变量吧？<br>sys.platform 得到运行的操作系统环境 </p>
+<p>输入<br><figure class="highlight vim"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line">import sys</div><div class="line"></div><div class="line"><span class="keyword">print</span> <span class="string">"The file name: "</span>, sys.<span class="built_in">argv</span>[<span class="number">0</span>]</div><div class="line"><span class="keyword">print</span> <span class="string">"The number of argument"</span>, <span class="built_in">len</span>(sys.<span class="built_in">argv</span>)</div><div class="line"><span class="keyword">print</span> <span class="string">"The argument is: "</span>, str(sys.<span class="built_in">argv</span>)</div><div class="line"><span class="keyword">print</span> <span class="string">"The platform is: "</span>, str(sys.platform)</div></pre></td></tr></table></figure></p>
+<p>输出<br><figure class="highlight vim"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">D:/learnpython27/python27exercise.<span class="keyword">py</span></div><div class="line">The <span class="keyword">file</span> name:  D:/learnpython27/python27exercise.<span class="keyword">py</span></div><div class="line">The <span class="keyword">number</span> of <span class="keyword">argument</span> <span class="number">1</span></div><div class="line">The <span class="keyword">argument</span> i<span class="variable">s:</span>  [<span class="string">'D:/learnpython27/python27exercise.py'</span>]</div><div class="line">The platform i<span class="variable">s:</span>  win32</div></pre></td></tr></table></figure></p>
+<p>使用help()查看platform，得到<br>（话说，只能用help(sys) 然后再去找platform对应的说明吗？）<br><figure class="highlight delphi"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">platform</span> -- <span class="keyword">platform</span> identifier #平台识别符？不懂</div></pre></td></tr></table></figure></p>
+<p>还有很多，就不一一说明了（主要是没用过，说不出个所以然来）</p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="https://flyerooo.github.io/2016/03/02/Python-sys-模块/" data-id="cj2x0ki3v0000l0hy1x5klvsw" class="article-share-link">分享</a>
+      
+      
+      
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Python/">Python</a></li></ul>
+
+    </footer>
+  </div>
+  
+</article>
+ 
+
+
+  
 
 
   <nav id="page-nav">
-    <a class="extend prev" rel="prev" href="/">&laquo; Vorige</a><a class="page-number" href="/">1</a><span class="page-number current">2</span><a class="page-number" href="/page/3/">3</a><a class="page-number" href="/page/4/">4</a><a class="extend next" rel="next" href="/page/3/">Volgende&raquo;</a>
+    <a class="extend prev" rel="prev" href="/">&laquo; 上一页</a><a class="page-number" href="/">1</a><span class="page-number current">2</span><a class="page-number" href="/page/3/">3</a><a class="page-number" href="/page/4/">4</a><a class="extend next" rel="next" href="/page/3/">下一页&raquo;</a>
   </nav>
 </section>
            
@@ -871,13 +768,9 @@
   
     
   <div class="widget-wrap">
-    <h3 class="widget-title recent-posts">Recente berichten</h3>
+    <h3 class="widget-title recent-posts">最新文章</h3>
     <div class="widget">
       <ul>
-        
-          <li>
-            <a href="/2017/06/03/SQL/">SQL学习</a>
-          </li>
         
           <li>
             <a href="/2017/05/28/Untitled/">Python多种方法实现斐波那契数列</a>
@@ -893,6 +786,10 @@
         
           <li>
             <a href="/2017/04/02/JavaScript-This-的六道坎/">JavaScript This 的六道坎</a>
+          </li>
+        
+          <li>
+            <a href="/2017/03/30/《网络是怎样连接的》大纲/">《网络是怎样连接的》大纲</a>
           </li>
         
       </ul>
@@ -911,10 +808,10 @@
   <div class="outer">
     <div id="footer-left">
       &copy; 2014 - 2017 Jeffzzz&nbsp;|&nbsp;
-      Theme by <a href="https://github.com/giscafer/hexo-theme-cafe/" target="_blank">Cafe</a>
+      主题 <a href="https://github.com/giscafer/hexo-theme-cafe/" target="_blank">Cafe</a>
     </div>
      <div id="footer-right">
-      Contact&nbsp;|&nbsp;wxl.pure@gmail.com
+      联系方式&nbsp;|&nbsp;wxl.pure@gmail.com
     </div>
   </div>
 </footer>
