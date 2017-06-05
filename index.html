@@ -69,6 +69,346 @@
       <div class="outer">
         <section id="main">
   
+    <article id="post-MySQL中的增删查改" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2017/06/05/MySQL中的增删查改/" class="article-date">
+  <time datetime="2017-06-05T07:10:34.000Z" itemprop="datePublished">2017-06-05</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2017/06/05/MySQL中的增删查改/">MySQL中的增删查改</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <!-- Table of Contents -->
+        
+        <p>在思维导图里写的，转换过来格式都不太好看，只有幕布中还清晰一些。<a href="https://mubu.com/doc/55XuH_0SX" target="_blank" rel="external">幕布地址</a></p>
+<div class="export-wrapper"><br><br><div style="font-size: 24px; padding: 20px 15px 0;"><br><br><div style="padding-bottom: 10px">MySQL中的增删查改和外键</div>
+
+<p></p></div><p></p>
+<ul>
+<li><span class="content mubu-node" style="line-height: 22px; min-height: 22px; font-size: 14px; display: inline-block; vertical-align: top;">MySQL</span><ul>
+<li><span class="content mubu-node" style="line-height: 22px; min-height: 22px; font-size: 14px; display: inline-block; vertical-align: top;">增</span><ul>
+<li><span class="content mubu-node" style="line-height: 22px; min-height: 22px; font-size: 14px; display: inline-block; vertical-align: top;">创建数据库</span><ul>
+<li><span class="content mubu-node" style="line-height: 22px; min-height: 22px; font-size: 14px; display: inline-block; vertical-align: top;">create database 数据库名 [其它选项]</span></li>
+</ul>
+</li>
+<li><span class="content mubu-node" style="line-height: 22px; min-height: 22px; font-size: 14px; display: inline-block; vertical-align: top;">创建表</span><ul>
+<li><span class="content mubu-node" style="line-height: 22px; min-height: 22px; font-size: 14px; display: inline-block; vertical-align: top;">create table [IF NOT EXISTS]表名称（列声明）</span></li>
+<li><span class="content mubu-node" style="line-height: 22px; min-height: 22px; font-size: 14px; display: inline-block; vertical-align: top;">create table students （ id int unsigned not null auto_increment primary key, name char(8) not null, sex char(4) not null, age tinyint unsigned not null, tel char(13) null default );</span></li>
+</ul>
+</li>
+<li><span class="content mubu-node" style="line-height: 22px; min-height: 22px; font-size: 14px; display: inline-block; vertical-align: top;">向表中插入数据</span><ul>
+<li><span class="content mubu-node" style="line-height: 22px; min-height: 22px; font-size: 14px; display: inline-block; vertical-align: top;">insert [into] 表名 [(列名1，列名2，列名3，…)] values（值1，值2，值3，…)</span></li>
+<li><span class="content mubu-node" style="line-height: 22px; min-height: 22px; font-size: 14px; display: inline-block; vertical-align: top;">将查询结果插入到表中</span><ul>
+<li><span class="content mubu-node" style="line-height: 22px; min-height: 22px; font-size: 14px; display: inline-block; vertical-align: top;">INSERT [INTO] tbl_name[(字段名称,…)] SELECT 字段名称 FROM tbl_name [WHERE 条件]</span></li>
+</ul>
+</li>
+<li><span class="content mubu-node" style="line-height: 22px; min-height: 22px; font-size: 14px; display: inline-block; vertical-align: top;">通过SET形式插入记录</span><ul>
+<li><span class="content mubu-node" style="line-height: 22px; min-height: 22px; font-size: 14px; display: inline-block; vertical-align: top;">INSERT [INTO] tbl_name SET 字段名称=值,…</span></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><span class="content mubu-node" style="line-height: 22px; min-height: 22px; font-size: 14px; display: inline-block; vertical-align: top;">添加列</span><ul>
+<li><span class="content mubu-node" style="line-height: 22px; min-height: 22px; font-size: 14px; display: inline-block; vertical-align: top;">基本形式：alter table 表名 change 列名称 列新名称 新数据类型</span></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><span class="content mubu-node" style="line-height: 22px; min-height: 22px; font-size: 14px; display: inline-block; vertical-align: top;">删</span><ul>
+<li><span class="content mubu-node" style="line-height: 22px; min-height: 22px; font-size: 14px; display: inline-block; vertical-align: top;">删除数据库</span><ul>
+<li><span class="content mubu-node" style="line-height: 22px; min-height: 22px; font-size: 14px; display: inline-block; vertical-align: top;">drop database 数据库名;</span></li>
+</ul>
+</li>
+<li><span class="content mubu-node" style="line-height: 22px; min-height: 22px; font-size: 14px; display: inline-block; vertical-align: top;">删除数据表</span><ul>
+<li><span class="content mubu-node" style="line-height: 22px; min-height: 22px; font-size: 14px; display: inline-block; vertical-align: top;">DROP TABLE table_name ;</span></li>
+</ul>
+</li>
+<li><span class="content mubu-node" style="line-height: 22px; min-height: 22px; font-size: 14px; display: inline-block; vertical-align: top;">删除表中的数据</span><ul>
+<li><span class="content mubu-node" style="line-height: 22px; min-height: 22px; font-size: 14px; display: inline-block; vertical-align: top;">delete from 表名称 where 删除条件</span></li>
+</ul>
+</li>
+<li><span class="content mubu-node" style="line-height: 22px; min-height: 22px; font-size: 14px; display: inline-block; vertical-align: top;">删除列</span><ul>
+<li><span class="content mubu-node" style="line-height: 22px; min-height: 22px; font-size: 14px; display: inline-block; vertical-align: top;">alter table 表名 drop 列名称</span></li>
+</ul>
+</li>
+<li><span class="content mubu-node" style="line-height: 22px; min-height: 22px; font-size: 14px; display: inline-block; vertical-align: top;">清空数据表</span><ul>
+<li><span class="content mubu-node" style="line-height: 22px; min-height: 22px; font-size: 14px; display: inline-block; vertical-align: top;">TRUNCATE [TABLE] tbl_name</span></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><span class="content mubu-node" style="line-height: 22px; min-height: 22px; font-size: 14px; display: inline-block; vertical-align: top;">查</span><ul>
+<li><span class="content mubu-node" style="line-height: 22px; min-height: 22px; font-size: 14px; display: inline-block; vertical-align: top;">查看所有数据库</span><ul>
+<li><span class="content mubu-node" style="line-height: 22px; min-height: 22px; font-size: 14px; display: inline-block; vertical-align: top;">show databases;</span></li>
+</ul>
+</li>
+<li><span class="content mubu-node" style="line-height: 22px; min-height: 22px; font-size: 14px; display: inline-block; vertical-align: top;">查看当前数据库所有数据表</span><ul>
+<li><span class="content mubu-node" style="line-height: 22px; min-height: 22px; font-size: 14px; display: inline-block; vertical-align: top;">show tables;</span></li>
+</ul>
+</li>
+<li><span class="content mubu-node" style="line-height: 22px; min-height: 22px; font-size: 14px; display: inline-block; vertical-align: top;">查看数据表结构</span><ul>
+<li><span class="content mubu-node" style="line-height: 22px; min-height: 22px; font-size: 14px; display: inline-block; vertical-align: top;">desc 表名;</span></li>
+</ul>
+</li>
+<li><span class="content mubu-node" style="line-height: 22px; min-height: 22px; font-size: 14px; display: inline-block; vertical-align: top;">查看创建数据表语句</span><ul>
+<li><span class="content mubu-node" style="line-height: 22px; min-height: 22px; font-size: 14px; display: inline-block; vertical-align: top;">show create table 表名</span></li>
+</ul>
+</li>
+<li><span class="content mubu-node" style="line-height: 22px; min-height: 22px; font-size: 14px; display: inline-block; vertical-align: top;">查询数据表中的数据</span><ul>
+<li><span class="content mubu-node" style="line-height: 22px; min-height: 22px; font-size: 14px; display: inline-block; vertical-align: top;">select 列名称 from 表名称 [查询条件] where 条件</span></li>
+<li><span class="content mubu-node" style="line-height: 22px; min-height: 22px; font-size: 14px; display: inline-block; vertical-align: top;">SELECT select_expr [, select_expr …] [ FROM table_references [WHERE 条件] [GROUP BY {col_name | position} [ASC | DESC], … 分组] [HAVING 条件 对分组结果进行二次筛选] [ORDER BY {col_name | position} [ASC | DESC], …排序] [LIMIT 限制显示条数] ]</span></li>
+</ul>
+</li>
+<li><span class="content mubu-node" style="line-height: 22px; min-height: 22px; font-size: 14px; display: inline-block; vertical-align: top;">子查询</span><ul>
+<li><span class="content mubu-node" style="line-height: 22px; min-height: 22px; font-size: 14px; display: inline-block; vertical-align: top;">将查询结果写入到数据表</span></li>
+</ul>
+</li>
+<li><span class="content mubu-node" style="line-height: 22px; min-height: 22px; font-size: 14px; display: inline-block; vertical-align: top;">正则查询</span><ul>
+<li><span class="content mubu-node" style="line-height: 22px; min-height: 22px; font-size: 14px; display: inline-block; vertical-align: top;">REGEXP ‘匹配方式’</span></li>
+</ul>
+</li>
+<li><span class="content mubu-node" style="line-height: 22px; min-height: 22px; font-size: 14px; display: inline-block; vertical-align: top;">连接查询</span><ul>
+<li><span class="content mubu-node" style="line-height: 22px; min-height: 22px; font-size: 14px; display: inline-block; vertical-align: top;">内连接查询</span><ul>
+<li><span class="content mubu-node" style="line-height: 22px; min-height: 22px; font-size: 14px; display: inline-block; vertical-align: top;">JOIN/INNER JOIN ON 连接条件</span><ul>
+<li><span class="content mubu-node" style="line-height: 22px; min-height: 22px; font-size: 14px; display: inline-block; vertical-align: top;">SELECT select_expr FROM table1 (两个表前后顺序无关) INNER JOIN table2 ON 连接条件 WHERE 条件</span></li>
+</ul>
+</li>
+<li><span class="content mubu-node" style="line-height: 22px; min-height: 22px; font-size: 14px; display: inline-block; vertical-align: top;">查询两(n)个表中符合条件的记录</span></li>
+</ul>
+</li>
+<li><span class="content mubu-node" style="line-height: 22px; min-height: 22px; font-size: 14px; display: inline-block; vertical-align: top;">外连接</span><ul>
+<li><span class="content mubu-node" style="line-height: 22px; min-height: 22px; font-size: 14px; display: inline-block; vertical-align: top;">左外连接</span><ul>
+<li><span class="content mubu-node" style="line-height: 22px; min-height: 22px; font-size: 14px; display: inline-block; vertical-align: top;">left [outer] join</span><ul>
+<li><span class="content mubu-node" style="line-height: 22px; min-height: 22px; font-size: 14px; display: inline-block; vertical-align: top;">显示左表的全部记录和右表符合条件的记录</span></li>
+<li><span class="content mubu-node" style="line-height: 22px; min-height: 22px; font-size: 14px; display: inline-block; vertical-align: top;">select 选择语句 from 左表 left join 右表 on 条件</span></li>
+<li><span class="content mubu-node" style="line-height: 22px; min-height: 22px; font-size: 14px; display: inline-block; vertical-align: top;"></span></li>
+</ul>
+</li>
+<li><span class="content mubu-node" style="line-height: 22px; min-height: 22px; font-size: 14px; display: inline-block; vertical-align: top;">right [outer] join</span><ul>
+<li><span class="content mubu-node" style="line-height: 22px; min-height: 22px; font-size: 14px; display: inline-block; vertical-align: top;">显示右表的全部记录和左表符合条件的记录</span></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><span class="content mubu-node" style="line-height: 22px; min-height: 22px; font-size: 14px; display: inline-block; vertical-align: top;">右外连接</span></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><span class="content mubu-node" style="line-height: 22px; min-height: 22px; font-size: 14px; display: inline-block; vertical-align: top;">约束</span><ul>
+<li><span class="content mubu-node" style="line-height: 22px; min-height: 22px; font-size: 14px; display: inline-block; vertical-align: top;">LIMIT限制查询结果显示条数</span><ul>
+<li><span class="content mubu-node" style="line-height: 22px; min-height: 22px; font-size: 14px; display: inline-block; vertical-align: top;">LIMIT 显示条数</span></li>
+<li><span class="content mubu-node" style="line-height: 22px; min-height: 22px; font-size: 14px; display: inline-block; vertical-align: top;">LIMIT 偏移量，显示条数</span></li>
+</ul>
+</li>
+<li><span class="content mubu-node" style="line-height: 22px; min-height: 22px; font-size: 14px; display: inline-block; vertical-align: top;">配合GROUP_CONCAT()得到分组详情</span></li>
+<li><span class="content mubu-node" style="line-height: 22px; min-height: 22px; font-size: 14px; display: inline-block; vertical-align: top;">ORDER BY排序</span><ul>
+<li><span class="content mubu-node" style="line-height: 22px; min-height: 22px; font-size: 14px; display: inline-block; vertical-align: top;">通过ORDER BY对查询结果排序</span></li>
+</ul>
+</li>
+<li><span class="content mubu-node" style="line-height: 22px; min-height: 22px; font-size: 14px; display: inline-block; vertical-align: top;">HAVING子句</span><ul>
+<li><span class="content mubu-node" style="line-height: 22px; min-height: 22px; font-size: 14px; display: inline-block; vertical-align: top;">通过HAVING子句对分组结果进行二次筛选</span></li>
+</ul>
+</li>
+<li><span class="content mubu-node" style="line-height: 22px; min-height: 22px; font-size: 14px; display: inline-block; vertical-align: top;">GROUP BY查询结果分组</span><ul>
+<li><span class="content mubu-node" style="line-height: 22px; min-height: 22px; font-size: 14px; display: inline-block; vertical-align: top;">配合GROUP_CONCAT()得到分组详情</span></li>
+<li><span class="content mubu-node" style="line-height: 22px; min-height: 22px; font-size: 14px; display: inline-block; vertical-align: top;">配合聚合函数</span><ul>
+<li><span class="content mubu-node" style="line-height: 22px; min-height: 22px; font-size: 14px; display: inline-block; vertical-align: top;">COUNT()</span></li>
+<li><span class="content mubu-node" style="line-height: 22px; min-height: 22px; font-size: 14px; display: inline-block; vertical-align: top;">MAX()</span></li>
+<li><span class="content mubu-node" style="line-height: 22px; min-height: 22px; font-size: 14px; display: inline-block; vertical-align: top;">MIN()</span></li>
+<li><span class="content mubu-node" style="line-height: 22px; min-height: 22px; font-size: 14px; display: inline-block; vertical-align: top;">AVG()</span></li>
+<li><span class="content mubu-node" style="line-height: 22px; min-height: 22px; font-size: 14px; display: inline-block; vertical-align: top;">SUM()</span></li>
+</ul>
+</li>
+<li><span class="content mubu-node" style="line-height: 22px; min-height: 22px; font-size: 14px; display: inline-block; vertical-align: top;">配合WITH ROLLUP记录上面所有记录的总和</span></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><span class="content mubu-node" style="line-height: 22px; min-height: 22px; font-size: 14px; display: inline-block; vertical-align: top;">改</span><ul>
+<li><span class="content mubu-node" style="line-height: 22px; min-height: 22px; font-size: 14px; display: inline-block; vertical-align: top;">修改表名</span><ul>
+<li><span class="content mubu-node" style="line-height: 22px; min-height: 22px; font-size: 14px; display: inline-block; vertical-align: top;">ALTER TABLE tbl_name RENAME [TO|AS] new_name</span></li>
+<li><span class="content mubu-node" style="line-height: 22px; min-height: 22px; font-size: 14px; display: inline-block; vertical-align: top;">RENAME TABLE tbl_name TO new_name</span></li>
+</ul>
+</li>
+<li><span class="content mubu-node" style="line-height: 22px; min-height: 22px; font-size: 14px; display: inline-block; vertical-align: top;">更新表中的数据</span><ul>
+<li><span class="content mubu-node" style="line-height: 22px; min-height: 22px; font-size: 14px; display: inline-block; vertical-align: top;">update 表名称 set 列名称=新值 where 更新条件</span></li>
+</ul>
+</li>
+<li><span class="content mubu-node" style="line-height: 22px; min-height: 22px; font-size: 14px; display: inline-block; vertical-align: top;">创建后表的修改 alter table</span><ul>
+<li><span class="content mubu-node" style="line-height: 22px; min-height: 22px; font-size: 14px; display: inline-block; vertical-align: top;">添加列</span><ul>
+<li><span class="content mubu-node" style="line-height: 22px; min-height: 22px; font-size: 14px; display: inline-block; vertical-align: top;">alter table 表名 add 列名 列数据类型 [after 插入位置]</span></li>
+</ul>
+</li>
+<li><span class="content mubu-node" style="line-height: 22px; min-height: 22px; font-size: 14px; display: inline-block; vertical-align: top;">删除列</span><ul>
+<li><span class="content mubu-node" style="line-height: 22px; min-height: 22px; font-size: 14px; display: inline-block; vertical-align: top;">alter table 表名 drop 列名称</span></li>
+</ul>
+</li>
+<li><span class="content mubu-node" style="line-height: 22px; min-height: 22px; font-size: 14px; display: inline-block; vertical-align: top;">修改列</span><ul>
+<li><span class="content mubu-node" style="line-height: 22px; min-height: 22px; font-size: 14px; display: inline-block; vertical-align: top;">alter table 表名 change 列名称 列新名称 新数据类型</span></li>
+</ul>
+</li>
+<li><span class="content mubu-node" style="line-height: 22px; min-height: 22px; font-size: 14px; display: inline-block; vertical-align: top;">重命名表</span><ul>
+<li><span class="content mubu-node" style="line-height: 22px; min-height: 22px; font-size: 14px; display: inline-block; vertical-align: top;">alter table 表名 rename 新表名;</span></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><span class="content mubu-node" style="line-height: 22px; min-height: 22px; font-size: 14px; display: inline-block; vertical-align: top;">选择</span><ul>
+<li><span class="content mubu-node" style="line-height: 22px; min-height: 22px; font-size: 14px; display: inline-block; vertical-align: top;">选择数据库</span><ul>
+<li><span class="content mubu-node" style="line-height: 22px; min-height: 22px; font-size: 14px; display: inline-block; vertical-align: top;">use 数据库名</span></li>
+<li><span class="content mubu-node" style="line-height: 22px; min-height: 22px; font-size: 14px; display: inline-block; vertical-align: top;">在登录数据库时指定： mysql -D 所选择的数据库名 -h 主机名 -u 用户名 -p</span></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><span class="content mubu-node" style="line-height: 22px; min-height: 22px; font-size: 14px; display: inline-block; vertical-align: top;">其它</span><ul>
+<li><span class="content mubu-node" style="line-height: 22px; min-height: 22px; font-size: 14px; display: inline-block; vertical-align: top;">登录</span><ul>
+<li><span class="content mubu-node" style="line-height: 22px; min-height: 22px; font-size: 14px; display: inline-block; vertical-align: top;">mysql -h 主机名 -u 用户名 -p</span></li>
+</ul>
+</li>
+<li><span class="content mubu-node" style="line-height: 22px; min-height: 22px; font-size: 14px; display: inline-block; vertical-align: top;">规范</span><ul>
+<li><span class="content mubu-node" style="line-height: 22px; min-height: 22px; font-size: 14px; display: inline-block; vertical-align: top;">数据库名称、表名称、字段名称如果需要使用MySQL的保留字的时候需要使用反引号(``)将名称括起来</span></li>
+</ul>
+</li>
+<li><span class="content mubu-node" style="line-height: 22px; min-height: 22px; font-size: 14px; display: inline-block; vertical-align: top;">数据类型</span><ul>
+<li><span class="content mubu-node" style="line-height: 22px; min-height: 22px; font-size: 14px; display: inline-block; vertical-align: top;">数值</span><ul>
+<li><span class="content mubu-node" style="line-height: 22px; min-height: 22px; font-size: 14px; display: inline-block; vertical-align: top;">INT</span></li>
+<li><span class="content mubu-node" style="line-height: 22px; min-height: 22px; font-size: 14px; display: inline-block; vertical-align: top;">FLOAT(M,D)</span></li>
+<li><span class="content mubu-node" style="line-height: 22px; min-height: 22px; font-size: 14px; display: inline-block; vertical-align: top;">DOUBLE(M,D)</span></li>
+</ul>
+</li>
+<li><span class="content mubu-node" style="line-height: 22px; min-height: 22px; font-size: 14px; display: inline-block; vertical-align: top;">日期时间</span><ul>
+<li><span class="content mubu-node" style="line-height: 22px; min-height: 22px; font-size: 14px; display: inline-block; vertical-align: top;">DATE</span><ul>
+<li><span class="content mubu-node" style="line-height: 22px; min-height: 22px; font-size: 14px; display: inline-block; vertical-align: top;">YYYY-MM-DD</span></li>
+</ul>
+</li>
+<li><span class="content mubu-node" style="line-height: 22px; min-height: 22px; font-size: 14px; display: inline-block; vertical-align: top;">DATETIME</span><ul>
+<li><span class="content mubu-node" style="line-height: 22px; min-height: 22px; font-size: 14px; display: inline-block; vertical-align: top;">YYYY-MM-DD HH:MM:SS</span></li>
+</ul>
+</li>
+<li><span class="content mubu-node" style="line-height: 22px; min-height: 22px; font-size: 14px; display: inline-block; vertical-align: top;">TIMESTAMP</span><ul>
+<li><span class="content mubu-node" style="line-height: 22px; min-height: 22px; font-size: 14px; display: inline-block; vertical-align: top;">从1970年1月1日开始算</span></li>
+</ul>
+</li>
+<li><span class="content mubu-node" style="line-height: 22px; min-height: 22px; font-size: 14px; display: inline-block; vertical-align: top;">TIME</span><ul>
+<li><span class="content mubu-node" style="line-height: 22px; min-height: 22px; font-size: 14px; display: inline-block; vertical-align: top;">HH:MM:SS</span></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><span class="content mubu-node" style="line-height: 22px; min-height: 22px; font-size: 14px; display: inline-block; vertical-align: top;">字符</span><ul>
+<li><span class="content mubu-node" style="line-height: 22px; min-height: 22px; font-size: 14px; display: inline-block; vertical-align: top;">CHAR(M)</span></li>
+<li><span class="content mubu-node" style="line-height: 22px; min-height: 22px; font-size: 14px; display: inline-block; vertical-align: top;">VARCHAR(M)</span></li>
+<li><span class="content mubu-node" style="line-height: 22px; min-height: 22px; font-size: 14px; display: inline-block; vertical-align: top;">BLOB</span></li>
+<li><span class="content mubu-node" style="line-height: 22px; min-height: 22px; font-size: 14px; display: inline-block; vertical-align: top;">TEXT</span></li>
+</ul>
+</li>
+<li><span class="content mubu-node" style="line-height: 22px; min-height: 22px; font-size: 14px; display: inline-block; vertical-align: top;">选择数据类型</span><ul>
+<li><span class="content mubu-node" style="line-height: 22px; min-height: 22px; font-size: 14px; display: inline-block; vertical-align: top;">1、整数类型和浮点数类型</span><ul>
+<li><span class="content mubu-node" style="line-height: 22px; min-height: 22px; font-size: 14px; display: inline-block; vertical-align: top;">浮点类型DOUBLE精度比FLOAT类型高，如果需要精确到10位以上，就应该选择DOUBLE类型。</span></li>
+</ul>
+</li>
+<li><span class="content mubu-node" style="line-height: 22px; min-height: 22px; font-size: 14px; display: inline-block; vertical-align: top;">2、浮点数类型和定点数类型</span><ul>
+<li><span class="content mubu-node" style="line-height: 22px; min-height: 22px; font-size: 14px; display: inline-block; vertical-align: top;">对于精度要求较高的时候需要使用定点数存，因为定点数内部是以字符串形式存储的。</span></li>
+</ul>
+</li>
+<li><span class="content mubu-node" style="line-height: 22px; min-height: 22px; font-size: 14px; display: inline-block; vertical-align: top;">3.CHAR类型和VARCHAR类型和TEXT类型</span><ul>
+<li><span class="content mubu-node" style="line-height: 22px; min-height: 22px; font-size: 14px; display: inline-block; vertical-align: top;">CHAR定长字符串，占用空间大，速度快</span></li>
+<li><span class="content mubu-node" style="line-height: 22px; min-height: 22px; font-size: 14px; display: inline-block; vertical-align: top;">VARCHAR变长字符串，占用空间小，速度慢</span></li>
+<li><span class="content mubu-node" style="line-height: 22px; min-height: 22px; font-size: 14px; display: inline-block; vertical-align: top;">TEXT类型是一种特殊的字符串类型。只能保存字符数据，而且不能有默认值</span></li>
+<li><span class="content mubu-node" style="line-height: 22px; min-height: 22px; font-size: 14px; display: inline-block; vertical-align: top;">它们3个存储和检索数据的方式都不一样，数据检索的效率CHAR&gt;VARCHAR&gt;TEXT</span></li>
+<li><span class="content mubu-node" style="line-height: 22px; min-height: 22px; font-size: 14px; display: inline-block; vertical-align: top;">CHAR在保存的时候，后面会用空格填充到指定的长度，在检索的时候后面的空格会去掉</span></li>
+<li><span class="content mubu-node" style="line-height: 22px; min-height: 22px; font-size: 14px; display: inline-block; vertical-align: top;">VARCHAR在保存的时候，不进行填充。当值保存和检索时尾部的空格仍保留</span></li>
+</ul>
+</li>
+<li><span class="content mubu-node" style="line-height: 22px; min-height: 22px; font-size: 14px; display: inline-block; vertical-align: top;">4.日期和时间类型</span><ul>
+<li><span class="content mubu-node" style="line-height: 22px; min-height: 22px; font-size: 14px; display: inline-block; vertical-align: top;">YEAR只保存年份，占用空间小。</span></li>
+<li><span class="content mubu-node" style="line-height: 22px; min-height: 22px; font-size: 14px; display: inline-block; vertical-align: top;">其它和日期时间有关的可以通过整型保存时间戳，方便计算</span></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><span class="content mubu-node" style="line-height: 22px; min-height: 22px; font-size: 14px; display: inline-block; vertical-align: top;">主键</span><ul>
+<li><span class="content mubu-node" style="line-height: 22px; min-height: 22px; font-size: 14px; display: inline-block; vertical-align: top;">任意两行都不具有相同的主键值</span></li>
+<li><span class="content mubu-node" style="line-height: 22px; min-height: 22px; font-size: 14px; display: inline-block; vertical-align: top;">每一行都必须具有一个主键值（主键值不允许NULL值）</span></li>
+<li><span class="content mubu-node" style="line-height: 22px; min-height: 22px; font-size: 14px; display: inline-block; vertical-align: top;">主键列中的值不允许修改或更新</span></li>
+<li><span class="content mubu-node" style="line-height: 22px; min-height: 22px; font-size: 14px; display: inline-block; vertical-align: top;">主键值不能重用（如果某行从表中删除，它的主键不能赋给以后的新行）</span></li>
+</ul>
+</li>
+<li><span class="content mubu-node" style="line-height: 22px; min-height: 22px; font-size: 14px; display: inline-block; vertical-align: top;">运算符</span></li>
+<li><span class="content mubu-node" style="line-height: 22px; min-height: 22px; font-size: 14px; display: inline-block; vertical-align: top;">函数</span></li>
+<li><span class="content mubu-node" style="line-height: 22px; min-height: 22px; font-size: 14px; display: inline-block; vertical-align: top;">外键</span><ul>
+<li><span class="content mubu-node" style="line-height: 22px; min-height: 22px; font-size: 14px; display: inline-block; vertical-align: top;">作用：建立该表与其父表的关联关系</span></li>
+<li><span class="content mubu-node" style="line-height: 22px; min-height: 22px; font-size: 14px; display: inline-block; vertical-align: top;">父表中对记录做操作时，子表中与之对应的信息也应该有相应的改变</span></li>
+<li><span class="content mubu-node" style="line-height: 22px; min-height: 22px; font-size: 14px; display: inline-block; vertical-align: top;">外键列和参照列必须具有相似的数据类型</span></li>
+<li><span class="content mubu-node" style="line-height: 22px; min-height: 22px; font-size: 14px; display: inline-block; vertical-align: top;">外键列和参照列必须创建索引，如果外键列不存在索引的话，MySQL将自动创建索引</span></li>
+</ul>
+</li>
+<li><span class="content mubu-node" style="line-height: 22px; min-height: 22px; font-size: 14px; display: inline-block; vertical-align: top;">索引</span><ul>
+<li><span class="content mubu-node" style="line-height: 22px; min-height: 22px; font-size: 14px; display: inline-block; vertical-align: top;">1.什么是索引？</span><ul>
+<li><span class="content mubu-node" style="line-height: 22px; min-height: 22px; font-size: 14px; display: inline-block; vertical-align: top;">索引由数据库中一列或多列组合而成，其作用是提高对表中数据的查询速度</span></li>
+<li><span class="content mubu-node" style="line-height: 22px; min-height: 22px; font-size: 14px; display: inline-block; vertical-align: top;">索引的优点是可以提高检索数据的速度</span></li>
+<li><span class="content mubu-node" style="line-height: 22px; min-height: 22px; font-size: 14px; display: inline-block; vertical-align: top;">索引的缺点是创建和维护索引需要耗费时间</span></li>
+<li><span class="content mubu-node" style="line-height: 22px; min-height: 22px; font-size: 14px; display: inline-block; vertical-align: top;">索引可以提高查询速度，会减慢写入速度</span></li>
+</ul>
+</li>
+<li><span class="content mubu-node" style="line-height: 22px; min-height: 22px; font-size: 14px; display: inline-block; vertical-align: top;"></span></li>
+<li><span class="content mubu-node" style="line-height: 22px; min-height: 22px; font-size: 14px; display: inline-block; vertical-align: top;">创建索引</span><ul>
+<li><span class="content mubu-node" style="line-height: 22px; min-height: 22px; font-size: 14px; display: inline-block; vertical-align: top;">创建表的时候创建索引</span><ul>
+<li><span class="content mubu-node" style="line-height: 22px; min-height: 22px; font-size: 14px; display: inline-block; vertical-align: top;">CREATE TABLE tbl_name( 字段名称 字段类型 [完整性约束条件], …, [UNIQUE|FULLTEXT|SPATIAL] INDEX|KEY <a href="字段名称[(长度">索引名称</a>] [ASC|DESC]) );</span></li>
+</ul>
+</li>
+<li><span class="content mubu-node" style="line-height: 22px; min-height: 22px; font-size: 14px; display: inline-block; vertical-align: top;">在已经存在的表上创建索引</span><ul>
+<li><span class="content mubu-node" style="line-height: 22px; min-height: 22px; font-size: 14px; display: inline-block; vertical-align: top;">CREATE [UNIQUE|FULLTEXT|SPATIAL] INDEX 索引名称 ON 表名 {字段名称[(长度)] [ASC|DESC]}</span></li>
+<li><span class="content mubu-node" style="line-height: 22px; min-height: 22px; font-size: 14px; display: inline-block; vertical-align: top;">ALTER TABLE tbl_name ADD [UNIQUE|FULLTEXT|SPATIAL] INDEX 索引名称(字段名称[(长度)] [ASC|DESC]);</span></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<p></p></div><p></p>
+<div style="text-align: center; font-size: 13px"><span style="color: #666">以上内容整理于</span> <a href="https://mubu.com?s=export-html" target="_blank" rel="external">幕布</a></div>
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="https://flyerooo.github.io/2017/06/05/MySQL中的增删查改/" data-id="cj3jt343g0000d0hy5bbu3fs9" class="article-share-link">分享</a>
+      
+      
+      
+    </footer>
+  </div>
+  
+</article>
+ 
+
+
+  
     <article id="post-Untitled" class="article article-type-post" itemscope itemprop="blogPost">
   <div class="article-meta">
     <a href="/2017/05/28/Untitled/" class="article-date">
@@ -594,164 +934,6 @@
 
 
   
-    <article id="post-齐舞团前端工程化之CSS" class="article article-type-post" itemscope itemprop="blogPost">
-  <div class="article-meta">
-    <a href="/2017/03/24/齐舞团前端工程化之CSS/" class="article-date">
-  <time datetime="2017-03-24T14:13:00.000Z" itemprop="datePublished">2017-03-24</time>
-</a>
-    
-  <div class="article-category">
-    <a class="article-category-link" href="/categories/CSS/">CSS</a>
-  </div>
-
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2017/03/24/齐舞团前端工程化之CSS/">齐舞团前端工程化之CSS</a>
-    </h1>
-  
-
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <!-- Table of Contents -->
-        
-        <div class="export-wrapper"><br><br><div style="font-size: 24px; padding: 20px 15px 0;"><br><br><div style="padding-bottom: 10px">奇舞团前端工程化之CSS</div>
-
-<p></p></div><p></p>
-<ul>
-<li><span class="content mubu-node" style="line-height: 22px; min-height: 22px; font-size: 14px; display: inline-block; vertical-align: top;">奇舞团前端工程化之CSS</span><ul>
-<li><span class="content mubu-node" style="line-height: 22px; min-height: 22px; font-size: 14px; display: inline-block; vertical-align: top;">目的</span><ul>
-<li><span class="content mubu-node" style="line-height: 22px; min-height: 22px; font-size: 14px; display: inline-block; vertical-align: top;">提供一致、合理的开发基础</span></li>
-<li><span class="content mubu-node" style="line-height: 22px; min-height: 22px; font-size: 14px; display: inline-block; vertical-align: top;">应对变化</span></li>
-<li><span class="content mubu-node" style="line-height: 22px; min-height: 22px; font-size: 14px; display: inline-block; vertical-align: top;">提升效率</span></li>
-</ul>
-</li>
-<li><span class="content mubu-node" style="line-height: 22px; min-height: 22px; font-size: 14px; display: inline-block; vertical-align: top;">命名原则</span><ul>
-<li><span class="content mubu-node" style="line-height: 22px; min-height: 22px; font-size: 14px; display: inline-block; vertical-align: top;">基于功能</span><ul>
-<li><span class="content mubu-node" style="line-height: 22px; min-height: 22px; font-size: 14px; display: inline-block; vertical-align: top;">它是用来干什么的</span></li>
-<li><span class="content mubu-node" style="line-height: 22px; min-height: 22px; font-size: 14px; display: inline-block; vertical-align: top;">.button/.form/.list/.tab-list/.nav</span></li>
-<li><span class="content mubu-node" style="line-height: 22px; min-height: 22px; font-size: 14px; display: inline-block; vertical-align: top;">优先使用</span></li>
-<li><span class="content mubu-node" style="line-height: 22px; min-height: 22px; font-size: 14px; display: inline-block; vertical-align: top;">样式与内容无关</span></li>
-</ul>
-</li>
-<li><span class="content mubu-node" style="line-height: 22px; min-height: 22px; font-size: 14px; display: inline-block; vertical-align: top;">基于内容</span><ul>
-<li><span class="content mubu-node" style="line-height: 22px; min-height: 22px; font-size: 14px; display: inline-block; vertical-align: top;">元素里面放的是什么</span></li>
-<li><span class="content mubu-node" style="line-height: 22px; min-height: 22px; font-size: 14px; display: inline-block; vertical-align: top;">.news/.user-info/.help/.contact-me</span></li>
-<li><span class="content mubu-node" style="line-height: 22px; min-height: 22px; font-size: 14px; display: inline-block; vertical-align: top;">中小型网站可以给予内容去命名</span></li>
-</ul>
-</li>
-<li><span class="content mubu-node" style="line-height: 22px; min-height: 22px; font-size: 14px; display: inline-block; vertical-align: top;">基于视觉</span><ul>
-<li><span class="content mubu-node" style="line-height: 22px; min-height: 22px; font-size: 14px; display: inline-block; vertical-align: top;">看起来是什么样？</span></li>
-<li><span class="content mubu-node" style="line-height: 22px; min-height: 22px; font-size: 14px; display: inline-block; vertical-align: top;">.round-image/.nowrap</span></li>
-<li><span class="content mubu-node" style="line-height: 22px; min-height: 22px; font-size: 14px; display: inline-block; vertical-align: top;">大型网站可以基于视觉去命名</span></li>
-<li><span class="content mubu-node" style="line-height: 22px; min-height: 22px; font-size: 14px; display: inline-block; vertical-align: top;">不要使用太具体的样式</span></li>
-</ul>
-</li>
-<li><span class="content mubu-node" style="line-height: 22px; min-height: 22px; font-size: 14px; display: inline-block; vertical-align: top;">现在比较火的命名方式</span><ul>
-<li><span class="content mubu-node" style="line-height: 22px; min-height: 22px; font-size: 14px; display: inline-block; vertical-align: top;">BEM</span><ul>
-<li><span class="content mubu-node" style="line-height: 22px; min-height: 22px; font-size: 14px; display: inline-block; vertical-align: top;">Block</span><ul>
-<li><span class="content mubu-node" style="line-height: 22px; min-height: 22px; font-size: 14px; display: inline-block; vertical-align: top;">.block</span></li>
-</ul>
-</li>
-<li><span class="content mubu-node" style="line-height: 22px; min-height: 22px; font-size: 14px; display: inline-block; vertical-align: top;">Element</span><ul>
-<li><span class="content mubu-node" style="line-height: 22px; min-height: 22px; font-size: 14px; display: inline-block; vertical-align: top;">.block__element</span></li>
-</ul>
-</li>
-<li><span class="content mubu-node" style="line-height: 22px; min-height: 22px; font-size: 14px; display: inline-block; vertical-align: top;">Modifier(修饰)</span><ul>
-<li><span class="content mubu-node" style="line-height: 22px; min-height: 22px; font-size: 14px; display: inline-block; vertical-align: top;">.block__element–modifer</span></li>
-<li><span class="content mubu-node" style="line-height: 22px; min-height: 22px; font-size: 14px; display: inline-block; vertical-align: top;">eg. tab__item–active</span></li>
-</ul>
-</li>
-</ul>
-</li>
-</ul>
-</li>
-</ul>
-</li>
-<li><span class="content mubu-node" style="line-height: 22px; min-height: 22px; font-size: 14px; display: inline-block; vertical-align: top;">文件结构</span><ul>
-<li><span class="content mubu-node" style="line-height: 22px; min-height: 22px; font-size: 14px; display: inline-block; vertical-align: top;">css</span><ul>
-<li><span class="content mubu-node" style="line-height: 22px; min-height: 22px; font-size: 14px; display: inline-block; vertical-align: top;">basic</span><ul>
-<li><span class="content mubu-node" style="line-height: 22px; min-height: 22px; font-size: 14px; display: inline-block; vertical-align: top;">css reset</span><ul>
-<li><span class="content mubu-node" style="line-height: 22px; min-height: 22px; font-size: 14px; display: inline-block; vertical-align: top;">设置HTML标签的默认样式</span></li>
-<li><span class="content mubu-node" style="line-height: 22px; min-height: 22px; font-size: 14px; display: inline-block; vertical-align: top;">使其在各个浏览器表现基本一致</span></li>
-<li><span class="content mubu-node" style="line-height: 22px; min-height: 22px; font-size: 14px; display: inline-block; vertical-align: top;">让默认样式归零</span></li>
-</ul>
-</li>
-<li><span class="content mubu-node" style="line-height: 22px; min-height: 22px; font-size: 14px; display: inline-block; vertical-align: top;">normalize.css</span><ul>
-<li><span class="content mubu-node" style="line-height: 22px; min-height: 22px; font-size: 14px; display: inline-block; vertical-align: top;">设置HTML标签的默认样式</span></li>
-<li><span class="content mubu-node" style="line-height: 22px; min-height: 22px; font-size: 14px; display: inline-block; vertical-align: top;">使其在各个浏览器表现基本一致</span></li>
-<li><span class="content mubu-node" style="line-height: 22px; min-height: 22px; font-size: 14px; display: inline-block; vertical-align: top;">保留标签的默认样式</span></li>
-</ul>
-</li>
-</ul>
-</li>
-<li><span class="content mubu-node" style="line-height: 22px; min-height: 22px; font-size: 14px; display: inline-block; vertical-align: top;">moudles</span><ul>
-<li><span class="content mubu-node" style="line-height: 22px; min-height: 22px; font-size: 14px; display: inline-block; vertical-align: top;">可复用的css代码段</span></li>
-<li><span class="content mubu-node" style="line-height: 22px; min-height: 22px; font-size: 14px; display: inline-block; vertical-align: top;">与模块在HTML中的位置无关</span></li>
-<li><span class="content mubu-node" style="line-height: 22px; min-height: 22px; font-size: 14px; display: inline-block; vertical-align: top;">（一般）与使用的HTML标签无关</span></li>
-<li><span class="content mubu-node" style="line-height: 22px; min-height: 22px; font-size: 14px; display: inline-block; vertical-align: top;">抽取css模块原则</span><ul>
-<li><span class="content mubu-node" style="line-height: 22px; min-height: 22px; font-size: 14px; display: inline-block; vertical-align: top;">面向对象</span><ul>
-<li><span class="content mubu-node" style="line-height: 22px; min-height: 22px; font-size: 14px; display: inline-block; vertical-align: top;">结构和皮肤分离</span><ul>
-<li><span class="content mubu-node" style="line-height: 22px; min-height: 22px; font-size: 14px; display: inline-block; vertical-align: top;">.btn .btn–primary .btn–info .btn–danger</span></li>
-</ul>
-</li>
-<li><span class="content mubu-node" style="line-height: 22px; min-height: 22px; font-size: 14px; display: inline-block; vertical-align: top;">容器和内容分离</span><ul>
-<li><span class="content mubu-node" style="line-height: 22px; min-height: 22px; font-size: 14px; display: inline-block; vertical-align: top;">/<em> 不推荐这样写 </em>/ .header .btn { background: <span class="tag" style="text-decoration: underline; opacity: 0.6; color: inherit;">#f66</span>; color: <span class="tag" style="text-decoration: underline; opacity: 0.6; color: inherit;">#fff</span>; }</span></li>
-<li><span class="content mubu-node" style="line-height: 22px; min-height: 22px; font-size: 14px; display: inline-block; vertical-align: top;">这样就没有遵循与位置无关原则</span></li>
-</ul>
-</li>
-</ul>
-</li>
-<li><span class="content mubu-node" style="line-height: 22px; min-height: 22px; font-size: 14px; display: inline-block; vertical-align: top;">单一职责</span><ul>
-<li><span class="content mubu-node" style="line-height: 22px; min-height: 22px; font-size: 14px; display: inline-block; vertical-align: top;">尽可能细的拆分成可独立复用的组件</span></li>
-<li><span class="content mubu-node" style="line-height: 22px; min-height: 22px; font-size: 14px; display: inline-block; vertical-align: top;">通过组合方式使用多个组件</span></li>
-<li><span class="content mubu-node" style="line-height: 22px; min-height: 22px; font-size: 14px; display: inline-block; vertical-align: top;">比如将布局和其它样式拆分</span></li>
-</ul>
-</li>
-<li><span class="content mubu-node" style="line-height: 22px; min-height: 22px; font-size: 14px; display: inline-block; vertical-align: top;">开闭原则</span><ul>
-<li><span class="content mubu-node" style="line-height: 22px; min-height: 22px; font-size: 14px; display: inline-block; vertical-align: top;">对扩展开放</span></li>
-<li><span class="content mubu-node" style="line-height: 22px; min-height: 22px; font-size: 14px; display: inline-block; vertical-align: top;">对修改关闭</span></li>
-</ul>
-</li>
-<li><span class="content mubu-node" style="line-height: 22px; min-height: 22px; font-size: 14px; display: inline-block; vertical-align: top;">DRY</span></li>
-</ul>
-</li>
-</ul>
-</li>
-<li><span class="content mubu-node" style="line-height: 22px; min-height: 22px; font-size: 14px; display: inline-block; vertical-align: top;">pages</span></li>
-</ul>
-</li>
-</ul>
-</li>
-</ul>
-</li>
-</ul>
-<p></p></div><br><a href="https://t.75team.com/video/play?id=34_136_20161229102914abb59e6b-d2b0-4101-bbd5-97801b6692a4" target="_blank" rel="external">视频教程地址</a><p></p>
-
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="https://flyerooo.github.io/2017/03/24/齐舞团前端工程化之CSS/" data-id="cj2vmz0xa001kl8hyp9g3vne0" class="article-share-link">分享</a>
-      
-      
-      
-  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/CSS/">CSS</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/前端/">前端</a></li></ul>
-
-    </footer>
-  </div>
-  
-</article>
- 
-
-
-  
 
 
   <nav id="page-nav">
@@ -810,6 +992,10 @@
       <ul>
         
           <li>
+            <a href="/2017/06/05/MySQL中的增删查改/">MySQL中的增删查改</a>
+          </li>
+        
+          <li>
             <a href="/2017/05/28/Untitled/">Python多种方法实现斐波那契数列</a>
           </li>
         
@@ -825,10 +1011,6 @@
             <a href="/2017/04/02/JavaScript-This-的六道坎/">JavaScript This 的六道坎</a>
           </li>
         
-          <li>
-            <a href="/2017/03/30/《网络是怎样连接的》大纲/">《网络是怎样连接的》大纲</a>
-          </li>
-        
       </ul>
     </div>
   </div>
@@ -838,7 +1020,7 @@
   <div class="widget-wrap">
     <h3 class="widget-title archive">归档</h3>
     <div class="widget">
-      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/05/">May 2017</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/04/">April 2017</a><span class="archive-list-count">3</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/03/">March 2017</a><span class="archive-list-count">9</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/01/">January 2017</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/11/">November 2016</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/10/">October 2016</a><span class="archive-list-count">2</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/03/">March 2016</a><span class="archive-list-count">3</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/02/">February 2016</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/01/">January 2016</a><span class="archive-list-count">2</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2015/12/">December 2015</a><span class="archive-list-count">10</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2015/11/">November 2015</a><span class="archive-list-count">1</span></li></ul>
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/06/">June 2017</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/05/">May 2017</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/04/">April 2017</a><span class="archive-list-count">3</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/03/">March 2017</a><span class="archive-list-count">9</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/01/">January 2017</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/11/">November 2016</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/10/">October 2016</a><span class="archive-list-count">2</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/03/">March 2016</a><span class="archive-list-count">3</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/02/">February 2016</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/01/">January 2016</a><span class="archive-list-count">2</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2015/12/">December 2015</a><span class="archive-list-count">10</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2015/11/">November 2015</a><span class="archive-list-count">1</span></li></ul>
     </div>
   </div>
 
