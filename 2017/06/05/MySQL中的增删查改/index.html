@@ -66,8 +66,9 @@ create table students （ id int unsigned not null auto_increm">
   <link rel="stylesheet" href="/css/style.css">
   
 
+  <script src="https://cdn1.lncld.net/static/js/av-min-1.2.1.js"></script>
+  <script>AV.initialize("3YhxXJgR2YkNSaB1UcA4xISt-gzGzoHsz", "q8c5tq5r1br5VY0LWuMsBGl2");</script>
 </head>
-
 <body>
   <div id="container">
     <div id="wrap">
@@ -80,7 +81,7 @@ create table students （ id int unsigned not null auto_increm">
         
           <a id="nav-rss-link" class="nav-icon" href="/atom.xml" title="RSS Feed"></a>
         
-        <a id="nav-search-btn" class="nav-icon" title="Search"></a>
+        <a id="nav-search-btn" class="nav-icon" title="Zoeken"></a>
       </nav>
       <div id="search-form-wrap">
         <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" results="0" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="https://flyerooo.github.io"></form>
@@ -442,7 +443,7 @@ create table students （ id int unsigned not null auto_increm">
       
     </div>
     <footer class="article-footer">
-      <a data-url="https://flyerooo.github.io/2017/06/05/MySQL中的增删查改/" data-id="cj3jt343g0000d0hy5bbu3fs9" class="article-share-link">Share</a>
+      <a data-url="https://flyerooo.github.io/2017/06/05/MySQL中的增删查改/" data-id="cj3jt343g0000d0hy5bbu3fs9" class="article-share-link">Delen</a>
       
       
       
@@ -456,7 +457,7 @@ create table students （ id int unsigned not null auto_increm">
   
   
     <a href="/2017/05/28/Untitled/" id="article-nav-older" class="article-nav-link-wrap">
-      <strong class="article-nav-caption">Older</strong>
+      <strong class="article-nav-caption">Ouder</strong>
       <div class="article-nav-title">Python多种方法实现斐波那契数列</div>
     </a>
   
@@ -492,7 +493,7 @@ create table students （ id int unsigned not null auto_increm">
   
     
   <div class="widget-wrap">
-    <h3 class="widget-title recent-posts">Recent Posts</h3>
+    <h3 class="widget-title recent-posts">Recente berichten</h3>
     <div class="widget">
       <ul>
         
@@ -522,6 +523,16 @@ create table students （ id int unsigned not null auto_increm">
 
   
     
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">������Ŀ</h3>
+    <div class="widget">
+      <ul class="popularlist">
+      </ul>
+    </div>
+  </div>
 
   
 </aside>
@@ -611,6 +622,75 @@ window.onload = function() {
 
 <script src="/js/script.js"></script>
 <script src="/js/elevator.js"></script>
+<!--page counter part-->
+<script>
+function addCount (Counter) {
+        url=$('.article-date').attr('href').trim();
+        title = $('.article-title').text().trim();
+        var query=new AV.Query(Counter);
+        //use url as unique idnetfication
+        query.equalTo("url",url);
+        query.find({
+            success: function(results){
+                if(results.length>0)
+                {
+                    var counter=results[0];
+                    counter.fetchWhenSave(true); //get recent result
+                    counter.increment("time");
+                    counter.save();
+                }
+                else
+                {
+                    var newcounter=new Counter();
+                    newcounter.set("title",title);
+                    newcounter.set("url",url);
+                    newcounter.set("time",1);
+                    newcounter.save(null,{
+                        success: function(newcounter){
+                        //alert('New object created');
+                        },
+                        error: function(newcounter,error){
+                        alert('Failed to create');
+                        }
+                        });
+                }
+            },
+            error: function(error){
+                //find null is not a error
+                alert('Error:'+error.code+" "+error.message);
+            }
+        });
+}
+$(function(){
+        var Counter=AV.Object.extend("Counter");
+        //only increse visit counting when intering a page
+        if ($('.article-title').length == 1)
+           addCount(Counter);
+        var query=new AV.Query(Counter);
+        query.descending("time");
+        // the sum of popular posts
+        query.limit(10); 
+        query.find({
+            success: function(results){
+                    for(var i=0;i<results.length;i++)    
+                    {
+                        var counter=results[i];
+                        title=counter.get("title");
+                        url=counter.get("url");
+                        time=counter.get("time");
+                        // add to the popularlist widget
+                        showcontent=title+" ("+time+")";
+                        //notice the "" in href
+                        $('.popularlist').append('<li><a href="'+url+'">'+showcontent+'</a></li>');
+                    }
+                },
+            error: function(error){
+                alert("Error:"+error.code+" "+error.message);
+            }
+            }
+        )
+        });
+</script>
   </div>
 </body>
 </html>
