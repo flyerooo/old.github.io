@@ -1,0 +1,406 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+  <title>自动化测试 | 青穗黄的练习本</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta name="description" content="软件开发流程
+需求分析
+架构模块设计
+编码
+单元测试
+集成测试
+系统测试
+验收
+
+测试分类
+功能测试：检查实际的功能是否符合用户的需求
+性能测试：通过自动化的测试工具模拟多种正常，峰值以及异常负载条件来对系统的各项性能指标进行测试
+
+手工测试：指定case，测试工程师一步步去测试
+
+自动化测试：把以人为驱动的测试行为转化为机器执行的过程
+
+自动化测试优点
+对程序的回归测试更方便。这可能是自动化测试">
+<meta property="og:type" content="article">
+<meta property="og:title" content="自动化测试">
+<meta property="og:url" content="https://flyerooo.github.io/2017/06/17/自动化测试/index.html">
+<meta property="og:site_name" content="青穗黄的练习本">
+<meta property="og:description" content="软件开发流程
+需求分析
+架构模块设计
+编码
+单元测试
+集成测试
+系统测试
+验收
+
+测试分类
+功能测试：检查实际的功能是否符合用户的需求
+性能测试：通过自动化的测试工具模拟多种正常，峰值以及异常负载条件来对系统的各项性能指标进行测试
+
+手工测试：指定case，测试工程师一步步去测试
+
+自动化测试：把以人为驱动的测试行为转化为机器执行的过程
+
+自动化测试优点
+对程序的回归测试更方便。这可能是自动化测试">
+<meta property="og:updated_time" content="2017-06-17T10:00:28.493Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="自动化测试">
+<meta name="twitter:description" content="软件开发流程
+需求分析
+架构模块设计
+编码
+单元测试
+集成测试
+系统测试
+验收
+
+测试分类
+功能测试：检查实际的功能是否符合用户的需求
+性能测试：通过自动化的测试工具模拟多种正常，峰值以及异常负载条件来对系统的各项性能指标进行测试
+
+手工测试：指定case，测试工程师一步步去测试
+
+自动化测试：把以人为驱动的测试行为转化为机器执行的过程
+
+自动化测试优点
+对程序的回归测试更方便。这可能是自动化测试">
+  
+    <link rel="alternate" href="/atom.xml" title="青穗黄的练习本" type="application/atom+xml">
+  
+  
+    <link rel="icon" href="/favicon.png">
+  
+  
+    
+  
+  <link rel="stylesheet" href="/css/style.css">
+  
+
+</head>
+<body>
+  <div id="container">
+    <div id="wrap">
+      <header id="header">
+  <div id="banner"></div>
+  <div id="header-outer" class="outer">
+    
+    <div id="header-inner" class="inner">
+      <nav id="sub-nav">
+        
+          <a id="nav-rss-link" class="nav-icon" href="/atom.xml" title="RSS Feed"></a>
+        
+        <a id="nav-search-btn" class="nav-icon" title="Søk"></a>
+      </nav>
+      <div id="search-form-wrap">
+        <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" results="0" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="https://flyerooo.github.io"></form>
+      </div>
+      <nav id="main-nav">
+        <a id="main-nav-toggle" class="nav-icon"></a>
+        
+          <a class="main-nav-link" href="/">首页</a>
+        
+          <a class="main-nav-link" href="/archives">归档</a>
+        
+          <a class="main-nav-link" href="/about">关于</a>
+        
+      </nav>
+      
+    </div>
+    <div id="header-title" class="inner">
+      <h1 id="logo-wrap">
+        <a href="/" id="logo">青穗黄的练习本</a>
+      </h1>
+      
+        <h2 id="subtitle-wrap">
+          <a href="/" id="subtitle">知而不行为不知</a>
+        </h2>
+      
+    </div>
+  </div>
+</header>
+      <div class="outer">
+        <section id="main"><article id="post-自动化测试" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2017/06/17/自动化测试/" class="article-date">
+  <time datetime="2017-06-17T09:49:00.000Z" itemprop="datePublished">2017-06-17</time>
+</a>
+    
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/测试/">测试</a>
+  </div>
+
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 class="article-title" itemprop="name">
+      自动化测试
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <!-- Table of Contents -->
+        
+        <h5 id="软件开发流程"><a href="#软件开发流程" class="headerlink" title="软件开发流程"></a>软件开发流程</h5><ol>
+<li>需求分析</li>
+<li>架构模块设计</li>
+<li>编码</li>
+<li>单元测试</li>
+<li>集成测试</li>
+<li>系统测试</li>
+<li>验收</li>
+</ol>
+<h5 id="测试分类"><a href="#测试分类" class="headerlink" title="测试分类"></a>测试分类</h5><ol>
+<li>功能测试：检查实际的功能是否符合用户的需求</li>
+<li><p>性能测试：通过自动化的测试工具模拟多种正常，峰值以及异常负载条件来对系统的各项性能指标进行测试</p>
+</li>
+<li><p>手工测试：指定case，测试工程师一步步去测试</p>
+</li>
+<li>自动化测试：把以人为驱动的测试行为转化为机器执行的过程</li>
+</ol>
+<h5 id="自动化测试优点"><a href="#自动化测试优点" class="headerlink" title="自动化测试优点"></a>自动化测试优点</h5><ol>
+<li>对程序的回归测试更方便。这可能是自动化测试最主要的任务，<br>特别是在程序修改比较频繁时，效果是非常明显的。</li>
+<li>可以运行更多更繁琐的测试</li>
+<li>可以执行一些手工测试困难或不可能进行的测试</li>
+<li>更好地利用资源，在某些方面解放测试工程师</li>
+<li>测试具有一致性和可重复性及测试用例的复用</li>
+<li>增加被测试软件的可靠性</li>
+</ol>
+<h5 id="适合自动化测试场景"><a href="#适合自动化测试场景" class="headerlink" title="适合自动化测试场景"></a>适合自动化测试场景</h5><ol>
+<li>任务测试明确，不会频繁变动</li>
+<li>软件需求变更少</li>
+<li>项目周期长，测试脚本可以复用</li>
+</ol>
+<h5 id="常用的测试工具"><a href="#常用的测试工具" class="headerlink" title="常用的测试工具"></a>常用的测试工具</h5><ol>
+<li>QTP：主要是用于回归测试和测试同一软件的新版本</li>
+<li>Robot Framework: python 编写的功能自动化测试框架，<br>良好的可扩展性</li>
+<li>selenium： 是一个用于Web应用程序测试的工具，<br>支持多平台，多浏览，多语言去实现自动化测试</li>
+</ol>
+<h5 id="Selenium"><a href="#Selenium" class="headerlink" title="Selenium"></a>Selenium</h5><figure class="highlight sqf"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">from</span> selenium import webdriver</div><div class="line"><span class="built_in">driver</span> = webdriver.Chrome()</div><div class="line"><span class="built_in">driver</span>.get(url)</div></pre></td></tr></table></figure>
+<ol>
+<li>定位<ul>
+<li>可用多种定位方法</li>
+</ul>
+</li>
+<li>鼠标和键盘事件 <figure class="highlight stylus"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">from selenium<span class="selector-class">.webdriver</span><span class="selector-class">.common</span><span class="selector-class">.action_chains</span> import ActionChains</div></pre></td></tr></table></figure>
+</li>
+</ol>
+<p>鼠标事件<br>鼠标停在一个元素上<br><figure class="highlight less"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="selector-tag">ActionChains</span>(driver)<span class="selector-class">.move_to_element</span>(ele)<span class="selector-class">.perform</span>()</div></pre></td></tr></table></figure></p>
+<ul>
+<li>content_click 右击</li>
+<li>double_click 双击</li>
+<li>drag_and_drop 拖动</li>
+<li>click_and_hold 按下鼠标左键</li>
+</ul>
+<p>键盘事件</p>
+<figure class="highlight stylus"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">from selenium<span class="selector-class">.webdriver</span><span class="selector-class">.common</span><span class="selector-class">.keys</span> import Keys</div></pre></td></tr></table></figure>
+<ul>
+<li>ele.send_keys(Keys.BACK_SPACE) 退格</li>
+<li>ele.send_keys(Keys.CONTROL, ‘a’) 全选</li>
+<li>ele.send_keys(Keys.CONTROL, ‘v’) 粘贴</li>
+<li>ele.send_keys(Keys.CONTROL, ‘c’) 复制</li>
+<li>ele.send_keys(Keys.CONTROL, ‘x’) 剪切</li>
+<li>ele.send_keys(Keys.ENTER) 回车</li>
+</ul>
+<ol>
+<li><p>对话框处理与登录测试</p>
+<ul>
+<li>无特殊操作</li>
+</ul>
+</li>
+<li><p>多窗口切换</p>
+<ul>
+<li>ele.switch_to_window(ele.window_handle[1])切换到指定窗口</li>
+<li>current_window_handle 显示当前句柄</li>
+<li>window_handles 列出所有句柄</li>
+</ul>
+</li>
+<li><p>时间等待</p>
+<ul>
+<li>time.sleep(x) </li>
+<li>driver.implicitly_wait(x) 最长等x秒，期间完成就执行下一步,</li>
+<li>设置一次对整个driver周期都起作用</li>
+<li><figure class="highlight plain"><figcaption><span>selenium.webdriver.support.ui import WebDriverWait</span></figcaption><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"> </div></pre></td></tr></table></figure>
+</li>
+<li><p>WebDriverWait 配合该类的until()和until_not()方法，就能够根据判断条件而进行灵活地等待</p>
+</li>
+</ul>
+</li>
+</ol>
+<ul>
+<li>Alter 对象</li>
+<li>switch_to_alert() 切到alert，返回一个alert对象</li>
+<li>accept 确认</li>
+<li>dismiss 取消</li>
+<li>send_keys() 有输入框时才能使用，负责报错</li>
+</ul>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="https://flyerooo.github.io/2017/06/17/自动化测试/" data-id="cj4144dxr0000vkhywnjvatd1" class="article-share-link">Share</a>
+      
+      
+      
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/测试/">测试</a></li></ul>
+
+    </footer>
+  </div>
+  
+    
+<nav id="article-nav">
+  
+  
+    <a href="/2017/06/05/MySQL中的增删查改/" id="article-nav-older" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Older</strong>
+      <div class="article-nav-title">MySQL中的增删查改</div>
+    </a>
+  
+</nav>
+
+  
+</article>
+ 
+     
+  <div class="comments" id="comments">
+    
+     
+       
+      <div id="cloud-tie-wrapper" class="cloud-tie-wrapper"></div>
+    
+  </div>
+ 
+  
+
+</section>
+           
+    <aside id="sidebar">
+  
+    
+
+  
+    
+    <div class="widget-wrap">
+    
+      <div class="widget" id="toc-widget-fixed">
+      
+        <strong class="toc-title">Content</strong>
+        <div class="toc-widget-list">
+              <ol class="toc"><li class="toc-item toc-level-5"><a class="toc-link" href="#软件开发流程"><span class="toc-number">1.</span> <span class="toc-text">软件开发流程</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#测试分类"><span class="toc-number">2.</span> <span class="toc-text">测试分类</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#自动化测试优点"><span class="toc-number">3.</span> <span class="toc-text">自动化测试优点</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#适合自动化测试场景"><span class="toc-number">4.</span> <span class="toc-text">适合自动化测试场景</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#常用的测试工具"><span class="toc-number">5.</span> <span class="toc-text">常用的测试工具</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#Selenium"><span class="toc-number">6.</span> <span class="toc-text">Selenium</span></a></li></ol>
+          </div>
+      </div>
+    </div>
+
+  
+    
+
+  
+    
+  
+    
+  
+    
+
+  
+</aside>
+
+      </div>
+      <footer id="footer">
+  
+  <div class="outer">
+    <div id="footer-left">
+      &copy; 2014 - 2017 Jeffzzz&nbsp;|&nbsp;
+      Theme by <a href="https://github.com/giscafer/hexo-theme-cafe/" target="_blank">Cafe</a>
+    </div>
+     <div id="footer-right">
+      Contact&nbsp;|&nbsp;wxl.pure@gmail.com
+    </div>
+  </div>
+</footer>
+ <script src="/jquery/jquery.min.js"></script>
+    </div>
+    <nav id="mobile-nav">
+  
+    <a href="/" class="mobile-nav-link">首页</a>
+  
+    <a href="/archives" class="mobile-nav-link">归档</a>
+  
+    <a href="/about" class="mobile-nav-link">关于</a>
+  
+</nav>
+    <img class="back-to-top-btn" src="/images/fly-to-top.png"/>
+<script>
+// Elevator script included on the page, already.
+window.onload = function() {
+  var elevator = new Elevator({
+    selector:'.back-to-top-btn',
+    element: document.querySelector('.back-to-top-btn'),
+    duration: 1000 // milliseconds
+  });
+}
+</script>
+      
+
+  
+    <script>
+      var cloudTieConfig = {
+        url: document.location.href, 
+        sourceId: "",
+        productKey: "e2fb4051c49842xxce669e634bc983f",
+        target: "cloud-tie-wrapper"
+      };
+    </script>
+    <script src="https://img1.ws.126.net/f2e/tie/yun/sdk/loader.js"></script>
+    
+
+  
+
+
+
+  
+    <script type="text/x-mathjax-config">
+      MathJax.Hub.Config({
+        tex2jax: {
+          inlineMath: [ ['$','$'], ["\\(","\\)"]  ],
+          processEscapes: true,
+          skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']
+        }
+      })
+    </script>
+
+    <script type="text/x-mathjax-config">
+      MathJax.Hub.Queue(function() {
+        var all = MathJax.Hub.getAllJax(), i;
+        for (i=0; i < all.length; i += 1) {
+          all[i].SourceElement().parentNode.className += ' has-jax';
+        }
+      })
+    </script>
+    <script type="text/javascript" src="//cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+  
+
+
+ <script src="/js/is.js"></script>
+
+
+  <link rel="stylesheet" href="/fancybox/jquery.fancybox.css">
+  <script src="/fancybox/jquery.fancybox.pack.js"></script>
+
+
+<script src="/js/script.js"></script>
+<script src="/js/elevator.js"></script>
+
+  </div>
+</body>
+</html>
