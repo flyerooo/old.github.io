@@ -25,7 +25,8 @@
 集成测试
 系统测试
 验收">
-<meta property="og:updated_time" content="2017-06-17T10:21:44.468Z">
+<meta property="og:image" content="http://ww1.sinaimg.cn/large/006JS5I6gy1fgodv2mtt1j30rp07wgm2.jpg">
+<meta property="og:updated_time" content="2017-06-17T10:39:20.406Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="自动化测试">
 <meta name="twitter:description" content="软件开发流程
@@ -36,6 +37,7 @@
 集成测试
 系统测试
 验收">
+<meta name="twitter:image" content="http://ww1.sinaimg.cn/large/006JS5I6gy1fgodv2mtt1j30rp07wgm2.jpg">
   
     <link rel="alternate" href="/atom.xml" title="青穗黄的练习本" type="application/atom+xml">
   
@@ -159,17 +161,22 @@
 <li>可用多种定位方法</li>
 </ul>
 </li>
-<li>鼠标和键盘事件 <figure class="highlight stylus"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">from selenium<span class="selector-class">.webdriver</span><span class="selector-class">.common</span><span class="selector-class">.action_chains</span> import ActionChains</div></pre></td></tr></table></figure>
-</li>
-</ol>
-<p>鼠标事件<br>鼠标停在一个元素上<br><figure class="highlight less"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="selector-tag">ActionChains</span>(driver)<span class="selector-class">.move_to_element</span>(ele)<span class="selector-class">.perform</span>()</div></pre></td></tr></table></figure></p>
+<li><p>鼠标和键盘事件 </p>
+<figure class="highlight stylus"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">from selenium<span class="selector-class">.webdriver</span><span class="selector-class">.common</span><span class="selector-class">.action_chains</span> import ActionChains</div></pre></td></tr></table></figure>
 <ul>
-<li>content_click 右击</li>
+<li><p>鼠标事件</p>
+<ul>
+<li><p>鼠标停在一个元素上</p>
+<figure class="highlight less"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="selector-tag">ActionChains</span>(driver)<span class="selector-class">.move_to_element</span>(ele)<span class="selector-class">.perform</span>()</div></pre></td></tr></table></figure>
+</li>
+<li><p>content_click 右击</p>
+</li>
 <li>double_click 双击</li>
 <li>drag_and_drop 拖动</li>
 <li>click_and_hold 按下鼠标左键</li>
 </ul>
-<p>键盘事件</p>
+</li>
+<li><p>键盘事件</p>
 <figure class="highlight stylus"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">from selenium<span class="selector-class">.webdriver</span><span class="selector-class">.common</span><span class="selector-class">.keys</span> import Keys</div></pre></td></tr></table></figure>
 <ul>
 <li>ele.send_keys(Keys.BACK_SPACE) 退格</li>
@@ -179,7 +186,9 @@
 <li>ele.send_keys(Keys.CONTROL, ‘x’) 剪切</li>
 <li>ele.send_keys(Keys.ENTER) 回车</li>
 </ul>
-<ol>
+</li>
+</ul>
+</li>
 <li><p>对话框处理与登录测试</p>
 <ul>
 <li>无特殊操作</li>
@@ -195,15 +204,14 @@
 <li><p>时间等待</p>
 <ul>
 <li>time.sleep(x) </li>
-<li>driver.implicitly_wait(x) 最长等x秒，期间完成就执行下一步,</li>
-<li>设置一次对整个driver周期都起作用</li>
+<li>driver.implicitly_wait(x) 最长等x秒，期间完成就执行下一步,设置一次对整个driver周期都起作用</li>
 <li><figure class="highlight plain"><figcaption><span>selenium.webdriver.support.ui import WebDriverWait</span></figcaption><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"> </div></pre></td></tr></table></figure>
 </li>
-<li><p>WebDriverWait 配合该类的until()和until_not()方法，就能够根据判断条件而进行灵活地等待</p>
+<li><p>WebDriverWait 配合该类的until()和until_not()方法，就能够根据判断条件而进行灵活地等待<br><img src="http://ww1.sinaimg.cn/large/006JS5I6gy1fgodv2mtt1j30rp07wgm2.jpg" alt=""></p>
 </li>
 </ul>
 </li>
-</ol>
+<li><p>其它</p>
 <ul>
 <li>Alter 对象</li>
 <li>switch_to_alert() 切到alert，返回一个alert对象</li>
@@ -211,6 +219,8 @@
 <li>dismiss 取消</li>
 <li>send_keys() 有输入框时才能使用，负责报错</li>
 </ul>
+</li>
+</ol>
 
       
     </div>
