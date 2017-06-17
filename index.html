@@ -36,7 +36,7 @@
         
           <a id="nav-rss-link" class="nav-icon" href="/atom.xml" title="RSS Feed"></a>
         
-        <a id="nav-search-btn" class="nav-icon" title="Søk"></a>
+        <a id="nav-search-btn" class="nav-icon" title="搜索"></a>
       </nav>
       <div id="search-form-wrap">
         <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" results="0" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="https://flyerooo.github.io"></form>
@@ -94,8 +94,6 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <!-- Table of Contents -->
-        
         <h5 id="软件开发流程"><a href="#软件开发流程" class="headerlink" title="软件开发流程"></a>软件开发流程</h5><ol>
 <li>需求分析</li>
 <li>架构模块设计</li>
@@ -103,97 +101,16 @@
 <li>单元测试</li>
 <li>集成测试</li>
 <li>系统测试</li>
-<li>验收</li>
-</ol>
-<h5 id="测试分类"><a href="#测试分类" class="headerlink" title="测试分类"></a>测试分类</h5><ol>
-<li>功能测试：检查实际的功能是否符合用户的需求</li>
-<li><p>性能测试：通过自动化的测试工具模拟多种正常，峰值以及异常负载条件来对系统的各项性能指标进行测试</p>
-</li>
-<li><p>手工测试：指定case，测试工程师一步步去测试</p>
-</li>
-<li>自动化测试：把以人为驱动的测试行为转化为机器执行的过程</li>
-</ol>
-<h5 id="自动化测试优点"><a href="#自动化测试优点" class="headerlink" title="自动化测试优点"></a>自动化测试优点</h5><ol>
-<li>对程序的回归测试更方便。这可能是自动化测试最主要的任务，<br>特别是在程序修改比较频繁时，效果是非常明显的。</li>
-<li>可以运行更多更繁琐的测试</li>
-<li>可以执行一些手工测试困难或不可能进行的测试</li>
-<li>更好地利用资源，在某些方面解放测试工程师</li>
-<li>测试具有一致性和可重复性及测试用例的复用</li>
-<li>增加被测试软件的可靠性</li>
-</ol>
-<h5 id="适合自动化测试场景"><a href="#适合自动化测试场景" class="headerlink" title="适合自动化测试场景"></a>适合自动化测试场景</h5><ol>
-<li>任务测试明确，不会频繁变动</li>
-<li>软件需求变更少</li>
-<li>项目周期长，测试脚本可以复用</li>
-</ol>
-<h5 id="常用的测试工具"><a href="#常用的测试工具" class="headerlink" title="常用的测试工具"></a>常用的测试工具</h5><ol>
-<li>QTP：主要是用于回归测试和测试同一软件的新版本</li>
-<li>Robot Framework: python 编写的功能自动化测试框架，<br>良好的可扩展性</li>
-<li>selenium： 是一个用于Web应用程序测试的工具，<br>支持多平台，多浏览，多语言去实现自动化测试</li>
-</ol>
-<h5 id="Selenium"><a href="#Selenium" class="headerlink" title="Selenium"></a>Selenium</h5><figure class="highlight sqf"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">from</span> selenium import webdriver</div><div class="line"><span class="built_in">driver</span> = webdriver.Chrome()</div><div class="line"><span class="built_in">driver</span>.get(url)</div></pre></td></tr></table></figure>
-<ol>
-<li>定位<ul>
-<li>可用多种定位方法</li>
-</ul>
-</li>
-<li>鼠标和键盘事件 <figure class="highlight stylus"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">from selenium<span class="selector-class">.webdriver</span><span class="selector-class">.common</span><span class="selector-class">.action_chains</span> import ActionChains</div></pre></td></tr></table></figure>
-</li>
-</ol>
-<p>鼠标事件<br>鼠标停在一个元素上<br><figure class="highlight less"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="selector-tag">ActionChains</span>(driver)<span class="selector-class">.move_to_element</span>(ele)<span class="selector-class">.perform</span>()</div></pre></td></tr></table></figure></p>
-<ul>
-<li>content_click 右击</li>
-<li>double_click 双击</li>
-<li>drag_and_drop 拖动</li>
-<li>click_and_hold 按下鼠标左键</li>
-</ul>
-<p>键盘事件</p>
-<figure class="highlight stylus"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">from selenium<span class="selector-class">.webdriver</span><span class="selector-class">.common</span><span class="selector-class">.keys</span> import Keys</div></pre></td></tr></table></figure>
-<ul>
-<li>ele.send_keys(Keys.BACK_SPACE) 退格</li>
-<li>ele.send_keys(Keys.CONTROL, ‘a’) 全选</li>
-<li>ele.send_keys(Keys.CONTROL, ‘v’) 粘贴</li>
-<li>ele.send_keys(Keys.CONTROL, ‘c’) 复制</li>
-<li>ele.send_keys(Keys.CONTROL, ‘x’) 剪切</li>
-<li>ele.send_keys(Keys.ENTER) 回车</li>
-</ul>
-<ol>
-<li><p>对话框处理与登录测试</p>
-<ul>
-<li>无特殊操作</li>
-</ul>
-</li>
-<li><p>多窗口切换</p>
-<ul>
-<li>ele.switch_to_window(ele.window_handle[1])切换到指定窗口</li>
-<li>current_window_handle 显示当前句柄</li>
-<li>window_handles 列出所有句柄</li>
-</ul>
-</li>
-<li><p>时间等待</p>
-<ul>
-<li>time.sleep(x) </li>
-<li>driver.implicitly_wait(x) 最长等x秒，期间完成就执行下一步,</li>
-<li>设置一次对整个driver周期都起作用</li>
-<li><figure class="highlight plain"><figcaption><span>selenium.webdriver.support.ui import WebDriverWait</span></figcaption><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"> </div></pre></td></tr></table></figure>
-</li>
-<li><p>WebDriverWait 配合该类的until()和until_not()方法，就能够根据判断条件而进行灵活地等待</p>
-</li>
-</ul>
-</li>
-</ol>
-<ul>
-<li>Alter 对象</li>
-<li>switch_to_alert() 切到alert，返回一个alert对象</li>
-<li>accept 确认</li>
-<li>dismiss 取消</li>
-<li>send_keys() 有输入框时才能使用，负责报错</li>
-</ul>
-
+<li>验收
+        
+          <p class="article-more-link">
+            <a href="/2017/06/17/自动化测试/#more">继续阅读全文 »</a>
+          </p>
+        
       
     </div>
     <footer class="article-footer">
-      <a data-url="https://flyerooo.github.io/2017/06/17/自动化测试/" data-id="cj4144dxr0000vkhywnjvatd1" class="article-share-link">Share</a>
+      <a data-url="https://flyerooo.github.io/2017/06/17/自动化测试/" data-id="cj4144dxr0000vkhywnjvatd1" class="article-share-link">分享</a>
       
       
       
@@ -233,313 +150,16 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <!-- Table of Contents -->
+        <p>在思维导图里写的，转换过来格式都不太好看，只有幕布中还清晰一些。<a href="https://mubu.com/doc/55XuH_0SX">幕布地址</a><br>
         
-        <p>在思维导图里写的，转换过来格式都不太好看，只有幕布中还清晰一些。<a href="https://mubu.com/doc/55XuH_0SX" target="_blank" rel="external">幕布地址</a></p>
-<div class="export-wrapper"><br><br><div style="font-size: 24px; padding: 20px 15px 0;"><br><br><div style="padding-bottom: 10px">MySQL中的增删查改和外键</div>
-
-<p></p></div><p></p>
-<ul>
-<li><span class="content mubu-node" style="line-height: 22px; min-height: 22px; font-size: 14px; display: inline-block; vertical-align: top;">MySQL</span><ul>
-<li><span class="content mubu-node" style="line-height: 22px; min-height: 22px; font-size: 14px; display: inline-block; vertical-align: top;">增</span><ul>
-<li><span class="content mubu-node" style="line-height: 22px; min-height: 22px; font-size: 14px; display: inline-block; vertical-align: top;">创建数据库</span><ul>
-<li><span class="content mubu-node" style="line-height: 22px; min-height: 22px; font-size: 14px; display: inline-block; vertical-align: top;">create database 数据库名 [其它选项]</span></li>
-</ul>
-</li>
-<li><span class="content mubu-node" style="line-height: 22px; min-height: 22px; font-size: 14px; display: inline-block; vertical-align: top;">创建表</span><ul>
-<li><span class="content mubu-node" style="line-height: 22px; min-height: 22px; font-size: 14px; display: inline-block; vertical-align: top;">create table [IF NOT EXISTS]表名称（列声明）</span></li>
-<li><span class="content mubu-node" style="line-height: 22px; min-height: 22px; font-size: 14px; display: inline-block; vertical-align: top;">create table students （ id int unsigned not null auto_increment primary key, name char(8) not null, sex char(4) not null, age tinyint unsigned not null, tel char(13) null default );</span></li>
-</ul>
-</li>
-<li><span class="content mubu-node" style="line-height: 22px; min-height: 22px; font-size: 14px; display: inline-block; vertical-align: top;">向表中插入数据</span><ul>
-<li><span class="content mubu-node" style="line-height: 22px; min-height: 22px; font-size: 14px; display: inline-block; vertical-align: top;">insert [into] 表名 [(列名1，列名2，列名3，…)] values（值1，值2，值3，…)</span></li>
-<li><span class="content mubu-node" style="line-height: 22px; min-height: 22px; font-size: 14px; display: inline-block; vertical-align: top;">将查询结果插入到表中</span><ul>
-<li><span class="content mubu-node" style="line-height: 22px; min-height: 22px; font-size: 14px; display: inline-block; vertical-align: top;">INSERT [INTO] tbl_name[(字段名称,…)] SELECT 字段名称 FROM tbl_name [WHERE 条件]</span></li>
-</ul>
-</li>
-<li><span class="content mubu-node" style="line-height: 22px; min-height: 22px; font-size: 14px; display: inline-block; vertical-align: top;">通过SET形式插入记录</span><ul>
-<li><span class="content mubu-node" style="line-height: 22px; min-height: 22px; font-size: 14px; display: inline-block; vertical-align: top;">INSERT [INTO] tbl_name SET 字段名称=值,…</span></li>
-</ul>
-</li>
-</ul>
-</li>
-<li><span class="content mubu-node" style="line-height: 22px; min-height: 22px; font-size: 14px; display: inline-block; vertical-align: top;">添加列</span><ul>
-<li><span class="content mubu-node" style="line-height: 22px; min-height: 22px; font-size: 14px; display: inline-block; vertical-align: top;">基本形式：alter table 表名 change 列名称 列新名称 新数据类型</span></li>
-</ul>
-</li>
-</ul>
-</li>
-<li><span class="content mubu-node" style="line-height: 22px; min-height: 22px; font-size: 14px; display: inline-block; vertical-align: top;">删</span><ul>
-<li><span class="content mubu-node" style="line-height: 22px; min-height: 22px; font-size: 14px; display: inline-block; vertical-align: top;">删除数据库</span><ul>
-<li><span class="content mubu-node" style="line-height: 22px; min-height: 22px; font-size: 14px; display: inline-block; vertical-align: top;">drop database 数据库名;</span></li>
-</ul>
-</li>
-<li><span class="content mubu-node" style="line-height: 22px; min-height: 22px; font-size: 14px; display: inline-block; vertical-align: top;">删除数据表</span><ul>
-<li><span class="content mubu-node" style="line-height: 22px; min-height: 22px; font-size: 14px; display: inline-block; vertical-align: top;">DROP TABLE table_name ;</span></li>
-</ul>
-</li>
-<li><span class="content mubu-node" style="line-height: 22px; min-height: 22px; font-size: 14px; display: inline-block; vertical-align: top;">删除表中的数据</span><ul>
-<li><span class="content mubu-node" style="line-height: 22px; min-height: 22px; font-size: 14px; display: inline-block; vertical-align: top;">delete from 表名称 where 删除条件</span></li>
-</ul>
-</li>
-<li><span class="content mubu-node" style="line-height: 22px; min-height: 22px; font-size: 14px; display: inline-block; vertical-align: top;">删除列</span><ul>
-<li><span class="content mubu-node" style="line-height: 22px; min-height: 22px; font-size: 14px; display: inline-block; vertical-align: top;">alter table 表名 drop 列名称</span></li>
-</ul>
-</li>
-<li><span class="content mubu-node" style="line-height: 22px; min-height: 22px; font-size: 14px; display: inline-block; vertical-align: top;">清空数据表</span><ul>
-<li><span class="content mubu-node" style="line-height: 22px; min-height: 22px; font-size: 14px; display: inline-block; vertical-align: top;">TRUNCATE [TABLE] tbl_name</span></li>
-</ul>
-</li>
-</ul>
-</li>
-<li><span class="content mubu-node" style="line-height: 22px; min-height: 22px; font-size: 14px; display: inline-block; vertical-align: top;">查</span><ul>
-<li><span class="content mubu-node" style="line-height: 22px; min-height: 22px; font-size: 14px; display: inline-block; vertical-align: top;">查看所有数据库</span><ul>
-<li><span class="content mubu-node" style="line-height: 22px; min-height: 22px; font-size: 14px; display: inline-block; vertical-align: top;">show databases;</span></li>
-</ul>
-</li>
-<li><span class="content mubu-node" style="line-height: 22px; min-height: 22px; font-size: 14px; display: inline-block; vertical-align: top;">查看当前数据库所有数据表</span><ul>
-<li><span class="content mubu-node" style="line-height: 22px; min-height: 22px; font-size: 14px; display: inline-block; vertical-align: top;">show tables;</span></li>
-</ul>
-</li>
-<li><span class="content mubu-node" style="line-height: 22px; min-height: 22px; font-size: 14px; display: inline-block; vertical-align: top;">查看数据表结构</span><ul>
-<li><span class="content mubu-node" style="line-height: 22px; min-height: 22px; font-size: 14px; display: inline-block; vertical-align: top;">desc 表名;</span></li>
-</ul>
-</li>
-<li><span class="content mubu-node" style="line-height: 22px; min-height: 22px; font-size: 14px; display: inline-block; vertical-align: top;">查看创建数据表语句</span><ul>
-<li><span class="content mubu-node" style="line-height: 22px; min-height: 22px; font-size: 14px; display: inline-block; vertical-align: top;">show create table 表名</span></li>
-</ul>
-</li>
-<li><span class="content mubu-node" style="line-height: 22px; min-height: 22px; font-size: 14px; display: inline-block; vertical-align: top;">查询数据表中的数据</span><ul>
-<li><span class="content mubu-node" style="line-height: 22px; min-height: 22px; font-size: 14px; display: inline-block; vertical-align: top;">select 列名称 from 表名称 [查询条件] where 条件</span></li>
-<li><span class="content mubu-node" style="line-height: 22px; min-height: 22px; font-size: 14px; display: inline-block; vertical-align: top;">SELECT select_expr [, select_expr …] [ FROM table_references [WHERE 条件] [GROUP BY {col_name | position} [ASC | DESC], … 分组] [HAVING 条件 对分组结果进行二次筛选] [ORDER BY {col_name | position} [ASC | DESC], …排序] [LIMIT 限制显示条数] ]</span></li>
-</ul>
-</li>
-<li><span class="content mubu-node" style="line-height: 22px; min-height: 22px; font-size: 14px; display: inline-block; vertical-align: top;">子查询</span><ul>
-<li><span class="content mubu-node" style="line-height: 22px; min-height: 22px; font-size: 14px; display: inline-block; vertical-align: top;">将查询结果写入到数据表</span></li>
-</ul>
-</li>
-<li><span class="content mubu-node" style="line-height: 22px; min-height: 22px; font-size: 14px; display: inline-block; vertical-align: top;">正则查询</span><ul>
-<li><span class="content mubu-node" style="line-height: 22px; min-height: 22px; font-size: 14px; display: inline-block; vertical-align: top;">REGEXP ‘匹配方式’</span></li>
-</ul>
-</li>
-<li><span class="content mubu-node" style="line-height: 22px; min-height: 22px; font-size: 14px; display: inline-block; vertical-align: top;">连接查询</span><ul>
-<li><span class="content mubu-node" style="line-height: 22px; min-height: 22px; font-size: 14px; display: inline-block; vertical-align: top;">内连接查询</span><ul>
-<li><span class="content mubu-node" style="line-height: 22px; min-height: 22px; font-size: 14px; display: inline-block; vertical-align: top;">JOIN/INNER JOIN ON 连接条件</span><ul>
-<li><span class="content mubu-node" style="line-height: 22px; min-height: 22px; font-size: 14px; display: inline-block; vertical-align: top;">SELECT select_expr FROM table1 (两个表前后顺序无关) INNER JOIN table2 ON 连接条件 WHERE 条件</span></li>
-</ul>
-</li>
-<li><span class="content mubu-node" style="line-height: 22px; min-height: 22px; font-size: 14px; display: inline-block; vertical-align: top;">查询两(n)个表中符合条件的记录</span></li>
-</ul>
-</li>
-<li><span class="content mubu-node" style="line-height: 22px; min-height: 22px; font-size: 14px; display: inline-block; vertical-align: top;">外连接</span><ul>
-<li><span class="content mubu-node" style="line-height: 22px; min-height: 22px; font-size: 14px; display: inline-block; vertical-align: top;">左外连接</span><ul>
-<li><span class="content mubu-node" style="line-height: 22px; min-height: 22px; font-size: 14px; display: inline-block; vertical-align: top;">left [outer] join</span><ul>
-<li><span class="content mubu-node" style="line-height: 22px; min-height: 22px; font-size: 14px; display: inline-block; vertical-align: top;">显示左表的全部记录和右表符合条件的记录</span></li>
-<li><span class="content mubu-node" style="line-height: 22px; min-height: 22px; font-size: 14px; display: inline-block; vertical-align: top;">select 选择语句 from 左表 left join 右表 on 条件</span></li>
-<li><span class="content mubu-node" style="line-height: 22px; min-height: 22px; font-size: 14px; display: inline-block; vertical-align: top;"></span></li>
-</ul>
-</li>
-<li><span class="content mubu-node" style="line-height: 22px; min-height: 22px; font-size: 14px; display: inline-block; vertical-align: top;">right [outer] join</span><ul>
-<li><span class="content mubu-node" style="line-height: 22px; min-height: 22px; font-size: 14px; display: inline-block; vertical-align: top;">显示右表的全部记录和左表符合条件的记录</span></li>
-</ul>
-</li>
-</ul>
-</li>
-<li><span class="content mubu-node" style="line-height: 22px; min-height: 22px; font-size: 14px; display: inline-block; vertical-align: top;">右外连接</span></li>
-</ul>
-</li>
-</ul>
-</li>
-<li><span class="content mubu-node" style="line-height: 22px; min-height: 22px; font-size: 14px; display: inline-block; vertical-align: top;">约束</span><ul>
-<li><span class="content mubu-node" style="line-height: 22px; min-height: 22px; font-size: 14px; display: inline-block; vertical-align: top;">LIMIT限制查询结果显示条数</span><ul>
-<li><span class="content mubu-node" style="line-height: 22px; min-height: 22px; font-size: 14px; display: inline-block; vertical-align: top;">LIMIT 显示条数</span></li>
-<li><span class="content mubu-node" style="line-height: 22px; min-height: 22px; font-size: 14px; display: inline-block; vertical-align: top;">LIMIT 偏移量，显示条数</span></li>
-</ul>
-</li>
-<li><span class="content mubu-node" style="line-height: 22px; min-height: 22px; font-size: 14px; display: inline-block; vertical-align: top;">配合GROUP_CONCAT()得到分组详情</span></li>
-<li><span class="content mubu-node" style="line-height: 22px; min-height: 22px; font-size: 14px; display: inline-block; vertical-align: top;">ORDER BY排序</span><ul>
-<li><span class="content mubu-node" style="line-height: 22px; min-height: 22px; font-size: 14px; display: inline-block; vertical-align: top;">通过ORDER BY对查询结果排序</span></li>
-</ul>
-</li>
-<li><span class="content mubu-node" style="line-height: 22px; min-height: 22px; font-size: 14px; display: inline-block; vertical-align: top;">HAVING子句</span><ul>
-<li><span class="content mubu-node" style="line-height: 22px; min-height: 22px; font-size: 14px; display: inline-block; vertical-align: top;">通过HAVING子句对分组结果进行二次筛选</span></li>
-</ul>
-</li>
-<li><span class="content mubu-node" style="line-height: 22px; min-height: 22px; font-size: 14px; display: inline-block; vertical-align: top;">GROUP BY查询结果分组</span><ul>
-<li><span class="content mubu-node" style="line-height: 22px; min-height: 22px; font-size: 14px; display: inline-block; vertical-align: top;">配合GROUP_CONCAT()得到分组详情</span></li>
-<li><span class="content mubu-node" style="line-height: 22px; min-height: 22px; font-size: 14px; display: inline-block; vertical-align: top;">配合聚合函数</span><ul>
-<li><span class="content mubu-node" style="line-height: 22px; min-height: 22px; font-size: 14px; display: inline-block; vertical-align: top;">COUNT()</span></li>
-<li><span class="content mubu-node" style="line-height: 22px; min-height: 22px; font-size: 14px; display: inline-block; vertical-align: top;">MAX()</span></li>
-<li><span class="content mubu-node" style="line-height: 22px; min-height: 22px; font-size: 14px; display: inline-block; vertical-align: top;">MIN()</span></li>
-<li><span class="content mubu-node" style="line-height: 22px; min-height: 22px; font-size: 14px; display: inline-block; vertical-align: top;">AVG()</span></li>
-<li><span class="content mubu-node" style="line-height: 22px; min-height: 22px; font-size: 14px; display: inline-block; vertical-align: top;">SUM()</span></li>
-</ul>
-</li>
-<li><span class="content mubu-node" style="line-height: 22px; min-height: 22px; font-size: 14px; display: inline-block; vertical-align: top;">配合WITH ROLLUP记录上面所有记录的总和</span></li>
-</ul>
-</li>
-</ul>
-</li>
-</ul>
-</li>
-<li><span class="content mubu-node" style="line-height: 22px; min-height: 22px; font-size: 14px; display: inline-block; vertical-align: top;">改</span><ul>
-<li><span class="content mubu-node" style="line-height: 22px; min-height: 22px; font-size: 14px; display: inline-block; vertical-align: top;">修改表名</span><ul>
-<li><span class="content mubu-node" style="line-height: 22px; min-height: 22px; font-size: 14px; display: inline-block; vertical-align: top;">ALTER TABLE tbl_name RENAME [TO|AS] new_name</span></li>
-<li><span class="content mubu-node" style="line-height: 22px; min-height: 22px; font-size: 14px; display: inline-block; vertical-align: top;">RENAME TABLE tbl_name TO new_name</span></li>
-</ul>
-</li>
-<li><span class="content mubu-node" style="line-height: 22px; min-height: 22px; font-size: 14px; display: inline-block; vertical-align: top;">更新表中的数据</span><ul>
-<li><span class="content mubu-node" style="line-height: 22px; min-height: 22px; font-size: 14px; display: inline-block; vertical-align: top;">update 表名称 set 列名称=新值 where 更新条件</span></li>
-</ul>
-</li>
-<li><span class="content mubu-node" style="line-height: 22px; min-height: 22px; font-size: 14px; display: inline-block; vertical-align: top;">创建后表的修改 alter table</span><ul>
-<li><span class="content mubu-node" style="line-height: 22px; min-height: 22px; font-size: 14px; display: inline-block; vertical-align: top;">添加列</span><ul>
-<li><span class="content mubu-node" style="line-height: 22px; min-height: 22px; font-size: 14px; display: inline-block; vertical-align: top;">alter table 表名 add 列名 列数据类型 [after 插入位置]</span></li>
-</ul>
-</li>
-<li><span class="content mubu-node" style="line-height: 22px; min-height: 22px; font-size: 14px; display: inline-block; vertical-align: top;">删除列</span><ul>
-<li><span class="content mubu-node" style="line-height: 22px; min-height: 22px; font-size: 14px; display: inline-block; vertical-align: top;">alter table 表名 drop 列名称</span></li>
-</ul>
-</li>
-<li><span class="content mubu-node" style="line-height: 22px; min-height: 22px; font-size: 14px; display: inline-block; vertical-align: top;">修改列</span><ul>
-<li><span class="content mubu-node" style="line-height: 22px; min-height: 22px; font-size: 14px; display: inline-block; vertical-align: top;">alter table 表名 change 列名称 列新名称 新数据类型</span></li>
-</ul>
-</li>
-<li><span class="content mubu-node" style="line-height: 22px; min-height: 22px; font-size: 14px; display: inline-block; vertical-align: top;">重命名表</span><ul>
-<li><span class="content mubu-node" style="line-height: 22px; min-height: 22px; font-size: 14px; display: inline-block; vertical-align: top;">alter table 表名 rename 新表名;</span></li>
-</ul>
-</li>
-</ul>
-</li>
-</ul>
-</li>
-<li><span class="content mubu-node" style="line-height: 22px; min-height: 22px; font-size: 14px; display: inline-block; vertical-align: top;">选择</span><ul>
-<li><span class="content mubu-node" style="line-height: 22px; min-height: 22px; font-size: 14px; display: inline-block; vertical-align: top;">选择数据库</span><ul>
-<li><span class="content mubu-node" style="line-height: 22px; min-height: 22px; font-size: 14px; display: inline-block; vertical-align: top;">use 数据库名</span></li>
-<li><span class="content mubu-node" style="line-height: 22px; min-height: 22px; font-size: 14px; display: inline-block; vertical-align: top;">在登录数据库时指定： mysql -D 所选择的数据库名 -h 主机名 -u 用户名 -p</span></li>
-</ul>
-</li>
-</ul>
-</li>
-<li><span class="content mubu-node" style="line-height: 22px; min-height: 22px; font-size: 14px; display: inline-block; vertical-align: top;">其它</span><ul>
-<li><span class="content mubu-node" style="line-height: 22px; min-height: 22px; font-size: 14px; display: inline-block; vertical-align: top;">登录</span><ul>
-<li><span class="content mubu-node" style="line-height: 22px; min-height: 22px; font-size: 14px; display: inline-block; vertical-align: top;">mysql -h 主机名 -u 用户名 -p</span></li>
-</ul>
-</li>
-<li><span class="content mubu-node" style="line-height: 22px; min-height: 22px; font-size: 14px; display: inline-block; vertical-align: top;">规范</span><ul>
-<li><span class="content mubu-node" style="line-height: 22px; min-height: 22px; font-size: 14px; display: inline-block; vertical-align: top;">数据库名称、表名称、字段名称如果需要使用MySQL的保留字的时候需要使用反引号(``)将名称括起来</span></li>
-</ul>
-</li>
-<li><span class="content mubu-node" style="line-height: 22px; min-height: 22px; font-size: 14px; display: inline-block; vertical-align: top;">数据类型</span><ul>
-<li><span class="content mubu-node" style="line-height: 22px; min-height: 22px; font-size: 14px; display: inline-block; vertical-align: top;">数值</span><ul>
-<li><span class="content mubu-node" style="line-height: 22px; min-height: 22px; font-size: 14px; display: inline-block; vertical-align: top;">INT</span></li>
-<li><span class="content mubu-node" style="line-height: 22px; min-height: 22px; font-size: 14px; display: inline-block; vertical-align: top;">FLOAT(M,D)</span></li>
-<li><span class="content mubu-node" style="line-height: 22px; min-height: 22px; font-size: 14px; display: inline-block; vertical-align: top;">DOUBLE(M,D)</span></li>
-</ul>
-</li>
-<li><span class="content mubu-node" style="line-height: 22px; min-height: 22px; font-size: 14px; display: inline-block; vertical-align: top;">日期时间</span><ul>
-<li><span class="content mubu-node" style="line-height: 22px; min-height: 22px; font-size: 14px; display: inline-block; vertical-align: top;">DATE</span><ul>
-<li><span class="content mubu-node" style="line-height: 22px; min-height: 22px; font-size: 14px; display: inline-block; vertical-align: top;">YYYY-MM-DD</span></li>
-</ul>
-</li>
-<li><span class="content mubu-node" style="line-height: 22px; min-height: 22px; font-size: 14px; display: inline-block; vertical-align: top;">DATETIME</span><ul>
-<li><span class="content mubu-node" style="line-height: 22px; min-height: 22px; font-size: 14px; display: inline-block; vertical-align: top;">YYYY-MM-DD HH:MM:SS</span></li>
-</ul>
-</li>
-<li><span class="content mubu-node" style="line-height: 22px; min-height: 22px; font-size: 14px; display: inline-block; vertical-align: top;">TIMESTAMP</span><ul>
-<li><span class="content mubu-node" style="line-height: 22px; min-height: 22px; font-size: 14px; display: inline-block; vertical-align: top;">从1970年1月1日开始算</span></li>
-</ul>
-</li>
-<li><span class="content mubu-node" style="line-height: 22px; min-height: 22px; font-size: 14px; display: inline-block; vertical-align: top;">TIME</span><ul>
-<li><span class="content mubu-node" style="line-height: 22px; min-height: 22px; font-size: 14px; display: inline-block; vertical-align: top;">HH:MM:SS</span></li>
-</ul>
-</li>
-</ul>
-</li>
-<li><span class="content mubu-node" style="line-height: 22px; min-height: 22px; font-size: 14px; display: inline-block; vertical-align: top;">字符</span><ul>
-<li><span class="content mubu-node" style="line-height: 22px; min-height: 22px; font-size: 14px; display: inline-block; vertical-align: top;">CHAR(M)</span></li>
-<li><span class="content mubu-node" style="line-height: 22px; min-height: 22px; font-size: 14px; display: inline-block; vertical-align: top;">VARCHAR(M)</span></li>
-<li><span class="content mubu-node" style="line-height: 22px; min-height: 22px; font-size: 14px; display: inline-block; vertical-align: top;">BLOB</span></li>
-<li><span class="content mubu-node" style="line-height: 22px; min-height: 22px; font-size: 14px; display: inline-block; vertical-align: top;">TEXT</span></li>
-</ul>
-</li>
-<li><span class="content mubu-node" style="line-height: 22px; min-height: 22px; font-size: 14px; display: inline-block; vertical-align: top;">选择数据类型</span><ul>
-<li><span class="content mubu-node" style="line-height: 22px; min-height: 22px; font-size: 14px; display: inline-block; vertical-align: top;">1、整数类型和浮点数类型</span><ul>
-<li><span class="content mubu-node" style="line-height: 22px; min-height: 22px; font-size: 14px; display: inline-block; vertical-align: top;">浮点类型DOUBLE精度比FLOAT类型高，如果需要精确到10位以上，就应该选择DOUBLE类型。</span></li>
-</ul>
-</li>
-<li><span class="content mubu-node" style="line-height: 22px; min-height: 22px; font-size: 14px; display: inline-block; vertical-align: top;">2、浮点数类型和定点数类型</span><ul>
-<li><span class="content mubu-node" style="line-height: 22px; min-height: 22px; font-size: 14px; display: inline-block; vertical-align: top;">对于精度要求较高的时候需要使用定点数存，因为定点数内部是以字符串形式存储的。</span></li>
-</ul>
-</li>
-<li><span class="content mubu-node" style="line-height: 22px; min-height: 22px; font-size: 14px; display: inline-block; vertical-align: top;">3.CHAR类型和VARCHAR类型和TEXT类型</span><ul>
-<li><span class="content mubu-node" style="line-height: 22px; min-height: 22px; font-size: 14px; display: inline-block; vertical-align: top;">CHAR定长字符串，占用空间大，速度快</span></li>
-<li><span class="content mubu-node" style="line-height: 22px; min-height: 22px; font-size: 14px; display: inline-block; vertical-align: top;">VARCHAR变长字符串，占用空间小，速度慢</span></li>
-<li><span class="content mubu-node" style="line-height: 22px; min-height: 22px; font-size: 14px; display: inline-block; vertical-align: top;">TEXT类型是一种特殊的字符串类型。只能保存字符数据，而且不能有默认值</span></li>
-<li><span class="content mubu-node" style="line-height: 22px; min-height: 22px; font-size: 14px; display: inline-block; vertical-align: top;">它们3个存储和检索数据的方式都不一样，数据检索的效率CHAR&gt;VARCHAR&gt;TEXT</span></li>
-<li><span class="content mubu-node" style="line-height: 22px; min-height: 22px; font-size: 14px; display: inline-block; vertical-align: top;">CHAR在保存的时候，后面会用空格填充到指定的长度，在检索的时候后面的空格会去掉</span></li>
-<li><span class="content mubu-node" style="line-height: 22px; min-height: 22px; font-size: 14px; display: inline-block; vertical-align: top;">VARCHAR在保存的时候，不进行填充。当值保存和检索时尾部的空格仍保留</span></li>
-</ul>
-</li>
-<li><span class="content mubu-node" style="line-height: 22px; min-height: 22px; font-size: 14px; display: inline-block; vertical-align: top;">4.日期和时间类型</span><ul>
-<li><span class="content mubu-node" style="line-height: 22px; min-height: 22px; font-size: 14px; display: inline-block; vertical-align: top;">YEAR只保存年份，占用空间小。</span></li>
-<li><span class="content mubu-node" style="line-height: 22px; min-height: 22px; font-size: 14px; display: inline-block; vertical-align: top;">其它和日期时间有关的可以通过整型保存时间戳，方便计算</span></li>
-</ul>
-</li>
-</ul>
-</li>
-</ul>
-</li>
-<li><span class="content mubu-node" style="line-height: 22px; min-height: 22px; font-size: 14px; display: inline-block; vertical-align: top;">主键</span><ul>
-<li><span class="content mubu-node" style="line-height: 22px; min-height: 22px; font-size: 14px; display: inline-block; vertical-align: top;">任意两行都不具有相同的主键值</span></li>
-<li><span class="content mubu-node" style="line-height: 22px; min-height: 22px; font-size: 14px; display: inline-block; vertical-align: top;">每一行都必须具有一个主键值（主键值不允许NULL值）</span></li>
-<li><span class="content mubu-node" style="line-height: 22px; min-height: 22px; font-size: 14px; display: inline-block; vertical-align: top;">主键列中的值不允许修改或更新</span></li>
-<li><span class="content mubu-node" style="line-height: 22px; min-height: 22px; font-size: 14px; display: inline-block; vertical-align: top;">主键值不能重用（如果某行从表中删除，它的主键不能赋给以后的新行）</span></li>
-</ul>
-</li>
-<li><span class="content mubu-node" style="line-height: 22px; min-height: 22px; font-size: 14px; display: inline-block; vertical-align: top;">运算符</span></li>
-<li><span class="content mubu-node" style="line-height: 22px; min-height: 22px; font-size: 14px; display: inline-block; vertical-align: top;">函数</span></li>
-<li><span class="content mubu-node" style="line-height: 22px; min-height: 22px; font-size: 14px; display: inline-block; vertical-align: top;">外键</span><ul>
-<li><span class="content mubu-node" style="line-height: 22px; min-height: 22px; font-size: 14px; display: inline-block; vertical-align: top;">作用：建立该表与其父表的关联关系</span></li>
-<li><span class="content mubu-node" style="line-height: 22px; min-height: 22px; font-size: 14px; display: inline-block; vertical-align: top;">父表中对记录做操作时，子表中与之对应的信息也应该有相应的改变</span></li>
-<li><span class="content mubu-node" style="line-height: 22px; min-height: 22px; font-size: 14px; display: inline-block; vertical-align: top;">外键列和参照列必须具有相似的数据类型</span></li>
-<li><span class="content mubu-node" style="line-height: 22px; min-height: 22px; font-size: 14px; display: inline-block; vertical-align: top;">外键列和参照列必须创建索引，如果外键列不存在索引的话，MySQL将自动创建索引</span></li>
-</ul>
-</li>
-<li><span class="content mubu-node" style="line-height: 22px; min-height: 22px; font-size: 14px; display: inline-block; vertical-align: top;">索引</span><ul>
-<li><span class="content mubu-node" style="line-height: 22px; min-height: 22px; font-size: 14px; display: inline-block; vertical-align: top;">1.什么是索引？</span><ul>
-<li><span class="content mubu-node" style="line-height: 22px; min-height: 22px; font-size: 14px; display: inline-block; vertical-align: top;">索引由数据库中一列或多列组合而成，其作用是提高对表中数据的查询速度</span></li>
-<li><span class="content mubu-node" style="line-height: 22px; min-height: 22px; font-size: 14px; display: inline-block; vertical-align: top;">索引的优点是可以提高检索数据的速度</span></li>
-<li><span class="content mubu-node" style="line-height: 22px; min-height: 22px; font-size: 14px; display: inline-block; vertical-align: top;">索引的缺点是创建和维护索引需要耗费时间</span></li>
-<li><span class="content mubu-node" style="line-height: 22px; min-height: 22px; font-size: 14px; display: inline-block; vertical-align: top;">索引可以提高查询速度，会减慢写入速度</span></li>
-</ul>
-</li>
-<li><span class="content mubu-node" style="line-height: 22px; min-height: 22px; font-size: 14px; display: inline-block; vertical-align: top;"></span></li>
-<li><span class="content mubu-node" style="line-height: 22px; min-height: 22px; font-size: 14px; display: inline-block; vertical-align: top;">创建索引</span><ul>
-<li><span class="content mubu-node" style="line-height: 22px; min-height: 22px; font-size: 14px; display: inline-block; vertical-align: top;">创建表的时候创建索引</span><ul>
-<li><span class="content mubu-node" style="line-height: 22px; min-height: 22px; font-size: 14px; display: inline-block; vertical-align: top;">CREATE TABLE tbl_name( 字段名称 字段类型 [完整性约束条件], …, [UNIQUE|FULLTEXT|SPATIAL] INDEX|KEY <a href="字段名称[(长度">索引名称</a>] [ASC|DESC]) );</span></li>
-</ul>
-</li>
-<li><span class="content mubu-node" style="line-height: 22px; min-height: 22px; font-size: 14px; display: inline-block; vertical-align: top;">在已经存在的表上创建索引</span><ul>
-<li><span class="content mubu-node" style="line-height: 22px; min-height: 22px; font-size: 14px; display: inline-block; vertical-align: top;">CREATE [UNIQUE|FULLTEXT|SPATIAL] INDEX 索引名称 ON 表名 {字段名称[(长度)] [ASC|DESC]}</span></li>
-<li><span class="content mubu-node" style="line-height: 22px; min-height: 22px; font-size: 14px; display: inline-block; vertical-align: top;">ALTER TABLE tbl_name ADD [UNIQUE|FULLTEXT|SPATIAL] INDEX 索引名称(字段名称[(长度)] [ASC|DESC]);</span></li>
-</ul>
-</li>
-</ul>
-</li>
-</ul>
-</li>
-</ul>
-</li>
-</ul>
-</li>
-</ul>
-<p></p></div><p></p>
-<div style="text-align: center; font-size: 13px"><span style="color: #666">以上内容整理于</span> <a href="https://mubu.com?s=export-html" target="_blank" rel="external">幕布</a></div>
+          <p class="article-more-link">
+            <a href="/2017/06/05/MySQL中的增删查改/#more">继续阅读全文 »</a>
+          </p>
+        
       
     </div>
     <footer class="article-footer">
-      <a data-url="https://flyerooo.github.io/2017/06/05/MySQL中的增删查改/" data-id="cj3jt343g0000d0hy5bbu3fs9" class="article-share-link">Share</a>
+      <a data-url="https://flyerooo.github.io/2017/06/05/MySQL中的增删查改/" data-id="cj3jt343g0000d0hy5bbu3fs9" class="article-share-link">分享</a>
       
       
       
@@ -579,37 +199,17 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <!-- Table of Contents -->
-        
         <h4 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h4><p>用多种方法实现斐波那契数列，并拓展相关的知识。</p>
 <h4 id="普通函数"><a href="#普通函数" class="headerlink" title="普通函数"></a>普通函数</h4><p>比较Pythonic 的方式<br><figure class="highlight ruby"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line"><span class="function"><span class="keyword">def</span> <span class="title">fib</span><span class="params">(n)</span></span>:</div><div class="line">    a, b = <span class="number">0</span>, <span class="number">1</span></div><div class="line">    <span class="keyword">for</span> i <span class="keyword">in</span> range(n):</div><div class="line">        a, b = b, a + b</div><div class="line">    <span class="keyword">return</span> b</div><div class="line">print(fib(<span class="number">50</span>))</div><div class="line"><span class="meta">&gt;&gt;</span>&gt;<span class="number">20365011074</span></div></pre></td></tr></table></figure></p>
-<h4 id="递归"><a href="#递归" class="headerlink" title="递归"></a>递归</h4><p>了解递归的话，这种方法最好理解，缺点就是太费时间(O(2^n))，fib(50)几分钟没等到出结果，强行终止运行了。<br><figure class="highlight maxima"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">def <span class="built_in">fib</span>(n):</div><div class="line">    <span class="keyword">if</span> n &lt;= <span class="number">1</span>:</div><div class="line">        <span class="built_in">return</span> <span class="number">1</span></div><div class="line">    <span class="built_in">return</span> <span class="built_in">fib</span>(n - <span class="number">1</span>) + <span class="built_in">fib</span>(n - <span class="number">2</span>)</div><div class="line"><span class="built_in">print</span>(<span class="built_in">fib</span>(<span class="number">50</span>))</div></pre></td></tr></table></figure></p>
-<p><img src="http://ww1.sinaimg.cn/large/006JS5I6gy1fg15ehkqxtj30io06smx1.jpg" alt="递归"><br>可以看到递归中有很多的重复计算，所以接下来优化一下这个函数，增加一个缓存字典，将已经计算过的项保存起来。</p>
-<h4 id="优化递归"><a href="#优化递归" class="headerlink" title="优化递归"></a>优化递归</h4><figure class="highlight sql"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div></pre></td><td class="code"><pre><div class="line">def fib(n, <span class="keyword">cache</span>=<span class="keyword">None</span>):</div><div class="line">    <span class="keyword">if</span> <span class="keyword">cache</span> <span class="keyword">is</span> <span class="keyword">None</span>:</div><div class="line">        <span class="keyword">cache</span> = &#123;&#125;</div><div class="line">    <span class="keyword">if</span> n <span class="keyword">in</span> <span class="keyword">cache</span>:</div><div class="line">        <span class="keyword">return</span> <span class="keyword">cache</span>[n]</div><div class="line">    <span class="keyword">if</span> n &lt;= <span class="number">1</span>:</div><div class="line">        <span class="keyword">return</span> <span class="number">1</span></div><div class="line">    # 如果缓存中没有，就增加进去</div><div class="line">    <span class="keyword">cache</span>[n] = fib(n<span class="number">-1</span>, <span class="keyword">cache</span>) + fib(n<span class="number">-2</span>, <span class="keyword">cache</span>)</div><div class="line">    <span class="keyword">return</span> <span class="keyword">cache</span>[n]</div><div class="line">print(fib(<span class="number">50</span>))</div><div class="line">&gt;&gt;&gt;<span class="number">20365011074</span></div></pre></td></tr></table></figure>
-<h4 id="装饰器"><a href="#装饰器" class="headerlink" title="装饰器"></a>装饰器</h4><p>这种重复计算的问题，在项目中是非常常见，如果每个方法都这样改写一次，项目中将会包含大量的冗余代码，不利于维护，也违背了“高内聚，低耦合”的编程思想。<br>是否能只用写一个增加缓存的方法，然后其他的方法都使用这个方法来装饰它，让它拥有这个功能？</p>
-<h5 id="实现思路："><a href="#实现思路：" class="headerlink" title="实现思路："></a>实现思路：</h5><ul>
-<li>写一个方法假设方法名为add_cache，该方法拥有缓存</li>
-<li>add_cache接收一个参数，参数就是原方法的对象</li>
-<li>在add_cache方法内部，有一个wrap方法，该方法就接收原来fibonacci方法的参数</li>
-<li>wrap方法首先判断参数是否在缓存中，如果在，就直接返回缓存中的值</li>
-<li>如果不在缓存中就调用原来的fibonacci方法计算然后把值保存在缓存中</li>
-<li>在add_cache中返回新的wrap方法的对象</li>
-</ul>
-<figure class="highlight maxima"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div></pre></td><td class="code"><pre><div class="line">def add_cache(func):</div><div class="line">    cache = &#123;&#125;</div><div class="line">    def wrapper(*<span class="built_in">args</span>):</div><div class="line">        <span class="keyword">if</span> <span class="built_in">args</span> <span class="keyword">not</span> <span class="keyword">in</span> cache:</div><div class="line">            cache[<span class="built_in">args</span>] = func(*<span class="built_in">args</span>)</div><div class="line">        <span class="built_in">return</span> cache[<span class="built_in">args</span>]</div><div class="line">    <span class="built_in">return</span> wrapper</div><div class="line"></div><div class="line">def <span class="built_in">fib</span>(n):</div><div class="line">    <span class="keyword">if</span> n &lt;= <span class="number">1</span>:</div><div class="line">        <span class="built_in">return</span> <span class="number">1</span></div><div class="line">    <span class="built_in">return</span> <span class="built_in">fib</span>(n-<span class="number">1</span>) + <span class="built_in">fib</span>(n-<span class="number">2</span>)</div><div class="line"></div><div class="line"><span class="built_in">fib</span> = add_cache(<span class="built_in">fib</span>)</div><div class="line"><span class="built_in">print</span>(<span class="built_in">fib</span>(<span class="number">50</span>))</div><div class="line">&gt;&gt;&gt;<span class="number">20365011074</span></div></pre></td></tr></table></figure>
-<p>当然Python提供了@装饰符号，使用起来更方便</p>
-<figure class="highlight ruby"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line">@add_cache</div><div class="line"><span class="function"><span class="keyword">def</span> <span class="title">fib</span><span class="params">(n)</span></span>:</div><div class="line">    <span class="keyword">if</span> n &lt;= <span class="number">1</span>:</div><div class="line">        <span class="keyword">return</span> <span class="number">1</span></div><div class="line">    <span class="keyword">return</span> fib(n-<span class="number">1</span>) + fib(n-<span class="number">2</span>)</div><div class="line">print(fib(<span class="number">50</span>))</div><div class="line"><span class="meta">&gt;&gt;</span>&gt;<span class="number">20365011074</span></div></pre></td></tr></table></figure>
-<h4 id="类"><a href="#类" class="headerlink" title="类"></a>类</h4><figure class="highlight ruby"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div></pre></td><td class="code"><pre><div class="line"><span class="class"><span class="keyword">class</span> <span class="title">Fib</span>(<span class="title">object</span>):</span></div><div class="line">    <span class="function"><span class="keyword">def</span> <span class="title">__getitem__</span><span class="params">(<span class="keyword">self</span>, n)</span></span>:</div><div class="line">        a, b = <span class="number">0</span>, <span class="number">1</span></div><div class="line">        <span class="keyword">for</span> x <span class="keyword">in</span> range(n):</div><div class="line">            a, b = b, a + b</div><div class="line">        <span class="keyword">return</span> b</div><div class="line">f = Fib()</div><div class="line">print(f[<span class="number">50</span>])</div><div class="line"><span class="meta">&gt;&gt;</span>&gt;<span class="number">20365011074</span></div></pre></td></tr></table></figure>
-<h4 id="后记"><a href="#后记" class="headerlink" title="后记"></a>后记</h4><p>边写边查，发现与之相关的东西还真不少，之后有时间再扩展一下。</p>
-<h4 id="参考资料"><a href="#参考资料" class="headerlink" title="参考资料"></a>参考资料</h4><ol>
-<li><a href="https://stackoverflow.com/questions/494594/how-to-write-the-fibonacci-sequence-in-python" target="_blank" rel="external">https://stackoverflow.com/questions/494594/how-to-write-the-fibonacci-sequence-in-python</a></li>
-<li><a href="http://www.liaoxuefeng.com/wiki/0014316089557264a6b348958f449949df42a6d3a2e542c000/0014319098638265527beb24f7840aa97de564ccc7f20f6000" target="_blank" rel="external">http://www.liaoxuefeng.com/wiki/0014316089557264a6b348958f449949df42a6d3a2e542c000/0014319098638265527beb24f7840aa97de564ccc7f20f6000</a></li>
-<li><a href="http://www.imooc.com/article/16227" target="_blank" rel="external">http://www.imooc.com/article/16227</a></li>
-</ol>
-
+        
+          <p class="article-more-link">
+            <a href="/2017/05/28/Untitled/#more">继续阅读全文 »</a>
+          </p>
+        
       
     </div>
     <footer class="article-footer">
-      <a data-url="https://flyerooo.github.io/2017/05/28/Untitled/" data-id="cj2vw0kb80000a0hywno5g288" class="article-share-link">Share</a>
+      <a data-url="https://flyerooo.github.io/2017/05/28/Untitled/" data-id="cj2vw0kb80000a0hywno5g288" class="article-share-link">分享</a>
       
       
       
@@ -693,7 +293,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="https://flyerooo.github.io/2017/04/21/python爬虫入门-简书七日热门文章数据/" data-id="cj2xbtjlq0000vkhy1c0yfhwg" class="article-share-link">Share</a>
+      <a data-url="https://flyerooo.github.io/2017/04/21/python爬虫入门-简书七日热门文章数据/" data-id="cj2xbtjlq0000vkhy1c0yfhwg" class="article-share-link">分享</a>
       
       
       
@@ -740,7 +340,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="https://flyerooo.github.io/2017/04/03/this语义/" data-id="cj2vmz0u80008l8hyg47zosyp" class="article-share-link">Share</a>
+      <a data-url="https://flyerooo.github.io/2017/04/03/this语义/" data-id="cj2vmz0u80008l8hyg47zosyp" class="article-share-link">分享</a>
       
       
       
@@ -790,7 +390,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="https://flyerooo.github.io/2017/04/02/JavaScript-This-的六道坎/" data-id="cj2vmz0tg0003l8hy46j8li6k" class="article-share-link">Share</a>
+      <a data-url="https://flyerooo.github.io/2017/04/02/JavaScript-This-的六道坎/" data-id="cj2vmz0tg0003l8hy46j8li6k" class="article-share-link">分享</a>
       
       
       
@@ -843,7 +443,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="https://flyerooo.github.io/2017/03/30/《网络是怎样连接的》大纲/" data-id="cj2vmz0vw000ql8hy5lv3lds4" class="article-share-link">Share</a>
+      <a data-url="https://flyerooo.github.io/2017/03/30/《网络是怎样连接的》大纲/" data-id="cj2vmz0vw000ql8hy5lv3lds4" class="article-share-link">分享</a>
       
       
       
@@ -894,7 +494,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="https://flyerooo.github.io/2017/03/26/第一章-浏览器生成消息/" data-id="cj2vmz0wq001bl8hyn10a1dgj" class="article-share-link">Share</a>
+      <a data-url="https://flyerooo.github.io/2017/03/26/第一章-浏览器生成消息/" data-id="cj2vmz0wq001bl8hyn10a1dgj" class="article-share-link">分享</a>
       
       
       
@@ -968,7 +568,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="https://flyerooo.github.io/2017/03/25/HTTP-状态码概要/" data-id="cj2vmz0t80002l8hyjh5vs86f" class="article-share-link">Share</a>
+      <a data-url="https://flyerooo.github.io/2017/03/25/HTTP-状态码概要/" data-id="cj2vmz0t80002l8hyjh5vs86f" class="article-share-link">分享</a>
       
       
       
@@ -1011,7 +611,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="https://flyerooo.github.io/2017/03/25/HTTP-中主要的头字段/" data-id="cj2vmz0sq0000l8hyt620pvpw" class="article-share-link">Share</a>
+      <a data-url="https://flyerooo.github.io/2017/03/25/HTTP-中主要的头字段/" data-id="cj2vmz0sq0000l8hyt620pvpw" class="article-share-link">分享</a>
       
       
       
@@ -1026,7 +626,7 @@
 
 
   <nav id="page-nav">
-    <span class="page-number current">1</span><a class="page-number" href="/page/2/">2</a><a class="page-number" href="/page/3/">3</a><a class="page-number" href="/page/4/">4</a><a class="extend next" rel="next" href="/page/2/">Neste&raquo;</a>
+    <span class="page-number current">1</span><a class="page-number" href="/page/2/">2</a><a class="page-number" href="/page/3/">3</a><a class="page-number" href="/page/4/">4</a><a class="extend next" rel="next" href="/page/2/">下一页&raquo;</a>
   </nav>
 </section>
            
@@ -1057,7 +657,7 @@
   
     
   <div class="widget-wrap">
-    <h3 class="widget-title categories">Kategorier</h3>
+    <h3 class="widget-title categories">分类</h3>
     <div class="widget" id="categories">
       <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/CSS/">CSS</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/JavaScript/">JavaScript</a><span class="category-list-count">7</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Python/">Python</a><span class="category-list-count">16</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/SQL/">SQL</a><span class="category-list-count">2</span><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/SQL/MySQL/">MySQL</a><span class="category-list-count">1</span></li></ul></li><li class="category-list-item"><a class="category-list-link" href="/categories/感想/">感想</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/测试/">测试</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/理解计算机/">理解计算机</a><span class="category-list-count">2</span><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/理解计算机/网络/">网络</a><span class="category-list-count">1</span></li></ul></li><li class="category-list-item"><a class="category-list-link" href="/categories/网络/">网络</a><span class="category-list-count">1</span></li></ul>
     </div>
@@ -1067,7 +667,7 @@
   
     
   <div class="widget-wrap">
-    <h3 class="widget-title tagcloud">Tag Cloud</h3>
+    <h3 class="widget-title tagcloud">标签云</h3>
     <div class="widget tagcloud">
       <a href="/tags/CSS/" style="font-size: 14px;">CSS</a> <a href="/tags/ES6/" style="font-size: 14px;">ES6</a> <a href="/tags/HTTP/" style="font-size: 14px;">HTTP</a> <a href="/tags/JavaScript/" style="font-size: 21.33px;">JavaScript</a> <a href="/tags/MySQL/" style="font-size: 14px;">MySQL</a> <a href="/tags/Python/" style="font-size: 25px;">Python</a> <a href="/tags/SQL/" style="font-size: 14px;">SQL</a> <a href="/tags/TCP-IP/" style="font-size: 14px;">TCP/IP</a> <a href="/tags/三省吾身/" style="font-size: 14px;">三省吾身</a> <a href="/tags/前端/" style="font-size: 14px;">前端</a> <a href="/tags/感想/" style="font-size: 14px;">感想</a> <a href="/tags/测试/" style="font-size: 14px;">测试</a> <a href="/tags/算法/" style="font-size: 14px;">算法</a> <a href="/tags/网络/" style="font-size: 17.67px;">网络</a> <a href="/tags/路由/" style="font-size: 14px;">路由</a> <a href="/tags/转载/" style="font-size: 14px;">转载</a> <a href="/tags/面向对象/" style="font-size: 14px;">面向对象</a>
     </div>
@@ -1076,7 +676,7 @@
   
     
   <div class="widget-wrap">
-    <h3 class="widget-title recent-posts">Siste innlegg</h3>
+    <h3 class="widget-title recent-posts">最新文章</h3>
     <div class="widget">
       <ul>
         
@@ -1107,7 +707,7 @@
   
     
   <div class="widget-wrap">
-    <h3 class="widget-title archive">Arkiv</h3>
+    <h3 class="widget-title archive">归档</h3>
     <div class="widget">
       <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/06/">June 2017</a><span class="archive-list-count">2</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/05/">May 2017</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/04/">April 2017</a><span class="archive-list-count">3</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/03/">March 2017</a><span class="archive-list-count">9</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/01/">January 2017</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/11/">November 2016</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/10/">October 2016</a><span class="archive-list-count">2</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/03/">March 2016</a><span class="archive-list-count">3</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/02/">February 2016</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/01/">January 2016</a><span class="archive-list-count">2</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2015/12/">December 2015</a><span class="archive-list-count">10</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2015/11/">November 2015</a><span class="archive-list-count">1</span></li></ul>
     </div>
@@ -1123,10 +723,10 @@
   <div class="outer">
     <div id="footer-left">
       &copy; 2014 - 2017 Jeffzzz&nbsp;|&nbsp;
-      Theme by <a href="https://github.com/giscafer/hexo-theme-cafe/" target="_blank">Cafe</a>
+      主题 <a href="https://github.com/giscafer/hexo-theme-cafe/" target="_blank">Cafe</a>
     </div>
      <div id="footer-right">
-      Contact&nbsp;|&nbsp;wxl.pure@gmail.com
+      联系方式&nbsp;|&nbsp;wxl.pure@gmail.com
     </div>
   </div>
 </footer>
